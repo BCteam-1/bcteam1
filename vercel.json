@@ -5,41 +5,206 @@
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "X-XSS-Protection", "value": "1; mode=block" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        }
       ]
     },
     {
       "source": "/assets/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     },
     {
       "source": "/style.css",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=86400" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
       ]
     },
     {
       "source": "/components.js",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=86400" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
       ]
     }
   ],
   "redirects": [
-    { "source": "/pages/home.html",   "destination": "/",                           "permanent": true },
-    { "source": "/pages/index.html",  "destination": "/",                           "permanent": true },
-    { "source": "/rap",               "destination": "/pages/rap.html",             "permanent": false },
-    { "source": "/rescue",            "destination": "/pages/bc-rescue-audit.html", "permanent": false },
-    { "source": "/audit",             "destination": "/pages/bc-rescue-audit.html", "permanent": false },
-    { "source": "/contact",           "destination": "/pages/contact.html",         "permanent": false },
-    { "source": "/about",             "destination": "/pages/about.html",           "permanent": false },
-    { "source": "/services",          "destination": "/pages/services.html",        "permanent": false },
-    { "source": "/privacy",           "destination": "/pages/privacy.html",         "permanent": false }
+    {
+      "source": "/pages/home.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/rap",
+      "destination": "/pages/rap.html",
+      "permanent": false
+    },
+    {
+      "source": "/rescue",
+      "destination": "/pages/bc-rescue-audit.html",
+      "permanent": false
+    },
+    {
+      "source": "/audit",
+      "destination": "/pages/bc-rescue-audit.html",
+      "permanent": false
+    },
+    {
+      "source": "/contact",
+      "destination": "/pages/contact.html",
+      "permanent": false
+    },
+    {
+      "source": "/about",
+      "destination": "/pages/about.html",
+      "permanent": false
+    },
+    {
+      "source": "/services",
+      "destination": "/pages/services.html",
+      "permanent": false
+    },
+    {
+      "source": "/privacy",
+      "destination": "/pages/privacy.html",
+      "permanent": false
+    },
+    {
+      "source": "/blog",
+      "destination": "/pages/blog.html",
+      "permanent": false
+    },
+    {
+      "source": "/post/month-end-close-in-business-central-how-to-speed-it-up-with-the-right-setup",
+      "destination": "/pages/blog/month-end-close-in-business-central-how-to-speed-it-up-with-the-right-setup.html",
+      "permanent": true
+    },
+    {
+      "source": "/post/5-receivables-metrics-every-finance-team-should-be-tracking",
+      "destination": "/pages/blog/5-receivables-metrics-every-finance-team-should-be-tracking.html",
+      "permanent": true
+    },
+    {
+      "source": "/post/the-1-8m-leak-nobody-saw-how-a-40m-job-shop-recovered-hidden-revenue-with-business-central-automa",
+      "destination": "/pages/blog/the-1-8m-leak-nobody-saw-how-a-40m-job-shop-recovered-hidden-revenue-with-busine.html",
+      "permanent": true
+    },
+    {
+      "source": "/post/your-construction-company-doesn-t-have-a-quickbooks-problem-it-has-a-visibility-problem",
+      "destination": "/pages/blog/your-construction-company-doesn-t-have-a-quickbooks-problem-it-has-a-visibility.html",
+      "permanent": true
+    },
+    {
+      "source": "/post/clean-data-clean-books-why-data-governance-is-the-foundation-of-a-successful-erp",
+      "destination": "/pages/blog/clean-data-clean-books-why-data-governance-is-the-foundation-of-a-successful-erp.html",
+      "permanent": true
+    },
+    {
+      "source": "/post/real-time-kpis-your-cfo-actually-wants-to-see-inside-business-central",
+      "destination": "/pages/blog/real-time-kpis-your-cfo-actually-wants-to-see-inside-business-central.html",
+      "permanent": true
+    },
+    {
+      "source": "/post/business-central-for-distribution-companies-managing-inventory-at-scale",
+      "destination": "/pages/blog/business-central-for-distribution-companies-managing-inventory-at-scale.html",
+      "permanent": true
+    },
+    {
+      "source": "/post/go-live-is-just-the-beginning-why-erp-optimization-matters-post-launch",
+      "destination": "/pages/blog/go-live-is-just-the-beginning-why-erp-optimization-matters-post-launch.html",
+      "permanent": true
+    },
+    {
+      "source": "/post/erp-project-rescue-what-happens-when-an-implementation-goes-wrong",
+      "destination": "/pages/blog/erp-project-rescue-what-happens-when-an-implementation-goes-wrong.html",
+      "permanent": true
+    },
+    {
+      "source": "/post/the-real-cost-of-a-failed-erp-implementation-and-how-to-avoid-it",
+      "destination": "/pages/blog/the-real-cost-of-a-failed-erp-implementation-and-how-to-avoid-it.html",
+      "permanent": true
+    },
+    {
+      "source": "/post/what-to-expect-in-the-first-90-days-of-a-business-central-implementation",
+      "destination": "/pages/blog/what-to-expect-in-the-first-90-days-of-a-business-central-implementation.html",
+      "permanent": true
+    },
+    {
+      "source": "/post/5-signs-your-erp-implementation-is-failing-and-how-to-rescue-it",
+      "destination": "/pages/blog/5-signs-your-erp-implementation-is-failing-and-how-to-rescue-it.html",
+      "permanent": true
+    },
+    {
+      "source": "/post/the-importance-of-ongoing-erp-support-erp-support-essentials",
+      "destination": "/pages/blog/the-importance-of-ongoing-erp-support-erp-support-essentials.html",
+      "permanent": true
+    },
+    {
+      "source": "/post/what-is-an-erp-health-check-and-does-your-business-need-one",
+      "destination": "/pages/blog/what-is-an-erp-health-check-and-does-your-business-need-one.html",
+      "permanent": true
+    },
+    {
+      "source": "/post/understanding-posting-groups-in-microsoft-dynamics-365-business-central",
+      "destination": "/pages/blog/understanding-posting-groups-in-microsoft-dynamics-365-business-central.html",
+      "permanent": true
+    },
+    {
+      "source": "/post/how-business-central-calculates-average-cost-and-why-it-matters",
+      "destination": "/pages/blog/how-business-central-calculates-average-cost-and-why-it-matters.html",
+      "permanent": true
+    },
+    {
+      "source": "/post/the-most-overlooked-factor-in-erp-success-isn-t-the-system-it-s-client-readiness",
+      "destination": "/pages/blog/the-most-overlooked-factor-in-erp-success-isn-t-the-system-it-s-client-readiness.html",
+      "permanent": true
+    },
+    {
+      "source": "/post/how-to-align-erp-with-your-finance-processes-for-faster-close",
+      "destination": "/pages/blog/how-to-align-erp-with-your-finance-processes-for-faster-close.html",
+      "permanent": true
+    },
+    {
+      "source": "/post/dynamics-gp-to-business-central-in-2026-a-practical-guide-for-finance-leaders",
+      "destination": "/pages/blog/dynamics-gp-to-business-central-in-2026-a-practical-guide-for-finance-leaders.html",
+      "permanent": true
+    },
+    {
+      "source": "/post/erp-rescue-checklist-what-every-cfo-should-ask-before-taking-action",
+      "destination": "/pages/blog/erp-rescue-checklist-what-every-cfo-should-ask-before-taking-action.html",
+      "permanent": true
+    }
   ]
 }
