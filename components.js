@@ -34,7 +34,7 @@ function renderNavbar(activePage) {
     },
     { href: '/pages/about.html',            label: 'About',    id: 'about' },
     { href: '/pages/contact.html',          label: 'Contact',  id: 'contact' },
-    { href: 'https://blog.bcteam1.com',      label: 'Blog',     id: 'blog', external: true },
+    { href: '/pages/blog.html',              label: 'Blog',     id: 'blog' },
   ];
 
   const linksHTML = pages.map(p => {
@@ -44,12 +44,11 @@ function renderNavbar(activePage) {
       const items = p.dropdown.map(d => `<li><a href="${d.href}">${d.label}</a></li>`).join('');
       return `<li><a href="${p.href}"${activeClass}>${p.label} ▾</a><ul class="dropdown">${items}</ul></li>`;
     }
-    if (p.external) return `<li><a href="${p.href}" target="_blank" rel="noopener">${p.label}</a></li>`;
     return `<li><a href="${p.href}"${activeClass}>${p.label}</a></li>`;
   }).join('');
 
   const mobileLinks = pages.map(p => {
-    let html = p.external ? `<a href="${p.href}" target="_blank" rel="noopener">${p.label}</a>` : `<a href="${p.href}">${p.label}</a>`;
+    let html = `<a href="${p.href}">${p.label}</a>`;
     if (p.dropdown) {
       html += p.dropdown.map(d => `<a href="${d.href}" style="padding-left:28px;font-size:13px;opacity:0.75;">↳ ${d.label.replace(/[🏗️🚑⚙️]\s*/g,'')}</a>`).join('');
     }
@@ -138,7 +137,6 @@ function renderFooter() {
           <ul>
             <li><a href="/pages/about.html">About Taylor</a></li>
             <li><a href="/index.html#case-study">Client Results</a></li>
-            <li><a href="https://blog.bcteam1.com" target="_blank" rel="noopener">Blog</a></li>
             <li><a href="/pages/contact.html">Contact Us</a></li>
           </ul>
         </div>
