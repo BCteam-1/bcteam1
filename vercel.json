@@ -1,0 +1,45 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/style.css",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400" }
+      ]
+    },
+    {
+      "source": "/components.js",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400" }
+      ]
+    }
+  ],
+  "redirects": [
+    { "source": "/pages/home.html",   "destination": "/",                           "permanent": true },
+    { "source": "/pages/index.html",  "destination": "/",                           "permanent": true },
+    { "source": "/rap",               "destination": "/pages/rap.html",             "permanent": false },
+    { "source": "/rescue",            "destination": "/pages/bc-rescue-audit.html", "permanent": false },
+    { "source": "/audit",             "destination": "/pages/bc-rescue-audit.html", "permanent": false },
+    { "source": "/contact",           "destination": "/pages/contact.html",         "permanent": false },
+    { "source": "/about",             "destination": "/pages/about.html",           "permanent": false },
+    { "source": "/services",          "destination": "/pages/services.html",        "permanent": false },
+    { "source": "/privacy",           "destination": "/pages/privacy.html",         "permanent": false }
+  ]
+}
