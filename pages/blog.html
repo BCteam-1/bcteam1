@@ -3,25 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Business Central Resources & Insights | BC Team Blog</title>
-  <meta name="description" content="Expert insights on Microsoft Dynamics 365 Business Central — implementation, rescue audits, AR automation, and ERP optimization from BC Team.">
+  <title>Business Central Blog — Insights & Resources | BC Team</title>
+  <meta name="description" content="Expert insights on Microsoft Dynamics 365 Business Central — implementation tips, AR automation, ERP rescue, and optimization strategies from BC Team.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.bcteam1.com/pages/blog.html">
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-  <meta property="og:type" content="article">
+  <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.bcteam1.com/pages/blog.html">
-  <meta property="og:title" content="Business Central Resources & Insights | BC Team Blog">
-  <meta property="og:description" content="Expert insights on Microsoft Dynamics 365 Business Central — implementation, rescue audits, AR automation, and ERP optimization from BC Team.">
+  <meta property="og:title" content="Business Central Blog — Insights & Resources | BC Team">
+  <meta property="og:description" content="Expert insights on Microsoft Dynamics 365 Business Central from BC Team.">
+  <meta property="og:image" content="https://www.bcteam1.com/assets/logo-square.jpg">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap"></noscript>
   <link rel="stylesheet" href="/style.css">
+  <style>
+    /* ── Blog page styles ─────────────────────────── */
+    .blog-hero{background:var(--black);padding:64px 24px 52px;text-align:center}
+    .blog-hero h1{color:#fff;font-size:clamp(28px,4vw,48px);font-family:'Nunito Sans',sans-serif;font-weight:900;margin-bottom:14px;letter-spacing:-0.3px}
+    .blog-hero p{color:rgba(255,255,255,0.6);font-size:17px;max-width:560px;margin:0 auto;line-height:1.7}
+
+    .blog-grid-section{background:var(--gray-light);padding:56px 24px 80px}
+    .blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:28px;max-width:1100px;margin:0 auto}
+
+    .blog-card{background:#fff;border:1px solid var(--gray-border);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;transition:box-shadow 0.2s,transform 0.2s}
+    .blog-card:hover{box-shadow:0 8px 28px rgba(0,0,0,0.09);transform:translateY(-2px)}
+
+    .blog-card-thumb{width:100%;height:196px;object-fit:cover;display:block;background:#f0f0f0}
+    .blog-card-thumb-placeholder{width:100%;height:196px;background:linear-gradient(135deg,#1a1a2e,#16213e);display:flex;align-items:center;justify-content:center;font-size:40px}
+
+    .blog-card-body{padding:24px;display:flex;flex-direction:column;flex:1}
+    .blog-card-date{font-size:11px;font-weight:700;color:var(--gray-mid);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px;font-family:'Nunito Sans',sans-serif}
+    .blog-card-title{font-size:17px;font-weight:800;line-height:1.35;margin-bottom:12px;font-family:'Nunito Sans',sans-serif;color:var(--gray-dark)}
+    .blog-card-title a{color:inherit;text-decoration:none}
+    .blog-card-title a:hover{color:var(--red)}
+    .blog-card-desc{font-size:14px;color:var(--gray-mid);line-height:1.7;flex:1;margin-bottom:20px}
+    .blog-card-link{font-size:13px;font-weight:800;color:var(--red);font-family:'Nunito Sans',sans-serif;text-decoration:none;display:inline-flex;align-items:center;gap:4px;transition:gap 0.15s}
+    .blog-card-link:hover{gap:8px}
+
+    .blog-notice{max-width:1100px;margin:0 auto 36px;background:#fff;border:1px solid var(--gray-border);border-left:4px solid var(--blue);border-radius:0 10px 10px 0;padding:18px 22px;display:flex;align-items:center;gap:16px}
+    .blog-notice-icon{font-size:22px;flex-shrink:0}
+    .blog-notice-text{font-size:14px;color:var(--gray-mid);line-height:1.6}
+    .blog-notice-text strong{color:var(--gray-dark);font-family:'Nunito Sans',sans-serif}
+    .blog-notice-text a{color:var(--red);font-weight:700}
+
+    @media(max-width:640px){.blog-grid{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
 
-<!-- ALERT BANNER -->
 <div class="bc-alert-banner">
   <div class="bc-alert-banner-inner">
     <span class="bc-alert-text">🔥 <strong>Free BC Health Check</strong> — Find out if your Business Central is silently costing you money</span>
@@ -31,268 +64,273 @@
     </div>
   </div>
 </div>
+
 <div id="navbar-placeholder"></div>
+
 <main>
 
-  <section class="page-hero" style="background:var(--black);text-align:center;padding:64px 24px 48px;">
-    <div class="hero-eyebrow-wrap"><span class="hero-eyebrow">Resources &amp; Insights</span></div>
-    <h1 style="color:#fff;font-size:clamp(28px,4vw,48px);margin-bottom:16px;">Business Central Blog</h1>
-    <p style="color:rgba(255,255,255,0.65);font-size:17px;max-width:580px;margin:0 auto;">
-      Expert insights on BC implementation, AR automation, ERP rescue, and getting more from Business Central.
-    </p>
+  <!-- HERO -->
+  <section class="blog-hero">
+    <div class="hero-eyebrow-wrap">
+      <span class="hero-eyebrow">Resources &amp; Insights</span>
+    </div>
+    <h1>Business Central Blog</h1>
+    <p>Expert insights on BC implementation, AR automation, ERP rescue, and getting more from Business Central — written by Taylor McEachnie.</p>
   </section>
 
-  <section class="section" style="background:var(--gray-light);">
-    <div class="container">
-      <div class="blog-index-note" style="background:#fff;border:1px solid var(--gray-border);border-radius:10px;padding:20px 24px;margin-bottom:40px;display:flex;align-items:center;gap:16px;">
-        <span style="font-size:24px;">📰</span>
-        <div>
-          <strong style="font-family:'Nunito Sans',sans-serif;font-size:15px;color:var(--gray-dark);">Showing 20 most recent posts</strong>
-          <p style="font-size:13px;color:var(--gray-mid);margin-top:4px;">For older posts, visit the <a href="https://www.bcteam1.com/blog" target="_blank" rel="noopener" style="color:var(--red);">full blog archive on bcteam1.com →</a></p>
-        </div>
-      </div>
-      <div class="blog-grid">
-        
-      <article class="blog-card">
-        <img src="https://static.wixstatic.com/media/c3c64f_69deb868f1d64504bb65df87f296cd57~mv2.png/v1/fit/w_1000,h_1000,al_c,q_80/file.png" alt="Month-End Close in Business Central: How to Speed It Up with the Right Setup" class="blog-card-img" loading="lazy" onerror="this.style.display='none'">
-        <div class="blog-card-body">
-          <div class="blog-card-date">June 11, 2026</div>
-          <h2 class="blog-card-title">
-            <a href="/pages/blog/month-end-close-in-business-central-how-to-speed-it-up-with-the-right-setup.html">Month-End Close in Business Central: How to Speed It Up with the Right Setup</a>
-          </h2>
-          <p class="blog-card-desc">Month-end close shouldn't feel like a monthly crisis. Yet many finance teams still struggle with manual processes, spreadsheet dependencies, and reporting delays that slow down decision-making. In thi...</p>
-          <a href="/pages/blog/month-end-close-in-business-central-how-to-speed-it-up-with-the-right-setup.html" class="blog-read-more">Read article →</a>
-        </div>
-      </article>
-      <article class="blog-card">
-        <img src="https://static.wixstatic.com/media/c3c64f_23b50f0b4bd9402aa48ff42e0a03756e~mv2.png/v1/fit/w_1000,h_1000,al_c,q_80/file.png" alt="5 Receivables Metrics Every Finance Team Should Be Tracking" class="blog-card-img" loading="lazy" onerror="this.style.display='none'">
-        <div class="blog-card-body">
-          <div class="blog-card-date">June 09, 2026</div>
-          <h2 class="blog-card-title">
-            <a href="/pages/blog/5-receivables-metrics-every-finance-team-should-be-tracking.html">5 Receivables Metrics Every Finance Team Should Be Tracking</a>
-          </h2>
-          <p class="blog-card-desc">Revenue may drive growth, but cash flow keeps businesses running. That's why leading finance teams focus on more than sales figures—they monitor the metrics that reveal how efficiently revenue turns i...</p>
-          <a href="/pages/blog/5-receivables-metrics-every-finance-team-should-be-tracking.html" class="blog-read-more">Read article →</a>
-        </div>
-      </article>
-      <article class="blog-card">
-        <img src="https://static.wixstatic.com/media/c3c64f_87807ae226b143c1b050881bb8674659~mv2.png/v1/fit/w_1000,h_1000,al_c,q_80/file.png" alt="The $1.8M Leak Nobody Saw: How a $40M Job Shop Recovered Hidden Revenue with Business Central Automation" class="blog-card-img" loading="lazy" onerror="this.style.display='none'">
-        <div class="blog-card-body">
-          <div class="blog-card-date">June 03, 2026</div>
-          <h2 class="blog-card-title">
-            <a href="/pages/blog/the-1-8m-leak-nobody-saw-how-a-40m-job-shop-recovered-hidden-revenue-with-busine.html">The $1.8M Leak Nobody Saw: How a $40M Job Shop Recovered Hidden Revenue with Business Central Automation</a>
-          </h2>
-          <p class="blog-card-desc">A growing $40M manufacturing job shop thought shrinking margins were simply part of rising operational costs — until they discovered millions in hidden revenue leakage buried inside manual processes, ...</p>
-          <a href="/pages/blog/the-1-8m-leak-nobody-saw-how-a-40m-job-shop-recovered-hidden-revenue-with-busine.html" class="blog-read-more">Read article →</a>
-        </div>
-      </article>
-      <article class="blog-card">
-        <img src="https://static.wixstatic.com/media/c3c64f_38bc5db06708428e8d84a4b47fa763dc~mv2.png/v1/fit/w_1000,h_1000,al_c,q_80/file.png" alt="Your Construction Company Doesn’t Have a QuickBooks Problem. It Has a Visibility Problem." class="blog-card-img" loading="lazy" onerror="this.style.display='none'">
-        <div class="blog-card-body">
-          <div class="blog-card-date">June 02, 2026</div>
-          <h2 class="blog-card-title">
-            <a href="/pages/blog/your-construction-company-doesn-t-have-a-quickbooks-problem-it-has-a-visibility.html">Your Construction Company Doesn’t Have a QuickBooks Problem. It Has a Visibility Problem.</a>
-          </h2>
-          <p class="blog-card-desc">QuickBooks isn’t the problem. Using it too long might be. Many construction companies outgrow small business accounting software long before they realize it. When job costing depends on spreadsheets, ...</p>
-          <a href="/pages/blog/your-construction-company-doesn-t-have-a-quickbooks-problem-it-has-a-visibility.html" class="blog-read-more">Read article →</a>
-        </div>
-      </article>
-      <article class="blog-card">
-        <img src="https://static.wixstatic.com/media/c3c64f_0a2fd711a78140d286b9a30ae0e28041~mv2.png/v1/fit/w_1000,h_1000,al_c,q_80/file.png" alt="Clean data, clean books: why data governance is the foundation of a successful ERP" class="blog-card-img" loading="lazy" onerror="this.style.display='none'">
-        <div class="blog-card-body">
-          <div class="blog-card-date">May 28, 2026</div>
-          <h2 class="blog-card-title">
-            <a href="/pages/blog/clean-data-clean-books-why-data-governance-is-the-foundation-of-a-successful-erp.html">Clean data, clean books: why data governance is the foundation of a successful ERP</a>
-          </h2>
-          <p class="blog-card-desc">Most ERP problems are not software problems — they’re data problems. Duplicate records, inconsistent reporting, broken dimensions, and spreadsheet workarounds quietly destroy visibility, trust, and de...</p>
-          <a href="/pages/blog/clean-data-clean-books-why-data-governance-is-the-foundation-of-a-successful-erp.html" class="blog-read-more">Read article →</a>
-        </div>
-      </article>
-      <article class="blog-card">
-        <img src="https://static.wixstatic.com/media/c3c64f_3f04a6a841944ebead9f8f0a25b1248d~mv2.png/v1/fit/w_1000,h_1000,al_c,q_80/file.png" alt="Real-time KPIs your CFO actually wants to see — inside Business Central" class="blog-card-img" loading="lazy" onerror="this.style.display='none'">
-        <div class="blog-card-body">
-          <div class="blog-card-date">May 27, 2026</div>
-          <h2 class="blog-card-title">
-            <a href="/pages/blog/real-time-kpis-your-cfo-actually-wants-to-see-inside-business-central.html">Real-time KPIs your CFO actually wants to see — inside Business Central</a>
-          </h2>
-          <p class="blog-card-desc">Most CFOs don’t need more dashboards — they need fewer surprises. This blog explores the real-time KPIs finance leaders actually want to see inside Microsoft Dynamics 365 Business Central, from cash f...</p>
-          <a href="/pages/blog/real-time-kpis-your-cfo-actually-wants-to-see-inside-business-central.html" class="blog-read-more">Read article →</a>
-        </div>
-      </article>
-      <article class="blog-card">
-        <img src="https://static.wixstatic.com/media/c3c64f_45e9193603814d119b0e6b3307617e1b~mv2.png/v1/fit/w_1000,h_1000,al_c,q_80/file.png" alt="Business Central for distribution companies: managing inventory at scale" class="blog-card-img" loading="lazy" onerror="this.style.display='none'">
-        <div class="blog-card-body">
-          <div class="blog-card-date">May 26, 2026</div>
-          <h2 class="blog-card-title">
-            <a href="/pages/blog/business-central-for-distribution-companies-managing-inventory-at-scale.html">Business Central for distribution companies: managing inventory at scale</a>
-          </h2>
-          <p class="blog-card-desc">Inventory problems rarely begin in the warehouse — they start with poor visibility, disconnected workflows, and inconsistent processes. As distribution companies grow, inventory complexity increases f...</p>
-          <a href="/pages/blog/business-central-for-distribution-companies-managing-inventory-at-scale.html" class="blog-read-more">Read article →</a>
-        </div>
-      </article>
-      <article class="blog-card">
-        <img src="https://static.wixstatic.com/media/c3c64f_f37f97bfefab421ab902c2ad840519ca~mv2.png/v1/fit/w_1000,h_1000,al_c,q_80/file.png" alt="Go-live is just the beginning: why ERP optimization matters post-launch" class="blog-card-img" loading="lazy" onerror="this.style.display='none'">
-        <div class="blog-card-body">
-          <div class="blog-card-date">May 18, 2026</div>
-          <h2 class="blog-card-title">
-            <a href="/pages/blog/go-live-is-just-the-beginning-why-erp-optimization-matters-post-launch.html">Go-live is just the beginning: why ERP optimization matters post-launch</a>
-          </h2>
-          <p class="blog-card-desc">Most ERP systems don’t fail during implementation — they fail quietly after go-live. Reports stop matching, spreadsheets return, workflows break down, and trust in the data slowly disappears. In this ...</p>
-          <a href="/pages/blog/go-live-is-just-the-beginning-why-erp-optimization-matters-post-launch.html" class="blog-read-more">Read article →</a>
-        </div>
-      </article>
-      <article class="blog-card">
-        <img src="https://static.wixstatic.com/media/c3c64f_69c3d3c424fc443294529c892164e4f6~mv2.png/v1/fit/w_1000,h_1000,al_c,q_80/file.png" alt="ERP project rescue: what happens when an implementation goes wrong" class="blog-card-img" loading="lazy" onerror="this.style.display='none'">
-        <div class="blog-card-body">
-          <div class="blog-card-date">May 12, 2026</div>
-          <h2 class="blog-card-title">
-            <a href="/pages/blog/erp-project-rescue-what-happens-when-an-implementation-goes-wrong.html">ERP project rescue: what happens when an implementation goes wrong</a>
-          </h2>
-          <p class="blog-card-desc">ERP implementations rarely fail overnight. They break down gradually through reporting issues, low user adoption, inconsistent data, and growing reliance on manual workarounds. By the time leadership ...</p>
-          <a href="/pages/blog/erp-project-rescue-what-happens-when-an-implementation-goes-wrong.html" class="blog-read-more">Read article →</a>
-        </div>
-      </article>
-      <article class="blog-card">
-        <img src="https://static.wixstatic.com/media/c3c64f_30d9841e91f94510a2e963769281f5ae~mv2.png/v1/fit/w_1000,h_1000,al_c,q_80/file.png" alt="The real cost of a failed ERP implementation — and how to avoid it" class="blog-card-img" loading="lazy" onerror="this.style.display='none'">
-        <div class="blog-card-body">
-          <div class="blog-card-date">May 11, 2026</div>
-          <h2 class="blog-card-title">
-            <a href="/pages/blog/the-real-cost-of-a-failed-erp-implementation-and-how-to-avoid-it.html">The real cost of a failed ERP implementation — and how to avoid it</a>
-          </h2>
-          <p class="blog-card-desc">Most ERP failures don’t happen overnight. They show up through delays, broken processes, unreliable reporting, and teams reverting back to spreadsheets. The real cost goes far beyond implementation fe...</p>
-          <a href="/pages/blog/the-real-cost-of-a-failed-erp-implementation-and-how-to-avoid-it.html" class="blog-read-more">Read article →</a>
-        </div>
-      </article>
-      <article class="blog-card">
-        <img src="https://static.wixstatic.com/media/c3c64f_6c01d6be2afe44289cd8a1528391dd48~mv2.png/v1/fit/w_1000,h_1000,al_c,q_80/file.png" alt="What to Expect in the First 90 Days of a Business Central Implementation" class="blog-card-img" loading="lazy" onerror="this.style.display='none'">
-        <div class="blog-card-body">
-          <div class="blog-card-date">May 07, 2026</div>
-          <h2 class="blog-card-title">
-            <a href="/pages/blog/what-to-expect-in-the-first-90-days-of-a-business-central-implementation.html">What to Expect in the First 90 Days of a Business Central Implementation</a>
-          </h2>
-          <p class="blog-card-desc">The first 90 days of a Microsoft Dynamics 365 Business Central implementation can determine the success—or failure—of your entire ERP project. From early alignment and process mapping to system config...</p>
-          <a href="/pages/blog/what-to-expect-in-the-first-90-days-of-a-business-central-implementation.html" class="blog-read-more">Read article →</a>
-        </div>
-      </article>
-      <article class="blog-card">
-        <img src="https://static.wixstatic.com/media/c3c64f_ad8d529f3c4d4b54826482c9c0b39a29~mv2.png/v1/fit/w_1000,h_1000,al_c,q_80/file.png" alt="5 Signs Your ERP Implementation Is Failing — And How to Rescue It" class="blog-card-img" loading="lazy" onerror="this.style.display='none'">
-        <div class="blog-card-body">
-          <div class="blog-card-date">May 06, 2026</div>
-          <h2 class="blog-card-title">
-            <a href="/pages/blog/5-signs-your-erp-implementation-is-failing-and-how-to-rescue-it.html">5 Signs Your ERP Implementation Is Failing — And How to Rescue It</a>
-          </h2>
-          <p class="blog-card-desc">ERP implementations rarely fail overnight—they break down slowly through missed deadlines, growing workarounds, poor data migration, and disengaged stakeholders. In this guide, The BC Team shares 5 cr...</p>
-          <a href="/pages/blog/5-signs-your-erp-implementation-is-failing-and-how-to-rescue-it.html" class="blog-read-more">Read article →</a>
-        </div>
-      </article>
-      <article class="blog-card">
-        <img src="https://static.wixstatic.com/media/c3c64f_6fe976722fa24df9b28208731d6317a0~mv2.png/v1/fit/w_1000,h_1000,al_c,q_80/file.png" alt="The Importance of Ongoing ERP Support: ERP Support Essentials" class="blog-card-img" loading="lazy" onerror="this.style.display='none'">
-        <div class="blog-card-body">
-          <div class="blog-card-date">May 04, 2026</div>
-          <h2 class="blog-card-title">
-            <a href="/pages/blog/the-importance-of-ongoing-erp-support-erp-support-essentials.html">The Importance of Ongoing ERP Support: ERP Support Essentials</a>
-          </h2>
-          <p class="blog-card-desc">ERP implementation is just the beginning. Without ongoing support, systems can become inefficient, outdated, and difficult to manage. This blog explores why continuous ERP support is critical for main...</p>
-          <a href="/pages/blog/the-importance-of-ongoing-erp-support-erp-support-essentials.html" class="blog-read-more">Read article →</a>
-        </div>
-      </article>
-      <article class="blog-card">
-        <img src="https://static.wixstatic.com/media/c3c64f_124ef584d12941c9af1600defd21c312~mv2.png/v1/fit/w_1000,h_1000,al_c,q_80/file.png" alt="What is an ERP health check — and does your business need one?" class="blog-card-img" loading="lazy" onerror="this.style.display='none'">
-        <div class="blog-card-body">
-          <div class="blog-card-date">April 29, 2026</div>
-          <h2 class="blog-card-title">
-            <a href="/pages/blog/what-is-an-erp-health-check-and-does-your-business-need-one.html">What is an ERP health check — and does your business need one?</a>
-          </h2>
-          <p class="blog-card-desc">An ERP health check is a structured review of your system to see how well it supports your business today—not just how it was originally configured. Over time, processes shift, data becomes inconsiste...</p>
-          <a href="/pages/blog/what-is-an-erp-health-check-and-does-your-business-need-one.html" class="blog-read-more">Read article →</a>
-        </div>
-      </article>
-      <article class="blog-card">
-        <img src="https://static.wixstatic.com/media/c3c64f_86e0a934dcb342c7b43021a6317c5526~mv2.png/v1/fit/w_1000,h_1000,al_c,q_80/file.png" alt="Understanding Posting Groups in Microsoft Dynamics 365 Business Central" class="blog-card-img" loading="lazy" onerror="this.style.display='none'">
-        <div class="blog-card-body">
-          <div class="blog-card-date">April 28, 2026</div>
-          <h2 class="blog-card-title">
-            <a href="/pages/blog/understanding-posting-groups-in-microsoft-dynamics-365-business-central.html">Understanding Posting Groups in Microsoft Dynamics 365 Business Central</a>
-          </h2>
-          <p class="blog-card-desc">Posting Groups in Microsoft Dynamics 365 Business Central are the backbone of automated financial posting. They define how transactions flow into the General Ledger without manual intervention, ensuri...</p>
-          <a href="/pages/blog/understanding-posting-groups-in-microsoft-dynamics-365-business-central.html" class="blog-read-more">Read article →</a>
-        </div>
-      </article>
-      <article class="blog-card">
-        <img src="https://static.wixstatic.com/media/c3c64f_a0947276dc824d1cb9bc10b7aaf2fe7f~mv2.png/v1/fit/w_1000,h_1000,al_c,q_80/file.png" alt="How Business Central calculates average cost — and why it matters" class="blog-card-img" loading="lazy" onerror="this.style.display='none'">
-        <div class="blog-card-body">
-          <div class="blog-card-date">April 23, 2026</div>
-          <h2 class="blog-card-title">
-            <a href="/pages/blog/how-business-central-calculates-average-cost-and-why-it-matters.html">How Business Central calculates average cost — and why it matters</a>
-          </h2>
-          <p class="blog-card-desc">One of the most common questions in inventory accounting is how Business Central calculates average cost. In this post, we break down the logic using a simple two-day example that shows how opening ba...</p>
-          <a href="/pages/blog/how-business-central-calculates-average-cost-and-why-it-matters.html" class="blog-read-more">Read article →</a>
-        </div>
-      </article>
-      <article class="blog-card">
-        <img src="https://static.wixstatic.com/media/c3c64f_642ec65cbb79457fbe8f28912c68f8c1~mv2.png/v1/fit/w_1000,h_1000,al_c,q_80/file.png" alt="The Most Overlooked Factor in ERP Success Isn’t the System—It’s Client Readiness" class="blog-card-img" loading="lazy" onerror="this.style.display='none'">
-        <div class="blog-card-body">
-          <div class="blog-card-date">April 16, 2026</div>
-          <h2 class="blog-card-title">
-            <a href="/pages/blog/the-most-overlooked-factor-in-erp-success-isn-t-the-system-it-s-client-readiness.html">The Most Overlooked Factor in ERP Success Isn’t the System—It’s Client Readiness</a>
-          </h2>
-          <p class="blog-card-desc">Most ERP projects don’t fail during implementation—they fail before they start. The missing piece is client readiness. Without clear processes, clean data, and defined ownership, even the best systems...</p>
-          <a href="/pages/blog/the-most-overlooked-factor-in-erp-success-isn-t-the-system-it-s-client-readiness.html" class="blog-read-more">Read article →</a>
-        </div>
-      </article>
-      <article class="blog-card">
-        <img src="https://static.wixstatic.com/media/c3c64f_ec618e105b4445669485d1f9b5362091~mv2.png/v1/fit/w_1000,h_1000,al_c,q_80/file.png" alt="How to Align ERP with Your Finance Processes for Faster Close" class="blog-card-img" loading="lazy" onerror="this.style.display='none'">
-        <div class="blog-card-body">
-          <div class="blog-card-date">April 15, 2026</div>
-          <h2 class="blog-card-title">
-            <a href="/pages/blog/how-to-align-erp-with-your-finance-processes-for-faster-close.html">How to Align ERP with Your Finance Processes for Faster Close</a>
-          </h2>
-          <p class="blog-card-desc">Most finance teams don’t struggle with closing because they lack an ERP—they struggle because it doesn’t match how finance actually works. Misalignment leads to delays, manual fixes, and constant work...</p>
-          <a href="/pages/blog/how-to-align-erp-with-your-finance-processes-for-faster-close.html" class="blog-read-more">Read article →</a>
-        </div>
-      </article>
-      <article class="blog-card">
-        <img src="https://static.wixstatic.com/media/c3c64f_6bab1a67c817430b82e885782eeeb01f~mv2.png/v1/fit/w_1000,h_1000,al_c,q_80/file.png" alt="Dynamics GP to Business Central in 2026: A Practical Guide for Finance Leaders" class="blog-card-img" loading="lazy" onerror="this.style.display='none'">
-        <div class="blog-card-body">
-          <div class="blog-card-date">April 14, 2026</div>
-          <h2 class="blog-card-title">
-            <a href="/pages/blog/dynamics-gp-to-business-central-in-2026-a-practical-guide-for-finance-leaders.html">Dynamics GP to Business Central in 2026: A Practical Guide for Finance Leaders</a>
-          </h2>
-          <p class="blog-card-desc">Dynamics GP remains widely used, but in 2026 the focus has shifted from stability to modernization and alignment with Microsoft’s ecosystem. GP is in maintenance mode with no meaningful new features, ...</p>
-          <a href="/pages/blog/dynamics-gp-to-business-central-in-2026-a-practical-guide-for-finance-leaders.html" class="blog-read-more">Read article →</a>
-        </div>
-      </article>
-      <article class="blog-card">
-        <img src="https://static.wixstatic.com/media/c3c64f_8dde3e04b73e4108bc0f31f64667bb06~mv2.png/v1/fit/w_1000,h_1000,al_c,q_80/file.png" alt="ERP Rescue Checklist: What Every CFO Should Ask Before Taking Action" class="blog-card-img" loading="lazy" onerror="this.style.display='none'">
-        <div class="blog-card-body">
-          <div class="blog-card-date">April 09, 2026</div>
-          <h2 class="blog-card-title">
-            <a href="/pages/blog/erp-rescue-checklist-what-every-cfo-should-ask-before-taking-action.html">ERP Rescue Checklist: What Every CFO Should Ask Before Taking Action</a>
-          </h2>
-          <p class="blog-card-desc">Before overhauling your ERP, ask the right questions. Our ERP Rescue Checklist helps CFOs uncover data gaps, eliminate workarounds, and align Business Central with real workflows—ensuring decisions ar...</p>
-          <a href="/pages/blog/erp-rescue-checklist-what-every-cfo-should-ask-before-taking-action.html" class="blog-read-more">Read article →</a>
-        </div>
-      </article>
+  <!-- BLOG GRID -->
+  <section class="blog-grid-section">
+
+    <div class="blog-notice">
+      <div class="blog-notice-icon">📰</div>
+      <div class="blog-notice-text">
+        <strong>Showing 20 most recent posts.</strong>
+        For the full archive of 119 articles visit
+        <a href="https://www.bcteam1.com/blog" target="_blank" rel="noopener">bcteam1.com/blog →</a>
       </div>
     </div>
+
+    <div class="blog-grid" id="blog-grid">
+
+      <!-- Post 1 -->
+      <article class="blog-card">
+        <img class="blog-card-thumb" src="https://static.wixstatic.com/media/c3c64f_69deb868f1d64504bb65df87f296cd57~mv2.png/v1/fit/w_800,h_400,al_c,q_80/file.png" alt="Month-End Close in Business Central" loading="lazy" onerror="this.style.display='none'">
+        <div class="blog-card-body">
+          <div class="blog-card-date">Jun 11, 2026</div>
+          <h2 class="blog-card-title"><a href="https://www.bcteam1.com/post/month-end-close-in-business-central-how-to-speed-it-up-with-the-right-setup" target="_blank" rel="noopener">Month-End Close in Business Central: How to Speed It Up with the Right Setup</a></h2>
+          <p class="blog-card-desc">Month-end close shouldn't feel like a monthly crisis. We explore how organizations can accelerate month-end close in Business Central through automation, workflow optimization, and real-time visibility.</p>
+          <a href="https://www.bcteam1.com/post/month-end-close-in-business-central-how-to-speed-it-up-with-the-right-setup" target="_blank" rel="noopener" class="blog-card-link">Read article →</a>
+        </div>
+      </article>
+
+      <!-- Post 2 -->
+      <article class="blog-card">
+        <img class="blog-card-thumb" src="https://static.wixstatic.com/media/c3c64f_23b50f0b4bd9402aa48ff42e0a03756e~mv2.png/v1/fit/w_800,h_400,al_c,q_80/file.png" alt="5 Receivables Metrics" loading="lazy" onerror="this.style.display='none'">
+        <div class="blog-card-body">
+          <div class="blog-card-date">Jun 09, 2026</div>
+          <h2 class="blog-card-title"><a href="https://www.bcteam1.com/post/5-receivables-metrics-every-finance-team-should-be-tracking" target="_blank" rel="noopener">5 Receivables Metrics Every Finance Team Should Be Tracking</a></h2>
+          <p class="blog-card-desc">Revenue may drive growth, but cash flow keeps businesses running. We explore five essential receivables metrics every CFO and controller should track, including DSO, CEI, aging reports, and bad debt ratio.</p>
+          <a href="https://www.bcteam1.com/post/5-receivables-metrics-every-finance-team-should-be-tracking" target="_blank" rel="noopener" class="blog-card-link">Read article →</a>
+        </div>
+      </article>
+
+      <!-- Post 3 -->
+      <article class="blog-card">
+        <img class="blog-card-thumb" src="https://static.wixstatic.com/media/c3c64f_87807ae226b143c1b050881bb8674659~mv2.png/v1/fit/w_800,h_400,al_c,q_80/file.png" alt="$1.8M Leak Job Shop" loading="lazy" onerror="this.style.display='none'">
+        <div class="blog-card-body">
+          <div class="blog-card-date">Jun 03, 2026</div>
+          <h2 class="blog-card-title"><a href="https://www.bcteam1.com/post/the-1-8m-leak-nobody-saw-how-a-40m-job-shop-recovered-hidden-revenue-with-business-central-automa" target="_blank" rel="noopener">The $1.8M Leak Nobody Saw: How a $40M Job Shop Recovered Hidden Revenue</a></h2>
+          <p class="blog-card-desc">A growing $40M manufacturing job shop discovered millions in hidden revenue leakage buried inside manual processes and disconnected systems. How Business Central automation recovered it.</p>
+          <a href="https://www.bcteam1.com/post/the-1-8m-leak-nobody-saw-how-a-40m-job-shop-recovered-hidden-revenue-with-business-central-automa" target="_blank" rel="noopener" class="blog-card-link">Read article →</a>
+        </div>
+      </article>
+
+      <!-- Post 4 -->
+      <article class="blog-card">
+        <img class="blog-card-thumb" src="https://static.wixstatic.com/media/c3c64f_38bc5db06708428e8d84a4b47fa763dc~mv2.png/v1/fit/w_800,h_400,al_c,q_80/file.png" alt="Construction QuickBooks Problem" loading="lazy" onerror="this.style.display='none'">
+        <div class="blog-card-body">
+          <div class="blog-card-date">Jun 02, 2026</div>
+          <h2 class="blog-card-title"><a href="https://www.bcteam1.com/post/your-construction-company-doesn-t-have-a-quickbooks-problem-it-has-a-visibility-problem" target="_blank" rel="noopener">Your Construction Company Doesn't Have a QuickBooks Problem. It Has a Visibility Problem.</a></h2>
+          <p class="blog-card-desc">Many construction companies outgrow small business accounting software long before they realize it. Discover the warning signs your contractor business has outgrown QuickBooks.</p>
+          <a href="https://www.bcteam1.com/post/your-construction-company-doesn-t-have-a-quickbooks-problem-it-has-a-visibility-problem" target="_blank" rel="noopener" class="blog-card-link">Read article →</a>
+        </div>
+      </article>
+
+      <!-- Post 5 -->
+      <article class="blog-card">
+        <img class="blog-card-thumb" src="https://static.wixstatic.com/media/c3c64f_0a2fd711a78140d286b9a30ae0e28041~mv2.png/v1/fit/w_800,h_400,al_c,q_80/file.png" alt="Clean Data Clean Books" loading="lazy" onerror="this.style.display='none'">
+        <div class="blog-card-body">
+          <div class="blog-card-date">May 28, 2026</div>
+          <h2 class="blog-card-title"><a href="https://www.bcteam1.com/post/clean-data-clean-books-why-data-governance-is-the-foundation-of-a-successful-erp" target="_blank" rel="noopener">Clean Data, Clean Books: Why Data Governance Is the Foundation of a Successful ERP</a></h2>
+          <p class="blog-card-desc">Most ERP problems are not software problems — they're data problems. Why data governance is the true foundation of a successful ERP implementation.</p>
+          <a href="https://www.bcteam1.com/post/clean-data-clean-books-why-data-governance-is-the-foundation-of-a-successful-erp" target="_blank" rel="noopener" class="blog-card-link">Read article →</a>
+        </div>
+      </article>
+
+      <!-- Post 6 -->
+      <article class="blog-card">
+        <img class="blog-card-thumb" src="https://static.wixstatic.com/media/c3c64f_3f04a6a841944ebead9f8f0a25b1248d~mv2.png/v1/fit/w_800,h_400,al_c,q_80/file.png" alt="Real-time KPIs CFO" loading="lazy" onerror="this.style.display='none'">
+        <div class="blog-card-body">
+          <div class="blog-card-date">May 27, 2026</div>
+          <h2 class="blog-card-title"><a href="https://www.bcteam1.com/post/real-time-kpis-your-cfo-actually-wants-to-see-inside-business-central" target="_blank" rel="noopener">Real-Time KPIs Your CFO Actually Wants to See — Inside Business Central</a></h2>
+          <p class="blog-card-desc">Most CFOs don't need more dashboards — they need fewer surprises. The real-time KPIs finance leaders actually want to see inside Business Central.</p>
+          <a href="https://www.bcteam1.com/post/real-time-kpis-your-cfo-actually-wants-to-see-inside-business-central" target="_blank" rel="noopener" class="blog-card-link">Read article →</a>
+        </div>
+      </article>
+
+      <!-- Post 7 -->
+      <article class="blog-card">
+        <img class="blog-card-thumb" src="https://static.wixstatic.com/media/c3c64f_45e9193603814d119b0e6b3307617e1b~mv2.png/v1/fit/w_800,h_400,al_c,q_80/file.png" alt="Distribution Inventory" loading="lazy" onerror="this.style.display='none'">
+        <div class="blog-card-body">
+          <div class="blog-card-date">May 26, 2026</div>
+          <h2 class="blog-card-title"><a href="https://www.bcteam1.com/post/business-central-for-distribution-companies-managing-inventory-at-scale" target="_blank" rel="noopener">Business Central for Distribution Companies: Managing Inventory at Scale</a></h2>
+          <p class="blog-card-desc">How Business Central helps distributors improve inventory accuracy, warehouse operations, replenishment planning, and operational control at scale.</p>
+          <a href="https://www.bcteam1.com/post/business-central-for-distribution-companies-managing-inventory-at-scale" target="_blank" rel="noopener" class="blog-card-link">Read article →</a>
+        </div>
+      </article>
+
+      <!-- Post 8 -->
+      <article class="blog-card">
+        <img class="blog-card-thumb" src="https://static.wixstatic.com/media/c3c64f_f37f97bfefab421ab902c2ad840519ca~mv2.png/v1/fit/w_800,h_400,al_c,q_80/file.png" alt="ERP Go-Live Optimization" loading="lazy" onerror="this.style.display='none'">
+        <div class="blog-card-body">
+          <div class="blog-card-date">May 18, 2026</div>
+          <h2 class="blog-card-title"><a href="https://www.bcteam1.com/post/go-live-is-just-the-beginning-why-erp-optimization-matters-post-launch" target="_blank" rel="noopener">Go-Live Is Just the Beginning: Why ERP Optimization Matters Post-Launch</a></h2>
+          <p class="blog-card-desc">Most ERP systems don't fail during implementation — they fail quietly after go-live. Why ERP optimization matters long after launch.</p>
+          <a href="https://www.bcteam1.com/post/go-live-is-just-the-beginning-why-erp-optimization-matters-post-launch" target="_blank" rel="noopener" class="blog-card-link">Read article →</a>
+        </div>
+      </article>
+
+      <!-- Post 9 -->
+      <article class="blog-card">
+        <img class="blog-card-thumb" src="https://static.wixstatic.com/media/c3c64f_69c3d3c424fc443294529c892164e4f6~mv2.png/v1/fit/w_800,h_400,al_c,q_80/file.png" alt="ERP Project Rescue" loading="lazy" onerror="this.style.display='none'">
+        <div class="blog-card-body">
+          <div class="blog-card-date">May 12, 2026</div>
+          <h2 class="blog-card-title"><a href="https://www.bcteam1.com/post/erp-project-rescue-what-happens-when-an-implementation-goes-wrong" target="_blank" rel="noopener">ERP Project Rescue: What Happens When an Implementation Goes Wrong</a></h2>
+          <p class="blog-card-desc">ERP implementations rarely fail overnight. They break down gradually through reporting issues, low user adoption, and growing reliance on manual workarounds.</p>
+          <a href="https://www.bcteam1.com/post/erp-project-rescue-what-happens-when-an-implementation-goes-wrong" target="_blank" rel="noopener" class="blog-card-link">Read article →</a>
+        </div>
+      </article>
+
+      <!-- Post 10 -->
+      <article class="blog-card">
+        <img class="blog-card-thumb" src="https://static.wixstatic.com/media/c3c64f_30d9841e91f94510a2e963769281f5ae~mv2.png/v1/fit/w_800,h_400,al_c,q_80/file.png" alt="Real Cost Failed ERP" loading="lazy" onerror="this.style.display='none'">
+        <div class="blog-card-body">
+          <div class="blog-card-date">May 11, 2026</div>
+          <h2 class="blog-card-title"><a href="https://www.bcteam1.com/post/the-real-cost-of-a-failed-erp-implementation-and-how-to-avoid-it" target="_blank" rel="noopener">The Real Cost of a Failed ERP Implementation — and How to Avoid It</a></h2>
+          <p class="blog-card-desc">Most ERP failures don't happen overnight. The real cost goes far beyond implementation fees — affecting productivity, trust in data, and long-term growth.</p>
+          <a href="https://www.bcteam1.com/post/the-real-cost-of-a-failed-erp-implementation-and-how-to-avoid-it" target="_blank" rel="noopener" class="blog-card-link">Read article →</a>
+        </div>
+      </article>
+
+      <!-- Post 11 -->
+      <article class="blog-card">
+        <img class="blog-card-thumb" src="https://static.wixstatic.com/media/c3c64f_6c01d6be2afe44289cd8a1528391dd48~mv2.png/v1/fit/w_800,h_400,al_c,q_80/file.png" alt="First 90 Days BC" loading="lazy" onerror="this.style.display='none'">
+        <div class="blog-card-body">
+          <div class="blog-card-date">May 07, 2026</div>
+          <h2 class="blog-card-title"><a href="https://www.bcteam1.com/post/what-to-expect-in-the-first-90-days-of-a-business-central-implementation" target="_blank" rel="noopener">What to Expect in the First 90 Days of a Business Central Implementation</a></h2>
+          <p class="blog-card-desc">The first 90 days of a BC implementation can determine the success or failure of your entire ERP project. A breakdown of what actually happens in each phase.</p>
+          <a href="https://www.bcteam1.com/post/what-to-expect-in-the-first-90-days-of-a-business-central-implementation" target="_blank" rel="noopener" class="blog-card-link">Read article →</a>
+        </div>
+      </article>
+
+      <!-- Post 12 -->
+      <article class="blog-card">
+        <img class="blog-card-thumb" src="https://static.wixstatic.com/media/c3c64f_ad8d529f3c4d4b54826482c9c0b39a29~mv2.png/v1/fit/w_800,h_400,al_c,q_80/file.png" alt="5 Signs ERP Failing" loading="lazy" onerror="this.style.display='none'">
+        <div class="blog-card-body">
+          <div class="blog-card-date">May 06, 2026</div>
+          <h2 class="blog-card-title"><a href="https://www.bcteam1.com/post/5-signs-your-erp-implementation-is-failing-and-how-to-rescue-it" target="_blank" rel="noopener">5 Signs Your ERP Implementation Is Failing — And How to Rescue It</a></h2>
+          <p class="blog-card-desc">ERP implementations rarely fail overnight. 5 critical warning signs your ERP project is in trouble and practical steps to rescue it before it's too late.</p>
+          <a href="https://www.bcteam1.com/post/5-signs-your-erp-implementation-is-failing-and-how-to-rescue-it" target="_blank" rel="noopener" class="blog-card-link">Read article →</a>
+        </div>
+      </article>
+
+      <!-- Post 13 -->
+      <article class="blog-card">
+        <img class="blog-card-thumb" src="https://static.wixstatic.com/media/c3c64f_6fe976722fa24df9b28208731d6317a0~mv2.png/v1/fit/w_800,h_400,al_c,q_80/file.png" alt="Ongoing ERP Support" loading="lazy" onerror="this.style.display='none'">
+        <div class="blog-card-body">
+          <div class="blog-card-date">May 04, 2026</div>
+          <h2 class="blog-card-title"><a href="https://www.bcteam1.com/post/the-importance-of-ongoing-erp-support-erp-support-essentials" target="_blank" rel="noopener">The Importance of Ongoing ERP Support: ERP Support Essentials</a></h2>
+          <p class="blog-card-desc">ERP implementation is just the beginning. Without ongoing support, systems become inefficient, outdated, and difficult to manage. Why continuous ERP support is critical.</p>
+          <a href="https://www.bcteam1.com/post/the-importance-of-ongoing-erp-support-erp-support-essentials" target="_blank" rel="noopener" class="blog-card-link">Read article →</a>
+        </div>
+      </article>
+
+      <!-- Post 14 -->
+      <article class="blog-card">
+        <img class="blog-card-thumb" src="https://static.wixstatic.com/media/c3c64f_124ef584d12941c9af1600defd21c312~mv2.png/v1/fit/w_800,h_400,al_c,q_80/file.png" alt="ERP Health Check" loading="lazy" onerror="this.style.display='none'">
+        <div class="blog-card-body">
+          <div class="blog-card-date">Apr 29, 2026</div>
+          <h2 class="blog-card-title"><a href="https://www.bcteam1.com/post/what-is-an-erp-health-check-and-does-your-business-need-one" target="_blank" rel="noopener">What Is an ERP Health Check — and Does Your Business Need One?</a></h2>
+          <p class="blog-card-desc">An ERP health check is a structured review of your system to see how well it supports your business today. How to uncover gaps before they become expensive problems.</p>
+          <a href="https://www.bcteam1.com/post/what-is-an-erp-health-check-and-does-your-business-need-one" target="_blank" rel="noopener" class="blog-card-link">Read article →</a>
+        </div>
+      </article>
+
+      <!-- Post 15 -->
+      <article class="blog-card">
+        <img class="blog-card-thumb" src="https://static.wixstatic.com/media/c3c64f_86e0a934dcb342c7b43021a6317c5526~mv2.png/v1/fit/w_800,h_400,al_c,q_80/file.png" alt="Posting Groups BC" loading="lazy" onerror="this.style.display='none'">
+        <div class="blog-card-body">
+          <div class="blog-card-date">Apr 28, 2026</div>
+          <h2 class="blog-card-title"><a href="https://www.bcteam1.com/post/understanding-posting-groups-in-microsoft-dynamics-365-business-central" target="_blank" rel="noopener">Understanding Posting Groups in Microsoft Dynamics 365 Business Central</a></h2>
+          <p class="blog-card-desc">Posting Groups are the backbone of automated financial posting in BC. How they work and why they're critical for financial reporting and ERP best practices.</p>
+          <a href="https://www.bcteam1.com/post/understanding-posting-groups-in-microsoft-dynamics-365-business-central" target="_blank" rel="noopener" class="blog-card-link">Read article →</a>
+        </div>
+      </article>
+
+      <!-- Post 16 -->
+      <article class="blog-card">
+        <img class="blog-card-thumb" src="https://static.wixstatic.com/media/c3c64f_a0947276dc824d1cb9bc10b7aaf2fe7f~mv2.png/v1/fit/w_800,h_400,al_c,q_80/file.png" alt="Average Cost BC" loading="lazy" onerror="this.style.display='none'">
+        <div class="blog-card-body">
+          <div class="blog-card-date">Apr 23, 2026</div>
+          <h2 class="blog-card-title"><a href="https://www.bcteam1.com/post/how-business-central-calculates-average-cost-and-why-it-matters" target="_blank" rel="noopener">How Business Central Calculates Average Cost — and Why It Matters</a></h2>
+          <p class="blog-card-desc">How Business Central calculates average cost using a simple two-day example that shows how opening balances, purchases, and sales transactions continuously update average cost.</p>
+          <a href="https://www.bcteam1.com/post/how-business-central-calculates-average-cost-and-why-it-matters" target="_blank" rel="noopener" class="blog-card-link">Read article →</a>
+        </div>
+      </article>
+
+      <!-- Post 17 -->
+      <article class="blog-card">
+        <img class="blog-card-thumb" src="https://static.wixstatic.com/media/c3c64f_642ec65cbb79457fbe8f28912c68f8c1~mv2.png/v1/fit/w_800,h_400,al_c,q_80/file.png" alt="Client Readiness ERP" loading="lazy" onerror="this.style.display='none'">
+        <div class="blog-card-body">
+          <div class="blog-card-date">Apr 16, 2026</div>
+          <h2 class="blog-card-title"><a href="https://www.bcteam1.com/post/the-most-overlooked-factor-in-erp-success-isn-t-the-system-it-s-client-readiness" target="_blank" rel="noopener">The Most Overlooked Factor in ERP Success Isn't the System — It's Client Readiness</a></h2>
+          <p class="blog-card-desc">Most ERP projects don't fail during implementation — they fail before they start. The missing piece is client readiness. What it really means to be ready for an ERP project.</p>
+          <a href="https://www.bcteam1.com/post/the-most-overlooked-factor-in-erp-success-isn-t-the-system-it-s-client-readiness" target="_blank" rel="noopener" class="blog-card-link">Read article →</a>
+        </div>
+      </article>
+
+      <!-- Post 18 -->
+      <article class="blog-card">
+        <img class="blog-card-thumb" src="https://static.wixstatic.com/media/c3c64f_ec618e105b4445669485d1f9b5362091~mv2.png/v1/fit/w_800,h_400,al_c,q_80/file.png" alt="Align ERP Finance" loading="lazy" onerror="this.style.display='none'">
+        <div class="blog-card-body">
+          <div class="blog-card-date">Apr 15, 2026</div>
+          <h2 class="blog-card-title"><a href="https://www.bcteam1.com/post/how-to-align-erp-with-your-finance-processes-for-faster-close" target="_blank" rel="noopener">How to Align ERP with Your Finance Processes for Faster Close</a></h2>
+          <p class="blog-card-desc">Most finance teams don't struggle with closing because they lack an ERP — they struggle because it doesn't match how finance actually works. How to fix it with Business Central.</p>
+          <a href="https://www.bcteam1.com/post/how-to-align-erp-with-your-finance-processes-for-faster-close" target="_blank" rel="noopener" class="blog-card-link">Read article →</a>
+        </div>
+      </article>
+
+      <!-- Post 19 -->
+      <article class="blog-card">
+        <img class="blog-card-thumb" src="https://static.wixstatic.com/media/c3c64f_6bab1a67c817430b82e885782eeeb01f~mv2.png/v1/fit/w_800,h_400,al_c,q_80/file.png" alt="GP to BC 2026" loading="lazy" onerror="this.style.display='none'">
+        <div class="blog-card-body">
+          <div class="blog-card-date">Apr 14, 2026</div>
+          <h2 class="blog-card-title"><a href="https://www.bcteam1.com/post/dynamics-gp-to-business-central-in-2026-a-practical-guide-for-finance-leaders" target="_blank" rel="noopener">Dynamics GP to Business Central in 2026: A Practical Guide for Finance Leaders</a></h2>
+          <p class="blog-card-desc">GP is in maintenance mode with no meaningful new features, AI, or Copilot innovation. A practical guide for finance leaders planning the migration to Business Central.</p>
+          <a href="https://www.bcteam1.com/post/dynamics-gp-to-business-central-in-2026-a-practical-guide-for-finance-leaders" target="_blank" rel="noopener" class="blog-card-link">Read article →</a>
+        </div>
+      </article>
+
+      <!-- Post 20 -->
+      <article class="blog-card">
+        <img class="blog-card-thumb" src="https://static.wixstatic.com/media/c3c64f_8dde3e04b73e4108bc0f31f64667bb06~mv2.png/v1/fit/w_800,h_400,al_c,q_80/file.png" alt="ERP Rescue Checklist" loading="lazy" onerror="this.style.display='none'">
+        <div class="blog-card-body">
+          <div class="blog-card-date">Apr 09, 2026</div>
+          <h2 class="blog-card-title"><a href="https://www.bcteam1.com/post/erp-rescue-checklist-what-every-cfo-should-ask-before-taking-action" target="_blank" rel="noopener">ERP Rescue Checklist: What Every CFO Should Ask Before Taking Action</a></h2>
+          <p class="blog-card-desc">Before overhauling your ERP, ask the right questions. Our ERP Rescue Checklist helps CFOs uncover data gaps, eliminate workarounds, and align Business Central with real workflows.</p>
+          <a href="https://www.bcteam1.com/post/erp-rescue-checklist-what-every-cfo-should-ask-before-taking-action" target="_blank" rel="noopener" class="blog-card-link">Read article →</a>
+        </div>
+      </article>
+
+    </div><!-- end blog-grid -->
   </section>
 
+  <!-- CTA -->
   <section class="audit-section" aria-labelledby="blog-cta">
     <div class="audit-grid">
       <div>
-        <div class="section-label" style="color:rgba(255,255,255,0.4);">Get Expert Help</div>
+        <div class="section-label" style="color:rgba(255,255,255,0.4);">Talk to an Expert</div>
         <h2 class="section-title" id="blog-cta" style="color:#fff;font-size:clamp(24px,3vw,36px);">Ready to fix your Business Central?</h2>
-        <p style="color:rgba(255,255,255,0.6);font-size:16px;line-height:1.7;margin-top:12px;">
-          Every article leads to the same place — a BC environment that works for your business. Book a free 30-minute call with Taylor.
-        </p>
+        <p style="color:rgba(255,255,255,0.6);font-size:16px;line-height:1.7;margin-top:12px;">Book a free 30-minute call with Taylor. No sales pitch — just honest advice about your specific BC environment.</p>
       </div>
       <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Book Free Call →</a>
     </div>
   </section>
 
 </main>
+
 <div id="footer-placeholder"></div>
 <script src="/components.js"></script>
-<script>renderNavbar("blog"); renderFooter();</script>
+<script>renderNavbar('blog'); renderFooter();</script>
 </body>
 </html>
