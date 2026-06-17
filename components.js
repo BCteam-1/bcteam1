@@ -14,7 +14,7 @@ const W3F_KEY_SCORECARD= '03a2b70c-6628-409d-9379-ba9129baec1d';  // same accoun
 const W3F_KEY_EXIT     = '03a2b70c-6628-409d-9379-ba9129baec1d';       // same account, third form key
 
 // ── Analytics IDs — fill in after account setup ──────
-const GA4_ID       = 'G-XXXXXXXXXX';   // Google Analytics 4
+const GA4_ID       = 'G-EXRX216X97';   // Google Analytics 4
 const CLARITY_ID   = 'x7l87wky7t';     // Microsoft Clarity project ID
 const LI_PARTNER   = '1234567';        // LinkedIn Insight Tag partner ID
 
