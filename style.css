@@ -216,8 +216,8 @@ ul { list-style: none; }
 
 /* ── CLIENTS SECTION ─────────────────────────────────── */
 .clients-section { background: #fff; padding: 52px 24px; border-bottom: 1px solid #eee; }
-.clients-label { text-align: center; font-family: 'Nunito Sans', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 1px; text-transform: uppercase; color: #999; margin-bottom: 36px; }
-.clients-row { max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: nowrap; gap: 40px; align-items: center; justify-content: center; overflow-x: auto; padding-bottom: 4px; }
+.clients-label { text-align: center; font-family: 'Nunito Sans', sans-serif; font-weight: 800; font-size: 20px; letter-spacing: 0.5px; text-transform: uppercase; color: #777; margin-bottom: 40px; }
+.clients-row { max-width: 1400px; margin: 0 auto; display: flex; flex-wrap: nowrap; gap: 32px; align-items: center; justify-content: center; overflow-x: auto; padding-bottom: 4px; }
 .client-name { font-family: 'Nunito Sans', sans-serif; font-weight: 800; font-size: 16px; color: #ccc; letter-spacing: 1px; }
 
 /* ── TESTIMONIALS ────────────────────────────────────── */
