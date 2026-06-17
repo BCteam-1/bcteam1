@@ -16,7 +16,7 @@ const W3F_KEY_EXIT     = '03a2b70c-6628-409d-9379-ba9129baec1d';       // same a
 // ── Analytics IDs — fill in after account setup ──────
 const GA4_ID       = 'G-EXRX216X97';   // Google Analytics 4
 const CLARITY_ID   = 'x7l87wky7t';     // Microsoft Clarity project ID
-const LI_PARTNER   = '1234567';        // LinkedIn Insight Tag partner ID
+const LI_PARTNER   = '9501580';        // LinkedIn Insight Tag partner ID
 
 // =====================================================
 
@@ -261,7 +261,7 @@ function renderFooter() {
     })(window,document,'clarity','script',CLARITY_ID);
   }
   // LinkedIn Insight Tag
-  if (LI_PARTNER && LI_PARTNER !== '1234567') {
+  if (LI_PARTNER && LI_PARTNER !== 'XXXXXXX') {
     window._linkedin_partner_id = LI_PARTNER;
     window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
     window._linkedin_data_partner_ids.push(LI_PARTNER);
