@@ -156,8 +156,13 @@ function renderFooter() {
     </footer>`;
 }
 
-// ── EXIT INTENT ─────────────────────────────────────────
+// ── EXIT INTENT (homepage only) ─────────────────────────
 (function initExitIntent() {
+  // Only run on the homepage
+  const path = window.location.pathname;
+  const isHome = path === '/' || path === '/index.html' || path === '';
+  if (!isHome) return;
+
   let fired = false;
   const STORAGE_KEY = 'bc_ei_dismissed';
 
@@ -169,6 +174,8 @@ function renderFooter() {
   }
 
   function injectOverlay() {
+    if (fired || alreadyDismissed()) return;
+    fired = true;
     const div = document.createElement('div');
     div.className = 'ei-overlay';
     div.id = 'ei-overlay';
@@ -177,7 +184,7 @@ function renderFooter() {
         <button class="ei-close" id="ei-close" aria-label="Close">✕</button>
         <div class="ei-icon">📋</div>
         <h3>Before you go — free AR checklist</h3>
-        <p>12 things your AR process should be doing automatically. Used by Controllers across Canada to find hidden cash flow leaks.</p>
+        <p>12 things your AR process should be doing automatically. Used by Controllers across North America to find hidden cash flow leaks.</p>
         <div class="ei-form" id="ei-form">
           <input type="text" id="ei-name" placeholder="Your first name" autocomplete="given-name" required>
           <input type="email" id="ei-email" placeholder="Work email" autocomplete="email" required>
@@ -226,19 +233,24 @@ function renderFooter() {
 
   document.addEventListener('DOMContentLoaded', () => {
     if (alreadyDismissed()) return;
+
     // Desktop: mouse leaves viewport toward top
     document.addEventListener('mouseleave', e => {
-      if (fired || alreadyDismissed()) return;
-      if (e.clientY < 10) { fired = true; injectOverlay(); }
+      if (e.clientY < 10) injectOverlay();
     });
-    // Mobile: scroll back up 300px after scrolling down 600px
-    let maxScroll = 0, mFired = false;
-    window.addEventListener('scroll', () => {
-      if (mFired || alreadyDismissed()) return;
-      const s = window.scrollY;
-      if (s > maxScroll) maxScroll = s;
-      if (maxScroll > 600 && s < maxScroll - 300) { mFired = true; fired = true; injectOverlay(); }
-    }, { passive: true });
+
+    // All devices: trigger when footer scrolls into view
+    const footerObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setTimeout(injectOverlay, 600);
+          footerObserver.disconnect();
+        }
+      });
+    }, { threshold: 0.1 });
+
+    const footer = document.querySelector('footer') || document.getElementById('footer-placeholder');
+    if (footer) footerObserver.observe(footer);
   });
 })();
 
