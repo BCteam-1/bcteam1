@@ -18,6 +18,12 @@ const GA4_ID       = 'G-EXRX216X97';   // Google Analytics 4
 const CLARITY_ID   = 'x7l87wky7t';     // Microsoft Clarity project ID
 const LI_PARTNER   = '9501580';        // LinkedIn Insight Tag partner ID
 
+// ── EmailJS — AR Checklist auto-reply ────────────────
+const EJS_PUBLIC_KEY  = 'ZqFO5H0lbSToPETig';
+const EJS_SERVICE_ID  = 'service_cs9ljml';
+const EJS_TEMPLATE_ID = 'template_3gybczo';
+const CHECKLIST_URL   = 'https://bcteam1.com/assets/ar-checklist.pdf';
+
 // =====================================================
 
 function renderNavbar(activePage) {
@@ -219,16 +225,38 @@ function renderFooter() {
     if (!name || !email || !consent) { alert('Please fill in all fields and accept the consent checkbox.'); return; }
     const btn = document.getElementById('ei-submit');
     btn.disabled = true; btn.textContent = 'Sending…';
-    const payload = { access_key: W3F_KEY_EXIT, subject: 'AR Checklist Request — ' + name, from_name: 'BC Team Website', name, email, botcheck: '' };
-    fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(payload) })
-      .then(r => r.json()).then(() => {
-        const form = document.getElementById('ei-form');
-        const skip = document.querySelector('.ei-skip');
-        if (form) form.innerHTML = '<div class="ei-success"><h4>✓ On its way!</h4><p>Check your inbox — the checklist will arrive within a few minutes.</p></div>';
-        if (skip) skip.style.display = 'none';
-        dismiss();
-        setTimeout(closeEI, 4000);
-      }).catch(() => { btn.disabled = false; btn.textContent = 'Send me the checklist →'; });
+
+    // Load EmailJS SDK if not already loaded, then send
+    function sendViaEmailJS() {
+      emailjs.init(EJS_PUBLIC_KEY);
+      const templateParams = {
+        to_name:       name,
+        to_email:      email,
+        checklist_url: CHECKLIST_URL,
+        reply_to:      EMAIL,
+      };
+      // Send auto-reply to visitor
+      emailjs.send(EJS_SERVICE_ID, EJS_TEMPLATE_ID, templateParams)
+        .then(() => {
+          const form = document.getElementById('ei-form');
+          const skip = document.querySelector('.ei-skip');
+          if (form) form.innerHTML = '<div class="ei-success"><h4>✓ On its way!</h4><p>Check your inbox — the checklist will arrive within a few minutes.</p></div>';
+          if (skip) skip.style.display = 'none';
+          dismiss();
+          setTimeout(closeEI, 4000);
+        })
+        .catch(() => { btn.disabled = false; btn.textContent = 'Send me the checklist →'; });
+    }
+
+    if (typeof emailjs === 'undefined') {
+      const s = document.createElement('script');
+      s.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
+      s.onload = sendViaEmailJS;
+      s.onerror = () => { btn.disabled = false; btn.textContent = 'Send me the checklist →'; };
+      document.head.appendChild(s);
+    } else {
+      sendViaEmailJS();
+    }
   }
 
   document.addEventListener('DOMContentLoaded', () => {
