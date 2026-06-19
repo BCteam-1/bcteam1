@@ -338,7 +338,7 @@
 <script>
 (function() {
   var BOOK_URL = 'https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2';
-  var W3F_KEY  = 'WEB3FORMS_KEY_SCORECARD'; // Replace with your web3forms key
+  var W3F_KEY  = '03a2b70c-6628-409d-9379-ba9129baec1d';
 
   var CATS = ['Process & Automation','Visibility & Reporting','Team & Capacity','Collections Effectiveness'];
 
@@ -614,30 +614,70 @@
   }
 
   function sendEmail(cb){
-    if(!W3F_KEY||W3F_KEY==='WEB3FORMS_KEY_SCORECARD'){cb();return;}
     var total=0; Object.keys(answers).forEach(function(k){total+=answers[k].s;});
     var pct=Math.round((total/(questions.length*3))*100);
     var level=pct>=65?'HIGH RISK':pct>=35?'MEDIUM RISK':'LOW RISK';
-    var payload={
+    var levelNote=pct>=65
+      ?'Your AR process has significant gaps that are likely costing you measurable cash flow. RAP was built specifically for situations like this.'
+      :pct>=35
+      ?'Your AR process has room for improvement. Targeted automation in the areas flagged below could meaningfully reduce your DSO.'
+      :'Your AR process is performing reasonably well. RAP can help close the remaining gaps and protect the gains you\'ve made.';
+
+    // Email 1 — Internal notification to BC Team
+    var internalPayload={
       access_key:W3F_KEY,
-      subject:'🎯 New AR Scorecard Lead — '+level+' ('+pct+'%) — '+lead.company,
+      subject:'\uD83C\uDFAF New AR Scorecard Lead \u2014 '+level+' ('+pct+'%) \u2014 '+lead.company,
       from_name:'BC Team AR Scorecard',
       replyto:lead.email,
+      to:'bc@bcteam1.com',
       name:lead.name, email:lead.email, company:lead.company,
       erp_system:lead.system||'Not specified',
       total_ar:lead.totalAR?'$'+lead.totalAR:'Not provided',
       ar_over_60:lead.over60?'$'+lead.over60:'Not provided',
       ar_over_90:lead.over90?'$'+lead.over90:'Not provided',
-      risk_score:pct+'% — '+level,
+      risk_score:pct+'% \u2014 '+level,
       full_scorecard:buildScoreSummary(),
-      casl_consent:'Yes — explicit consent given on scorecard form',
+      casl_consent:'Yes \u2014 explicit consent given on scorecard form',
       botcheck:''
     };
+
+    // Email 2 — Results email to the visitor
+    var visitorPayload={
+      access_key:W3F_KEY,
+      subject:'Your AR Health Scorecard Results \u2014 '+level+' ('+pct+'%)',
+      from_name:'Taylor McEachnie \u2014 BC Team',
+      replyto:'bc@bcteam1.com',
+      to:lead.email,
+      name:lead.name,
+      email:'bc@bcteam1.com',
+      message:'Hi '+lead.name+',\n\nThank you for completing the BC Team AR Health Scorecard. Here are your results.\n\n'
+        +'--- YOUR RESULTS ---\n'
+        +'Company: '+lead.company+'\n'
+        +'AR Risk Score: '+pct+'% \u2014 '+level+'\n\n'
+        +levelNote+'\n\n'
+        +'--- SCORECARD BREAKDOWN ---\n'
+        +buildScoreSummary()+'\n\n'
+        +'--- NEXT STEP ---\n'
+        +'If you\'d like to walk through these results and see how RAP could improve your AR process, book a free 30-minute call with me directly:\n'
+        +'https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2\n\n'
+        +'Taylor McEachnie\nPresident & CEO, BC Team\nbc@bcteam1.com\nbcteam1.com',
+      botcheck:''
+    };
+
+    var sent=0;
+    function done(){ sent++; if(sent>=2) cb(); }
+
     fetch('https://api.web3forms.com/submit',{
       method:'POST',
       headers:{'Content-Type':'application/json','Accept':'application/json'},
-      body:JSON.stringify(payload)
-    }).then(function(r){return r.json();}).then(function(){cb();}).catch(function(){cb();});
+      body:JSON.stringify(internalPayload)
+    }).then(function(r){return r.json();}).then(done).catch(done);
+
+    fetch('https://api.web3forms.com/submit',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify(visitorPayload)
+    }).then(function(r){return r.json();}).then(done).catch(done);
   }
 
   render();
