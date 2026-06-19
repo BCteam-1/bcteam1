@@ -229,10 +229,20 @@
       <div class="section-label">Pricing</div>
       <h2 class="section-title">Simple, transparent pricing.</h2>
       <p class="section-sub">Less than one hour of your finance team's time chasing invoices manually — every single month.</p>
+      <!-- Billing toggle -->
+      <div style="display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:36px;">
+        <span id="toggle-label-monthly" style="font-size:15px;font-weight:700;font-family:'Nunito Sans',sans-serif;color:var(--gray-dark);">Monthly</span>
+        <div id="billing-toggle" onclick="toggleBilling()" style="width:52px;height:28px;background:var(--red);border-radius:14px;cursor:pointer;position:relative;transition:background 0.2s;flex-shrink:0;">
+          <div id="toggle-knob" style="position:absolute;top:3px;left:3px;width:22px;height:22px;background:#fff;border-radius:50%;transition:transform 0.2s;"></div>
+        </div>
+        <span id="toggle-label-annual" style="font-size:15px;font-weight:700;font-family:'Nunito Sans',sans-serif;color:#aaa;">Annual <span style="background:#e8f5e9;color:#2e7d32;font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px;margin-left:4px;">Save 25%</span></span>
+      </div>
+
       <div class="pricing-grid">
         <div class="pricing-card">
           <div class="pricing-label">Standard</div>
-          <div class="pricing-price"><span>$</span>400<sub>/mo</sub></div>
+          <div class="pricing-price"><span>$</span><span id="price-standard">400</span><sub>/mo</sub></div>
+          <p id="price-standard-note" class="pricing-desc" style="font-size:13px;color:#aaa;margin-top:-8px;margin-bottom:8px;min-height:18px;"></p>
           <p class="pricing-desc">Everything you need to automate AR for a mid-sized BC environment.</p>
           <ul class="pricing-features">
             <li>Automated statement generation &amp; delivery</li>
@@ -252,7 +262,8 @@
         <div class="pricing-card featured">
           <div class="pricing-badge">Most Popular</div>
           <div class="pricing-label">Growth</div>
-          <div class="pricing-price"><span>$</span>600<sub>/mo</sub></div>
+          <div class="pricing-price"><span>$</span><span id="price-growth">600</span><sub>/mo</sub></div>
+          <p id="price-growth-note" class="pricing-desc" style="font-size:13px;color:#aaa;margin-top:-8px;margin-bottom:8px;min-height:18px;"></p>
           <p class="pricing-desc">Standard + cash flow forecasting + advanced reporting for CFOs and controllers.</p>
           <ul class="pricing-features">
             <li>Everything in Standard</li>
@@ -270,7 +281,24 @@
           <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%;text-align:center;">Book a Demo</a>
         </div>
       </div>
-      <p style="color:#aaa;font-size:13px;margin-top:24px;">All prices USD. Annual billing available. Canadian customers billed in CAD at current exchange.</p>
+      <p style="color:#aaa;font-size:13px;margin-top:24px;">All prices USD. Canadian customers billed in CAD at current exchange.</p>
+
+      <script>
+        var isAnnual = false;
+        function toggleBilling() {
+          isAnnual = !isAnnual;
+          var knob = document.getElementById('toggle-knob');
+          var labelMonthly = document.getElementById('toggle-label-monthly');
+          var labelAnnual = document.getElementById('toggle-label-annual');
+          knob.style.transform = isAnnual ? 'translateX(24px)' : 'translateX(0)';
+          labelMonthly.style.color = isAnnual ? '#aaa' : 'var(--gray-dark)';
+          labelAnnual.style.color = isAnnual ? 'var(--gray-dark)' : '#aaa';
+          document.getElementById('price-standard').textContent = isAnnual ? '300' : '400';
+          document.getElementById('price-growth').textContent = isAnnual ? '450' : '600';
+          document.getElementById('price-standard-note').textContent = isAnnual ? 'Billed annually — $3,600/yr' : '';
+          document.getElementById('price-growth-note').textContent = isAnnual ? 'Billed annually — $5,400/yr' : '';
+        }
+      </script>
     </div>
   </section>
 
