@@ -57,6 +57,11 @@
   ],
   "redirects": [
     {
+      "source": "/post/erp-for-construction-companies-what-business-central-can-and-cant-do",
+      "destination": "/pages/blog/erp-for-construction-companies-what-business-central-can-and-cant-do-out-of-the-box.html",
+      "permanent": true
+    },
+    {
       "source": "/pages/home.html",
       "destination": "/",
       "permanent": true
