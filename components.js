@@ -226,6 +226,25 @@ function renderFooter() {
     const btn = document.getElementById('ei-submit');
     btn.disabled = true; btn.textContent = 'Sending…';
 
+    // Notify BC Team via Web3Forms
+    function notifyBCTeam() {
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          access_key: W3F_KEY_EXIT,
+          subject: '📋 New AR Checklist Lead — ' + name,
+          from_name: 'BC Team Website',
+          replyto: email,
+          name: name,
+          email: email,
+          source: 'AR Checklist Pop-up — bcteam1.com',
+          casl_consent: 'Yes — explicit consent given on checklist pop-up form',
+          botcheck: ''
+        })
+      }).catch(() => {}); // Silent fail — visitor experience unaffected
+    }
+
     // Load EmailJS SDK if not already loaded, then send
     function sendViaEmailJS() {
       emailjs.init(EJS_PUBLIC_KEY);
@@ -238,6 +257,7 @@ function renderFooter() {
       // Send auto-reply to visitor
       emailjs.send(EJS_SERVICE_ID, EJS_TEMPLATE_ID, templateParams)
         .then(() => {
+          notifyBCTeam(); // Notify BC Team of new lead
           const form = document.getElementById('ei-form');
           const skip = document.querySelector('.ei-skip');
           if (form) form.innerHTML = '<div class="ei-success"><h4>✓ On its way!</h4><p>Check your inbox — the checklist will arrive within a few minutes.</p></div>';
