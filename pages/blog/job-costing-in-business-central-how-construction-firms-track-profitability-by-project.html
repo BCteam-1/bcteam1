@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Costing in Business Central: How Construction Firms Track Profitability by Project | BC Team</title>
+  <meta name="description" content="Most construction companies don't lose money on bad projects. They lose it on projects they thought were fine. Here's how Business Central's job costing module gives you the visibility to know — while there's still time to act.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.bcteam1.com/pages/blog/job-costing-in-business-central-how-construction-firms-track-profitability-by-project.html">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.bcteam1.com/pages/blog/job-costing-in-business-central-how-construction-firms-track-profitability-by-project.html">
+  <meta property="og:title" content="Job Costing in Business Central: How Construction Firms Track Profitability by Project | BC Team">
+  <meta property="og:description" content="Most construction companies don't lose money on bad projects. They lose it on projects they thought were fine. Here's how to fix that with Business Central.">
+  <meta property="og:image" content="https://www.bcteam1.com/assets/blog/job-costing-business-central-construction.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.bcteam1.com/assets/blog/job-costing-business-central-construction.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap"></noscript>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .post-body h2 { font-family: 'Nunito Sans', sans-serif; font-weight: 900; font-size: clamp(20px, 2.5vw, 26px); color: var(--gray-dark); margin: 2.5rem 0 1rem; letter-spacing: -0.3px; }
+    .post-body p { font-size: 17px; line-height: 1.8; color: #374151; margin-bottom: 1.25rem; }
+    .post-body ul.check-list { list-style: none; padding: 0; margin: 0 0 1.5rem; }
+    .post-body ul.check-list li { font-size: 16px; line-height: 1.7; color: #374151; padding: 0.3rem 0 0.3rem 2rem; position: relative; }
+    .post-body ul.check-list.yes li::before { content: "✓"; position: absolute; left: 0; top: 0.3rem; width: 20px; height: 20px; background: #d1fae5; border-radius: 50%; text-align: center; font-size: 11px; font-weight: 700; color: #065f46; line-height: 20px; }
+    .post-body ul.check-list.no li::before { content: "✕"; position: absolute; left: 0; top: 0.3rem; width: 20px; height: 20px; background: #fee2e2; border-radius: 50%; text-align: center; font-size: 11px; font-weight: 700; color: #991b1b; line-height: 20px; }
+    .post-body ul.plain-list { list-style: none; padding: 0; margin: 0 0 1.5rem; }
+    .post-body ul.plain-list li { font-size: 16px; line-height: 1.7; color: #374151; padding: 0.3rem 0 0.3rem 1.5rem; position: relative; }
+    .post-body ul.plain-list li::before { content: "→"; position: absolute; left: 0; color: var(--red); font-weight: 700; }
+    .inline-cta { background: var(--black); border-radius: 12px; padding: 28px 32px; margin: 2.5rem 0; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
+    .inline-cta h3 { font-family: 'Nunito Sans', sans-serif; font-weight: 900; font-size: 18px; color: #fff; margin-bottom: 6px; }
+    .inline-cta p { font-size: 14px; color: rgba(255,255,255,0.6); margin: 0; line-height: 1.6; }
+    .inline-cta .btn { white-space: nowrap; }
+    .stat-callout { background: #f8fafc; border-left: 4px solid var(--red); border-radius: 0 8px 8px 0; padding: 20px 24px; margin: 2rem 0; }
+    .stat-callout .stat-number { font-family: 'Nunito Sans', sans-serif; font-weight: 900; font-size: 36px; color: var(--red); line-height: 1; margin-bottom: 6px; }
+    .stat-callout .stat-label { font-size: 14px; color: #6b7280; line-height: 1.5; }
+    .scenario-box { background: #fff8f0; border: 1px solid #fed7aa; border-radius: 10px; padding: 24px 28px; margin: 2rem 0; }
+    .scenario-box .scenario-label { font-family: 'Nunito Sans', sans-serif; font-weight: 800; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: #c2410c; margin-bottom: 10px; }
+    .scenario-box p { font-size: 15px; color: #374151; margin-bottom: 0; }
+  </style>
+</head>
+<body>
+
+<!-- ALERT BANNER -->
+<div class="bc-alert-banner">
+  <div class="bc-alert-banner-inner">
+    <span class="bc-alert-text">🔥 <strong>Free BC Health Check</strong> — Find out if your Business Central is silently costing you money</span>
+    <div class="alert-btns">
+      <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="alert-btn alert-btn-primary">Book Free 30-Min Call</a>
+      <a href="/pages/bc-rescue-audit.html" class="alert-btn alert-btn-outline">See Rescue Audit →</a>
+    </div>
+  </div>
+</div>
+<div id="navbar-placeholder"></div>
+<main>
+
+  <article>
+    <!-- HERO -->
+    <section style="background:var(--black);padding:56px 24px 48px;">
+      <div style="max-width:760px;margin:0 auto;">
+        <div class="breadcrumb" style="margin-bottom:20px;">
+          <a href="/index.html" style="color:rgba(255,255,255,0.4);">Home</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <a href="/pages/blog.html" style="color:rgba(255,255,255,0.4);">Blog</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <span style="color:rgba(255,255,255,0.6);">Job Costing in Business Central...</span>
+        </div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:14px;font-family:'Nunito Sans',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:1px;">June 23, 2026</div>
+        <h1 style="color:#fff;font-size:clamp(24px,3.5vw,44px);line-height:1.2;font-family:'Nunito Sans',sans-serif;font-weight:900;margin-bottom:20px;">Job Costing in Business Central: How Construction Firms Track Profitability by Project</h1>
+        <p style="color:rgba(255,255,255,0.65);font-size:17px;line-height:1.7;max-width:660px;">Most construction companies don't lose money on bad projects. They lose it on projects they thought were fine — right up until month-end close revealed otherwise. Here's how to stop that from happening.</p>
+        <div style="margin-top:24px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;">
+          <span style="font-size:13px;color:rgba(255,255,255,0.4);">By <strong style="color:rgba(255,255,255,0.7);">Taylor McEachnie</strong>, President &amp; CEO</span>
+          <span style="font-size:13px;color:rgba(255,255,255,0.4);">5 min read</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- COVER IMAGE -->
+    <div style="max-width:860px;margin:0 auto 40px;padding:0 24px;">
+      <img
+        src="/assets/blog/job-costing-business-central-construction.png"
+        alt="Job Costing in Business Central: How Construction Firms Track Profitability by Project"
+        style="width:100%;border-radius:12px;display:block;"
+        loading="eager"
+      >
+    </div>
+
+    <!-- BODY -->
+    <section style="padding:8px 24px 64px;background:#fff;">
+      <div style="max-width:760px;margin:0 auto;" class="post-body">
+
+        <p>A $40 million general contractor came to us two years ago with a problem that had been hiding in plain sight. They had 14 active projects. Twelve were hitting their margin targets on paper. Two were hemorrhaging money. By the time the numbers surfaced through their month-end process, one of those jobs had already burned past break-even — and the team had been making resourcing decisions for the next project based on the assumption that cash was coming in on schedule.</p>
+
+        <p>It wasn't a cash flow problem. It was a visibility problem. And it's the most common pattern we see in construction businesses that haven't set up their ERP to think the way a job-based business actually works.</p>
+
+        <p>Job costing in Business Central — when it's configured properly — solves this. Not in theory. In practice, at the job level, in real time. Here's what that actually looks like.</p>
+
+        <h2>Why standard accounting fails construction</h2>
+
+        <p>Traditional accounting is designed for businesses where revenue and cost flow through predictable cycles. A product ships. An invoice is raised. The margin is what it is. The books close, and you move on to next month.</p>
+
+        <p>Construction doesn't work like that. Your revenue is contracted upfront but earned progressively. Your costs arrive in waves — materials in week two, labour through the whole job, subcontractors when they're done, equipment rentals that get disputed. A project that looked like it was running at 28% gross margin in month one might actually be sitting at 11% by month three, not because anything went wrong in month three, but because the early numbers were incomplete.</p>
+
+        <p>The default response to this is more spreadsheets. Project managers build their own tracking. Finance builds theirs. At month-end, someone spends two days reconciling the two. This is how you arrive at a situation where a project is flagged as problematic six weeks after the point where you could have done anything about it.</p>
+
+        <div class="stat-callout">
+          <div class="stat-number">6–8 weeks</div>
+          <div class="stat-label">The average lag between a cost overrun occurring and a construction firm's finance team becoming aware of it — when job costing isn't integrated into the ERP. By that point, the window to course-correct has usually closed.</div>
+        </div>
+
+        <h2>What Business Central's job costing module actually does</h2>
+
+        <p>Business Central structures job costing around a concept called the <strong>Job Card</strong> — a single record that connects every financial event associated with a project: purchase orders, vendor invoices, time entries, material consumption, subcontractor costs, and billing. When it's set up correctly, the job card becomes the single source of truth for a project's financial position.</p>
+
+        <p>The core capabilities that matter for a construction business:</p>
+
+        <ul class="check-list yes">
+          <li><strong>Budget vs. actual by cost category</strong> — labour, materials, subcontract, and equipment tracked separately against the original budget at the task level, not just the total job level</li>
+          <li><strong>WIP (Work in Progress) accounting</strong> — BC handles the accounting entries for costs incurred but not yet billed, and revenue earned but not yet invoiced, so your P&amp;L doesn't misrepresent where you actually are mid-project</li>
+          <li><strong>Purchase order commitment tracking</strong> — when a PO is raised, BC records the committed cost before the invoice arrives, which means your cost position reflects what you've ordered, not just what's been billed</li>
+          <li><strong>Real-time job profitability reports</strong> — the Job Profitability Overview gives you revenue, cost, gross profit, and margin percentage per job, updated as transactions post</li>
+          <li><strong>Multi-phase job structure</strong> — you can break a job into tasks and subtasks, so a $5M build isn't tracked as a single number but as foundations, structure, fitout, and commissioning — each with its own budget and cost line</li>
+          <li><strong>Progress billing integration</strong> — invoices raised against the job reduce the outstanding revenue balance and update the earned-to-date position automatically</li>
+        </ul>
+
+        <p>None of this is magic. But when it replaces a combination of spreadsheets, a disconnected project management tool, and a finance system that only speaks in GL codes — the improvement in visibility is dramatic.</p>
+
+        <h2>The configuration decisions that make or break it</h2>
+
+        <p>Here's what most people don't tell you: Business Central's job costing module ships with enough flexibility that two businesses can implement it completely differently and get completely different results from identical data.</p>
+
+        <p>The decisions that matter most:</p>
+
+        <p><strong>Job structure depth.</strong> You can track a project as a single job, or you can break it into tasks with sub-tasks. For simple projects, a flat structure is fine. For a $20M commercial build with 30 cost codes, a shallow job structure means your "budget vs actual" report is useless in practice — everything rolls up to a number that's too aggregated to act on. Get the task hierarchy right at setup, before any costs post.</p>
+
+        <p><strong>WIP method selection.</strong> BC offers multiple WIP calculation methods — percentage of completion, completed contract, cost of sales, and others. The right choice depends on your contract type, your revenue recognition policy, and what your auditors expect. We've seen firms implement Business Central, go live on the wrong WIP method, and spend the next six months explaining P&amp;L variances that didn't actually exist in the underlying business. This is a decision that needs finance and operations in the same room before go-live.</p>
+
+        <p><strong>Cost type mapping.</strong> How you categorise costs in BC determines what you can report on later. If labour from three different crew types all posts to a single "labour" cost type, you can't identify which resource category is running over budget. Set up your cost type structure to match the granularity you actually need for project decisions — not the minimum required to satisfy the accountants.</p>
+
+        <p><strong>Purchase order integration.</strong> By default, a PO doesn't appear in your job cost position until the invoice is matched and posted. If you're buying materials months ahead of installation, your committed cost position looks artificially clean. We always configure jobs with committed cost visibility turned on, so the job card reflects reality — including what's been ordered but not yet billed.</p>
+
+        <!-- INLINE CTA -->
+        <div class="inline-cta">
+          <div>
+            <h3>Is your BC job costing set up to catch problems early?</h3>
+            <p>Book a free 30-min call. We'll take a look at your current configuration and tell you where the gaps are — no obligation.</p>
+          </div>
+          <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="btn btn-primary">Book Free Call →</a>
+        </div>
+
+        <h2>What good looks like in practice</h2>
+
+        <p>When job costing is working properly, a project manager and a CFO should be able to look at the same number in Business Central and have the same conversation — not a negotiation about whose spreadsheet is right.</p>
+
+        <div class="scenario-box">
+          <div class="scenario-label">Real scenario — $40M General Contractor</div>
+          <p>After restructuring their job cards to include task-level cost budgets and enabling committed cost tracking on all POs, this client's finance team moved from a three-week month-end reconciliation cycle to posting final job profitability reports within four days of period close. More importantly, project managers started catching cost overruns during the job — not after it — because the same numbers were visible to both teams in real time.</p>
+        </div>
+
+        <p>The difference between a business that can do this and one that can't usually isn't the platform. It's whether the platform has been set up to reflect how the business actually operates — right down to which GL account a subcontractor invoice hits and what cost type it flows to in the job card.</p>
+
+        <h2>The reports that construction decision-makers actually use</h2>
+
+        <p>Business Central ships with several job-related reports. The ones we see finance leaders and operations directors use consistently:</p>
+
+        <ul class="plain-list">
+          <li><strong>Job Profitability Overview</strong> — revenue, cost, gross profit, and margin across all active jobs. Your CFO's weekly starting point.</li>
+          <li><strong>Job Budget vs. Actual</strong> — cost performance at the task level against original budget. Your project manager's daily reference.</li>
+          <li><strong>WIP to G/L Reconciliation</strong> — confirms that what's posted in the job module matches what's in the general ledger. Essential for month-end and your auditors.</li>
+          <li><strong>Job Cost Transaction Detail</strong> — every cost posted to a job, filterable by type, date, vendor, or resource. The one you pull when something doesn't add up.</li>
+          <li><strong>Job Actual to Budget (Cost)%</strong> — a percentage-based view of cost performance, useful for flagging which jobs are absorbing costs faster than planned relative to the work done.</li>
+        </ul>
+
+        <p>Power BI extends this considerably. We've built dashboards for construction clients that show real-time margin by project, cost variance by category across the portfolio, and cash flow timing against expected billing milestones — all pulling directly from Business Central with no manual data export required.</p>
+
+        <h2>Where the gaps are — and how to close them</h2>
+
+        <p>Business Central's standard job module doesn't handle everything a construction business needs. The gaps are real and worth knowing about before you discover them mid-implementation:</p>
+
+        <ul class="check-list yes">
+          <li><strong>Progress claim schedules</strong> — not standard. Requires either a customisation or an AppSource extension specifically built for construction billing.</li>
+          <li><strong>Retention management</strong> — amounts held from subcontractors and amounts clients are holding from you both require custom handling to track properly in BC.</li>
+          <li><strong>Variation order tracking</strong> — BC has no native variation management workflow. Variations need to be tracked outside the system or via extension until they're formally approved and added to the job budget.</li>
+          <li><strong>Site timesheets with mobile capture</strong> — the standard timesheet functionality is functional but not designed for field crews. Third-party integrations (including Microsoft's own Field Service) solve this, but add implementation scope.</li>
+        </ul>
+
+        <p>None of these are showstoppers. Every one of them has a workable solution. But they need to be scoped and priced before you go live — not discovered after.</p>
+
+        <h2>The question that changes the conversation</h2>
+
+        <p>When we do a BC health check for a construction business, we ask one question early: <em>"On your last three completed projects, when did you know the final margin?"</em></p>
+
+        <p>If the answer is "after final invoice" or "when the accounts closed," the job costing setup needs work. If the answer is "we had a pretty accurate picture by 60% completion," that's a system that's doing its job.</p>
+
+        <p>The goal isn't perfect numbers in real time — construction is too dynamic for that. The goal is early enough to act. A cost overrun caught at 50% complete is a management problem. The same overrun caught at 95% complete is a write-down.</p>
+
+        <p>Business Central has the architecture to give you the former. Whether your current configuration is delivering it is a different question — and one worth answering before you price your next project.</p>
+
+        <!-- BOTTOM CTA -->
+        <div style="background:var(--black);border-radius:12px;padding:32px;text-align:center;margin:48px 0;">
+          <div class="section-label" style="color:rgba(255,255,255,0.4);margin-bottom:8px;">BC Team · Construction Specialists</div>
+          <h3 style="color:#fff;font-size:22px;font-weight:900;font-family:'Nunito Sans',sans-serif;margin-bottom:12px;">Find out if your job costing is actually protecting your margins.</h3>
+          <p style="color:rgba(255,255,255,0.6);font-size:15px;margin-bottom:24px;line-height:1.6;max-width:480px;margin-left:auto;margin-right:auto;">Taylor will review your Business Central setup and show you exactly where your job cost visibility breaks down — and what to do about it. No sales pitch. No obligation.</p>
+          <div style="display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;">
+            <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="btn btn-primary">Book Free 30-Min Call →</a>
+            <a href="/pages/bc-rescue-audit.html" class="btn btn-outline">See Our Rescue Audit</a>
+          </div>
+        </div>
+
+        <!-- NAV -->
+        <div class="post-navigation" style="display:flex;gap:16px;flex-wrap:wrap;">
+          <a href="/pages/blog/erp-for-construction-companies-what-business-central-can-and-cant-do-out-of-the-box.html" class="post-nav-link post-nav-prev">← ERP for Construction Companies: What BC Can (and Can't) Do Out of the Box</a>
+          <a href="/pages/blog.html" class="post-nav-link post-nav-next">Back to all articles →</a>
+        </div>
+
+        <div style="margin-top:40px;padding-top:28px;border-top:1px solid var(--gray-border);text-align:center;">
+          <a href="/pages/blog.html" style="font-family:'Nunito Sans',sans-serif;font-weight:800;font-size:14px;color:var(--red);">← Back to all articles</a>
+        </div>
+
+      </div>
+    </section>
+  </article>
+
+</main>
+<div id="footer-placeholder"></div>
+<script src="/components.js"></script>
+<script>renderNavbar("blog"); renderFooter();</script>
+</body>
+</html>
