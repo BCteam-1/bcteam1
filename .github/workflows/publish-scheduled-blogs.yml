@@ -2,9 +2,9 @@ name: Publish Scheduled Blogs
 
 on:
   schedule:
-    - cron: '0 1 * * 2'   # Tuesday    9am Manila (UTC+8)
-    - cron: '0 1 * * 3'   # Wednesday  9am Manila (UTC+8)
-    - cron: '0 1 * * 4'   # Thursday   9am Manila (UTC+8)
+    - cron: '0 14 * * 2'   # Tuesday    9am EST (UTC-5)
+    - cron: '0 14 * * 3'   # Wednesday  9am EST (UTC-5)
+    - cron: '0 14 * * 4'   # Thursday   9am EST (UTC-5)
   workflow_dispatch:
 
 permissions:
