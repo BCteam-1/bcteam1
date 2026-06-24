@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Call — BC Team</title>
+  <meta name="description" content="Book a free 30-minute call with Taylor McEachnie — Business Central implementation, rescue audit, optimization, or RAP AR automation." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.bcteam1.com/pages/book.html" />
+
+  <!-- OG -->
+  <meta property="og:title" content="Book a Call — BC Team" />
+  <meta property="og:description" content="Book a free call with Taylor. BC Implementation, Rescue Audit, Optimization, or RAP Demo — pick the session that fits your situation." />
+  <meta property="og:url" content="https://www.bcteam1.com/pages/book.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.bcteam1.com/assets/og-home.jpg" />
+
+  <style>
+    /* ── Reset & base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:   #0a1628;
+      --blue:   #1a3a6b;
+      --accent: #2563eb;
+      --accent-light: #3b82f6;
+      --white:  #ffffff;
+      --off-white: #f8fafc;
+      --gray-100: #f1f5f9;
+      --gray-200: #e2e8f0;
+      --gray-400: #94a3b8;
+      --gray-600: #475569;
+      --gray-800: #1e293b;
+      --green:  #16a34a;
+      --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --radius: 8px;
+      --shadow: 0 1px 3px rgba(0,0,0,.08), 0 4px 16px rgba(0,0,0,.06);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--white);
+      color: var(--gray-800);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ── Announcement bar ── */
+    .announcement-bar {
+      background: var(--navy);
+      color: var(--white);
+      text-align: center;
+      padding: 10px 16px;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+    .announcement-bar a {
+      color: #60a5fa;
+      text-decoration: underline;
+      margin-left: 8px;
+    }
+
+    /* ── Nav ── */
+    nav {
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-200);
+      padding: 0 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 4px rgba(0,0,0,.06);
+    }
+    .nav-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 1.125rem;
+      color: var(--navy);
+    }
+    .nav-logo-badge {
+      background: var(--accent);
+      color: var(--white);
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 4px;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--gray-600);
+    }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-links li.active a { color: var(--accent); }
+    .nav-cta {
+      background: var(--accent);
+      color: var(--white) !important;
+      padding: 8px 18px;
+      border-radius: var(--radius);
+      font-weight: 600;
+      font-size: 0.875rem;
+      transition: background .2s;
+    }
+    .nav-cta:hover { background: var(--accent-light) !important; color: var(--white) !important; }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+    }
+
+    /* ── Hero ── */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+      color: var(--white);
+      padding: 64px 24px 56px;
+      text-align: center;
+    }
+    .hero-eyebrow {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: #60a5fa;
+      margin-bottom: 16px;
+    }
+    .hero h1 {
+      font-size: clamp(1.8rem, 4vw, 2.75rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 16px;
+      letter-spacing: -.02em;
+    }
+    .hero h1 span { color: #60a5fa; }
+    .hero-sub {
+      font-size: 1.05rem;
+      color: #cbd5e1;
+      max-width: 560px;
+      margin: 0 auto 32px;
+      line-height: 1.65;
+    }
+    .hero-badges {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .hero-badge {
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 6px;
+      padding: 8px 16px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #e2e8f0;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .hero-badge .dot {
+      width: 6px; height: 6px;
+      background: #4ade80;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    /* ── Service selector ── */
+    .service-section {
+      background: var(--off-white);
+      padding: 56px 24px 0;
+    }
+    .service-section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 8px;
+      text-align: center;
+    }
+    .section-title {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 800;
+      color: var(--navy);
+      text-align: center;
+      margin-bottom: 8px;
+      letter-spacing: -.02em;
+    }
+    .section-sub {
+      text-align: center;
+      color: var(--gray-600);
+      font-size: 0.95rem;
+      margin-bottom: 36px;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+
+    .service-card {
+      background: var(--white);
+      border: 2px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 20px 18px;
+      cursor: pointer;
+      transition: border-color .2s, box-shadow .2s, transform .15s;
+      text-align: left;
+      position: relative;
+    }
+    .service-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 4px 20px rgba(37,99,235,.1);
+      transform: translateY(-1px);
+    }
+    .service-card.active {
+      border-color: var(--accent);
+      background: #eff6ff;
+      box-shadow: 0 4px 20px rgba(37,99,235,.12);
+    }
+    .service-card .icon {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      display: block;
+    }
+    .service-card .label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+    .service-card .name {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 4px;
+      line-height: 1.3;
+    }
+    .service-card .duration {
+      font-size: 0.78rem;
+      color: var(--gray-400);
+      font-weight: 500;
+    }
+    .service-card .check {
+      position: absolute;
+      top: 12px; right: 12px;
+      width: 20px; height: 20px;
+      background: var(--accent);
+      border-radius: 50%;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 0.7rem;
+    }
+    .service-card.active .check { display: flex; }
+
+    /* ── Booking embed ── */
+    .booking-section {
+      background: var(--off-white);
+      padding: 0 24px 64px;
+    }
+    .booking-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .booking-wrapper {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .booking-header {
+      background: var(--navy);
+      padding: 18px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .booking-header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .booking-header-icon {
+      font-size: 1.4rem;
+    }
+    .booking-header-text .title {
+      font-weight: 700;
+      color: var(--white);
+      font-size: 1rem;
+    }
+    .booking-header-text .sub {
+      font-size: 0.78rem;
+      color: #94a3b8;
+    }
+    .booking-tag {
+      background: rgba(74,222,128,.15);
+      color: #4ade80;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 4px;
+      letter-spacing: .04em;
+    }
+
+    .iframe-container {
+      width: 100%;
+      min-height: 700px;
+      position: relative;
+    }
+    .iframe-container iframe {
+      width: 100%;
+      height: 700px;
+      border: none;
+      display: block;
+    }
+
+    /* ── Trust strip ── */
+    .trust-strip {
+      background: var(--white);
+      border-top: 1px solid var(--gray-200);
+      padding: 40px 24px;
+    }
+    .trust-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 32px;
+      text-align: center;
+    }
+    .trust-item .stat {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: -.03em;
+    }
+    .trust-item .stat-label {
+      font-size: 0.82rem;
+      color: var(--gray-600);
+      margin-top: 4px;
+    }
+
+    /* ── What to expect ── */
+    .expect-section {
+      padding: 56px 24px;
+      background: var(--navy);
+      color: var(--white);
+    }
+    .expect-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .expect-section .section-label { color: #60a5fa; text-align: left; }
+    .expect-section .section-title { color: var(--white); text-align: left; margin-bottom: 32px; }
+    .expect-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+    }
+    .expect-step {
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: var(--radius);
+      padding: 24px 20px;
+    }
+    .expect-step .num {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      color: #60a5fa;
+      margin-bottom: 10px;
+    }
+    .expect-step .step-title {
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+    .expect-step p {
+      font-size: 0.85rem;
+      color: #94a3b8;
+      line-height: 1.6;
+    }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--gray-800);
+      color: var(--gray-400);
+      text-align: center;
+      padding: 28px 24px;
+      font-size: 0.82rem;
+    }
+    footer a { color: #60a5fa; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <!-- Announcement bar -->
+  <div class="announcement-bar">
+    🔥 <strong>Free BC Health Check</strong> — Find out if your Business Central is silently costing you money
+    <a href="#booking-embed">Book Now →</a>
+  </div>
+
+  <!-- Nav -->
+  <nav>
+    <div class="nav-inner">
+      <a href="https://www.bcteam1.com" class="nav-logo">
+        <span>BC Team</span>
+        <span class="nav-logo-badge">Microsoft Partner</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="https://www.bcteam1.com/pages/services.html">Services</a></li>
+        <li><a href="https://www.bcteam1.com/pages/bc-rescue-audit.html">Rescue Audit</a></li>
+        <li><a href="https://www.bcteam1.com/pages/rap.html">RAP</a></li>
+        <li><a href="https://www.bcteam1.com/pages/about.html">About</a></li>
+        <li class="active"><a href="#booking-embed" class="nav-cta">Book a Call</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-eyebrow">Schedule Your Session</div>
+    <h1>Book a Free Call<br>with <span>Taylor McEachnie</span></h1>
+    <p class="hero-sub">No sales pitch. No obligation. Pick the session that fits your situation — Taylor will tell you exactly what's working, what's not, and the fastest path forward.</p>
+    <div class="hero-badges">
+      <div class="hero-badge"><span class="dot"></span> Free — No obligation</div>
+      <div class="hero-badge"><span class="dot"></span> 19+ years in Business Central</div>
+      <div class="hero-badge"><span class="dot"></span> Canada & US</div>
+    </div>
+  </section>
+
+  <!-- Service selector -->
+  <section class="service-section">
+    <div class="service-section-inner">
+      <div class="section-label">Choose Your Session</div>
+      <h2 class="section-title">What brings you here today?</h2>
+      <p class="section-sub">Select the session that best matches your situation — all are free.</p>
+
+      <div class="service-grid">
+        <div class="service-card active" onclick="selectService(this, 'health-check')">
+          <span class="icon">🆓</span>
+          <div class="label">Most Popular</div>
+          <div class="name">Free BC Health Check</div>
+          <div class="duration">30 min · Free</div>
+          <div class="check">✓</div>
+        </div>
+        <div class="service-card" onclick="selectService(this, 'rescue')">
+          <span class="icon">🚑</span>
+          <div class="label">Broken Environment</div>
+          <div class="name">BC Rescue Audit Call</div>
+          <div class="duration">45 min · Free</div>
+          <div class="check">✓</div>
+        </div>
+        <div class="service-card" onclick="selectService(this, 'implementation')">
+          <span class="icon">🏗️</span>
+          <div class="label">New to BC</div>
+          <div class="name">BC Implementation Scoping</div>
+          <div class="duration">60 min · Free</div>
+          <div class="check">✓</div>
+        </div>
+        <div class="service-card" onclick="selectService(this, 'optimization')">
+          <span class="icon">⚙️</span>
+          <div class="label">Already Live</div>
+          <div class="name">BC Optimization Review</div>
+          <div class="duration">45 min · Free</div>
+          <div class="check">✓</div>
+        </div>
+        <div class="service-card" onclick="selectService(this, 'rap')">
+          <span class="icon">💰</span>
+          <div class="label">AR Automation</div>
+          <div class="name">RAP Demo</div>
+          <div class="duration">30 min · Free</div>
+          <div class="check">✓</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking embed -->
+  <section class="booking-section" id="booking-embed">
+    <div class="booking-inner">
+      <div class="booking-wrapper">
+        <div class="booking-header">
+          <div class="booking-header-left">
+            <span class="booking-header-icon">📅</span>
+            <div class="booking-header-text">
+              <div class="title" id="booking-title">Free BC Health Check — 30 Min</div>
+              <div class="sub">with Taylor McEachnie · Microsoft Teams</div>
+            </div>
+          </div>
+          <div class="booking-tag">FREE · No Obligation</div>
+        </div>
+        <div class="iframe-container">
+          <iframe
+            id="booking-iframe"
+            src="https://outlook.office.com/book/TheBCTeam@bcteam1.com/"
+            scrolling="yes"
+            title="Book a call with BC Team"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust strip -->
+  <div class="trust-strip">
+    <div class="trust-inner">
+      <div class="trust-item">
+        <div class="stat">19+</div>
+        <div class="stat-label">Years Business Central expertise</div>
+      </div>
+      <div class="trust-item">
+        <div class="stat">140+</div>
+        <div class="stat-label">Successful BC projects across Canada & US</div>
+      </div>
+      <div class="trust-item">
+        <div class="stat">15%</div>
+        <div class="stat-label">Average DSO reduction within 60 days of RAP</div>
+      </div>
+      <div class="trust-item">
+        <div class="stat">$4.2M</div>
+        <div class="stat-label">Cash flow visibility restored — one client</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- What to expect -->
+  <section class="expect-section">
+    <div class="expect-inner">
+      <div class="section-label">What Happens Next</div>
+      <h2 class="section-title">What to expect on the call</h2>
+      <div class="expect-steps">
+        <div class="expect-step">
+          <div class="num">STEP 01</div>
+          <div class="step-title">You book — Taylor confirms</div>
+          <p>You'll get an immediate confirmation with a Teams link. No assistant, no intake call — you're booking directly with Taylor.</p>
+        </div>
+        <div class="expect-step">
+          <div class="num">STEP 02</div>
+          <div class="step-title">Taylor reviews your situation</div>
+          <p>Taylor reads your intake answers before the call so you're not repeating yourself. He comes in already oriented to your BC environment.</p>
+        </div>
+        <div class="expect-step">
+          <div class="num">STEP 03</div>
+          <div class="step-title">You get a straight answer</div>
+          <p>No generic pitch. Taylor tells you what he sees, what's causing your pain, and exactly what the fix looks like — including whether BC Team is even the right fit.</p>
+        </div>
+        <div class="expect-step">
+          <div class="num">STEP 04</div>
+          <div class="step-title">A clear path forward</div>
+          <p>You leave with a prioritized next step — whether that's a rescue audit, implementation scoping, RAP demo, or a referral to someone better suited.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 BC Team · <a href="https://www.bcteam1.com">bcteam1.com</a> · Microsoft Dynamics 365 Business Central Experts</p>
+  </footer>
+
+  <script>
+    // Service card selector — updates header label only
+    // (The iframe loads the full Bookings page which shows all services natively)
+    const serviceLabels = {
+      'health-check': 'Free BC Health Check — 30 Min',
+      'rescue':        'BC Rescue Audit Discovery Call — 45 Min',
+      'implementation':'BC Implementation Scoping Call — 60 Min',
+      'optimization':  'BC Optimization Review Call — 45 Min',
+      'rap':           'RAP Demo — AR Automation — 30 Min'
+    };
+
+    function selectService(card, key) {
+      document.querySelectorAll('.service-card').forEach(c => c.classList.remove('active'));
+      card.classList.add('active');
+      document.getElementById('booking-title').textContent = serviceLabels[key];
+
+      // Scroll to booking embed smoothly
+      document.getElementById('booking-embed').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  </script>
+
+</body>
+</html>
