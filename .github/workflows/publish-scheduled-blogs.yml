@@ -1,0 +1,32 @@
+name: Publish Scheduled Blogs
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run publish script
+        run: python scripts/publish_scheduled_blogs.py
+
+      - name: Commit and push published blogs
+        run: |
+          git config user.name  "BC Team Bot"
+          git config user.email "bot@bcteam1.com"
+          git add pages/blog/ pages/blog.html assets/blog/
+          git diff --cached --quiet || git commit -m "chore: publish scheduled blog(s) [$(date +%Y-%m-%d)]"
+          git push
