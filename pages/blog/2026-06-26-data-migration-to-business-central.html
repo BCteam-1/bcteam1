@@ -1,0 +1,185 @@
+<!-- publish-date: 2026-06-26 -->
+<!-- blog-title: Data Migration to Business Central: What Can Go Wrong and How to Prevent It -->
+<!-- blog-desc: Most Business Central migrations don't fail because of the software. They fail because of the data. Here's what actually goes wrong — and how to get ahead of it. -->
+<!-- blog-cover: /assets/blog/2026-06-26-data-migration-to-business-central-cover.png -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Migration to Business Central: What Can Go Wrong and How to Prevent It | BC Team</title>
+  <meta name="description" content="Most Business Central migrations don't fail because of the software. They fail because of the data. Here's what actually goes wrong — and how to get ahead of it.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.bcteam1.com/pages/blog/2026-06-26-data-migration-to-business-central.html">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.bcteam1.com/pages/blog/2026-06-26-data-migration-to-business-central.html">
+  <meta property="og:title" content="Data Migration to Business Central: What Can Go Wrong and How to Prevent It | BC Team">
+  <meta property="og:description" content="Most Business Central migrations don't fail because of the software. They fail because of the data. Here's what actually goes wrong — and how to get ahead of it.">
+  <meta property="og:image" content="https://www.bcteam1.com/assets/blog/2026-06-26-data-migration-to-business-central-cover.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap"></noscript>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .post-body h2 { font-family:'Nunito Sans',sans-serif; font-weight:900; font-size:22px; color:var(--gray-dark); margin:40px 0 14px; }
+    .post-body h3 { font-family:'Nunito Sans',sans-serif; font-weight:800; font-size:17px; color:var(--gray-dark); margin:28px 0 10px; }
+    .post-body p  { font-size:16px; color:#333; line-height:1.85; margin-bottom:20px; }
+    .post-body hr { border:none; border-top:1px solid var(--gray-border); margin:40px 0; }
+  </style>
+</head>
+<body>
+
+<div class="bc-alert-banner">
+  <div class="bc-alert-banner-inner">
+    <span class="bc-alert-text">🔥 <strong>Free BC Health Check</strong> — Find out if your Business Central is silently costing you money</span>
+    <div class="alert-btns">
+      <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="alert-btn alert-btn-primary">Book Free 30-Min Call</a>
+      <a href="/pages/bc-rescue-audit.html" class="alert-btn alert-btn-outline">See Rescue Audit →</a>
+    </div>
+  </div>
+</div>
+<div id="navbar-placeholder"></div>
+<main>
+
+  <article>
+    <section style="background:var(--black);padding:56px 24px 48px;">
+      <div style="max-width:760px;margin:0 auto;">
+        <div class="breadcrumb" style="margin-bottom:20px;">
+          <a href="/index.html" style="color:rgba(255,255,255,0.4);">Home</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <a href="/pages/blog.html" style="color:rgba(255,255,255,0.4);">Blog</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <span style="color:rgba(255,255,255,0.6);">Data Migration to Business Central...</span>
+        </div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:14px;font-family:'Nunito Sans',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:1px;">June 26, 2026</div>
+        <h1 style="color:#fff;font-size:clamp(24px,3.5vw,44px);line-height:1.2;font-family:'Nunito Sans',sans-serif;font-weight:900;margin-bottom:20px;">Data Migration to Business Central: What Can Go Wrong and How to Prevent It</h1>
+        <p style="color:rgba(255,255,255,0.65);font-size:17px;line-height:1.7;max-width:660px;">Most Business Central migrations don't fail because of the software. They fail because of the data. Here's what actually goes wrong — and how to get ahead of it before it costs you.</p>
+      </div>
+    </section>
+
+  <div style="max-width:860px;margin:0 auto 40px;padding:0 24px;">
+    <img src="/assets/blog/2026-06-26-data-migration-to-business-central-cover.png"
+         alt="Data Migration to Business Central: What Can Go Wrong and How to Prevent It"
+         style="width:100%;border-radius:12px;max-height:420px;object-fit:cover;display:block;"
+         loading="lazy">
+  </div>
+
+    <section style="padding:48px 24px 64px;background:#fff;">
+      <div style="max-width:760px;margin:0 auto;">
+
+        <div class="post-body">
+
+          <p>Someone on your team just said the words "data migration" in a meeting. Half the room nodded confidently. The other half quietly tensed up — because they've been through one before.</p>
+
+          <p>Data migration is the part of a Business Central implementation that gets the least attention in the sales conversation and causes the most problems in the actual project. Not because the technology is unreliable. Because data is messy, and most organisations don't find out just how messy until they're already committed to a go-live date.</p>
+
+          <p>This is a practical breakdown of where migrations go wrong and what you can do — before the project starts — to prevent each one.</p>
+
+          <hr>
+
+          <h2>The assumption that kills timelines</h2>
+
+          <p>Almost every migration that runs over schedule or over budget starts with the same assumption: "Our data is pretty clean." It almost never is.</p>
+
+          <p>Legacy systems — whether that's an older ERP, a collection of spreadsheets, or a purpose-built accounting package — accumulate years of workarounds. Duplicate vendor records created because nobody could find the original. Customer accounts with mismatched ABNs. Item codes that mean different things in different departments. Open transactions that were never properly closed. Chart of accounts entries that were created for a project three years ago and never removed.</p>
+
+          <p>None of this is visible until someone runs a data extract and actually looks at it. By then, the project plan is already locked.</p>
+
+          <p>The fix is simple but discipline-intensive: run your data audit before the project scope is finalised, not after. Treat the audit findings as inputs to your timeline and budget, not problems to solve in parallel with everything else.</p>
+
+          <hr>
+
+          <h2>The five failure points that show up every time</h2>
+
+          <h3>1. Duplicate records</h3>
+
+          <p>Duplicates are the most common data quality issue and the one with the most downstream damage. A customer who exists three times in your legacy system will exist three times in Business Central — each with different contact details, different payment terms, and different transaction histories. Your AR team will spend months untangling it.</p>
+
+          <p>Deduplication sounds straightforward until you realise that the duplicates often exist for a reason — different trading entities, different sites, different credit arrangements. Resolving them requires business decisions, not just a merge function. That takes time and needs the right people in the room.</p>
+
+          <h3>2. Missing or incomplete data</h3>
+
+          <p>Business Central has mandatory fields that your legacy system didn't. Vendor payment terms. Customer posting groups. Item unit of measure. If those fields are empty in your source data, the migration tool will either reject the record or fill the field with a default value — which is often wrong.</p>
+
+          <p>The result is a live system where half your vendor records have incorrect payment terms, and your finance team spends the first month after go-live manually correcting them while also trying to run month-end close.</p>
+
+          <p>Map every mandatory Business Central field back to its source before migration begins. Identify the gaps. Decide who fills them and when.</p>
+
+          <h3>3. Invalid formats and structure mismatches</h3>
+
+          <p>Dates stored as text. Phone numbers with inconsistent formatting. Postal codes missing leading zeros. Account codes that don't match Business Central's expected structure. These aren't dramatic failures — they're the kind of thing that slips through testing and surfaces six weeks after go-live when a report won't reconcile or an integration breaks.</p>
+
+          <p>Data transformation — converting your source data into the exact format Business Central expects — is the most underestimated part of any migration. It's not a one-time script. It's an iterative process that typically runs through multiple test cycles before it's clean.</p>
+
+          <h3>4. Historical transactions that don't balance</h3>
+
+          <p>Migrating open balances — outstanding invoices, purchase orders, bank reconciliations — is a different challenge from migrating master data. The numbers have to balance. If your opening AR balance in Business Central doesn't match what was in your legacy system on cutover day, you have a problem that affects financial reporting, audit trails, and customer statements simultaneously.</p>
+
+          <p>This is where cutover planning matters enormously. The window between your last transaction in the old system and your first transaction in Business Central needs to be managed precisely. Most project plans underestimate how long this takes and how many people it involves.</p>
+
+          <h3>5. Inconsistent data across departments</h3>
+
+          <p>The item master in your warehouse system doesn't match the item master in your accounting system. The customer list in your CRM has different names than the customer list in your ERP. These inconsistencies exist because different teams have been maintaining different systems independently for years.</p>
+
+          <p>Migration forces a reconciliation. And that reconciliation — deciding which version of the truth is actually correct — requires business decisions that IT can't make on their own. When those decisions get deferred, the migration gets delayed.</p>
+
+          <hr>
+
+          <h2>What a good migration process actually looks like</h2>
+
+          <p>The organisations that get through Business Central migrations cleanly aren't necessarily the ones with better data. They're the ones who treat migration as a business project, not an IT project.</p>
+
+          <p>That means a few specific things in practice.</p>
+
+          <p>First, a dedicated data owner from the business — not from IT — who is accountable for data quality outcomes. Someone who knows what the data means, not just where it lives.</p>
+
+          <p>Second, multiple migration dress rehearsals before go-live. Load the data into a test environment. Run your standard reports. Check your opening balances. Have your finance team try to process a transaction. Find the problems when they don't matter, not when they do.</p>
+
+          <p>Third, a clear decision framework for data that can't be migrated cleanly. Not every record from a legacy system needs to come across. Historical transactions beyond a certain date might be better archived than migrated. Old item codes that are no longer active might be better left behind. Making those calls deliberately — rather than trying to migrate everything — often produces a cleaner result.</p>
+
+          <hr>
+
+          <h2>The post-migration window nobody plans for</h2>
+
+          <p>Go-live is not the finish line. It's the start of a period — usually 30 to 90 days — where your team is running Business Central for the first time while also discovering the data issues that testing didn't catch.</p>
+
+          <p>This period needs to be planned for explicitly. Reduced expectations on productivity. Dedicated support resources. A clear process for logging and resolving data issues as they surface. A freeze on non-essential system changes while the team finds their footing.</p>
+
+          <p>Organisations that treat go-live as the end of the migration project tend to struggle through this period without structure. Organisations that build it into the plan come out the other side faster and with less pain.</p>
+
+          <hr>
+
+          <h2>The honest question to ask before you start</h2>
+
+          <p>Before your migration project kicks off, ask your implementation partner one direct question: how many of the migrations you've done have gone live on the originally scheduled date?</p>
+
+          <p>The honest answer will tell you a lot. Not because delays are always avoidable — sometimes business decisions or external factors genuinely shift timelines. But because a partner who has seen enough migrations knows where the risk lives and builds that knowledge into how they plan.</p>
+
+          <p>Data migration is solvable. The organisations that struggle aren't the ones with the worst data — they're the ones who found out about their data problems too late. Start the audit early, resource it properly, and treat it as the business-critical exercise it actually is.</p>
+
+        </div>
+
+        <div style="background:var(--black);border-radius:12px;padding:32px;text-align:center;margin:48px 0;">
+          <div class="section-label" style="color:rgba(255,255,255,0.4);margin-bottom:8px;">Planning a Migration?</div>
+          <h3 style="color:#fff;font-size:22px;font-weight:900;font-family:'Nunito Sans',sans-serif;margin-bottom:12px;">Talk to someone who's done this before.</h3>
+          <p style="color:rgba(255,255,255,0.6);font-size:15px;margin-bottom:24px;line-height:1.6;">Book a free 30-minute call with Taylor. We'll look at your current data landscape and tell you honestly what you're dealing with.</p>
+          <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="btn btn-primary">Book a Free 30-Min Call</a>
+        </div>
+
+        <div style="margin-top:40px;padding-top:28px;border-top:1px solid var(--gray-border);text-align:center;">
+          <a href="/pages/blog.html" style="font-family:'Nunito Sans',sans-serif;font-weight:800;font-size:14px;color:var(--red);">← Back to all articles</a>
+        </div>
+
+      </div>
+    </section>
+  </article>
+
+</main>
+<div id="footer-placeholder"></div>
+<script src="/components.js"></script>
+<script>renderNavbar("blog"); renderFooter();</script>
+</body>
+</html>
