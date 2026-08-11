@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comment Moderation | BC Team Admin</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap">
+<style>
+  :root { --black:#0D1B2A; --red:#E53E1E; --gray-border:#e2e2e2; --gray-dark:#1a1a1a; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:'Lato',sans-serif; background:#f7f8fa; color:#222; }
+
+  /* ---- Login screen ---- */
+  #login-screen { min-height:100vh; display:flex; align-items:center; justify-content:center; padding:24px; }
+  .login-box { background:#fff; border-radius:14px; padding:40px 36px; max-width:380px; width:100%; box-shadow:0 4px 24px rgba(0,0,0,0.08); text-align:center; }
+  .login-box h1 { font-family:'Nunito Sans',sans-serif; font-weight:900; font-size:20px; color:var(--gray-dark); margin:0 0 8px; }
+  .login-box p { font-size:14px; color:#888; margin:0 0 24px; }
+  .login-box input { width:100%; padding:12px 14px; border:1px solid var(--gray-border); border-radius:8px; font-size:15px; margin-bottom:14px; }
+  .login-box input:focus { outline:none; border-color:var(--red); }
+  .login-box button { width:100%; background:var(--red); color:#fff; border:none; border-radius:8px; padding:13px; font-family:'Nunito Sans',sans-serif; font-weight:800; font-size:14px; cursor:pointer; }
+  .login-box button:hover { opacity:0.9; }
+  .login-error { color:#b02a2a; font-size:13px; margin-top:12px; display:none; }
+
+  /* ---- Dashboard ---- */
+  #dashboard { display:none; max-width:900px; margin:0 auto; padding:40px 20px 80px; }
+  .dash-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:32px; }
+  .dash-header h1 { font-family:'Nunito Sans',sans-serif; font-weight:900; font-size:24px; color:var(--gray-dark); margin:0; }
+  .logout-btn { background:none; border:1px solid var(--gray-border); border-radius:8px; padding:9px 18px; font-family:'Nunito Sans',sans-serif; font-weight:700; font-size:13px; color:#666; cursor:pointer; }
+  .logout-btn:hover { border-color:var(--red); color:var(--red); }
+
+  .pending-count { font-size:14px; color:#888; margin-bottom:20px; }
+  .pending-count strong { color:var(--red); }
+
+  .comment-card { background:#fff; border:1px solid var(--gray-border); border-radius:12px; padding:20px 22px; margin-bottom:16px; }
+  .comment-card-top { display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:8px; margin-bottom:10px; }
+  .comment-post { font-family:'Nunito Sans',sans-serif; font-weight:700; font-size:12px; color:var(--red); text-transform:uppercase; letter-spacing:0.4px; }
+  .comment-date { font-size:12px; color:#999; }
+  .comment-author { font-family:'Nunito Sans',sans-serif; font-weight:800; font-size:15px; color:var(--gray-dark); margin-bottom:2px; }
+  .comment-email { font-size:12.5px; color:#999; margin-bottom:12px; }
+  .comment-text { font-size:14.5px; line-height:1.65; color:#333; white-space:pre-wrap; word-wrap:break-word; margin-bottom:16px; }
+  .comment-actions { display:flex; gap:10px; }
+  .btn-approve, .btn-reject { border:none; border-radius:8px; padding:9px 20px; font-family:'Nunito Sans',sans-serif; font-weight:800; font-size:13px; cursor:pointer; }
+  .btn-approve { background:#22c55e; color:#fff; }
+  .btn-approve:hover { opacity:0.88; }
+  .btn-reject { background:#f1f1f1; color:#555; }
+  .btn-reject:hover { background:#fde2e2; color:#b02a2a; }
+  .btn-approve:disabled, .btn-reject:disabled { opacity:0.5; cursor:default; }
+
+  .empty-state { text-align:center; padding:60px 20px; color:#999; font-size:15px; }
+  .loading-state { text-align:center; padding:60px 20px; color:#999; font-size:14px; }
+</style>
+</head>
+<body>
+
+<div id="login-screen">
+  <div class="login-box">
+    <h1>BC Team Admin</h1>
+    <p>Enter the admin password to review pending comments.</p>
+    <input type="password" id="password-input" placeholder="Password" autocomplete="current-password">
+    <button id="login-btn">Log In</button>
+    <div class="login-error" id="login-error">Incorrect password. Please try again.</div>
+  </div>
+</div>
+
+<div id="dashboard">
+  <div class="dash-header">
+    <h1>Comment Moderation</h1>
+    <button class="logout-btn" id="logout-btn">Log Out</button>
+  </div>
+  <div class="pending-count" id="pending-count"></div>
+  <div id="comment-list"></div>
+</div>
+
+<script>
+(function () {
+  var loginScreen = document.getElementById('login-screen');
+  var dashboard = document.getElementById('dashboard');
+  var passwordInput = document.getElementById('password-input');
+  var loginBtn = document.getElementById('login-btn');
+  var loginError = document.getElementById('login-error');
+  var logoutBtn = document.getElementById('logout-btn');
+  var commentList = document.getElementById('comment-list');
+  var pendingCount = document.getElementById('pending-count');
+
+  function checkSession() {
+    fetch('/api/admin/check')
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        if (d.authenticated) {
+          showDashboard();
+        } else {
+          showLogin();
+        }
+      })
+      .catch(showLogin);
+  }
+
+  function showLogin() {
+    loginScreen.style.display = 'flex';
+    dashboard.style.display = 'none';
+  }
+
+  function showDashboard() {
+    loginScreen.style.display = 'none';
+    dashboard.style.display = 'block';
+    loadComments();
+  }
+
+  function doLogin() {
+    loginError.style.display = 'none';
+    var pw = passwordInput.value;
+    if (!pw) return;
+    loginBtn.disabled = true;
+    loginBtn.textContent = 'Checking…';
+    fetch('/api/admin/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ password: pw }),
+    })
+      .then(function (r) { return r.json().then(function (d) { return { ok: r.ok, data: d }; }); })
+      .then(function (res) {
+        loginBtn.disabled = false;
+        loginBtn.textContent = 'Log In';
+        if (res.ok) {
+          passwordInput.value = '';
+          showDashboard();
+        } else {
+          loginError.textContent = res.data.error || 'Incorrect password.';
+          loginError.style.display = 'block';
+        }
+      })
+      .catch(function () {
+        loginBtn.disabled = false;
+        loginBtn.textContent = 'Log In';
+        loginError.textContent = 'Network error. Please try again.';
+        loginError.style.display = 'block';
+      });
+  }
+
+  loginBtn.addEventListener('click', doLogin);
+  passwordInput.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') doLogin();
+  });
+
+  logoutBtn.addEventListener('click', function () {
+    fetch('/api/admin/logout', { method: 'POST' }).finally(showLogin);
+  });
+
+  function escapeHtml(str) {
+    var div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  function loadComments() {
+    commentList.innerHTML = '<div class="loading-state">Loading pending comments…</div>';
+    fetch('/api/admin/comments')
+      .then(function (r) {
+        if (r.status === 401) { showLogin(); throw new Error('unauthorized'); }
+        return r.json();
+      })
+      .then(function (data) {
+        var comments = data.comments || [];
+        pendingCount.innerHTML = '<strong>' + comments.length + '</strong> comment' + (comments.length === 1 ? '' : 's') + ' awaiting review';
+
+        if (!comments.length) {
+          commentList.innerHTML = '<div class="empty-state">No pending comments right now. 🎉</div>';
+          return;
+        }
+
+        commentList.innerHTML = comments.map(function (c) {
+          var date = new Date(c.created_at);
+          var dateStr = date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }) +
+                         ' at ' + date.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+          return (
+            '<div class="comment-card" data-id="' + c.id + '">' +
+              '<div class="comment-card-top">' +
+                '<span class="comment-post">' + escapeHtml(c.post_slug) + '</span>' +
+                '<span class="comment-date">' + dateStr + '</span>' +
+              '</div>' +
+              '<div class="comment-author">' + escapeHtml(c.name) + '</div>' +
+              '<div class="comment-email">' + escapeHtml(c.email) + '</div>' +
+              '<div class="comment-text">' + escapeHtml(c.comment_text) + '</div>' +
+              '<div class="comment-actions">' +
+                '<button class="btn-approve" data-action="approve" data-id="' + c.id + '">Approve</button>' +
+                '<button class="btn-reject" data-action="reject" data-id="' + c.id + '">Reject</button>' +
+              '</div>' +
+            '</div>'
+          );
+        }).join('');
+
+        commentList.querySelectorAll('button[data-action]').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            moderate(btn.dataset.id, btn.dataset.action, btn);
+          });
+        });
+      })
+      .catch(function (err) {
+        if (err.message !== 'unauthorized') {
+          commentList.innerHTML = '<div class="empty-state">Failed to load comments. Please refresh.</div>';
+        }
+      });
+  }
+
+  function moderate(id, action, btn) {
+    var card = btn.closest('.comment-card');
+    card.querySelectorAll('button').forEach(function (b) { b.disabled = true; });
+    fetch('/api/admin/moderate', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id: id, action: action }),
+    })
+      .then(function (r) { return r.json(); })
+      .then(function () {
+        card.style.transition = 'opacity .25s, transform .25s';
+        card.style.opacity = '0';
+        card.style.transform = 'translateX(12px)';
+        setTimeout(function () {
+          card.remove();
+          var remaining = commentList.querySelectorAll('.comment-card').length;
+          pendingCount.innerHTML = '<strong>' + remaining + '</strong> comment' + (remaining === 1 ? '' : 's') + ' awaiting review';
+          if (!remaining) {
+            commentList.innerHTML = '<div class="empty-state">No pending comments right now. 🎉</div>';
+          }
+        }, 250);
+      })
+      .catch(function () {
+        card.querySelectorAll('button').forEach(function (b) { b.disabled = false; });
+        alert('Something went wrong. Please try again.');
+      });
+  }
+
+  checkSession();
+})();
+</script>
+</body>
+</html>
