@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-Entity Consolidation in Business Central: Setup Guide | BC Team</title>
+  <meta name="description" content="Consolidated financials taking days instead of hours? Here's how multi-entity consolidation actually works in Business Central — and the setup mistakes that turn a one-click process into a manual one.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.bcteam1.com/pages/blog/2026-08-11-multi-entity-consolidation-bc-setup-guide.html">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.bcteam1.com/pages/blog/2026-08-11-multi-entity-consolidation-bc-setup-guide.html">
+  <meta property="og:title" content="Multi-Entity Consolidation in Business Central: Setup Guide | BC Team">
+  <meta property="og:description" content="Consolidated financials taking days instead of hours? Here's how multi-entity consolidation actually works in Business Central — and the setup mistakes that turn a one-click process into a manual one.">
+  <meta property="og:image" content="https://www.bcteam1.com/assets/blog/2026-08-11-multi-entity-consolidation-bc-setup-guide-cover.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap"></noscript>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .post-body h2 { font-family:'Nunito Sans',sans-serif; font-weight:900; font-size:22px; color:var(--gray-dark); margin:40px 0 14px; }
+    .post-body h3 { font-family:'Nunito Sans',sans-serif; font-weight:800; font-size:17px; color:var(--gray-dark); margin:28px 0 10px; }
+    .post-body p  { font-size:16px; color:#333; line-height:1.85; margin-bottom:20px; }
+    .post-body ul { margin:0 0 20px 22px; }
+    .post-body li { font-size:16px; color:#333; line-height:1.8; margin-bottom:8px; }
+    .post-body hr { border:none; border-top:1px solid var(--gray-border); margin:40px 0; }
+    .post-body strong { color:var(--gray-dark); }
+  </style>
+</head>
+<body>
+
+<div class="bc-alert-banner">
+  <div class="bc-alert-banner-inner">
+    <span class="bc-alert-text">🔥 <strong>Free BC Health Check</strong> — Find out if your Business Central is silently costing you money</span>
+    <div class="alert-btns">
+      <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="alert-btn alert-btn-primary">Book Free 30-Min Call</a>
+      <a href="/pages/bc-rescue-audit.html" class="alert-btn alert-btn-outline">See Rescue Audit →</a>
+    </div>
+  </div>
+</div>
+<div id="navbar-placeholder"></div>
+<main>
+
+  <article>
+    <section style="background:var(--black);padding:56px 24px 48px;">
+      <div style="max-width:760px;margin:0 auto;">
+        <div class="breadcrumb" style="margin-bottom:20px;">
+          <a href="/index.html" style="color:rgba(255,255,255,0.4);">Home</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <a href="/pages/blog.html" style="color:rgba(255,255,255,0.4);">Blog</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <span style="color:rgba(255,255,255,0.6);">Multi-Entity Consolidation in Business Central...</span>
+        </div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:14px;font-family:'Nunito Sans',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:1px;">August 11, 2026</div>
+        <h1 style="color:#fff;font-size:clamp(24px,3.5vw,44px);line-height:1.2;font-family:'Nunito Sans',sans-serif;font-weight:900;margin-bottom:20px;">Multi-Entity Consolidation in Business Central: Setup Guide</h1>
+        <p style="color:rgba(255,255,255,0.65);font-size:17px;line-height:1.7;max-width:660px;">If consolidating your entities still means exporting trial balances into a spreadsheet, you're not using a limitation of Business Central — you're using a workaround for one you built yourself.</p>
+      </div>
+    </section>
+
+    <section style="padding:48px 24px 64px;background:#fff;">
+      <div style="max-width:760px;margin:0 auto;">
+
+        <div class="post-body">
+
+          <p>Somewhere in most multi-entity finance teams' month-end routine sits a spreadsheet nobody's proud of. Trial balances get exported entity by entity, pasted into a master tab, intercompany balances get manually zeroed out, and currency gets converted with a formula someone built three years ago that nobody fully trusts anymore.</p>
+
+          <p>The frustrating part: Business Central has a native consolidation engine built specifically to eliminate this. Most companies running multiple entities on BC simply never turned it on properly — often because it was configured quickly during implementation and nobody's gone back to fix it since.</p>
+
+          <p>Here's what proper multi-entity consolidation setup actually looks like, and where it typically breaks.</p>
+
+          <hr>
+
+          <h2>How Consolidation Actually Works in BC</h2>
+
+          <p>Business Central handles consolidation through a dedicated <strong>consolidation company</strong> — a separate company database that pulls in financial data from each of your subsidiary or business unit companies and combines it into one set of consolidated statements.</p>
+
+          <p>Each subsidiary is registered as a <strong>Business Unit</strong> inside the consolidation company, with a defined consolidation method — typically full consolidation for wholly or majority-owned entities. From there, running a consolidation pulls G/L balances from each business unit into the consolidation company automatically, rather than requiring anyone to manually re-key numbers.</p>
+
+          <p>When this is set up correctly, closing consolidated financials becomes a matter of hours, not days. When it isn't, the manual spreadsheet workaround creeps back in — and once that habit forms, most teams never go back to fix the root cause.</p>
+
+          <hr>
+
+          <h2>Where the Setup Typically Breaks</h2>
+
+          <h3>1. Chart of Accounts Misalignment</h3>
+
+          <p>Consolidation depends on every subsidiary's Chart of Accounts mapping cleanly to the consolidation company's chart. If Entity A calls an account "Office Supplies" and Entity B calls the equivalent account "General Office Expense," the consolidation engine has no way to know they're the same line item unless someone explicitly maps them.</p>
+
+          <p>This is the single most common reason consolidation stalls. Entities that were acquired, or that grew up independently before standardizing on BC, often carry charts of accounts that were never rationalized against each other. The fix isn't glamorous — it's a disciplined mapping exercise, done once, done properly, rather than patched around every month-end.</p>
+
+          <h3>2. Intercompany Eliminations Left Manual</h3>
+
+          <p>Transactions between related entities — one subsidiary invoicing another, intercompany loans, shared service allocations — need to be eliminated at consolidation, or your consolidated revenue and expenses will be artificially inflated.</p>
+
+          <p>BC supports intercompany elimination through dedicated elimination accounts and, where <strong>Intercompany Postings</strong> functionality is properly configured, can automate much of this instead of relying on someone manually journaling out intercompany balances every period. Companies that skip this configuration end up doing elimination entries by hand — a process that's slow and genuinely easy to get wrong, especially as transaction volume grows.</p>
+
+          <h3>3. Currency Translation Set Up as an Afterthought</h3>
+
+          <p>For companies with entities operating in multiple currencies, translation method matters. BC supports both the current rate method and other translation approaches depending on the nature of each subsidiary, and getting this wrong doesn't just create a rounding error — it can meaningfully distort consolidated equity and retained earnings over time.</p>
+
+          <p>This needs to be decided deliberately at setup, aligned with how your auditors expect currency translation to be handled, not defaulted to whatever the system assumed during a rushed implementation.</p>
+
+          <h3>4. Dimensions Not Carried Through Consistently</h3>
+
+          <p>If you want to slice consolidated results by business line, region, or project across entities, your <strong>Dimensions</strong> need to be used consistently across every business unit — not just within each entity individually. A dimension called "Region" in one entity and "Territory" in another means your consolidated reporting can't cleanly segment by that dimension without manual rework.</p>
+
+          <hr>
+
+          <h2>What Good Consolidation Setup Delivers</h2>
+
+          <p>Done properly, a CFO or Controller should be able to run consolidation, review eliminations, and produce consolidated financial statements without touching a spreadsheet — and without needing to manually verify that intercompany balances actually zeroed out.</p>
+
+          <p>That's not a theoretical outcome. It's what the native functionality is built to do. The gap between that and "we still consolidate in Excel" is almost always a configuration gap, not a platform limitation — the same pattern that shows up across most Business Central performance and reporting complaints.</p>
+
+          <hr>
+
+          <h2>Where to Start</h2>
+
+          <p>Before assuming your organization has simply outgrown native consolidation, it's worth auditing three things: whether your subsidiaries' charts of accounts actually map cleanly to your consolidation company, whether intercompany eliminations are automated or still manual, and whether currency translation was configured deliberately or left at a default.</p>
+
+          <p>Most companies find the fix is narrower — and faster — than they expected.</p>
+
+        </div>
+
+        <div style="background:var(--black);border-radius:12px;padding:32px;text-align:center;margin:48px 0;">
+          <div class="section-label" style="color:rgba(255,255,255,0.4);margin-bottom:8px;">Still Consolidating in Excel?</div>
+          <h3 style="color:#fff;font-size:22px;font-weight:900;font-family:'Nunito Sans',sans-serif;margin-bottom:12px;">Find out what's actually stopping your close.</h3>
+          <p style="color:rgba(255,255,255,0.6);font-size:15px;margin-bottom:24px;line-height:1.6;">Book a free 30-minute call with our team. We'll look at your Chart of Accounts, eliminations, and currency setup — and tell you honestly how close you are to a one-click consolidation.</p>
+          <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="btn btn-primary">Book a Free 30-Min Call</a>
+        </div>
+
+        <div style="margin-top:40px;padding-top:28px;border-top:1px solid var(--gray-border);text-align:center;">
+          <a href="/pages/blog.html" style="font-family:'Nunito Sans',sans-serif;font-weight:800;font-size:14px;color:var(--red);">← Back to all articles</a>
+        </div>
+
+      </div>
+    </section>
+  </article>
+
+</main>
+<div id="footer-placeholder"></div>
+<script src="/components.js"></script>
+<script src="/assets/engagement.js" defer></script>
+<script>renderNavbar("blog"); renderFooter();</script>
+</body>
+</html>
