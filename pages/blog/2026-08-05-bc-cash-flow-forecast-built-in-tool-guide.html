@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cash Flow Forecasting in Business Central: The Built-In Tool Guide | BC Team</title>
+  <meta name="description" content="Most companies running Business Central have never opened the Cash Flow Forecast page. Here's exactly how the native tool works, what feeds it, and how to set it up properly instead of forecasting in a spreadsheet.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.bcteam1.com/pages/blog/2026-08-05-bc-cash-flow-forecast-built-in-tool-guide.html">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.bcteam1.com/pages/blog/2026-08-05-bc-cash-flow-forecast-built-in-tool-guide.html">
+  <meta property="og:title" content="Cash Flow Forecasting in Business Central: The Built-In Tool Guide | BC Team">
+  <meta property="og:description" content="Most companies running Business Central have never opened the Cash Flow Forecast page. Here's exactly how the native tool works and how to set it up properly.">
+  <meta property="og:image" content="https://www.bcteam1.com/assets/blog/2026-08-05-bc-cash-flow-forecast-built-in-tool-guide-cover.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap"></noscript>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .post-body h2 { font-family:'Nunito Sans',sans-serif; font-weight:900; font-size:22px; color:var(--gray-dark); margin:40px 0 14px; }
+    .post-body h3 { font-family:'Nunito Sans',sans-serif; font-weight:800; font-size:17px; color:var(--gray-dark); margin:28px 0 10px; }
+    .post-body p  { font-size:16px; color:#333; line-height:1.85; margin-bottom:20px; }
+    .post-body ul { margin:0 0 20px 22px; }
+    .post-body li { font-size:16px; color:#333; line-height:1.8; margin-bottom:8px; }
+    .post-body hr { border:none; border-top:1px solid var(--gray-border); margin:40px 0; }
+    .post-body strong { color:var(--gray-dark); }
+  </style>
+</head>
+<body>
+
+<div class="bc-alert-banner">
+  <div class="bc-alert-banner-inner">
+    <span class="bc-alert-text">🔥 <strong>Free BC Health Check</strong> — Find out if your Business Central is silently costing you money</span>
+    <div class="alert-btns">
+      <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="alert-btn alert-btn-primary">Book Free 30-Min Call</a>
+      <a href="/pages/bc-rescue-audit.html" class="alert-btn alert-btn-outline">See Rescue Audit →</a>
+    </div>
+  </div>
+</div>
+<div id="navbar-placeholder"></div>
+<main>
+
+  <article>
+    <section style="background:var(--black);padding:56px 24px 48px;">
+      <div style="max-width:760px;margin:0 auto;">
+        <div class="breadcrumb" style="margin-bottom:20px;">
+          <a href="/index.html" style="color:rgba(255,255,255,0.4);">Home</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <a href="/pages/blog.html" style="color:rgba(255,255,255,0.4);">Blog</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <span style="color:rgba(255,255,255,0.6);">Cash Flow Forecasting in Business Central...</span>
+        </div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:14px;font-family:'Nunito Sans',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:1px;">August 5, 2026</div>
+        <h1 style="color:#fff;font-size:clamp(24px,3.5vw,44px);line-height:1.2;font-family:'Nunito Sans',sans-serif;font-weight:900;margin-bottom:20px;">Cash Flow Forecasting in Business Central: The Built-In Tool Guide</h1>
+        <p style="color:rgba(255,255,255,0.65);font-size:17px;line-height:1.7;max-width:660px;">Most companies running Business Central have never opened the Cash Flow Forecast page. Here's exactly how it works, what feeds it, and how to set it up properly.</p>
+      </div>
+    </section>
+
+    <section style="padding:48px 24px 64px;background:#fff;">
+      <div style="max-width:760px;margin:0 auto;">
+
+        <div class="post-body">
+
+          <p>Ask most finance teams how they forecast cash flow, and the honest answer is a spreadsheet someone rebuilds every Friday — half of it pulled manually from open invoices, half of it educated guessing about when customers will actually pay. It works, sort of, right up until the week it doesn't, and someone discovers a payroll run and a large vendor payment were about to hit the same account on the same day.</p>
+
+          <p>The frustrating part is that Business Central ships with a genuine cash flow forecasting engine built to solve exactly this — pulling live data from payables, receivables, and budgets automatically instead of requiring someone to manually reconstruct the picture every week. Most companies simply never turn it on, or set it up once, incorrectly, and quietly abandon it a month later.</p>
+
+          <p>Here's what the native tool actually does, and how to configure it so it's worth trusting.</p>
+
+          <hr>
+
+          <h2>What the Cash Flow Forecast Page Actually Shows</h2>
+
+          <p>The <strong>Cash Flow Forecast</strong> page in Business Central projects your cash position forward across a defined time horizon, broken into periods you control — weekly, monthly, or otherwise. It combines your current liquid funds with projected inflows and outflows pulled from live transactional data, rather than requiring anyone to manually estimate what's coming.</p>
+
+          <p>Done properly, it answers the specific question every Controller actually needs answered: not "what's our cash balance today," but "will we have enough cash on the 15th, after that payroll run and before that customer payment clears."</p>
+
+          <hr>
+
+          <h2>What Actually Feeds the Forecast</h2>
+
+          <p>The forecast is only as good as the sources feeding it, and BC pulls from several places that need to be configured correctly to produce a number worth trusting.</p>
+
+          <h3>1. Liquid Funds — Your Starting Point</h3>
+
+          <p><strong>Liquid Funds</strong> represent your current cash position: bank accounts and other immediately available funds. This needs to be accurate and current, which usually means your bank reconciliation process needs to be reasonably tight — a forecast built on a stale starting balance is wrong before it even projects forward.</p>
+
+          <h3>2. Payables and Receivables</h3>
+
+          <p>Open <strong>vendor invoices</strong> feed projected outflows, and open <strong>customer invoices</strong> feed projected inflows, both timed according to due dates or payment terms. This is where most of the forecast's real value comes from — it's live data, not a guess, and it updates automatically as invoices get created, paid, or adjusted.</p>
+
+          <p>The accuracy here depends entirely on whether payment terms are set up correctly and consistently across customers and vendors. A forecast that assumes every customer pays on the invoice due date, when your actual average is 15 days later, will be optimistic in a way that quietly undermines trust in the whole tool.</p>
+
+          <h3>3. Sales and Purchase Orders</h3>
+
+          <p>Beyond posted invoices, BC can incorporate open <strong>sales orders</strong> and <strong>purchase orders</strong> that haven't yet been invoiced — giving visibility further out than payables and receivables alone would provide. This is particularly valuable for businesses with longer lead times between order and invoice, like manufacturers or distributors managing significant purchase commitments.</p>
+
+          <h3>4. Budgeted Amounts</h3>
+
+          <p>For periods beyond what's covered by actual open transactions, the forecast can pull from <strong>G/L Budgets</strong> — giving a projected view even for cash flows that don't yet exist as concrete transactions. This is where a forecast stops being purely reactive and starts genuinely projecting forward, provided the underlying budget is realistic and kept current.</p>
+
+          <h3>5. Recurring and Manual Entries</h3>
+
+          <p>Not everything fits neatly into payables, receivables, or budgets. Payroll, loan payments, tax remittances, and other recurring cash events can be entered directly as <strong>Cash Flow Manual Expense/Revenue</strong> entries, ensuring the forecast reflects reality rather than just what happens to be sitting in the AP/AR ledgers.</p>
+
+          <hr>
+
+          <h2>Setting It Up Properly</h2>
+
+          <h3>Configure the Chart of Cash Flow Accounts</h3>
+
+          <p>Before the forecast means anything, the <strong>Chart of Cash Flow Accounts</strong> needs to be built out — a structure separate from your G/L Chart of Accounts that categorizes cash flow sources (operating, investing, financing) in a way that matches how your organization actually thinks about cash movement. Skipping this step is the single most common reason companies set up the forecast once and then find it unusable.</p>
+
+          <h3>Map Your Source Types Correctly</h3>
+
+          <p>In <strong>Cash Flow Setup</strong>, each source type — payables, receivables, budgets, fixed assets, tax — needs to be mapped to the right cash flow accounts and assigned an appropriate delay or adjustment where relevant. This is a one-time setup task that pays off every week afterward, but it does require someone to sit down and think through the mapping deliberately rather than accepting defaults.</p>
+
+          <h3>Choose a Realistic Forecast Horizon</h3>
+
+          <p>A 13-week rolling forecast is a common standard for good reason — long enough to catch problems with lead time to act, short enough that the underlying data (open invoices, near-term orders) is still reasonably reliable. Forecasting a full year out using this tool tends to lean heavily on budget data rather than live transactions, which is a different — and less trustworthy — kind of forecast.</p>
+
+          <h3>Reconcile Actuals Against the Forecast Regularly</h3>
+
+          <p>The forecast should be checked against what actually happened, regularly — not set up once and trusted blindly. If actual cash consistently comes in meaningfully different from forecast, that's a signal something in the setup — payment term assumptions, a missing manual entry pattern, stale liquid funds data — needs adjustment.</p>
+
+          <hr>
+
+          <h2>Why Most Companies Never Get Here</h2>
+
+          <p>The honest reason most companies abandon this tool isn't that it doesn't work — it's that proper setup takes real thought, and the payoff isn't immediately obvious until you're relying on it during a genuinely tight cash period. Spreadsheet forecasting feels more controllable, even though it's slower to build every week and more prone to human error.</p>
+
+          <p>The companies that do get this right tend to treat setup as a one-time investment worth doing carefully, rather than something to configure quickly and revisit later — because "later" rarely comes until there's already a cash crunch forcing the issue.</p>
+
+          <hr>
+
+          <h2>Where to Start</h2>
+
+          <p>If your Cash Flow Forecast page has sat untouched since implementation, the fastest path forward is auditing three things: whether your Chart of Cash Flow Accounts actually reflects how your business thinks about cash, whether payment terms are set up accurately enough to trust the receivables and payables projections, and whether recurring cash events like payroll are captured as manual entries or simply missing from the picture entirely.</p>
+
+        </div>
+
+        <div style="background:var(--black);border-radius:12px;padding:32px;text-align:center;margin:48px 0;">
+          <div class="section-label" style="color:rgba(255,255,255,0.4);margin-bottom:8px;">Still Forecasting Cash Flow in a Spreadsheet?</div>
+          <h3 style="color:#fff;font-size:22px;font-weight:900;font-family:'Nunito Sans',sans-serif;margin-bottom:12px;">See what the native tool can actually do for you.</h3>
+          <p style="color:rgba(255,255,255,0.6);font-size:15px;margin-bottom:24px;line-height:1.6;">Book a free 30-minute call with our team. We'll look at your current setup and map out what it would take to run a forecast you can actually trust.</p>
+          <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="btn btn-primary">Book a Free 30-Min Call</a>
+        </div>
+
+        <div style="margin-top:40px;padding-top:28px;border-top:1px solid var(--gray-border);text-align:center;">
+          <a href="/pages/blog.html" style="font-family:'Nunito Sans',sans-serif;font-weight:800;font-size:14px;color:var(--red);">← Back to all articles</a>
+        </div>
+
+      </div>
+    </section>
+  </article>
+
+</main>
+<div id="footer-placeholder"></div>
+<script src="/components.js"></script>
+<script src="/assets/engagement.js" defer></script>
+<script>renderNavbar("blog"); renderFooter();</script>
+</body>
+</html>
