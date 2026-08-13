@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Central Chart of Accounts Review: When and How | BC Team</title>
+  <meta name="description" content="Your Chart of Accounts has been quietly growing for years — and nobody's audited it since go-live. Here's when a review is actually overdue, and how to do one without breaking historical reporting.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.bcteam1.com/pages/blog/2026-08-04-bc-chart-of-accounts-review-when-and-how.html">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.bcteam1.com/pages/blog/2026-08-04-bc-chart-of-accounts-review-when-and-how.html">
+  <meta property="og:title" content="Business Central Chart of Accounts Review: When and How | BC Team">
+  <meta property="og:description" content="Your Chart of Accounts has been quietly growing for years. Here's when a review is actually overdue, and how to do one without breaking historical reporting.">
+  <meta property="og:image" content="https://www.bcteam1.com/assets/blog/2026-08-04-bc-chart-of-accounts-review-when-and-how-cover.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap"></noscript>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .post-body h2 { font-family:'Nunito Sans',sans-serif; font-weight:900; font-size:22px; color:var(--gray-dark); margin:40px 0 14px; }
+    .post-body h3 { font-family:'Nunito Sans',sans-serif; font-weight:800; font-size:17px; color:var(--gray-dark); margin:28px 0 10px; }
+    .post-body p  { font-size:16px; color:#333; line-height:1.85; margin-bottom:20px; }
+    .post-body ul { margin:0 0 20px 22px; }
+    .post-body li { font-size:16px; color:#333; line-height:1.8; margin-bottom:8px; }
+    .post-body hr { border:none; border-top:1px solid var(--gray-border); margin:40px 0; }
+    .post-body strong { color:var(--gray-dark); }
+  </style>
+</head>
+<body>
+
+<div class="bc-alert-banner">
+  <div class="bc-alert-banner-inner">
+    <span class="bc-alert-text">🔥 <strong>Free BC Health Check</strong> — Find out if your Business Central is silently costing you money</span>
+    <div class="alert-btns">
+      <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="alert-btn alert-btn-primary">Book Free 30-Min Call</a>
+      <a href="/pages/bc-rescue-audit.html" class="alert-btn alert-btn-outline">See Rescue Audit →</a>
+    </div>
+  </div>
+</div>
+<div id="navbar-placeholder"></div>
+<main>
+
+  <article>
+    <section style="background:var(--black);padding:56px 24px 48px;">
+      <div style="max-width:760px;margin:0 auto;">
+        <div class="breadcrumb" style="margin-bottom:20px;">
+          <a href="/index.html" style="color:rgba(255,255,255,0.4);">Home</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <a href="/pages/blog.html" style="color:rgba(255,255,255,0.4);">Blog</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <span style="color:rgba(255,255,255,0.6);">Business Central Chart of Accounts Review...</span>
+        </div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:14px;font-family:'Nunito Sans',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:1px;">August 4, 2026</div>
+        <h1 style="color:#fff;font-size:clamp(24px,3.5vw,44px);line-height:1.2;font-family:'Nunito Sans',sans-serif;font-weight:900;margin-bottom:20px;">Business Central Chart of Accounts Review: When and How</h1>
+        <p style="color:rgba(255,255,255,0.65);font-size:17px;line-height:1.7;max-width:660px;">Nobody schedules a Chart of Accounts review. It just quietly needs one, usually for years, until close starts taking noticeably longer and nobody can say exactly why.</p>
+      </div>
+    </section>
+
+    <section style="padding:48px 24px 64px;background:#fff;">
+      <div style="max-width:760px;margin:0 auto;">
+
+        <div class="post-body">
+
+          <p>Every Chart of Accounts starts clean. Someone designed it carefully during implementation, mapped it to a logical structure, and it made sense. Then two years pass. A new product line launches and gets its own account instead of a dimension. Someone adds a one-off account for a grant that expired eighteen months ago. A departing controller's pet project account never gets cleaned up because nobody's sure if it's still in use.</p>
+
+          <p>None of this happens through negligence. It happens through completely reasonable, individually justified decisions that nobody ever steps back to review as a whole. And at some point — usually quietly, usually without anyone declaring it — the Chart of Accounts stops being a clean financial structure and starts being an archaeological record of every decision the finance team has made since go-live.</p>
+
+          <p>Here's how to know when a review is actually overdue, and how to run one without breaking anything you rely on for historical reporting.</p>
+
+          <hr>
+
+          <h2>The Signs a Review Is Overdue</h2>
+
+          <p>A few patterns show up consistently in Charts of Accounts that need attention. None of them alone is damning, but seeing several together is a reliable signal.</p>
+
+          <ul>
+            <li><strong>Account count has grown faster than the business.</strong> If your Chart of Accounts has doubled in size over a period where revenue or headcount grew by 20%, something other than genuine business complexity is driving that growth.</li>
+            <li><strong>Reconciliations take longer than they used to,</strong> with no clear reason why — often because there's more noise in the trial balance to sort through, not because the underlying business got more complicated.</li>
+            <li><strong>Multiple accounts exist for functionally identical purposes,</strong> usually because someone didn't realize a suitable account already existed and created a new one instead of using — or asking about — what was already there.</li>
+            <li><strong>Nobody on the current team can confidently explain what half the accounts are for.</strong> This is the clearest signal of all. Institutional knowledge about "why this account exists" tends to leave with the person who created it.</li>
+            <li><strong>You're using account codes to capture information that Dimensions should be capturing</strong> — department, location, project, product line — which inflates the chart with accounts that are really just dimension values in disguise.</li>
+          </ul>
+
+          <hr>
+
+          <h2>Why This Happens Specifically in Business Central</h2>
+
+          <p>BC's flexibility is part of the problem here, ironically. Creating a new G/L account is fast and doesn't require much justification, while properly using <strong>Dimensions</strong> to capture the same distinction takes more upfront thought. Under deadline pressure, the path of least resistance is almost always "just add an account" rather than "set up a dimension properly."</p>
+
+          <p>This compounds over time because each new account, once created, tends to stay forever. Nobody wants to be the person who deletes an account and accidentally breaks a saved report or a prior-year comparison, so the chart only grows. Multiply that hesitation across several years and multiple finance team members, and you get exactly the kind of sprawling, half-understood chart most companies are quietly sitting on.</p>
+
+          <hr>
+
+          <h2>How to Run the Review Without Breaking Anything</h2>
+
+          <h3>1. Pull Actual Usage Data First</h3>
+
+          <p>Before deciding anything is dormant, check the <strong>G/L Entry</strong> table for actual posting activity per account over the last 24 months. An account with zero postings in two years is a strong candidate for consolidation. An account that gets one posting a year might still be legitimate — check before assuming.</p>
+
+          <h3>2. Separate "Delete" from "Consolidate" from "Leave Alone"</h3>
+
+          <p>Never delete an account with historical postings — doing so breaks prior-period reports and can create real problems for auditors. Instead, dormant accounts with history should be marked inactive so they can't receive new postings, while their historical data stays intact and reportable. True duplicates — two accounts serving an identical purpose — are candidates for consolidation, which requires remapping historical entries, not deletion.</p>
+
+          <h3>3. Distinguish Genuine Accounts from Disguised Dimensions</h3>
+
+          <p>Any account that exists purely to capture a department, location, or project distinction is a candidate to be replaced by proper Dimension usage going forward. This doesn't mean rewriting history — it means stopping the pattern from continuing, and building a plan to migrate reporting toward the Dimension-based structure over time.</p>
+
+          <h3>4. Get Sign-Off Before Changing Anything Live</h3>
+
+          <p>A Chart of Accounts review touches how every department's numbers get reported. Changes should be reviewed with whoever relies on those reports — FP&A, department heads, anyone pulling numbers for board reporting — before anything goes live, not after someone notices their usual report looks different.</p>
+
+          <hr>
+
+          <h2>What a Clean Chart Actually Buys You</h2>
+
+          <p>The payoff isn't cosmetic. A rationalized Chart of Accounts makes reconciliation faster because there's less noise to sort through at close. It makes onboarding new finance staff faster because the structure is actually self-explanatory again. And it makes every report built on top of it — budget vs. actual, departmental P&Ls, board decks — more trustworthy, because the numbers rolling up into them aren't scattered across a dozen near-duplicate accounts nobody fully understands anymore.</p>
+
+          <hr>
+
+          <h2>When to Actually Do This</h2>
+
+          <p>There's no perfect calendar trigger, but a few moments are natural windows: after a system upgrade, before a major reporting change, following an acquisition that merged two charts together, or simply when a new Controller or CFO comes in and wants to understand what they've inherited. If none of those apply and it's simply been several years since anyone looked closely — that's reason enough on its own.</p>
+
+        </div>
+
+        <div style="background:var(--black);border-radius:12px;padding:32px;text-align:center;margin:48px 0;">
+          <div class="section-label" style="color:rgba(255,255,255,0.4);margin-bottom:8px;">Not Sure How Bloated Your Chart Is?</div>
+          <h3 style="color:#fff;font-size:22px;font-weight:900;font-family:'Nunito Sans',sans-serif;margin-bottom:12px;">Get a clear picture before you touch anything.</h3>
+          <p style="color:rgba(255,255,255,0.6);font-size:15px;margin-bottom:24px;line-height:1.6;">Book a free 30-minute call with our team. We'll review your Chart of Accounts, flag what's dormant or duplicated, and map out a safe path to cleaning it up.</p>
+          <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="btn btn-primary">Book a Free 30-Min Call</a>
+        </div>
+
+        <div style="margin-top:40px;padding-top:28px;border-top:1px solid var(--gray-border);text-align:center;">
+          <a href="/pages/blog.html" style="font-family:'Nunito Sans',sans-serif;font-weight:800;font-size:14px;color:var(--red);">← Back to all articles</a>
+        </div>
+
+      </div>
+    </section>
+  </article>
+
+</main>
+<div id="footer-placeholder"></div>
+<script src="/components.js"></script>
+<script src="/assets/engagement.js" defer></script>
+<script>renderNavbar("blog"); renderFooter();</script>
+</body>
+</html>
