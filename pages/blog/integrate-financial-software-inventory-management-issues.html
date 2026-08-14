@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Integrating Cloud Financial Software With Inventory Management: What Actually Breaks | BC Team</title>
+  <meta name="description" content="Most integration failures between finance and inventory systems come from a handful of predictable mistakes. Here's what to design around first.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.bcteam1.com/pages/blog/integrate-financial-software-inventory-management-issues.html">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.bcteam1.com/pages/blog/integrate-financial-software-inventory-management-issues.html">
+  <meta property="og:title" content="Integrating Cloud Financial Software With Inventory Management: What Actually Breaks | BC Team">
+  <meta property="og:description" content="Most integration failures between finance and inventory systems come from a handful of predictable mistakes. Here's what to design around first.">
+  <meta property="og:image" content="https://www.bcteam1.com/assets/blog/integrate-financial-software-inventory-management-issues-cover.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap"></noscript>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .post-body h2 { font-family:'Nunito Sans',sans-serif; font-weight:900; font-size:22px; color:var(--gray-dark); margin:40px 0 14px; }
+    .post-body h3 { font-family:'Nunito Sans',sans-serif; font-weight:800; font-size:17px; color:var(--gray-dark); margin:28px 0 10px; }
+    .post-body p  { font-size:16px; color:#333; line-height:1.85; margin-bottom:20px; }
+    .post-body ul { margin:0 0 20px 22px; }
+    .post-body li { font-size:16px; color:#333; line-height:1.8; margin-bottom:8px; }
+    .post-body hr { border:none; border-top:1px solid var(--gray-border); margin:40px 0; }
+    .post-body strong { color:var(--gray-dark); }
+  </style>
+</head>
+<body>
+
+<div class="bc-alert-banner">
+  <div class="bc-alert-banner-inner">
+    <span class="bc-alert-text">🔥 <strong>Free BC Health Check</strong> — Find out if your Business Central is silently costing you money</span>
+    <div class="alert-btns">
+      <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="alert-btn alert-btn-primary">Book Free 30-Min Call</a>
+      <a href="/pages/bc-rescue-audit.html" class="alert-btn alert-btn-outline">See Rescue Audit →</a>
+    </div>
+  </div>
+</div>
+<div id="navbar-placeholder"></div>
+<main>
+
+  <article>
+    <section style="background:var(--black);padding:56px 24px 48px;">
+      <div style="max-width:760px;margin:0 auto;">
+        <div class="breadcrumb" style="margin-bottom:20px;">
+          <a href="/index.html" style="color:rgba(255,255,255,0.4);">Home</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <a href="/pages/blog.html" style="color:rgba(255,255,255,0.4);">Blog</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <span style="color:rgba(255,255,255,0.6);">Integrating Cloud Financial Software Wit...</span>
+        </div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:14px;font-family:'Nunito Sans',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:1px;">July 16, 2026</div>
+        <h1 style="color:#fff;font-size:clamp(24px,3.5vw,44px);line-height:1.2;font-family:'Nunito Sans',sans-serif;font-weight:900;margin-bottom:20px;">Integrating Cloud Financial Software With Inventory Management: What Actually Breaks</h1>
+        <p style="color:rgba(255,255,255,0.65);font-size:17px;line-height:1.7;max-width:660px;">When inventory and general ledger numbers stop matching, it's rarely the software's fault. Here's what actually breaks, and how to design around it.</p>
+      </div>
+    </section>
+
+    <div style="max-width:860px;margin:0 auto 40px;padding:0 24px;">
+      <img src="/assets/blog/integrate-financial-software-inventory-management-issues-cover.png"
+           alt="Integrating Cloud Financial Software With Inventory Management: What Actually Breaks"
+           style="width:100%;border-radius:12px;max-height:420px;object-fit:cover;display:block;"
+           loading="lazy">
+    </div>
+
+    <section style="padding:48px 24px 64px;background:#fff;">
+      <div style="max-width:760px;margin:0 auto;">
+        <div class="post-body">
+<p>Somewhere in most companies that have integrated a financial system with inventory management, there's a quarter where the numbers didn't reconcile and nobody could immediately say why. The inventory system showed one value, the general ledger showed another, and reconstructing the discrepancy took days of tracing individual transactions. This isn't rare, and it isn't usually a sign the software is broken &mdash; it's almost always a sign the integration was designed around a handful of predictable, avoidable assumptions.</p>
+
+<p>Here's what actually tends to break, and how to design around each one before connecting two systems.</p>
+
+<h2>Costing Method Mismatches</h2>
+
+<p>Business Central supports several inventory costing methods &mdash; FIFO, Average (a weighted, moving average), Standard, and Specific &mdash; and each one values inventory differently, with real consequences for how cost of goods sold gets calculated and posted to the general ledger. FIFO applies costs in the order inventory was received; Standard costing sets a predetermined cost and routes any variance from actual cost to dedicated variance accounts; Average uses a moving weighted calculation that updates with each purchase.</p>
+
+<p>The integration problem shows up when a costing method is chosen without input from finance, or changed later without understanding the downstream reporting impact. A manufacturer using Standard costing, for instance, needs variance accounts properly mapped and reviewed regularly &mdash; skip that, and inventory variance quietly accumulates in an account nobody's watching until it surfaces as a large, confusing adjustment at year-end.</p>
+
+<p><strong>What to design around:</strong> Choose the costing method deliberately, with finance involved in the decision, and confirm variance account mapping is reviewed as part of regular close &mdash; not left to default settings from implementation.</p>
+
+<h2>Unapplied or Partially Applied Transactions</h2>
+
+<p>A common, quiet failure mode: inventory transactions that were never properly applied against their corresponding receipt or issue, leaving the system with entries that technically exist but aren't correctly linked to the transaction they relate to. This produces exactly the kind of discrepancy between inventory valuation and the general ledger that takes days to trace, because the underlying data isn't wrong exactly &mdash; it's just unresolved.</p>
+
+<p><strong>What to design around:</strong> Build a regular review cadence &mdash; not just at year-end &mdash; using tools like an Item Application Worksheet to catch and resolve unapplied entries close to when they happen, while the context is still fresh, rather than letting them accumulate.</p>
+
+<h2>Timing Mismatches Between Physical and Financial Events</h2>
+
+<p>Inventory can physically move &mdash; received, shipped, adjusted &mdash; before the corresponding financial posting catches up, especially in integrations that batch updates rather than processing them as transactions occur. In the gap between physical movement and financial posting, anyone pulling a report is looking at a snapshot that's technically inconsistent between the two systems, even though both will eventually agree once the batch runs.</p>
+
+<p><strong>What to design around:</strong> Understand exactly what your integration's timing model is &mdash; real-time, near-real-time, or batch &mdash; and make sure anyone relying on reports understands what "as of" actually means for the numbers they're looking at. This is a business decision as much as a technical one, and it's covered in more depth as its own topic elsewhere in this series.</p>
+
+<h2>No Regular Reconciliation Process</h2>
+
+<p>Even a well-designed integration will drift over time &mdash; small discrepancies that individually look immaterial but compound if nobody's checking. Companies that treat integration as a one-time setup rather than an ongoing process are the ones who discover a large, confusing variance months later instead of a small, easily traced one within days.</p>
+
+<p><strong>What to design around:</strong> A regular reconciliation cadence between inventory valuation and the general ledger &mdash; monthly at minimum, more frequently for high-volume operations &mdash; using dedicated reconciliation reporting rather than manual cross-checking.</p>
+
+<h2>Treating Integration as Purely an IT Project</h2>
+
+<p>The mistake underneath several of the above: integration decisions frequently get made by IT or an implementation partner without enough finance involvement, because costing methods and reconciliation cadence look like technical settings rather than financial policy decisions. They're both. A costing method choice has direct GAAP and tax implications; a reconciliation cadence is a financial control, not just a system configuration.</p>
+
+<p><strong>What to design around:</strong> Make sure finance leadership is genuinely involved in these decisions during setup, not just informed of them after the fact.</p>
+
+<h2>What Good Integration Actually Looks Like</h2>
+
+<p>None of this requires exotic technical solutions. It requires a costing method chosen deliberately with finance involved, a clear understanding of transaction timing, a regular reconciliation cadence, and consistent review of unapplied transactions before they accumulate. Companies that get this right don't have zero discrepancies &mdash; they have small, quickly traceable ones instead of quarterly surprises.</p>
+
+        </div>
+
+        <div style="background:var(--black);border-radius:12px;padding:32px;text-align:center;margin:48px 0;">
+          <div class="section-label" style="color:rgba(255,255,255,0.4);margin-bottom:8px;">Have Questions About Your Own Situation?</div>
+          <h3 style="color:#fff;font-size:22px;font-weight:900;font-family:'Nunito Sans',sans-serif;margin-bottom:12px;">Talk it through with our team — no pitch, just answers.</h3>
+          <p style="color:rgba(255,255,255,0.6);font-size:15px;margin-bottom:24px;line-height:1.6;">Book a free 30-minute call. We'll answer these questions directly, about your specific business.</p>
+          <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="btn btn-primary">Book a Free 30-Min Call</a>
+        </div>
+
+        <div style="margin-top:40px;padding-top:28px;border-top:1px solid var(--gray-border);text-align:center;">
+          <a href="/pages/blog.html" style="font-family:'Nunito Sans',sans-serif;font-weight:800;font-size:14px;color:var(--red);">← Back to all articles</a>
+        </div>
+      </div>
+    </section>
+  </article>
+
+</main>
+<div id="footer-placeholder"></div>
+<script src="/components.js"></script>
+<script src="/assets/engagement.js" defer></script>
+<script>renderNavbar("blog"); renderFooter();</script>
+</body>
+</html>
