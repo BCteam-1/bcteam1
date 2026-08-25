@@ -1,0 +1,145 @@
+<!-- publish-date: 2026-09-16 -->
+<!-- blog-title: Business Central Backup and Disaster Recovery: What SaaS Actually Covers (and What It Doesn't) -->
+<!-- blog-desc: Microsoft backs up your entire Business Central environment automatically. What it can't do is restore just the one customer record someone accidentally deleted this morning without restoring everything else too. -->
+<!-- blog-cover: /assets/blog/2026-09-16-bc-backup-disaster-recovery-what-saas-covers-cover.png -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Central Backup and Disaster Recovery: What SaaS Actually Covers (and What It Doesn't) | BC Team</title>
+  <meta name="description" content="Microsoft backs up your entire Business Central environment automatically. What it can't do is restore just the one customer record someone accidentally deleted this morning.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.bcteam1.com/pages/blog/2026-09-16-bc-backup-disaster-recovery-what-saas-covers.html">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.bcteam1.com/pages/blog/2026-09-16-bc-backup-disaster-recovery-what-saas-covers.html">
+  <meta property="og:title" content="Business Central Backup and Disaster Recovery: What SaaS Actually Covers | BC Team">
+  <meta property="og:description" content="Microsoft backs up everything automatically. It can't restore just one deleted record without restoring everything else too.">
+  <meta property="og:image" content="https://www.bcteam1.com/assets/blog/2026-09-16-bc-backup-disaster-recovery-what-saas-covers-cover.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap"></noscript>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .post-body h2 { font-family:'Nunito Sans',sans-serif; font-weight:900; font-size:22px; color:var(--gray-dark); margin:40px 0 14px; }
+    .post-body h3 { font-family:'Nunito Sans',sans-serif; font-weight:800; font-size:17px; color:var(--gray-dark); margin:28px 0 10px; }
+    .post-body p  { font-size:16px; color:#333; line-height:1.85; margin-bottom:20px; }
+    .post-body ul { margin:0 0 20px 22px; }
+    .post-body li { font-size:16px; color:#333; line-height:1.8; margin-bottom:8px; }
+    .post-body hr { border:none; border-top:1px solid var(--gray-border); margin:40px 0; }
+    .post-body strong { color:var(--gray-dark); }
+  </style>
+</head>
+<body>
+
+<div class="bc-alert-banner">
+  <div class="bc-alert-banner-inner">
+    <span class="bc-alert-text">🔥 <strong>Free BC Health Check</strong> — Find out if your Business Central is silently costing you money</span>
+    <div class="alert-btns">
+      <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="alert-btn alert-btn-primary">Book Free 30-Min Call</a>
+      <a href="/pages/bc-rescue-audit.html" class="alert-btn alert-btn-outline">See Rescue Audit →</a>
+    </div>
+  </div>
+</div>
+<div id="navbar-placeholder"></div>
+<main>
+
+  <article>
+    <section style="background:var(--black);padding:56px 24px 48px;">
+      <div style="max-width:760px;margin:0 auto;">
+        <div class="breadcrumb" style="margin-bottom:20px;">
+          <a href="/index.html" style="color:rgba(255,255,255,0.4);">Home</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <a href="/pages/blog.html" style="color:rgba(255,255,255,0.4);">Blog</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <span style="color:rgba(255,255,255,0.6);">Business Central Backup and Disaster Recovery...</span>
+        </div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:14px;font-family:'Nunito Sans',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:1px;">September 16, 2026</div>
+        <h1 style="color:#fff;font-size:clamp(24px,3.5vw,44px);line-height:1.2;font-family:'Nunito Sans',sans-serif;font-weight:900;margin-bottom:20px;">Business Central Backup and Disaster Recovery: What SaaS Actually Covers (and What It Doesn't)</h1>
+        <p style="color:rgba(255,255,255,0.65);font-size:17px;line-height:1.7;max-width:660px;">Microsoft backs up your entire environment automatically. It can't restore just one deleted record without restoring everything else too.</p>
+      </div>
+    </section>
+
+    <div style="max-width:860px;margin:0 auto 40px;padding:0 24px;">
+      <img src="/assets/blog/2026-09-16-bc-backup-disaster-recovery-what-saas-covers-cover.png"
+           alt="Business Central Backup and Disaster Recovery: What SaaS Actually Covers (and What It Doesn't)"
+           style="width:100%;border-radius:12px;max-height:420px;object-fit:cover;display:block;"
+           loading="lazy">
+    </div>
+
+    <section style="padding:48px 24px 64px;background:#fff;">
+      <div style="max-width:760px;margin:0 auto;">
+
+        <div class="post-body">
+
+          <p>Someone accidentally deletes a customer record with two years of transaction history attached, and IT's first instinct is confidence: "we're on SaaS, Microsoft backs everything up, we'll just restore it." Then the actual restore process gets explained, and it turns out the fix isn't nearly that surgical — restoring means rolling the entire environment back to a point in time, which would also undo every other transaction every other user posted since then. Suddenly the "simple" fix has a much bigger cost than anyone expected.</p>
+
+          <p>This gap between what people assume SaaS backup means and what it actually covers is common, and it's worth understanding clearly before an incident forces the conversation.</p>
+
+          <hr>
+
+          <h2>What Microsoft Genuinely Handles</h2>
+
+          <p>Business Central Online runs on Azure SQL Database, and Microsoft automatically creates and maintains backups continuously — full, differential, and transaction log backups — with a retention window in roughly the 28-to-30-day range, covering both production and sandbox environments. For genuine business continuity against infrastructure failure, Microsoft also maintains <strong>geo-redundant replicas</strong> of production environments in a secondary Azure region, kept synchronized through continuous replication with typically only a few minutes of lag, specifically to protect against a region-wide Azure outage.</p>
+
+          <p>This is a genuinely strong foundation — it means the underlying infrastructure risk of data loss from hardware failure or even a full regional outage is handled automatically, without any action required from your team.</p>
+
+          <hr>
+
+          <h2>What This Backup Model Does Not Give You</h2>
+
+          <p>The critical limitation, worth stating plainly: restoring from these automated backups means restoring an <strong>entire environment</strong> to a specific point in time. There is no native, granular, record-level restore capability — no way to say "just bring back this one deleted customer, exactly as it was, without touching anything else." A restore also creates the recovered environment as a separate <strong>sandbox</strong>, not an in-place fix to production, meaning any genuinely recovered data still has to be manually identified and re-entered or re-imported into the live environment afterward.</p>
+
+          <p>Administrators also cannot directly access or manage these backups themselves — only specific internal or delegated administrator roles can even initiate an environment restore through the admin center, and only within the retention window before the backup itself ages out.</p>
+
+          <hr>
+
+          <h2>Why This Matters More the Longer You Wait to Notice</h2>
+
+          <p>The retention window is real and finite — roughly a month. A data problem that isn't noticed until after that window closes has no automated backup path back at all, regardless of severity. This is exactly why monitoring critical data changes and having a documented process for noticing problems quickly matters as much as the backup capability itself: Microsoft's automated protection is only useful within a window your team actually catches the problem inside.</p>
+
+          <hr>
+
+          <h2>Where Third-Party Tools Actually Add Value</h2>
+
+          <p>Because native restore is whole-environment and time-boxed, a real market exists for Business Central-specific backup tools that provide genuinely granular, record-level restore, automated scheduled exports outside Microsoft's retention window, and cross-environment comparison capability. For companies with real regulatory retention requirements, or simply a lower tolerance for the "roll back everything" nature of native restore, evaluating one of these tools is a legitimate, worthwhile conversation — not a sign that Microsoft's native protection is somehow deficient, just narrower in scope than most people assume.</p>
+
+          <hr>
+
+          <h2>What a Realistic DR Conversation Actually Covers</h2>
+
+          <p>A genuine disaster recovery conversation for Business Central needs to cover three distinct questions: what happens in a full regional Azure outage (Microsoft's geo-redundancy genuinely handles this), what happens if the environment needs restoring to a point in time due to widespread corruption or error (native restore handles this, at the cost of losing everything since that point), and what happens when a single record or small set of records needs recovery without touching anything else (native tools do not solve this — a third-party solution or a disciplined internal export process does).</p>
+
+          <hr>
+
+          <h2>Where to Start</h2>
+
+          <p>If your current disaster recovery plan for Business Central is simply "Microsoft handles it," it's worth clarifying specifically which of the three scenarios above that assumption actually covers. For most companies, the gap that matters practically is the middle one — record-level recovery — and it's worth deciding deliberately whether a third-party backup tool or a documented internal process is the right answer, rather than discovering the gap during an actual incident.</p>
+
+        </div>
+
+        <div style="background:var(--black);border-radius:12px;padding:32px;text-align:center;margin:48px 0;">
+          <div class="section-label" style="color:rgba(255,255,255,0.4);margin-bottom:8px;">Not Sure What Your DR Plan Actually Covers?</div>
+          <h3 style="color:#fff;font-size:22px;font-weight:900;font-family:'Nunito Sans',sans-serif;margin-bottom:12px;">Get a clear picture before an incident forces the question.</h3>
+          <p style="color:rgba(255,255,255,0.6);font-size:15px;margin-bottom:24px;line-height:1.6;">Book a free 30-minute call with our team. We'll walk through what Microsoft's native backup actually covers for your environment, and where a real gap might exist.</p>
+          <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="btn btn-primary">Book a Free 30-Min Call</a>
+        </div>
+
+        <div style="margin-top:40px;padding-top:28px;border-top:1px solid var(--gray-border);text-align:center;">
+          <a href="/pages/blog.html" style="font-family:'Nunito Sans',sans-serif;font-weight:800;font-size:14px;color:var(--red);">← Back to all articles</a>
+        </div>
+
+      </div>
+    </section>
+  </article>
+
+</main>
+<div id="footer-placeholder"></div>
+<script src="/components.js"></script>
+<script src="/assets/engagement.js" defer></script>
+<script>renderNavbar("blog"); renderFooter();</script>
+</body>
+</html>
