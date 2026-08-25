@@ -1,0 +1,153 @@
+<!-- publish-date: 2026-08-27 -->
+<!-- blog-title: Fixed Assets in Business Central: Depreciation Setup Most Companies Get Wrong -->
+<!-- blog-desc: A depreciation run that looks correct in Business Central can still be quietly wrong for months, because the mistake usually happened during setup, not during the monthly batch job. -->
+<!-- blog-cover: /assets/blog/2026-08-27-bc-fixed-assets-depreciation-setup-mistakes-cover.png -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fixed Assets in Business Central: Depreciation Setup Most Companies Get Wrong | BC Team</title>
+  <meta name="description" content="A depreciation run that looks correct in Business Central can still be quietly wrong for months, because the mistake usually happened during setup, not during the monthly batch job.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.bcteam1.com/pages/blog/2026-08-27-bc-fixed-assets-depreciation-setup-mistakes.html">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.bcteam1.com/pages/blog/2026-08-27-bc-fixed-assets-depreciation-setup-mistakes.html">
+  <meta property="og:title" content="Fixed Assets in Business Central: Depreciation Setup Most Companies Get Wrong | BC Team">
+  <meta property="og:description" content="A depreciation run that looks correct can still be quietly wrong for months, because the mistake usually happened during setup.">
+  <meta property="og:image" content="https://www.bcteam1.com/assets/blog/2026-08-27-bc-fixed-assets-depreciation-setup-mistakes-cover.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap"></noscript>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .post-body h2 { font-family:'Nunito Sans',sans-serif; font-weight:900; font-size:22px; color:var(--gray-dark); margin:40px 0 14px; }
+    .post-body h3 { font-family:'Nunito Sans',sans-serif; font-weight:800; font-size:17px; color:var(--gray-dark); margin:28px 0 10px; }
+    .post-body p  { font-size:16px; color:#333; line-height:1.85; margin-bottom:20px; }
+    .post-body ul { margin:0 0 20px 22px; }
+    .post-body li { font-size:16px; color:#333; line-height:1.8; margin-bottom:8px; }
+    .post-body hr { border:none; border-top:1px solid var(--gray-border); margin:40px 0; }
+    .post-body strong { color:var(--gray-dark); }
+  </style>
+</head>
+<body>
+
+<div class="bc-alert-banner">
+  <div class="bc-alert-banner-inner">
+    <span class="bc-alert-text">🔥 <strong>Free BC Health Check</strong> — Find out if your Business Central is silently costing you money</span>
+    <div class="alert-btns">
+      <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="alert-btn alert-btn-primary">Book Free 30-Min Call</a>
+      <a href="/pages/bc-rescue-audit.html" class="alert-btn alert-btn-outline">See Rescue Audit →</a>
+    </div>
+  </div>
+</div>
+<div id="navbar-placeholder"></div>
+<main>
+
+  <article>
+    <section style="background:var(--black);padding:56px 24px 48px;">
+      <div style="max-width:760px;margin:0 auto;">
+        <div class="breadcrumb" style="margin-bottom:20px;">
+          <a href="/index.html" style="color:rgba(255,255,255,0.4);">Home</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <a href="/pages/blog.html" style="color:rgba(255,255,255,0.4);">Blog</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <span style="color:rgba(255,255,255,0.6);">Fixed Assets in Business Central...</span>
+        </div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:14px;font-family:'Nunito Sans',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:1px;">August 27, 2026</div>
+        <h1 style="color:#fff;font-size:clamp(24px,3.5vw,44px);line-height:1.2;font-family:'Nunito Sans',sans-serif;font-weight:900;margin-bottom:20px;">Fixed Assets in Business Central: Depreciation Setup Most Companies Get Wrong</h1>
+        <p style="color:rgba(255,255,255,0.65);font-size:17px;line-height:1.7;max-width:660px;">A depreciation run that looks correct can still be quietly wrong for months, because the mistake almost always happened during setup — not during the monthly batch job.</p>
+      </div>
+    </section>
+
+    <div style="max-width:860px;margin:0 auto 40px;padding:0 24px;">
+      <img src="/assets/blog/2026-08-27-bc-fixed-assets-depreciation-setup-mistakes-cover.png"
+           alt="Fixed Assets in Business Central: Depreciation Setup Most Companies Get Wrong"
+           style="width:100%;border-radius:12px;max-height:420px;object-fit:cover;display:block;"
+           loading="lazy">
+    </div>
+
+    <section style="padding:48px 24px 64px;background:#fff;">
+      <div style="max-width:760px;margin:0 auto;">
+
+        <div class="post-body">
+
+          <p>The auditor asks a simple question during year-end fieldwork: why does the tax depreciation schedule not match what's posted to the general ledger for this piece of equipment. Nobody has a confident answer, because the person who originally set up the fixed asset left the company two years ago, and the depreciation batch job has been quietly running every month since — technically working, technically wrong, for two years.</p>
+
+          <p>This is a specific, recurring pattern in Business Central fixed asset management: the software runs depreciation exactly as configured, every time, without complaint. The problem is never that the batch job failed. It's that the setup underneath it — depreciation books, posting groups, FA posting type configuration — had a mistake baked in from the start, and nothing about a smoothly running monthly job ever surfaces that.</p>
+
+          <hr>
+
+          <h2>The Structure: Three Layers That Have to Line Up</h2>
+
+          <p>Business Central's fixed asset structure has three layers, and a mistake in any one of them quietly propagates through the others. The <strong>Fixed Asset card</strong> represents the physical asset itself. The <strong>Depreciation Book</strong>, linked to that card, defines how the asset is actually depreciated — and a single asset can be linked to multiple depreciation books simultaneously, commonly one for financial reporting and a separate one for tax purposes, each potentially using entirely different methods and timelines. The <strong>FA Posting Group</strong> determines which G/L accounts fixed asset transactions actually hit — acquisition cost, accumulated depreciation, depreciation expense, gain and loss on disposal.</p>
+
+          <p>When these three layers are configured correctly and consistently, an asset depreciates cleanly across however many books it needs to, posting to the right accounts automatically. When one layer is off — a posting group misaligned with its asset class, a depreciation book missing proper FA Posting Type Setup — the depreciation job still runs successfully every month. It just posts the wrong numbers, consistently, until someone notices.</p>
+
+          <hr>
+
+          <h2>Mistake 1: Multiple Books Set Up Once and Never Reconciled</h2>
+
+          <p>Running separate depreciation books for financial and tax reporting is a legitimate, common setup — but it requires each book's FA Posting Type Setup to be configured independently and deliberately, not copied once and assumed correct forever. Each posting type on that page controls specific behavior: whether posting is debit or credit, and whether that posting type is included in the depreciable basis calculation. Get this wrong on one book and it can silently diverge from the other for years, since nothing in the normal monthly run flags the mismatch.</p>
+
+          <p>Worth noting directly: Business Central explicitly recommends not changing FA Posting Type Setup for a depreciation book once entries have already been posted against it — meaning a setup mistake discovered late is often more complicated to correct retroactively than it would have been to catch during initial configuration.</p>
+
+          <hr>
+
+          <h2>Mistake 2: Depreciation Method Chosen Without Understanding the Formula Behind It</h2>
+
+          <p>Business Central supports straight-line, declining-balance, and user-defined depreciation methods, each calculating depreciation amounts through a distinct formula tied to depreciable basis, depreciation days, and the specific percentage or fixed amount entered. Choosing a method without understanding exactly how that formula behaves against a specific asset's acquisition date and fiscal calendar is a common source of depreciation amounts that look plausible but aren't quite right — particularly when depreciation is run for a partial period rather than a clean full fiscal year, which Microsoft's own documentation flags as a common source of calculation errors if not handled deliberately.</p>
+
+          <p>User-defined depreciation methods add another layer of setup precision: the <strong>First User-Defined Depreciation Date</strong> must be set to the same date as, or earlier than, the depreciation starting date — a small field easy to get backwards, with real downstream effect on the calculated schedule.</p>
+
+          <hr>
+
+          <h2>Mistake 3: G/L Integration Toggles Left at Default</h2>
+
+          <p>On the Integration tab of each depreciation book, individual toggles control whether each posting type actually writes to the general ledger or stays contained within the FA ledger only. The common, correct pattern is enabling G/L integration on the primary financial book while leaving it off on tax-only books — but this has to be a deliberate choice, not a default left unexamined. A tax book accidentally posting to the G/L, or a financial book failing to post when it should, both produce numbers that look internally consistent within Business Central while being wrong relative to what finance actually needs reported.</p>
+
+          <hr>
+
+          <h2>Mistake 4: FA Posting Groups Misaligned With Asset Classes</h2>
+
+          <p>Each Fixed Asset card links to one FA Posting Group, which should normally align with the asset's FA Class — but it's common for posting groups to be created ad hoc during data entry rather than deliberately mapped to a consistent class structure. When posting groups drift from class alignment, reporting that segments by asset class becomes unreliable, because the underlying G/L postings aren't actually organized the way the class structure implies they should be.</p>
+
+          <hr>
+
+          <h2>What Catching This Actually Looks Like</h2>
+
+          <p>Business Central does provide a genuine safety net worth knowing about: if a depreciation run turns out to be wrong, the <strong>Cancel FA Ledger Entries</strong> batch job can reverse specific posted entries, recording the reversal as a distinct Fixed Asset Error Ledger Entry that preserves a clean audit trail rather than simply deleting the mistake. This is a real, usable correction path — but it's a fix for a discovered problem, not a substitute for getting the underlying setup right in the first place.</p>
+
+          <hr>
+
+          <h2>Where to Start</h2>
+
+          <p>For any company running multiple depreciation books, it's worth auditing three things directly: whether FA Posting Type Setup has actually been configured independently and correctly for each book rather than copied once, whether G/L integration toggles reflect a deliberate financial-versus-tax decision rather than a default, and whether FA Posting Groups genuinely align with asset classes rather than having drifted from ad hoc data entry. A quiet mismatch in any of these can run undetected for years — right up until an auditor asks the one question nobody currently on staff can confidently answer.</p>
+
+        </div>
+
+        <div style="background:var(--black);border-radius:12px;padding:32px;text-align:center;margin:48px 0;">
+          <div class="section-label" style="color:rgba(255,255,255,0.4);margin-bottom:8px;">Not Sure Your Depreciation Setup Is Clean?</div>
+          <h3 style="color:#fff;font-size:22px;font-weight:900;font-family:'Nunito Sans',sans-serif;margin-bottom:12px;">Get it checked before your next audit does.</h3>
+          <p style="color:rgba(255,255,255,0.6);font-size:15px;margin-bottom:24px;line-height:1.6;">Book a free 30-minute call with our team. We'll review your depreciation books, posting groups, and FA setup to confirm the numbers you're reporting are actually the numbers you think you're reporting.</p>
+          <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="btn btn-primary">Book a Free 30-Min Call</a>
+        </div>
+
+        <div style="margin-top:40px;padding-top:28px;border-top:1px solid var(--gray-border);text-align:center;">
+          <a href="/pages/blog.html" style="font-family:'Nunito Sans',sans-serif;font-weight:800;font-size:14px;color:var(--red);">← Back to all articles</a>
+        </div>
+
+      </div>
+    </section>
+  </article>
+
+</main>
+<div id="footer-placeholder"></div>
+<script src="/components.js"></script>
+<script src="/assets/engagement.js" defer></script>
+<script>renderNavbar("blog"); renderFooter();</script>
+</body>
+</html>
