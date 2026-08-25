@@ -1,0 +1,141 @@
+<!-- publish-date: 2026-09-09 -->
+<!-- blog-title: Power BI and Business Central: What's Native vs. What Needs Building -->
+<!-- blog-desc: Business Central ships with genuine embedded Power BI reporting. Most companies never get past the default tiles, and few understand where native reporting actually stops and real Power BI development begins. -->
+<!-- blog-cover: /assets/blog/2026-09-09-bc-power-bi-native-vs-custom-cover.png -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Power BI and Business Central: What's Native vs. What Needs Building | BC Team</title>
+  <meta name="description" content="Business Central ships with genuine embedded Power BI reporting. Most companies never get past the default tiles, and few understand where native reporting stops and real Power BI development begins.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.bcteam1.com/pages/blog/2026-09-09-bc-power-bi-native-vs-custom.html">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.bcteam1.com/pages/blog/2026-09-09-bc-power-bi-native-vs-custom.html">
+  <meta property="og:title" content="Power BI and Business Central: What's Native vs. What Needs Building | BC Team">
+  <meta property="og:description" content="Business Central ships with genuine embedded Power BI reporting. Here's where that stops and real Power BI development begins.">
+  <meta property="og:image" content="https://www.bcteam1.com/assets/blog/2026-09-09-bc-power-bi-native-vs-custom-cover.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap"></noscript>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .post-body h2 { font-family:'Nunito Sans',sans-serif; font-weight:900; font-size:22px; color:var(--gray-dark); margin:40px 0 14px; }
+    .post-body h3 { font-family:'Nunito Sans',sans-serif; font-weight:800; font-size:17px; color:var(--gray-dark); margin:28px 0 10px; }
+    .post-body p  { font-size:16px; color:#333; line-height:1.85; margin-bottom:20px; }
+    .post-body ul { margin:0 0 20px 22px; }
+    .post-body li { font-size:16px; color:#333; line-height:1.8; margin-bottom:8px; }
+    .post-body hr { border:none; border-top:1px solid var(--gray-border); margin:40px 0; }
+    .post-body strong { color:var(--gray-dark); }
+  </style>
+</head>
+<body>
+
+<div class="bc-alert-banner">
+  <div class="bc-alert-banner-inner">
+    <span class="bc-alert-text">🔥 <strong>Free BC Health Check</strong> — Find out if your Business Central is silently costing you money</span>
+    <div class="alert-btns">
+      <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="alert-btn alert-btn-primary">Book Free 30-Min Call</a>
+      <a href="/pages/bc-rescue-audit.html" class="alert-btn alert-btn-outline">See Rescue Audit →</a>
+    </div>
+  </div>
+</div>
+<div id="navbar-placeholder"></div>
+<main>
+
+  <article>
+    <section style="background:var(--black);padding:56px 24px 48px;">
+      <div style="max-width:760px;margin:0 auto;">
+        <div class="breadcrumb" style="margin-bottom:20px;">
+          <a href="/index.html" style="color:rgba(255,255,255,0.4);">Home</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <a href="/pages/blog.html" style="color:rgba(255,255,255,0.4);">Blog</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <span style="color:rgba(255,255,255,0.6);">Power BI and Business Central...</span>
+        </div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:14px;font-family:'Nunito Sans',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:1px;">September 9, 2026</div>
+        <h1 style="color:#fff;font-size:clamp(24px,3.5vw,44px);line-height:1.2;font-family:'Nunito Sans',sans-serif;font-weight:900;margin-bottom:20px;">Power BI and Business Central: What's Native vs. What Needs Building</h1>
+        <p style="color:rgba(255,255,255,0.65);font-size:17px;line-height:1.7;max-width:660px;">Business Central ships with genuine embedded Power BI reporting. Most companies never get past the default tiles.</p>
+      </div>
+    </section>
+
+    <div style="max-width:860px;margin:0 auto 40px;padding:0 24px;">
+      <img src="/assets/blog/2026-09-09-bc-power-bi-native-vs-custom-cover.png"
+           alt="Power BI and Business Central: What's Native vs. What Needs Building"
+           style="width:100%;border-radius:12px;max-height:420px;object-fit:cover;display:block;"
+           loading="lazy">
+    </div>
+
+    <section style="padding:48px 24px 64px;background:#fff;">
+      <div style="max-width:760px;margin:0 auto;">
+
+        <div class="post-body">
+
+          <p>A CFO asks whether the company should invest in Power BI, and the honest answer is that they're already paying for it — it's embedded in the Business Central license they hold today. What they don't have is anyone who's gone past the default report tiles to actually build something specific to how their business needs to see its own numbers.</p>
+
+          <p>This confusion is common, and it runs in a specific, predictable direction: companies either assume Power BI is a separate, expensive add-on they haven't purchased, or they assume the default embedded reports are "Power BI" in the fullest sense and stop looking further. Neither assumption is quite right.</p>
+
+          <hr>
+
+          <h2>What's Genuinely Native</h2>
+
+          <p>Business Central includes embedded Power BI reporting directly in the product — pre-built report pages and dashboard tiles pulling live data from your environment, viewable inside Business Central itself without needing a separate Power BI license or license tier upgrade for basic viewing. This native layer covers standard financial and operational summaries reasonably well, and for a company with straightforward reporting needs, it can be genuinely sufficient without further investment.</p>
+
+          <p>The distinction worth understanding clearly: native embedded reports are built against Microsoft's own predefined data model and visual layout. They're not something a business user can meaningfully reshape without moving into actual Power BI development — a different skill set and a different tool, even though both carry the same "Power BI" name.</p>
+
+          <hr>
+
+          <h2>Where Native Reporting Stops</h2>
+
+          <p>The moment a reporting need goes beyond what Microsoft's predefined report pages show — a custom visual combining data from multiple areas of Business Central in a way the default reports don't anticipate, a dashboard built around metrics specific to your industry, or genuinely interactive drill-down analysis a static tile can't provide — native embedded reporting stops being sufficient, and real Power BI report development, connecting to Business Central data through its published data connector, becomes the actual path forward.</p>
+
+          <p>This is a meaningfully different undertaking than viewing a default tile. It requires someone who understands both the underlying Business Central data structure and Power BI's report-building tools — measures, relationships, DAX calculations — to construct something genuinely custom rather than consuming what Microsoft pre-built.</p>
+
+          <hr>
+
+          <h2>Why This Confusion Persists</h2>
+
+          <p>Microsoft's own product marketing understandably leans on the fact that Power BI is "included" — which is true for the embedded, native layer, and creates a reasonable expectation that everything under the Power BI name is similarly included and ready to use. In practice, moving from consuming default tiles to building genuinely custom reports crosses into a different kind of work — one that typically does require either a Power BI Pro license for whoever's building and sharing custom reports, and someone with real report-building capability, not just Business Central administration knowledge.</p>
+
+          <p>Companies that discover this gap late in the process — after assuming "we already have Power BI" meant custom dashboards were simply a configuration toggle away — tend to be more frustrated by the mismatch in expectation than by the actual cost of building something real.</p>
+
+          <hr>
+
+          <h2>A Practical Way to Frame the Decision</h2>
+
+          <p>Before assuming either extreme — that Power BI requires a large new investment, or that it's already fully covered — it's worth mapping your actual reporting gaps against what the native embedded layer genuinely provides. If the default report pages already answer the questions your team asks regularly, there may be nothing further to build. If leadership routinely asks for a specific cross-functional view that no default tile shows, that's a signal real Power BI development work — grounded in a clean underlying data model — is the actual next step, not a settings change inside Business Central.</p>
+
+          <hr>
+
+          <h2>Where to Start</h2>
+
+          <p>The most useful first step is usually a short audit: list the specific reports or dashboards your leadership team currently wants but doesn't have, and check each one against what Business Central's native embedded reporting already covers. What's left over after that comparison is the real scope of custom Power BI work — often smaller and more targeted than assumed, once it's separated clearly from what's already sitting in the license unused.</p>
+
+        </div>
+
+        <div style="background:var(--black);border-radius:12px;padding:32px;text-align:center;margin:48px 0;">
+          <div class="section-label" style="color:rgba(255,255,255,0.4);margin-bottom:8px;">Not Sure Where Native Reporting Stops for You?</div>
+          <h3 style="color:#fff;font-size:22px;font-weight:900;font-family:'Nunito Sans',sans-serif;margin-bottom:12px;">Get a clear picture of what's already included.</h3>
+          <p style="color:rgba(255,255,255,0.6);font-size:15px;margin-bottom:24px;line-height:1.6;">Book a free 30-minute call with our team. We'll map your actual reporting gaps against what Business Central's native Power BI reporting already provides.</p>
+          <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="btn btn-primary">Book a Free 30-Min Call</a>
+        </div>
+
+        <div style="margin-top:40px;padding-top:28px;border-top:1px solid var(--gray-border);text-align:center;">
+          <a href="/pages/blog.html" style="font-family:'Nunito Sans',sans-serif;font-weight:800;font-size:14px;color:var(--red);">← Back to all articles</a>
+        </div>
+
+      </div>
+    </section>
+  </article>
+
+</main>
+<div id="footer-placeholder"></div>
+<script src="/components.js"></script>
+<script src="/assets/engagement.js" defer></script>
+<script>renderNavbar("blog"); renderFooter();</script>
+</body>
+</html>
