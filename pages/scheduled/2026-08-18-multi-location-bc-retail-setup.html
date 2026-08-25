@@ -1,0 +1,157 @@
+<!-- publish-date: 2026-08-18 -->
+<!-- blog-title: Retail ERP: How to Set Up Multi-Location Business Central -->
+<!-- blog-desc: Adding a second store location in Business Central isn't just a new location code. Get the transfer routes and inventory posting setup wrong, and you'll be reconciling phantom inventory for months. -->
+<!-- blog-cover: /assets/blog/2026-08-18-multi-location-bc-retail-setup-cover.png -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retail ERP: How to Set Up Multi-Location Business Central | BC Team</title>
+  <meta name="description" content="Adding a second store location in Business Central isn't just a new location code. Get the transfer routes and inventory posting setup wrong, and you'll be reconciling phantom inventory for months.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.bcteam1.com/pages/blog/2026-08-18-multi-location-bc-retail-setup.html">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.bcteam1.com/pages/blog/2026-08-18-multi-location-bc-retail-setup.html">
+  <meta property="og:title" content="Retail ERP: How to Set Up Multi-Location Business Central | BC Team">
+  <meta property="og:description" content="Adding a second store location in Business Central isn't just a new location code. Get the transfer routes and inventory posting setup wrong, and you'll be reconciling phantom inventory for months.">
+  <meta property="og:image" content="https://www.bcteam1.com/assets/blog/2026-08-18-multi-location-bc-retail-setup-cover.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap"></noscript>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .post-body h2 { font-family:'Nunito Sans',sans-serif; font-weight:900; font-size:22px; color:var(--gray-dark); margin:40px 0 14px; }
+    .post-body h3 { font-family:'Nunito Sans',sans-serif; font-weight:800; font-size:17px; color:var(--gray-dark); margin:28px 0 10px; }
+    .post-body p  { font-size:16px; color:#333; line-height:1.85; margin-bottom:20px; }
+    .post-body ul { margin:0 0 20px 22px; }
+    .post-body li { font-size:16px; color:#333; line-height:1.8; margin-bottom:8px; }
+    .post-body hr { border:none; border-top:1px solid var(--gray-border); margin:40px 0; }
+    .post-body strong { color:var(--gray-dark); }
+  </style>
+</head>
+<body>
+
+<div class="bc-alert-banner">
+  <div class="bc-alert-banner-inner">
+    <span class="bc-alert-text">🔥 <strong>Free BC Health Check</strong> — Find out if your Business Central is silently costing you money</span>
+    <div class="alert-btns">
+      <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="alert-btn alert-btn-primary">Book Free 30-Min Call</a>
+      <a href="/pages/bc-rescue-audit.html" class="alert-btn alert-btn-outline">See Rescue Audit →</a>
+    </div>
+  </div>
+</div>
+<div id="navbar-placeholder"></div>
+<main>
+
+  <article>
+    <section style="background:var(--black);padding:56px 24px 48px;">
+      <div style="max-width:760px;margin:0 auto;">
+        <div class="breadcrumb" style="margin-bottom:20px;">
+          <a href="/index.html" style="color:rgba(255,255,255,0.4);">Home</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <a href="/pages/blog.html" style="color:rgba(255,255,255,0.4);">Blog</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <span style="color:rgba(255,255,255,0.6);">Retail ERP: How to Set Up Multi-Location...</span>
+        </div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:14px;font-family:'Nunito Sans',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:1px;">August 18, 2026</div>
+        <h1 style="color:#fff;font-size:clamp(24px,3.5vw,44px);line-height:1.2;font-family:'Nunito Sans',sans-serif;font-weight:900;margin-bottom:20px;">Retail ERP: How to Set Up Multi-Location Business Central</h1>
+        <p style="color:rgba(255,255,255,0.65);font-size:17px;line-height:1.7;max-width:660px;">Adding a second store location isn't just a new location code. Get the setup wrong, and you'll be reconciling phantom inventory for months.</p>
+      </div>
+    </section>
+
+    <div style="max-width:860px;margin:0 auto 40px;padding:0 24px;">
+      <img src="/assets/blog/2026-08-18-multi-location-bc-retail-setup-cover.png"
+           alt="Retail ERP: How to Set Up Multi-Location Business Central"
+           style="width:100%;border-radius:12px;max-height:420px;object-fit:cover;display:block;"
+           loading="lazy">
+    </div>
+
+    <section style="padding:48px 24px 64px;background:#fff;">
+      <div style="max-width:760px;margin:0 auto;">
+
+        <div class="post-body">
+
+          <p>The second store opens in six weeks. Someone on the team has already added a new location to Business Central, and on paper, everything looks ready. Then week two after go-live arrives, and the numbers stop making sense: inventory shows up as sold at one store but never received at the other, a transfer that shipped Tuesday still hasn't landed anywhere a week later, and finance can't tell whether that stock is lost, mis-shipped, or just sitting in some kind of accounting limbo.</p>
+
+          <p>None of this means Business Central can't handle multi-location retail. It handles it well. But "add a location" and "properly configure multi-location retail" are two very different amounts of setup work, and the gap between them is exactly where most of these problems come from.</p>
+
+          <hr>
+
+          <h2>A Location Code Is the Easy Part</h2>
+
+          <p>Creating a new <strong>Location Card</strong> takes minutes — name it, code it, done. That's also the part everyone remembers to do, which is exactly why it's rarely the source of problems. The setup that actually determines whether multi-location retail runs cleanly happens in three other places: transfer routes, inventory posting setup, and in-transit handling. Skip any of these and the location technically exists, but stock moving between it and anywhere else won't behave the way anyone expects.</p>
+
+          <hr>
+
+          <h2>Transfer Routes: The Setup Everyone Forgets Until It Breaks</h2>
+
+          <p>Moving inventory between two locations in Business Central happens through a <strong>Transfer Order</strong> — a from-location, a to-location, a shipment posted, then a receipt posted separately at the other end. That structure only works if a <strong>Transfer Route</strong> has been defined between the two locations first. Without one, a transfer order between your two stores simply can't be posted, which is exactly the kind of thing that surfaces for the first time during a live transfer, not during testing.</p>
+
+          <p>A transfer route also defines the <strong>in-transit location</strong> — a special location code flagged specifically for holding inventory that's shipped from one store but not yet received at the other. This matters more than it sounds like it should: while stock is in transit, it needs to live somewhere in the system, or your on-hand quantities will be wrong at both ends simultaneously — appearing to have left one store's inventory before it's actually arrived at the other, with no record of where it currently sits.</p>
+
+          <p>The in-transit location isn't just a placeholder, either — it needs its own entry in <strong>Inventory Posting Setup</strong>, or posting a transfer will throw an error the first time anyone tries it. This is one of the most common setup gaps we see: a transfer route gets created, someone forgets the in-transit location needs posting setup too, and the whole thing fails the first time it's actually used.</p>
+
+          <hr>
+
+          <h2>Inventory Posting Setup Needs to Exist for Every Location, Not Just the First One</h2>
+
+          <p>Each location needs its own inventory posting setup combination — tying item categories or posting groups to the correct G/L accounts for that specific location. It's common for a second location to get created and left pointing at incomplete or default posting setup, which technically lets transactions post but sends the resulting entries to the wrong place in the general ledger, or fails outright on the first real transaction that touches it.</p>
+
+          <p>This is worth testing deliberately before go-live — post a test receipt, a test sale, and a test transfer at the new location specifically, and confirm the G/L entries land where finance expects them to. Discovering a posting setup gap during a live sale on opening day is a worse time to find it than during a quiet test the week before.</p>
+
+          <hr>
+
+          <h2>Planning Worksheet Behavior Across Locations</h2>
+
+          <p>Here's a specific, easy-to-miss detail: Business Central's <strong>Planning Worksheet</strong>, when run without a location filter, evaluates each location's needs independently — it won't automatically notice that Location A has excess stock that could cover a shortage at Location B. Left unconfigured, this means the system can suggest a brand-new purchase order for Location B while Location A is sitting on inventory that could have covered it through a transfer instead.</p>
+
+          <p>Getting the system to suggest transfers instead of duplicate purchases requires deliberate planning parameter setup — not a default behavior, something that has to be configured with your specific store network in mind. For a retail operation with two or more locations, this is worth setting up properly from day one; the alternative is duplicate purchasing that nobody notices until inventory levels look strangely bloated at one store and strangely thin at another.</p>
+
+          <hr>
+
+          <h2>Zones and Bins — Only If You Actually Need Them</h2>
+
+          <p>Business Central lets you subdivide a location further into <strong>zones</strong> and <strong>bins</strong> — receiving zones, storage zones, shipping zones, and specific bin locations within each. For most retail store locations, this level of granularity is unnecessary complexity; it's built for warehouse and distribution operations with real pick-and-pack workflows, not a retail floor with a stockroom.</p>
+
+          <p>The mistake worth avoiding here runs in both directions: skipping zone and bin setup for an actual distribution center that needs it causes real fulfillment problems, but adding that complexity to a simple retail stockroom that doesn't need it just creates unnecessary configuration overhead for staff to work around every day. Match the setup to what the location actually does, not to what sounds more sophisticated.</p>
+
+          <hr>
+
+          <h2>What This Looks Like Done Right</h2>
+
+          <p>A properly configured multi-location retail setup means a transfer between stores posts cleanly, in-transit inventory is visible and accounted for the entire time it's moving, posting setup is complete and tested at every location before go-live, and planning correctly considers cross-location stock before suggesting a new purchase. None of this is exotic configuration — it's foundational setup that simply needs to happen before opening day, not discovered as a gap after it.</p>
+
+          <hr>
+
+          <h2>Before You Open the Next Location</h2>
+
+          <p>If you're adding a second — or third, or tenth — location to an existing Business Central environment, it's worth auditing three things specifically before go-live: whether transfer routes and their in-transit locations are fully configured and posting-tested, whether inventory posting setup is complete for the new location specifically, and whether planning parameters actually account for cross-location stock. Most multi-location retail problems trace back to one of these three gaps, and all three are far cheaper to fix before opening day than after.</p>
+
+        </div>
+
+        <div style="background:var(--black);border-radius:12px;padding:32px;text-align:center;margin:48px 0;">
+          <div class="section-label" style="color:rgba(255,255,255,0.4);margin-bottom:8px;">Opening a New Location?</div>
+          <h3 style="color:#fff;font-size:22px;font-weight:900;font-family:'Nunito Sans',sans-serif;margin-bottom:12px;">Get your multi-location setup right before go-live.</h3>
+          <p style="color:rgba(255,255,255,0.6);font-size:15px;margin-bottom:24px;line-height:1.6;">Book a free 30-minute call with our team. We'll review your transfer routes, posting setup, and planning configuration before you open your doors.</p>
+          <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="btn btn-primary">Book a Free 30-Min Call</a>
+        </div>
+
+        <div style="margin-top:40px;padding-top:28px;border-top:1px solid var(--gray-border);text-align:center;">
+          <a href="/pages/blog.html" style="font-family:'Nunito Sans',sans-serif;font-weight:800;font-size:14px;color:var(--red);">← Back to all articles</a>
+        </div>
+
+      </div>
+    </section>
+  </article>
+
+</main>
+<div id="footer-placeholder"></div>
+<script src="/components.js"></script>
+<script src="/assets/engagement.js" defer></script>
+<script>renderNavbar("blog"); renderFooter();</script>
+</body>
+</html>
