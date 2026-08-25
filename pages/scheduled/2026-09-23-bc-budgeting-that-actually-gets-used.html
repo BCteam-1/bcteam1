@@ -1,0 +1,141 @@
+<!-- publish-date: 2026-09-23 -->
+<!-- blog-title: Budgeting in Business Central: Building a Budget That Actually Gets Used -->
+<!-- blog-desc: Most G/L budgets in Business Central get built once during implementation, imported from last year's Excel version, and never touched again until someone asks why the budget-to-actual report doesn't mean anything. -->
+<!-- blog-cover: /assets/blog/2026-09-23-bc-budgeting-that-actually-gets-used-cover.png -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budgeting in Business Central: Building a Budget That Actually Gets Used | BC Team</title>
+  <meta name="description" content="Most G/L budgets get built once during implementation, imported from last year's Excel version, and never touched again until the budget-to-actual report stops meaning anything.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.bcteam1.com/pages/blog/2026-09-23-bc-budgeting-that-actually-gets-used.html">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.bcteam1.com/pages/blog/2026-09-23-bc-budgeting-that-actually-gets-used.html">
+  <meta property="og:title" content="Budgeting in Business Central: Building a Budget That Actually Gets Used | BC Team">
+  <meta property="og:description" content="Most G/L budgets get built once, imported from last year's Excel version, and never touched again.">
+  <meta property="og:image" content="https://www.bcteam1.com/assets/blog/2026-09-23-bc-budgeting-that-actually-gets-used-cover.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap"></noscript>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .post-body h2 { font-family:'Nunito Sans',sans-serif; font-weight:900; font-size:22px; color:var(--gray-dark); margin:40px 0 14px; }
+    .post-body h3 { font-family:'Nunito Sans',sans-serif; font-weight:800; font-size:17px; color:var(--gray-dark); margin:28px 0 10px; }
+    .post-body p  { font-size:16px; color:#333; line-height:1.85; margin-bottom:20px; }
+    .post-body ul { margin:0 0 20px 22px; }
+    .post-body li { font-size:16px; color:#333; line-height:1.8; margin-bottom:8px; }
+    .post-body hr { border:none; border-top:1px solid var(--gray-border); margin:40px 0; }
+    .post-body strong { color:var(--gray-dark); }
+  </style>
+</head>
+<body>
+
+<div class="bc-alert-banner">
+  <div class="bc-alert-banner-inner">
+    <span class="bc-alert-text">🔥 <strong>Free BC Health Check</strong> — Find out if your Business Central is silently costing you money</span>
+    <div class="alert-btns">
+      <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="alert-btn alert-btn-primary">Book Free 30-Min Call</a>
+      <a href="/pages/bc-rescue-audit.html" class="alert-btn alert-btn-outline">See Rescue Audit →</a>
+    </div>
+  </div>
+</div>
+<div id="navbar-placeholder"></div>
+<main>
+
+  <article>
+    <section style="background:var(--black);padding:56px 24px 48px;">
+      <div style="max-width:760px;margin:0 auto;">
+        <div class="breadcrumb" style="margin-bottom:20px;">
+          <a href="/index.html" style="color:rgba(255,255,255,0.4);">Home</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <a href="/pages/blog.html" style="color:rgba(255,255,255,0.4);">Blog</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <span style="color:rgba(255,255,255,0.6);">Budgeting in Business Central...</span>
+        </div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:14px;font-family:'Nunito Sans',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:1px;">September 23, 2026</div>
+        <h1 style="color:#fff;font-size:clamp(24px,3.5vw,44px);line-height:1.2;font-family:'Nunito Sans',sans-serif;font-weight:900;margin-bottom:20px;">Budgeting in Business Central: Building a Budget That Actually Gets Used</h1>
+        <p style="color:rgba(255,255,255,0.65);font-size:17px;line-height:1.7;max-width:660px;">Most G/L budgets get built once, imported from last year's Excel version, and never touched again until nobody trusts the budget-to-actual report anymore.</p>
+      </div>
+    </section>
+
+    <div style="max-width:860px;margin:0 auto 40px;padding:0 24px;">
+      <img src="/assets/blog/2026-09-23-bc-budgeting-that-actually-gets-used-cover.png"
+           alt="Budgeting in Business Central: Building a Budget That Actually Gets Used"
+           style="width:100%;border-radius:12px;max-height:420px;object-fit:cover;display:block;"
+           loading="lazy">
+    </div>
+
+    <section style="padding:48px 24px 64px;background:#fff;">
+      <div style="max-width:760px;margin:0 auto;">
+
+        <div class="post-body">
+
+          <p>A department head glances at the budget-to-actual column in a monthly report and mentally discounts it entirely, because everyone in the room already knows that budget was built by copying last year's spreadsheet numbers into Business Central during implementation and hasn't been meaningfully revisited since. Nobody trusts it, so nobody uses it to make a decision — which means the company is running a genuine ERP platform with a budgeting capability sitting largely decorative, next to a number everyone's quietly agreed to ignore.</p>
+
+          <p>This is a common, specific failure mode, and it has less to do with Business Central's budgeting capability and more to do with how budgets typically get built and then abandoned.</p>
+
+          <hr>
+
+          <h2>G/L Budgets Are More Flexible Than Most Companies Use Them For</h2>
+
+          <p>Business Central's G/L Budgets support entry at a genuinely granular level — by account, by period, and critically, by <strong>Dimension</strong>, meaning a budget can be broken down by department, location, or project rather than existing only as a single company-wide number per account. Most companies that build a budget once during implementation never take advantage of this dimensional depth, ending up with a budget that can only be compared at the total company level — which makes department-level accountability against budget essentially impossible, even though the underlying platform supports it.</p>
+
+          <hr>
+
+          <h2>Why Budgets Built Once Stop Being Trustworthy</h2>
+
+          <p>A budget built as a one-time exercise, disconnected from how the business actually operates day to day, drifts out of relevance almost immediately once real conditions change — a new product line launches, a cost assumption turns out wrong, headcount grows faster or slower than planned. Without a deliberate process for revising the budget as the year progresses, the original numbers become a historical artifact rather than a genuine planning tool, and everyone comparing actual results against it knows it on some level, which is exactly why the comparison stops carrying any real weight.</p>
+
+          <hr>
+
+          <h2>Multiple Budgets Serve Different Purposes — Most Companies Only Build One</h2>
+
+          <p>Business Central supports maintaining multiple named budgets simultaneously — an original approved budget kept static as a baseline, alongside a separate, actively updated reforecast that reflects current-year reality as it unfolds. Comparing actual results against both, side by side, tells a genuinely useful story: how far off the original plan turned out to be, and how well the business is tracking against its most current, realistic expectations. Most companies maintain only the original static budget, which answers only the first, less useful question.</p>
+
+          <hr>
+
+          <h2>Connecting the Budget to Financial Reporting</h2>
+
+          <p>A budget only becomes genuinely useful once it's actually surfaced in the reports people look at regularly — through properly built <strong>Financial Reports</strong> (covered in more depth elsewhere on this site) with column definitions specifically comparing actual to budget, ideally at the department or project level using the same dimensional structure the budget was built with. A budget sitting in the G/L Budget Entries table that nobody's built a comparison report against is functionally invisible, regardless of how carefully it was constructed.</p>
+
+          <hr>
+
+          <h2>What a Budget People Actually Use Looks Like</h2>
+
+          <p>A genuinely useful budget is built with dimensional detail matching how the business actually wants to hold departments accountable, gets revised through a real reforecast process rather than staying frozen from the original planning exercise, and is compared against actual results through reports specifically built to show that comparison clearly — not buried in a generic trial balance nobody reads that way. None of this requires exotic configuration; it requires treating budgeting as an ongoing process rather than a one-time data entry task completed during implementation and forgotten.</p>
+
+          <hr>
+
+          <h2>Where to Start</h2>
+
+          <p>If your current budget-to-actual comparison is something people quietly discount rather than genuinely use, it's worth checking three things directly: whether the budget was ever built with dimensional detail at all, whether it's been meaningfully revised since it was first entered, and whether a real reforecast budget exists alongside the original for a more honest comparison. Most companies find the gap traces back to one of these three, fixable without rebuilding anything from scratch.</p>
+
+        </div>
+
+        <div style="background:var(--black);border-radius:12px;padding:32px;text-align:center;margin:48px 0;">
+          <div class="section-label" style="color:rgba(255,255,255,0.4);margin-bottom:8px;">Is Your Budget-to-Actual Report Trusted by Anyone?</div>
+          <h3 style="color:#fff;font-size:22px;font-weight:900;font-family:'Nunito Sans',sans-serif;margin-bottom:12px;">Build a budget people actually use.</h3>
+          <p style="color:rgba(255,255,255,0.6);font-size:15px;margin-bottom:24px;line-height:1.6;">Book a free 30-minute call with our team. We'll review your current budget setup and help you build one that's actually connected to your reporting and reforecasting process.</p>
+          <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="btn btn-primary">Book a Free 30-Min Call</a>
+        </div>
+
+        <div style="margin-top:40px;padding-top:28px;border-top:1px solid var(--gray-border);text-align:center;">
+          <a href="/pages/blog.html" style="font-family:'Nunito Sans',sans-serif;font-weight:800;font-size:14px;color:var(--red);">← Back to all articles</a>
+        </div>
+
+      </div>
+    </section>
+  </article>
+
+</main>
+<div id="footer-placeholder"></div>
+<script src="/components.js"></script>
+<script src="/assets/engagement.js" defer></script>
+<script>renderNavbar("blog"); renderFooter();</script>
+</body>
+</html>
