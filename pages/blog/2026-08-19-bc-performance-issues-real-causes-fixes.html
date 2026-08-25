@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Central Performance Issues: The Real Causes and Fixes | BC Team</title>
+  <meta name="description" content="\"BC is slow\" isn't a diagnosis, it's a symptom. Here's how to use the actual telemetry tools Microsoft ships to find out which of four specific causes is behind it.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.bcteam1.com/pages/blog/2026-08-19-bc-performance-issues-real-causes-fixes.html">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.bcteam1.com/pages/blog/2026-08-19-bc-performance-issues-real-causes-fixes.html">
+  <meta property="og:title" content="Business Central Performance Issues: The Real Causes and Fixes | BC Team">
+  <meta property="og:description" content="\"BC is slow\" isn't a diagnosis, it's a symptom. Here's how to use the actual telemetry tools Microsoft ships to find out which of four specific causes is behind it.">
+  <meta property="og:image" content="https://www.bcteam1.com/assets/blog/2026-08-19-bc-performance-issues-real-causes-fixes-cover.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap"></noscript>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .post-body h2 { font-family:'Nunito Sans',sans-serif; font-weight:900; font-size:22px; color:var(--gray-dark); margin:40px 0 14px; }
+    .post-body h3 { font-family:'Nunito Sans',sans-serif; font-weight:800; font-size:17px; color:var(--gray-dark); margin:28px 0 10px; }
+    .post-body p  { font-size:16px; color:#333; line-height:1.85; margin-bottom:20px; }
+    .post-body ul { margin:0 0 20px 22px; }
+    .post-body li { font-size:16px; color:#333; line-height:1.8; margin-bottom:8px; }
+    .post-body hr { border:none; border-top:1px solid var(--gray-border); margin:40px 0; }
+    .post-body strong { color:var(--gray-dark); }
+    .post-body code { background:#f3f4f6; padding:2px 6px; border-radius:4px; font-size:14px; color:#c0392b; }
+  </style>
+</head>
+<body>
+
+<div class="bc-alert-banner">
+  <div class="bc-alert-banner-inner">
+    <span class="bc-alert-text">🔥 <strong>Free BC Health Check</strong> — Find out if your Business Central is silently costing you money</span>
+    <div class="alert-btns">
+      <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="alert-btn alert-btn-primary">Book Free 30-Min Call</a>
+      <a href="/pages/bc-rescue-audit.html" class="alert-btn alert-btn-outline">See Rescue Audit →</a>
+    </div>
+  </div>
+</div>
+<div id="navbar-placeholder"></div>
+<main>
+
+  <article>
+    <section style="background:var(--black);padding:56px 24px 48px;">
+      <div style="max-width:760px;margin:0 auto;">
+        <div class="breadcrumb" style="margin-bottom:20px;">
+          <a href="/index.html" style="color:rgba(255,255,255,0.4);">Home</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <a href="/pages/blog.html" style="color:rgba(255,255,255,0.4);">Blog</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <span style="color:rgba(255,255,255,0.6);">Business Central Performance Issues...</span>
+        </div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:14px;font-family:'Nunito Sans',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:1px;">August 19, 2026</div>
+        <h1 style="color:#fff;font-size:clamp(24px,3.5vw,44px);line-height:1.2;font-family:'Nunito Sans',sans-serif;font-weight:900;margin-bottom:20px;">Business Central Performance Issues: The Real Causes and Fixes</h1>
+        <p style="color:rgba(255,255,255,0.65);font-size:17px;line-height:1.7;max-width:660px;">"BC is slow" isn't a diagnosis, it's a symptom. Here's how to find out which of four specific causes is actually behind it.</p>
+      </div>
+    </section>
+
+    <div style="max-width:860px;margin:0 auto 40px;padding:0 24px;">
+      <img src="/assets/blog/2026-08-19-bc-performance-issues-real-causes-fixes-cover.png"
+           alt="Business Central Performance Issues: The Real Causes and Fixes"
+           style="width:100%;border-radius:12px;max-height:420px;object-fit:cover;display:block;"
+           loading="lazy">
+    </div>
+
+    <section style="padding:48px 24px 64px;background:#fff;">
+      <div style="max-width:760px;margin:0 auto;">
+
+        <div class="post-body">
+
+          <p>A user opens a ticket: "Business Central is slow." That's the entire report. Not which page, not what action, not whether it's slow for one person or everyone, not whether it started yesterday or has been creeping up for months. And yet that vague ticket usually triggers the same reflexive response — restart the service tier, maybe bump the App Service plan, hope it resolves itself.</p>
+
+          <p>Sometimes it does, temporarily. It almost always comes back, because "restart it" treats a symptom without ever identifying a cause. Business Central actually ships with real diagnostic tooling built specifically to answer "which of the following four things is actually happening" — most IT teams just haven't turned it on.</p>
+
+          <hr>
+
+          <h2>Stop Guessing. Turn On Telemetry First.</h2>
+
+          <p>Before chasing any specific fix, the single highest-leverage step is connecting your environment to <strong>Azure Application Insights</strong>. Once enabled, Business Central emits detailed telemetry covering long-running SQL queries, lock timeouts, deadlocks, and page load durations — the exact signals needed to tell these four causes apart instead of guessing.</p>
+
+          <p>Microsoft's own guidance here is specific: baseline your environment with telemetry before changing anything, then make changes and compare against that baseline. Without it, "we made it faster" is a feeling, not a measurement — and it's impossible to tell whether a fix actually worked or the problem just moved somewhere else.</p>
+
+          <hr>
+
+          <h2>Cause 1: FlowFields Calculating More Than They Need To</h2>
+
+          <p><strong>FlowFields</strong> — the calculated fields showing sums, counts, and lookups like a customer's balance — are one of the most common sources of page-load slowness, specifically because each FlowField calculation can require its own separate SQL query against potentially millions of underlying ledger rows.</p>
+
+          <p>The classic failure pattern: a list page shows several FlowField columns, and every one of them recalculates for every visible row, every time the list refreshes. On a small customer list, nobody notices. On a list with thousands of records and several FlowField columns, that's a genuinely heavy amount of database work disguised as "just opening a page."</p>
+
+          <p><strong>The fix:</strong> Reduce the number of FlowFields shown directly on high-traffic list pages — move less-critical totals to a FactBox or drill-down instead of a default column. Enable the <strong>Calculate only visible FlowFields</strong> feature so fields that aren't currently shown don't calculate anyway. And ensure the underlying <strong>SIFT</strong> indexes actually exist and are properly maintained for the sum/count FlowFields you do keep visible — a missing or disabled SIFT index turns what should be an instant lookup into a full table scan.</p>
+
+          <hr>
+
+          <h2>Cause 2: Missing or Disabled SIFT Indexes</h2>
+
+          <p><strong>SumIndexField Technology (SIFT)</strong> is what makes a field like a customer's running balance open instantly instead of recalculating from scratch across every ledger entry that's ever posted. Each SIFT definition becomes an indexed structure in the database that pre-aggregates those sums.</p>
+
+          <p>The tradeoff is real: every maintained SIFT index adds write overhead, since the database has to update it on every insert, modify, and delete against the base table. This means the fix isn't automatically "add more SIFT indexes everywhere" — high-volume transaction tables in particular, like Item Ledger Entry, can actually slow down posting if too many SIFT structures are being maintained on fields nobody reads often.</p>
+
+          <p><strong>The fix:</strong> Audit which SIFT-backed totals are actually viewed frequently versus rarely, and disable maintenance on the ones that aren't earning their write-overhead cost. This is a genuine balancing act, not a one-directional "add more indexes" exercise — and it's exactly the kind of thing telemetry data should inform rather than guesswork.</p>
+
+          <hr>
+
+          <h2>Cause 3: Lock Contention, Not Actually Slow Queries</h2>
+
+          <p>A query that looks slow in a report isn't always slow because of the query itself — it's often waiting on a lock held by something else. Posting routines, warehouse activity, job queue entries, and integrations running concurrently can all hold locks long enough to stall unrelated user sessions, and this shows up to end users as generic sluggishness with no obvious cause.</p>
+
+          <p>This is a specifically common pattern worth naming directly: performance that's noticeably worse at certain times of day — heavy posting activity in the afternoon, a scheduled job queue task running during business hours — is a strong signal of lock contention rather than a fundamentally slow query.</p>
+
+          <p><strong>The fix:</strong> Application Insights telemetry specifically surfaces lock timeout and deadlock events, which is the fastest way to confirm whether users are actually waiting on locks rather than raw query time. Once confirmed, staggering heavy job queue tasks away from peak business hours is often the single highest-impact, lowest-effort fix available.</p>
+
+          <hr>
+
+          <h2>Cause 4: A Handful of Extensions Doing More Work Than Anyone Realizes</h2>
+
+          <p>Most Business Central environments run several extensions layered on the base platform, and it's genuinely difficult to know, just by looking at a slow page, which extension — if any — is contributing to the problem. Business Central's built-in <strong>Page Inspection</strong> tool exists specifically for this: it shows a page's source table, its fields including FlowFields, and which installed extensions are adding fields, parts, or FactBoxes to that specific page.</p>
+
+          <p><strong>The fix:</strong> When a specific page is slow, use Page Inspection first to see exactly what's loading on it — heavy FlowField counts, multiple FactBoxes, custom fields from several different extensions stacking up. Combine that with the built-in performance profiler under Troubleshooting to measure exactly where time is spent when the slow action is performed, rather than guessing which of several installed extensions might be responsible.</p>
+
+          <hr>
+
+          <h2>What a Real Diagnostic Process Looks Like</h2>
+
+          <p>Put together, a genuine performance investigation looks like this: enable Application Insights and establish a baseline. When a specific complaint comes in, check whether it's a long-running query, a lock wait, or a page loading too many FlowField calculations — the telemetry data distinguishes between these directly rather than requiring a guess. Use Page Inspection on the specific slow page to see what's actually loading. Only then decide whether the fix is a SIFT index change, a FlowField visibility change, a job queue schedule change, or an extension that needs attention.</p>
+
+          <p>None of this requires exotic tooling — it's built into the platform and largely underused, because "restart the service" is faster to try even though it rarely addresses the actual cause.</p>
+
+          <hr>
+
+          <h2>Where to Start</h2>
+
+          <p>If Application Insights isn't currently connected to your environment, that's the first thing worth fixing — everything else in this list depends on having that signal available. From there, the next time a specific page or action is reported as slow, resist the urge to guess and instead run it through Page Inspection and the performance profiler before deciding what to change.</p>
+
+        </div>
+
+        <div style="background:var(--black);border-radius:12px;padding:32px;text-align:center;margin:48px 0;">
+          <div class="section-label" style="color:rgba(255,255,255,0.4);margin-bottom:8px;">Chasing a Performance Problem Without Telemetry?</div>
+          <h3 style="color:#fff;font-size:22px;font-weight:900;font-family:'Nunito Sans',sans-serif;margin-bottom:12px;">Get real diagnostic data before changing anything.</h3>
+          <p style="color:rgba(255,255,255,0.6);font-size:15px;margin-bottom:24px;line-height:1.6;">Book a free 30-minute call with our team. We'll help you set up Application Insights properly and find out which of these four causes is actually behind your slowdown.</p>
+          <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="btn btn-primary">Book a Free 30-Min Call</a>
+        </div>
+
+        <div style="margin-top:40px;padding-top:28px;border-top:1px solid var(--gray-border);text-align:center;">
+          <a href="/pages/blog.html" style="font-family:'Nunito Sans',sans-serif;font-weight:800;font-size:14px;color:var(--red);">← Back to all articles</a>
+        </div>
+
+      </div>
+    </section>
+  </article>
+
+</main>
+<div id="footer-placeholder"></div>
+<script src="/components.js"></script>
+<script src="/assets/engagement.js" defer></script>
+<script>renderNavbar("blog"); renderFooter();</script>
+</body>
+</html>
