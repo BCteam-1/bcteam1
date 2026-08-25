@@ -1,0 +1,145 @@
+<!-- publish-date: 2026-09-15 -->
+<!-- blog-title: Item Tracking in Business Central: Lot and Serial Numbers Done Right -->
+<!-- blog-desc: A product recall is the worst possible moment to discover your lot tracking has gaps. Here's what proper item tracking setup actually requires, and why it's usually configured just enough to look complete without actually being reliable. -->
+<!-- blog-cover: /assets/blog/2026-09-15-bc-item-tracking-lot-serial-numbers-cover.png -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Item Tracking in Business Central: Lot and Serial Numbers Done Right | BC Team</title>
+  <meta name="description" content="A product recall is the worst possible moment to discover your lot tracking has gaps. Here's what proper item tracking setup actually requires.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.bcteam1.com/pages/blog/2026-09-15-bc-item-tracking-lot-serial-numbers.html">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.bcteam1.com/pages/blog/2026-09-15-bc-item-tracking-lot-serial-numbers.html">
+  <meta property="og:title" content="Item Tracking in Business Central: Lot and Serial Numbers Done Right | BC Team">
+  <meta property="og:description" content="A product recall is the worst possible moment to discover your lot tracking has gaps. Here's what proper setup actually requires.">
+  <meta property="og:image" content="https://www.bcteam1.com/assets/blog/2026-09-15-bc-item-tracking-lot-serial-numbers-cover.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap"></noscript>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .post-body h2 { font-family:'Nunito Sans',sans-serif; font-weight:900; font-size:22px; color:var(--gray-dark); margin:40px 0 14px; }
+    .post-body h3 { font-family:'Nunito Sans',sans-serif; font-weight:800; font-size:17px; color:var(--gray-dark); margin:28px 0 10px; }
+    .post-body p  { font-size:16px; color:#333; line-height:1.85; margin-bottom:20px; }
+    .post-body ul { margin:0 0 20px 22px; }
+    .post-body li { font-size:16px; color:#333; line-height:1.8; margin-bottom:8px; }
+    .post-body hr { border:none; border-top:1px solid var(--gray-border); margin:40px 0; }
+    .post-body strong { color:var(--gray-dark); }
+  </style>
+</head>
+<body>
+
+<div class="bc-alert-banner">
+  <div class="bc-alert-banner-inner">
+    <span class="bc-alert-text">🔥 <strong>Free BC Health Check</strong> — Find out if your Business Central is silently costing you money</span>
+    <div class="alert-btns">
+      <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="alert-btn alert-btn-primary">Book Free 30-Min Call</a>
+      <a href="/pages/bc-rescue-audit.html" class="alert-btn alert-btn-outline">See Rescue Audit →</a>
+    </div>
+  </div>
+</div>
+<div id="navbar-placeholder"></div>
+<main>
+
+  <article>
+    <section style="background:var(--black);padding:56px 24px 48px;">
+      <div style="max-width:760px;margin:0 auto;">
+        <div class="breadcrumb" style="margin-bottom:20px;">
+          <a href="/index.html" style="color:rgba(255,255,255,0.4);">Home</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <a href="/pages/blog.html" style="color:rgba(255,255,255,0.4);">Blog</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <span style="color:rgba(255,255,255,0.6);">Item Tracking in Business Central...</span>
+        </div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:14px;font-family:'Nunito Sans',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:1px;">September 15, 2026</div>
+        <h1 style="color:#fff;font-size:clamp(24px,3.5vw,44px);line-height:1.2;font-family:'Nunito Sans',sans-serif;font-weight:900;margin-bottom:20px;">Item Tracking in Business Central: Lot and Serial Numbers Done Right</h1>
+        <p style="color:rgba(255,255,255,0.65);font-size:17px;line-height:1.7;max-width:660px;">A product recall is the worst possible moment to discover your lot tracking has gaps. Here's what proper setup actually requires.</p>
+      </div>
+    </section>
+
+    <div style="max-width:860px;margin:0 auto 40px;padding:0 24px;">
+      <img src="/assets/blog/2026-09-15-bc-item-tracking-lot-serial-numbers-cover.png"
+           alt="Item Tracking in Business Central: Lot and Serial Numbers Done Right"
+           style="width:100%;border-radius:12px;max-height:420px;object-fit:cover;display:block;"
+           loading="lazy">
+    </div>
+
+    <section style="padding:48px 24px 64px;background:#fff;">
+      <div style="max-width:760px;margin:0 auto;">
+
+        <div class="post-body">
+
+          <p>A quality issue surfaces on one specific production lot, and the question everyone needs answered immediately is simple: exactly which customers received product from that lot, and where is any remaining stock right now. If the honest answer takes hours of manual digging through paper records or half-complete system data instead of a single traceability report, the lot tracking setup wasn't actually built for this moment — it was built to look complete during a routine audit, which is a very different bar.</p>
+
+          <p>Item tracking in Business Central is genuinely capable of full lot and serial traceability from receipt through to the customer who ultimately received the item. The gap between that capability and what most companies actually have running is almost always a setup and discipline issue, not a platform limitation.</p>
+
+          <hr>
+
+          <h2>Lot Tracking vs. Serial Tracking: Different Tools for Different Needs</h2>
+
+          <p><strong>Lot tracking</strong> follows a batch or production run as a single unit — appropriate for items where individual units within a batch share identical characteristics and don't need separate identity, like a production run of a chemical product or a batch of food items sharing an expiration date. <strong>Serial tracking</strong> follows each individual unit distinctly — appropriate for higher-value items like equipment or electronics, where a specific unit's history matters on its own, separate from others manufactured at the same time.</p>
+
+          <p>Choosing the wrong one for a given item category creates real problems: lot tracking on an item that actually needs individual serial-level traceability means losing the ability to distinguish one specific problem unit from others in the same batch. Serial tracking on high-volume, low-value items that don't need individual identity creates unnecessary transactional overhead for no real traceability benefit.</p>
+
+          <hr>
+
+          <h2>Where Tracking Actually Breaks: The Chain, Not the Setup Screen</h2>
+
+          <p>Configuring an item for lot or serial tracking on the item card is the easy part. The part that actually determines whether traceability works when it matters is whether the tracking number gets carried correctly through every single transaction the item passes through — receipt, put-away, transfer between locations, pick, shipment. A single point in that chain where tracking information doesn't get properly captured or carried forward — a manual adjustment posted without the lot number attached, a transfer where tracking wasn't required — creates a genuine gap in the traceability chain, even though the item was technically "tracked" at the point of receipt.</p>
+
+          <p>This is why lot tracking that looks complete during a quiet audit can fail during an actual recall: the audit typically checks whether tracking is configured, not whether every single transaction in the item's history actually carried the tracking number through cleanly.</p>
+
+          <hr>
+
+          <h2>Expiration Dates Need Their Own Deliberate Setup</h2>
+
+          <p>For lot-tracked items with genuine shelf life — food, pharmaceuticals, and similar categories — expiration date tracking needs to be configured specifically, not assumed to come automatically with lot tracking alone. Getting this right means the system can actively enforce FEFO (first-expired, first-out) picking logic rather than simply recording an expiration date passively as a data field nobody's actively using to drive picking decisions.</p>
+
+          <hr>
+
+          <h2>The E-Commerce Connector Gap Worth Knowing About</h2>
+
+          <p>Worth flagging directly for any company selling lot- or serial-tracked items online: Microsoft's native Shopify connector does not handle lot tracking or serial numbers as part of its standard integration. A business selling tracked items through an e-commerce channel needs a deliberate plan for how tracking information gets captured on those orders — this typically means additional configuration or a warehouse management integration layered on top of the standard connector, not something that works automatically out of the box.</p>
+
+          <hr>
+
+          <h2>What a Real Traceability Test Looks Like</h2>
+
+          <p>The only genuine way to know whether lot or serial tracking actually works end to end is to run a real test: pick a specific lot or serial number already in the system, and trace it forward through every transaction it's touched — receipt, any transfers, any picks, the final shipment — confirming the tracking number carried through cleanly at every step, with no gaps. If that trace can be completed cleanly and quickly, the traceability chain is genuinely reliable. If it requires manual digging or hits a dead end partway through, that's exactly the gap that would surface at the worst possible moment — during an actual quality issue or recall, not during a planned test.</p>
+
+          <hr>
+
+          <h2>Where to Start</h2>
+
+          <p>For any company relying on lot or serial tracking for quality, compliance, or regulatory reasons, it's worth running that end-to-end trace test on a handful of actual items now, deliberately, rather than waiting to discover a gap during a real recall. It's also worth confirming whether expiration date tracking is actively driving FEFO picking or just sitting as an unused data field, and whether any e-commerce-sold tracked items have a real plan for capturing tracking information on those specific orders.</p>
+
+        </div>
+
+        <div style="background:var(--black);border-radius:12px;padding:32px;text-align:center;margin:48px 0;">
+          <div class="section-label" style="color:rgba(255,255,255,0.4);margin-bottom:8px;">Not Sure Your Traceability Chain Actually Holds?</div>
+          <h3 style="color:#fff;font-size:22px;font-weight:900;font-family:'Nunito Sans',sans-serif;margin-bottom:12px;">Test it before you need it during a real recall.</h3>
+          <p style="color:rgba(255,255,255,0.6);font-size:15px;margin-bottom:24px;line-height:1.6;">Book a free 30-minute call with our team. We'll help you run a real end-to-end trace test on your lot or serial tracked items and find the gaps before they matter.</p>
+          <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="btn btn-primary">Book a Free 30-Min Call</a>
+        </div>
+
+        <div style="margin-top:40px;padding-top:28px;border-top:1px solid var(--gray-border);text-align:center;">
+          <a href="/pages/blog.html" style="font-family:'Nunito Sans',sans-serif;font-weight:800;font-size:14px;color:var(--red);">← Back to all articles</a>
+        </div>
+
+      </div>
+    </section>
+  </article>
+
+</main>
+<div id="footer-placeholder"></div>
+<script src="/components.js"></script>
+<script src="/assets/engagement.js" defer></script>
+<script>renderNavbar("blog"); renderFooter();</script>
+</body>
+</html>
