@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ERP Custom Development Trap: What to Check Before You Build | BC Team</title>
+  <meta name="description" content="Before approving a custom Business Central build, three checks separate a genuine business requirement from an expensive way to avoid changing a process that was never that efficient to begin with.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.bcteam1.com/pages/blog/2026-08-25-erp-custom-development-trap-check-before-you-build.html">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.bcteam1.com/pages/blog/2026-08-25-erp-custom-development-trap-check-before-you-build.html">
+  <meta property="og:title" content="ERP Custom Development Trap: What to Check Before You Build | BC Team">
+  <meta property="og:description" content="Three checks separate a genuine business requirement from an expensive way to avoid changing a process that was never that efficient to begin with.">
+  <meta property="og:image" content="https://www.bcteam1.com/assets/blog/2026-08-25-erp-custom-development-trap-check-before-you-build-cover.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap"></noscript>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .post-body h2 { font-family:'Nunito Sans',sans-serif; font-weight:900; font-size:22px; color:var(--gray-dark); margin:40px 0 14px; }
+    .post-body h3 { font-family:'Nunito Sans',sans-serif; font-weight:800; font-size:17px; color:var(--gray-dark); margin:28px 0 10px; }
+    .post-body p  { font-size:16px; color:#333; line-height:1.85; margin-bottom:20px; }
+    .post-body ul { margin:0 0 20px 22px; }
+    .post-body li { font-size:16px; color:#333; line-height:1.8; margin-bottom:8px; }
+    .post-body hr { border:none; border-top:1px solid var(--gray-border); margin:40px 0; }
+    .post-body strong { color:var(--gray-dark); }
+  </style>
+</head>
+<body>
+
+<div class="bc-alert-banner">
+  <div class="bc-alert-banner-inner">
+    <span class="bc-alert-text">🔥 <strong>Free BC Health Check</strong> — Find out if your Business Central is silently costing you money</span>
+    <div class="alert-btns">
+      <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="alert-btn alert-btn-primary">Book Free 30-Min Call</a>
+      <a href="/pages/bc-rescue-audit.html" class="alert-btn alert-btn-outline">See Rescue Audit →</a>
+    </div>
+  </div>
+</div>
+<div id="navbar-placeholder"></div>
+<main>
+
+  <article>
+    <section style="background:var(--black);padding:56px 24px 48px;">
+      <div style="max-width:760px;margin:0 auto;">
+        <div class="breadcrumb" style="margin-bottom:20px;">
+          <a href="/index.html" style="color:rgba(255,255,255,0.4);">Home</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <a href="/pages/blog.html" style="color:rgba(255,255,255,0.4);">Blog</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <span style="color:rgba(255,255,255,0.6);">ERP Custom Development Trap...</span>
+        </div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:14px;font-family:'Nunito Sans',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:1px;">August 25, 2026</div>
+        <h1 style="color:#fff;font-size:clamp(24px,3.5vw,44px);line-height:1.2;font-family:'Nunito Sans',sans-serif;font-weight:900;margin-bottom:20px;">ERP Custom Development Trap: What to Check Before You Build</h1>
+        <p style="color:rgba(255,255,255,0.65);font-size:17px;line-height:1.7;max-width:660px;">"We need the system to work the way we've always worked" is a common brief. It's also often a request to avoid changing a process that was never that efficient to begin with.</p>
+      </div>
+    </section>
+
+    <div style="max-width:860px;margin:0 auto 40px;padding:0 24px;">
+      <img src="/assets/blog/2026-08-25-erp-custom-development-trap-check-before-you-build-cover.png"
+           alt="ERP Custom Development Trap: What to Check Before You Build"
+           style="width:100%;border-radius:12px;max-height:420px;object-fit:cover;display:block;"
+           loading="lazy">
+    </div>
+
+    <section style="padding:48px 24px 64px;background:#fff;">
+      <div style="max-width:760px;margin:0 auto;">
+
+        <div class="post-body">
+
+          <p>Someone on the team asks for a custom development quote to make Business Central handle approvals "the way we've always done it." The request sounds reasonable — every business has its own workflow, and the system should adapt to the business, not the other way around. Six months and a meaningful invoice later, that custom logic breaks during a routine update, and IT spends a week figuring out why, because the person who understood the original requirement left the company in between.</p>
+
+          <p>This isn't an argument against customizing Business Central — sometimes it's genuinely the right call. It's an argument for checking three things first, because a fair number of custom development requests turn out, on closer inspection, to be an expensive way to avoid a five-minute process conversation.</p>
+
+          <hr>
+
+          <h2>Check 1: Does an Extension Already Exist for This?</h2>
+
+          <p>Business Central's AppSource marketplace hosts thousands of published extensions — industry-specific functionality, third-party integrations, and enhancements to standard modules, built and maintained by vendors who handle ongoing compatibility as part of the product. Before commissioning custom development, it's worth a genuine search: has someone already built and maintains a solution to this exact problem?</p>
+
+          <p>The advantage of an AppSource extension over custom-built logic isn't just cost — it's that someone else is responsible for keeping it compatible with new Business Central releases. That's a real, ongoing maintenance burden a published vendor absorbs that a custom build leaves entirely on your own team. This isn't true of every extension equally; vendor update history and support practices vary and are worth checking before adopting one. But when a well-maintained extension genuinely covers the requirement, it's very often the lower-total-cost path compared to building the same thing from scratch.</p>
+
+          <hr>
+
+          <h2>Check 2: Is This a Genuine Requirement, or Process Change Avoidance?</h2>
+
+          <p>This is the harder conversation, and the more valuable one. "We need the system to match our current process" sounds like a requirement. Sometimes it is. Often, on closer examination, it's really a request to preserve a process that was built years ago for reasons nobody currently at the company fully remembers, and that a standard Business Central workflow would actually handle better.</p>
+
+          <p>A useful question to ask directly: if we were setting this process up fresh today, with no history to preserve, would we build it this way? If the honest answer is no — if the current process exists mostly because "that's how we've always done it" — that's a signal worth taking seriously before spending real development budget encoding that process permanently into custom code. Standard functionality exists because it reflects patterns that work well across many businesses; deviating from it should be a deliberate choice grounded in a genuine business difference, not inertia.</p>
+
+          <hr>
+
+          <h2>Check 3: Who Maintains This When the Person Who Built It Is Gone?</h2>
+
+          <p>Custom development built as a proper <strong>per-tenant extension</strong> — AL-coded, version-controlled, designed with Business Central's modern extensibility model in mind — survives platform updates far better than the old-style customizations that used to require re-applying code changes after every upgrade. That's a genuine architectural improvement worth understanding clearly. It does not mean the custom logic maintains itself.</p>
+
+          <p>Per-tenant extensions receive no validation from Microsoft and carry no external maintenance obligation the way an AppSource product does — code quality, security review, and ongoing compatibility testing are entirely the responsibility of whoever built it. If that's an internal developer who leaves, or an outside contractor who isn't retained after the initial build, the business is left with working code that nobody currently on staff fully understands, waiting for the day it needs to change.</p>
+
+          <p>Before approving custom development, ask directly: who owns this code long-term, is it version-controlled somewhere the business actually has access to, and what happens when it needs updating in two years by someone who didn't write it. If there's no good answer, that's a real cost to weigh against the build — not a hypothetical one.</p>
+
+          <hr>
+
+          <h2>When Custom Development Is Genuinely the Right Call</h2>
+
+          <p>None of this means custom development is inherently risky or should be avoided by default. A business with a genuinely unique pricing model, a specialized workflow tied to real competitive differentiation, or a one-off integration with an external system the business depends on is exactly the kind of situation a properly built per-tenant extension is designed for. The goal isn't zero customization — it's making sure each customization decision passes through these three checks deliberately, rather than getting approved because a demo of the current process sounded urgent.</p>
+
+          <hr>
+
+          <h2>What Good Custom Development Actually Looks Like</h2>
+
+          <p>When a custom build genuinely clears all three checks, it's worth insisting on a few specific things from whoever builds it. The extension should be built properly in AL, following Microsoft's modern extensibility model — using events and subscriptions to extend standard functionality rather than modifying base objects directly, which is what makes it survive future platform updates cleanly instead of breaking with every release.</p>
+
+          <p>It should also be version-controlled somewhere the business itself has access to — not sitting only on a contractor's laptop or a partner's internal repository the company can't reach if that relationship ends. And it should come with enough documentation that a different developer, two years later, can understand what the extension does and why, without needing to track down the original author. None of this is exotic — it's standard, professional development practice — but it's exactly the kind of thing that gets skipped under time pressure on a "quick" custom build, and it's exactly what makes the difference between a maintainable asset and the kind of undocumented legacy logic nobody wants to touch.</p>
+
+          <hr>
+
+          <h2>A Practical Filter Before the Next Build Request</h2>
+
+          <p>The next time a custom development request comes in, run it through the three checks directly: has this already been solved by a maintained AppSource extension, is the underlying process itself actually worth preserving or just familiar, and is there a real, named plan for who maintains this once the person requesting it has moved on. Requests that survive all three are usually the ones worth building. A surprising number don't make it past the first two.</p>
+
+        </div>
+
+        <div style="background:var(--black);border-radius:12px;padding:32px;text-align:center;margin:48px 0;">
+          <div class="section-label" style="color:rgba(255,255,255,0.4);margin-bottom:8px;">Considering a Custom Build?</div>
+          <h3 style="color:#fff;font-size:22px;font-weight:900;font-family:'Nunito Sans',sans-serif;margin-bottom:12px;">Get an honest read before you commit budget to it.</h3>
+          <p style="color:rgba(255,255,255,0.6);font-size:15px;margin-bottom:24px;line-height:1.6;">Book a free 30-minute call with our team. We'll help you run the actual requirement through these checks — including whether standard functionality or an existing extension already covers it.</p>
+          <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="btn btn-primary">Book a Free 30-Min Call</a>
+        </div>
+
+        <div style="margin-top:40px;padding-top:28px;border-top:1px solid var(--gray-border);text-align:center;">
+          <a href="/pages/blog.html" style="font-family:'Nunito Sans',sans-serif;font-weight:800;font-size:14px;color:var(--red);">← Back to all articles</a>
+        </div>
+
+      </div>
+    </section>
+  </article>
+
+</main>
+<div id="footer-placeholder"></div>
+<script src="/components.js"></script>
+<script src="/assets/engagement.js" defer></script>
+<script>renderNavbar("blog"); renderFooter();</script>
+</body>
+</html>
