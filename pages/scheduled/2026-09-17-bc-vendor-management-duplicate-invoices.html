@@ -1,0 +1,145 @@
+<!-- publish-date: 2026-09-17 -->
+<!-- blog-title: Vendor Management in Business Central: Reducing Payment Errors and Duplicate Invoices -->
+<!-- blog-desc: The same vendor invoice gets paid twice because it entered the system through two different channels with two different reference numbers. Here's why duplicate payments happen even in a system that technically tracks every invoice. -->
+<!-- blog-cover: /assets/blog/2026-09-17-bc-vendor-management-duplicate-invoices-cover.png -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vendor Management in Business Central: Reducing Payment Errors and Duplicate Invoices | BC Team</title>
+  <meta name="description" content="The same vendor invoice gets paid twice because it entered the system through two different channels with two different reference numbers. Here's why duplicate payments happen even in a system that tracks every invoice.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.bcteam1.com/pages/blog/2026-09-17-bc-vendor-management-duplicate-invoices.html">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.bcteam1.com/pages/blog/2026-09-17-bc-vendor-management-duplicate-invoices.html">
+  <meta property="og:title" content="Vendor Management in Business Central: Reducing Payment Errors | BC Team">
+  <meta property="og:description" content="The same invoice gets paid twice because it entered through two different channels with two different reference numbers. Here's why.">
+  <meta property="og:image" content="https://www.bcteam1.com/assets/blog/2026-09-17-bc-vendor-management-duplicate-invoices-cover.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap"></noscript>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .post-body h2 { font-family:'Nunito Sans',sans-serif; font-weight:900; font-size:22px; color:var(--gray-dark); margin:40px 0 14px; }
+    .post-body h3 { font-family:'Nunito Sans',sans-serif; font-weight:800; font-size:17px; color:var(--gray-dark); margin:28px 0 10px; }
+    .post-body p  { font-size:16px; color:#333; line-height:1.85; margin-bottom:20px; }
+    .post-body ul { margin:0 0 20px 22px; }
+    .post-body li { font-size:16px; color:#333; line-height:1.8; margin-bottom:8px; }
+    .post-body hr { border:none; border-top:1px solid var(--gray-border); margin:40px 0; }
+    .post-body strong { color:var(--gray-dark); }
+  </style>
+</head>
+<body>
+
+<div class="bc-alert-banner">
+  <div class="bc-alert-banner-inner">
+    <span class="bc-alert-text">🔥 <strong>Free BC Health Check</strong> — Find out if your Business Central is silently costing you money</span>
+    <div class="alert-btns">
+      <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="alert-btn alert-btn-primary">Book Free 30-Min Call</a>
+      <a href="/pages/bc-rescue-audit.html" class="alert-btn alert-btn-outline">See Rescue Audit →</a>
+    </div>
+  </div>
+</div>
+<div id="navbar-placeholder"></div>
+<main>
+
+  <article>
+    <section style="background:var(--black);padding:56px 24px 48px;">
+      <div style="max-width:760px;margin:0 auto;">
+        <div class="breadcrumb" style="margin-bottom:20px;">
+          <a href="/index.html" style="color:rgba(255,255,255,0.4);">Home</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <a href="/pages/blog.html" style="color:rgba(255,255,255,0.4);">Blog</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <span style="color:rgba(255,255,255,0.6);">Vendor Management in Business Central...</span>
+        </div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:14px;font-family:'Nunito Sans',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:1px;">September 17, 2026</div>
+        <h1 style="color:#fff;font-size:clamp(24px,3.5vw,44px);line-height:1.2;font-family:'Nunito Sans',sans-serif;font-weight:900;margin-bottom:20px;">Vendor Management in Business Central: Reducing Payment Errors and Duplicate Invoices</h1>
+        <p style="color:rgba(255,255,255,0.65);font-size:17px;line-height:1.7;max-width:660px;">The same invoice gets paid twice because it entered the system through two different channels, with two different reference numbers. Here's why that keeps happening.</p>
+      </div>
+    </section>
+
+    <div style="max-width:860px;margin:0 auto 40px;padding:0 24px;">
+      <img src="/assets/blog/2026-09-17-bc-vendor-management-duplicate-invoices-cover.png"
+           alt="Vendor Management in Business Central: Reducing Payment Errors and Duplicate Invoices"
+           style="width:100%;border-radius:12px;max-height:420px;object-fit:cover;display:block;"
+           loading="lazy">
+    </div>
+
+    <section style="padding:48px 24px 64px;background:#fff;">
+      <div style="max-width:760px;margin:0 auto;">
+
+        <div class="post-body">
+
+          <p>A vendor emails a copy of an invoice that was already entered into Business Central three weeks earlier through a different process — maybe scanned in by one AP clerk, then emailed directly to another. Both versions get entered, both get paid, and nobody notices until the vendor's own statement flags a credit balance that shouldn't exist. The invoice itself was never actually duplicated in a way that looks obviously wrong; it just entered the system twice, through two different doors, with slightly different reference formatting each time.</p>
+
+          <p>This is a specific, recurring pattern in accounts payable, and it's rarely caught by simply "being more careful." It requires deliberate vendor record and invoice number discipline that most companies never fully establish.</p>
+
+          <hr>
+
+          <h2>Why Duplicate Invoices Slip Through</h2>
+
+          <p>Business Central can flag a duplicate invoice number against the same vendor — but only if the reference number entered matches exactly. A vendor invoice numbered "INV-4471" and the same invoice re-entered as "inv4471" or "4471" won't be caught as a duplicate by simple matching, because from the system's perspective, they're different reference strings. This is exactly the kind of gap that opens up when invoices enter AP through multiple channels — a portal upload, a direct email, a scanned document processed by OCR — each potentially normalizing the reference number slightly differently.</p>
+
+          <p>The fix isn't a system setting; it's a documented, single point of entry for vendor invoices wherever possible, and a consistent reference number format enforced at data entry, so that duplicate detection actually has a fair chance of catching a genuine repeat.</p>
+
+          <hr>
+
+          <h2>Duplicate Vendor Records Cause the Same Problem From a Different Angle</h2>
+
+          <p>A related, equally common issue: the same vendor exists twice in the system under slightly different names — "ABC Supply" and "ABC Supply Inc." — created by two different people at two different points in time, neither aware the other record already existed. Invoices and payments get split across both records, making it much harder to see the vendor's true total balance or catch a duplicate payment, since the two records never get compared against each other directly.</p>
+
+          <p>Before creating any new vendor record, a quick search against existing vendors by name, phone number, or tax ID is a simple habit that prevents this — but it requires being a deliberate part of the AP onboarding process, not an assumption that whoever's creating the record will remember to check.</p>
+
+          <hr>
+
+          <h2>Segregation of Duties: The Control That Actually Prevents Fraud, Not Just Errors</h2>
+
+          <p>Beyond honest duplicate entry mistakes, the more serious risk — covered in more depth elsewhere on this site — is a single person having both the ability to create or modify a vendor record and the ability to approve or post payments to that vendor. This combination is what actually enables fraudulent payments, not just accidental duplicates, and it's a permission set design issue specifically, not something invoice-matching discipline alone can catch.</p>
+
+          <hr>
+
+          <h2>The Three-Way Match as a Duplicate Payment Backstop</h2>
+
+          <p>A properly enforced three-way match — purchase order, receipt, and invoice compared before payment, covered in more depth in a related article on this site — also functions as a secondary check against duplicate payment, since a second invoice for goods already matched and paid against a specific purchase order should visibly fail that comparison. Companies that skip three-way matching for speed lose this backstop along with the primary control it was built for.</p>
+
+          <hr>
+
+          <h2>What a Clean Vendor Management Process Actually Looks Like</h2>
+
+          <p>A mature accounts payable process routes vendor invoices through a single, consistent entry point regardless of how the vendor originally sent it. New vendor creation includes a deliberate duplicate-check step before the record is saved. Reference numbers are entered in a consistent format that gives Business Central's own duplicate detection a genuine chance to work. And no single person holds both vendor-record control and payment-approval authority over the same vendor.</p>
+
+          <hr>
+
+          <h2>Where to Start</h2>
+
+          <p>A useful first step is a direct audit: pull your vendor list and look specifically for near-duplicate names that might represent the same vendor entered twice, and check whether your AP team has more than one informal channel through which invoices currently enter the system. Both of these are quick to check and are the two most common sources of the duplicate payment problem in practice.</p>
+
+        </div>
+
+        <div style="background:var(--black);border-radius:12px;padding:32px;text-align:center;margin:48px 0;">
+          <div class="section-label" style="color:rgba(255,255,255,0.4);margin-bottom:8px;">Worried About Duplicate Vendor Payments?</div>
+          <h3 style="color:#fff;font-size:22px;font-weight:900;font-family:'Nunito Sans',sans-serif;margin-bottom:12px;">Get your vendor data and AP process checked.</h3>
+          <p style="color:rgba(255,255,255,0.6);font-size:15px;margin-bottom:24px;line-height:1.6;">Book a free 30-minute call with our team. We'll help you audit for duplicate vendor records and tighten your invoice entry process.</p>
+          <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="btn btn-primary">Book a Free 30-Min Call</a>
+        </div>
+
+        <div style="margin-top:40px;padding-top:28px;border-top:1px solid var(--gray-border);text-align:center;">
+          <a href="/pages/blog.html" style="font-family:'Nunito Sans',sans-serif;font-weight:800;font-size:14px;color:var(--red);">← Back to all articles</a>
+        </div>
+
+      </div>
+    </section>
+  </article>
+
+</main>
+<div id="footer-placeholder"></div>
+<script src="/components.js"></script>
+<script src="/assets/engagement.js" defer></script>
+<script>renderNavbar("blog"); renderFooter();</script>
+</body>
+</html>
