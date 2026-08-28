@@ -7,6 +7,8 @@ If the date <= today (UTC), it:
   1. Moves the file to pages/blog/
   2. Moves any matching cover image  assets/scheduled/ -> assets/blog/
   3. Injects a new card at the TOP of the blog listing in pages/blog.html
+     -- but ONLY if a card linking to this post doesn't already exist
+     -- (prevents duplicate cards if a scheduled file is ever left behind)
   4. Deletes the file from pages/scheduled/
 
 File naming convention
@@ -59,6 +61,11 @@ def build_card(slug, title, desc, cover, pub_date):
         f'      </article>\n'
     )
 
+def card_already_exists(blog_list_html, slug):
+    """Check whether a card linking to this post already exists in blog.html."""
+    href = f"/pages/blog/{slug}.html"
+    return href in blog_list_html
+
 def inject_card(blog_list_html, card):
     marker = re.search(r'(<div[^>]*class="[^"]*blog-grid[^"]*"[^>]*>)', blog_list_html)
     if marker:
@@ -85,6 +92,7 @@ def main():
 
     blog_list_html = BLOG_LIST.read_text(encoding="utf-8")
     published_count = 0
+    skipped_already_live = 0
 
     for f in sorted(SCHEDULED_DIR.glob("*.html")):
         html = f.read_text(encoding="utf-8")
@@ -102,6 +110,22 @@ def main():
         title = extract_meta(html, "blog-title") or slug.replace("-", " ").title()
         desc  = extract_meta(html, "blog-desc") or ""
         cover = extract_meta(html, "blog-cover") or ""
+
+        # -- Safeguard: if a card for this slug already exists in blog.html,
+        # -- this file is a stale leftover from a previous run (or a manual
+        # -- publish) that never got cleaned up. Remove the leftover files
+        # -- WITHOUT touching the blog listing again, instead of creating
+        # -- a duplicate card.
+        if card_already_exists(blog_list_html, slug):
+            print(f"  ALREADY LIVE {f.name} -- removing stale leftover, no card injected")
+            f.unlink()
+            for ext in (".png", ".jpg", ".jpeg", ".webp"):
+                stale_img = SCHED_IMG_DIR / f"{slug}-cover{ext}"
+                if stale_img.exists():
+                    stale_img.unlink()
+                    print(f"  REMOVED stale leftover image {stale_img.name}")
+            skipped_already_live += 1
+            continue
 
         for ext in (".png", ".jpg", ".jpeg", ".webp"):
             src_img = SCHED_IMG_DIR / f"{slug}-cover{ext}"
@@ -125,7 +149,9 @@ def main():
     if published_count:
         BLOG_LIST.write_text(blog_list_html, encoding="utf-8")
         print(f"\nPublished {published_count} post(s). blog.html updated.")
-    else:
+    if skipped_already_live:
+        print(f"Cleaned up {skipped_already_live} stale leftover file(s) already live.")
+    if not published_count and not skipped_already_live:
         print("\nNo posts due today.")
 
 if __name__ == "__main__":
