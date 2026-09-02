@@ -2,9 +2,11 @@ name: Publish Scheduled Blogs
 
 on:
   schedule:
-    - cron: '0 14 * * 2'   # Tuesday    9am EST (UTC-5)
-    - cron: '0 14 * * 3'   # Wednesday  9am EST (UTC-5)
-    - cron: '0 14 * * 4'   # Thursday   9am EST (UTC-5)
+    # Runs every 3 hours, every day. The publish script itself only
+    # acts on posts whose publish-date has arrived (and skips/cleans
+    # up anything already live), so frequent checks are safe and
+    # simply protect against GitHub occasionally skipping a run.
+    - cron: '0 */3 * * *'
   workflow_dispatch:
 
 permissions:
@@ -29,6 +31,6 @@ jobs:
         run: |
           git config user.name  "BC Team Bot"
           git config user.email "bot@bcteam1.com"
-          git add pages/blog/ pages/blog.html assets/blog/
+          git add pages/blog/ pages/blog.html assets/blog/ pages/scheduled/ assets/scheduled/
           git diff --cached --quiet || git commit -m "chore: publish scheduled blog(s) [$(date +%Y-%m-%d)]"
           git push
