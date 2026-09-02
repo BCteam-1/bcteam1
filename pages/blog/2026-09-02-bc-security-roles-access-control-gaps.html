@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Central Security Roles: The Access Control Gaps Auditors Find First | BC Team</title>
+  <meta name="description" content="Business Central has no built-in check that stops one person from creating a vendor and approving their own payment to it. Here's what native security actually gives you, and where the gap starts.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.bcteam1.com/pages/blog/2026-09-02-bc-security-roles-access-control-gaps.html">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.bcteam1.com/pages/blog/2026-09-02-bc-security-roles-access-control-gaps.html">
+  <meta property="og:title" content="Business Central Security Roles: The Access Control Gaps Auditors Find First | BC Team">
+  <meta property="og:description" content="Business Central has no built-in check that stops one person from creating a vendor and approving their own payment to it. Here's the gap most companies miss.">
+  <meta property="og:image" content="https://www.bcteam1.com/assets/blog/2026-09-02-bc-security-roles-access-control-gaps-cover.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap"></noscript>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .post-body h2 { font-family:'Nunito Sans',sans-serif; font-weight:900; font-size:22px; color:var(--gray-dark); margin:40px 0 14px; }
+    .post-body h3 { font-family:'Nunito Sans',sans-serif; font-weight:800; font-size:17px; color:var(--gray-dark); margin:28px 0 10px; }
+    .post-body p  { font-size:16px; color:#333; line-height:1.85; margin-bottom:20px; }
+    .post-body ul { margin:0 0 20px 22px; }
+    .post-body li { font-size:16px; color:#333; line-height:1.8; margin-bottom:8px; }
+    .post-body hr { border:none; border-top:1px solid var(--gray-border); margin:40px 0; }
+    .post-body strong { color:var(--gray-dark); }
+  </style>
+</head>
+<body>
+
+<div class="bc-alert-banner">
+  <div class="bc-alert-banner-inner">
+    <span class="bc-alert-text">🔥 <strong>Free BC Health Check</strong> — Find out if your Business Central is silently costing you money</span>
+    <div class="alert-btns">
+      <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="alert-btn alert-btn-primary">Book Free 30-Min Call</a>
+      <a href="/pages/bc-rescue-audit.html" class="alert-btn alert-btn-outline">See Rescue Audit →</a>
+    </div>
+  </div>
+</div>
+<div id="navbar-placeholder"></div>
+<main>
+
+  <article>
+    <section style="background:var(--black);padding:56px 24px 48px;">
+      <div style="max-width:760px;margin:0 auto;">
+        <div class="breadcrumb" style="margin-bottom:20px;">
+          <a href="/index.html" style="color:rgba(255,255,255,0.4);">Home</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <a href="/pages/blog.html" style="color:rgba(255,255,255,0.4);">Blog</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <span style="color:rgba(255,255,255,0.6);">Business Central Security Roles...</span>
+        </div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:14px;font-family:'Nunito Sans',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:1px;">September 2, 2026</div>
+        <h1 style="color:#fff;font-size:clamp(24px,3.5vw,44px);line-height:1.2;font-family:'Nunito Sans',sans-serif;font-weight:900;margin-bottom:20px;">Business Central Security Roles: The Access Control Gaps Auditors Find First</h1>
+        <p style="color:rgba(255,255,255,0.65);font-size:17px;line-height:1.7;max-width:660px;">Business Central has no built-in check that stops one person from creating a vendor and approving their own payment to it. Here's where that gap starts.</p>
+      </div>
+    </section>
+
+    <div style="max-width:860px;margin:0 auto 40px;padding:0 24px;">
+      <img src="/assets/blog/2026-09-02-bc-security-roles-access-control-gaps-cover.png"
+           alt="Business Central Security Roles: The Access Control Gaps Auditors Find First"
+           style="width:100%;border-radius:12px;max-height:420px;object-fit:cover;display:block;"
+           loading="lazy">
+    </div>
+
+    <section style="padding:48px 24px 64px;background:#fff;">
+      <div style="max-width:760px;margin:0 auto;">
+
+        <div class="post-body">
+
+          <p>An external auditor asks a routine question during fieldwork: can any single user create a new vendor and also approve or post a payment to that same vendor? At a lot of companies running Business Central, the honest answer requires someone to go check, because nobody's actually verified it — and there's a real chance the answer is yes for at least one person on staff.</p>
+
+          <p>This isn't a Business Central flaw exactly. It's a specific, documented gap in how the platform's native security model works, and it's worth understanding clearly before an auditor finds it for you.</p>
+
+          <hr>
+
+          <h2>Permission Sets Control What, Not Who Should Do What Together</h2>
+
+          <p><strong>Permission sets</strong> are the core mechanism in Business Central's security model — named bundles of table and object-level permissions defining whether a user can Read, Insert, Modify, Delete, or Execute against specific data and processes. A user can be assigned multiple permission sets simultaneously, which is exactly where the risk starts: each individual permission set might be entirely reasonable on its own, but the combination can quietly grant one person end-to-end control over an entire process.</p>
+
+          <p>This is the distinction worth being precise about: Business Central can express a segregation of duties design through careful permission set assignment, but it has no native engine that analyzes combined permissions, flags conflicts, or blocks an assignment that would grant one person control over an entire transaction lifecycle. The system does not scan for these combinations during setup. That responsibility sits entirely with whoever is designing and assigning the permission sets.</p>
+
+          <hr>
+
+          <h2>Security Groups Are Not the Same Thing as Permissions</h2>
+
+          <p>Since Business Central's 2024 release wave 2, the old User Groups feature has been fully retired in favor of <strong>Security Groups</strong> managed in Microsoft Entra ID. This created a clearer, genuinely useful distinction: Security Groups control <em>access</em> — who can sign into Business Central at all — while permission sets control <em>actions</em> — what a signed-in user is actually allowed to do once inside. It's entirely possible for someone to be correctly restricted from certain areas by Security Group membership while still holding a dangerous combination of permission sets underneath that access layer. Confusing these two controls, or assuming one covers the other, is a common and specific mistake.</p>
+
+          <hr>
+
+          <h2>The Classic Conflict Pairs Worth Checking Directly</h2>
+
+          <p>A handful of specific permission combinations show up repeatedly in audit findings and internal control reviews: a user who can both create a vendor record and approve or post payments to vendors; a user who can enter a purchase invoice and also release it for payment without a second set of eyes; a user who can create a sales order and also ship and invoice it without any independent review. None of these combinations are unusual to find in a Business Central environment that's grown organically since implementation, without anyone specifically auditing for them.</p>
+
+          <p>The fix isn't necessarily removing capability from anyone — it's making a deliberate decision about which duties genuinely need to stay separated, and then verifying, specifically, that no single permission set combination currently held by any one user crosses that line.</p>
+
+          <hr>
+
+          <h2>Approval Workflows Are a Complement, Not a Substitute</h2>
+
+          <p>Approval workflows — covered in more depth elsewhere on this site — add a genuine layer of protection by requiring a second person to review specific transactions before they post. But it's worth being clear that workflows and permissions are different controls solving different problems. A workflow can require a second approver for a transaction; it does nothing to prevent the underlying permission structure from allowing one person to bypass that requirement if their permission set doesn't actually route through the workflow correctly. Both controls need to be right, independently, for the combination to actually hold.</p>
+
+          <hr>
+
+          <h2>What a Real Review Looks Like</h2>
+
+          <p>A genuine segregation of duties review starts with a written conflict matrix — a specific list of duty combinations that should never sit with one person, decided deliberately rather than assumed. From there, every current user's combined permission set assignments need to be checked against that matrix directly, not against how the system was originally intended to be configured at implementation. Because permission sets can be layered custom-on-standard and assigned individually or through Security Groups, this check genuinely requires someone to sit down and trace actual combined access — it isn't something Business Central will flag on its own.</p>
+
+          <hr>
+
+          <h2>Where to Start</h2>
+
+          <p>Before your next audit surfaces this as a finding, it's worth checking directly whether any user currently holds both sides of the classic conflict pairs — vendor creation and payment approval, invoice entry and payment release, order creation and shipment/invoicing. Most companies find at least one gap once they actually look, simply because nobody had checked since the original implementation.</p>
+
+        </div>
+
+        <div style="background:var(--black);border-radius:12px;padding:32px;text-align:center;margin:48px 0;">
+          <div class="section-label" style="color:rgba(255,255,255,0.4);margin-bottom:8px;">Not Sure Your Access Controls Would Pass Audit?</div>
+          <h3 style="color:#fff;font-size:22px;font-weight:900;font-family:'Nunito Sans',sans-serif;margin-bottom:12px;">Get a clear picture before your auditor does.</h3>
+          <p style="color:rgba(255,255,255,0.6);font-size:15px;margin-bottom:24px;line-height:1.6;">Book a free 30-minute call with our team. We'll review your permission set assignments against a real segregation of duties matrix.</p>
+          <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="btn btn-primary">Book a Free 30-Min Call</a>
+        </div>
+
+        <div style="margin-top:40px;padding-top:28px;border-top:1px solid var(--gray-border);text-align:center;">
+          <a href="/pages/blog.html" style="font-family:'Nunito Sans',sans-serif;font-weight:800;font-size:14px;color:var(--red);">← Back to all articles</a>
+        </div>
+
+      </div>
+    </section>
+  </article>
+
+</main>
+<div id="footer-placeholder"></div>
+<script src="/components.js"></script>
+<script src="/assets/engagement.js" defer></script>
+<script>renderNavbar("blog"); renderFooter();</script>
+</body>
+</html>
