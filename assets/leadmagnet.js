@@ -71,7 +71,7 @@
           '<button type="submit" class="bc-lm-submit">Get the Free Checklist</button>' +
         '</form>' +
         '<div class="bc-lm-error" data-role="lm-error" style="display:none"></div>' +
-        '<div class="bc-lm-note">No spam. We&#39;ll email you the PDF and you can unsubscribe anytime.</div>' +
+        '<div class="bc-lm-note">No spam. Enter your details to unlock the download.</div>' +
       '</div>'
     );
 
@@ -96,7 +96,7 @@
 
       var submitBtn = form.querySelector('.bc-lm-submit');
       submitBtn.disabled = true;
-      submitBtn.textContent = 'Sending…';
+      submitBtn.textContent = 'Unlocking…';
 
       fetch('/api/leads', {
         method: 'POST',
@@ -120,7 +120,7 @@
           }
           card.querySelector('.bc-lm-form').outerHTML =
             '<div class="bc-lm-success">' +
-              'Check your inbox — we just emailed you the PDF.' +
+              'You&#39;re all set — your download is ready.' +
               '<br><a class="bc-lm-download" href="' + res.data.downloadUrl + '" target="_blank" rel="noopener">Download Now &#8594;</a>' +
             '</div>';
           card.querySelector('.bc-lm-note').style.display = 'none';
