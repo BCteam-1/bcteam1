@@ -1,0 +1,139 @@
+<!-- publish-date: 2026-10-08 -->
+<!-- blog-title: Credit Management in Business Central: Stopping Bad Orders Before They Ship -->
+<!-- blog-desc: A sales order for a customer already 90 days past due still ships, because nobody in the process was actually blocked by a credit limit. Here's how Business Central's credit controls actually work when configured properly. -->
+<!-- blog-cover: /assets/blog/2026-10-08-bc-credit-management-stopping-bad-orders-cover.png -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Credit Management in Business Central: Stopping Bad Orders Before They Ship | BC Team</title>
+  <meta name="description" content="A sales order for a customer already 90 days past due still ships, because nobody was actually blocked by a credit limit. Here's how Business Central's credit controls work when properly configured.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.bcteam1.com/pages/blog/2026-10-08-bc-credit-management-stopping-bad-orders.html">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.bcteam1.com/pages/blog/2026-10-08-bc-credit-management-stopping-bad-orders.html">
+  <meta property="og:title" content="Credit Management in Business Central: Stopping Bad Orders Before They Ship | BC Team">
+  <meta property="og:description" content="A sales order for a customer already 90 days past due still ships. Here's how BC's credit controls work when properly configured.">
+  <meta property="og:image" content="https://www.bcteam1.com/assets/blog/2026-10-08-bc-credit-management-stopping-bad-orders-cover.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap"></noscript>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .post-body h2 { font-family:'Nunito Sans',sans-serif; font-weight:900; font-size:22px; color:var(--gray-dark); margin:40px 0 14px; }
+    .post-body h3 { font-family:'Nunito Sans',sans-serif; font-weight:800; font-size:17px; color:var(--gray-dark); margin:28px 0 10px; }
+    .post-body p  { font-size:16px; color:#333; line-height:1.85; margin-bottom:20px; }
+    .post-body ul { margin:0 0 20px 22px; }
+    .post-body li { font-size:16px; color:#333; line-height:1.8; margin-bottom:8px; }
+    .post-body hr { border:none; border-top:1px solid var(--gray-border); margin:40px 0; }
+    .post-body strong { color:var(--gray-dark); }
+  </style>
+</head>
+<body>
+
+<div class="bc-alert-banner">
+  <div class="bc-alert-banner-inner">
+    <span class="bc-alert-text">🔥 <strong>Free BC Health Check</strong> — Find out if your Business Central is silently costing you money</span>
+    <div class="alert-btns">
+      <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="alert-btn alert-btn-primary">Book Free 30-Min Call</a>
+      <a href="/pages/bc-rescue-audit.html" class="alert-btn alert-btn-outline">See Rescue Audit →</a>
+    </div>
+  </div>
+</div>
+<div id="navbar-placeholder"></div>
+<main>
+
+  <article>
+    <section style="background:var(--black);padding:56px 24px 48px;">
+      <div style="max-width:760px;margin:0 auto;">
+        <div class="breadcrumb" style="margin-bottom:20px;">
+          <a href="/index.html" style="color:rgba(255,255,255,0.4);">Home</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <a href="/pages/blog.html" style="color:rgba(255,255,255,0.4);">Blog</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <span style="color:rgba(255,255,255,0.6);">Credit Management in Business Central...</span>
+        </div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:14px;font-family:'Nunito Sans',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:1px;">October 8, 2026</div>
+        <h1 style="color:#fff;font-size:clamp(24px,3.5vw,44px);line-height:1.2;font-family:'Nunito Sans',sans-serif;font-weight:900;margin-bottom:20px;">Credit Management in Business Central: Stopping Bad Orders Before They Ship</h1>
+        <p style="color:rgba(255,255,255,0.65);font-size:17px;line-height:1.7;max-width:660px;">A sales order for a customer already 90 days past due still ships, because nobody was actually blocked by a credit limit.</p>
+      </div>
+    </section>
+
+    <div style="max-width:860px;margin:0 auto 40px;padding:0 24px;">
+      <img src="/assets/blog/2026-10-08-bc-credit-management-stopping-bad-orders-cover.png"
+           alt="Credit Management in Business Central: Stopping Bad Orders Before They Ship"
+           style="width:100%;border-radius:12px;max-height:420px;object-fit:cover;display:block;"
+           loading="lazy">
+    </div>
+
+    <section style="padding:48px 24px 64px;background:#fff;">
+      <div style="max-width:760px;margin:0 auto;">
+
+        <div class="post-body">
+
+          <p>A warehouse ships an order to a customer sitting 90 days past due on their last three invoices, because the sales rep who entered the order had no idea, and nothing in the system stopped it from going through. Finance finds out after the fact, when they're already chasing four invoices instead of three. This is a specific, avoidable failure — Business Central has native credit limit checking built for exactly this scenario, and it's frequently either never configured or configured in a way that doesn't actually block anything.</p>
+
+          <hr>
+
+          <h2>How Credit Checking Actually Works</h2>
+
+          <p>Each customer card carries a <strong>Credit Limit</strong> field, and when a sales order is created or modified, Business Central can check the customer's current outstanding balance — open invoices plus any documents not yet invoiced — against that limit. If configured to block rather than just warn, the order genuinely cannot be released or shipped until the credit issue is resolved.</p>
+
+          <p>The word "if" in that sentence is doing a lot of work. A credit limit field populated with a number does nothing on its own unless the actual blocking behavior is enabled and tested.</p>
+
+          <hr>
+
+          <h2>Where This Typically Breaks</h2>
+
+          <h3>Credit Limit Set to Zero or Left Blank</h3>
+
+          <p>A blank or zero credit limit is often interpreted by the system as "no limit" rather than "no credit allowed" — the opposite of what most people assume it means. Auditing which customers actually have a real, deliberate credit limit versus a default blank field is worth doing directly rather than assuming it's been done.</p>
+
+          <h3>Warning Instead of Blocking</h3>
+
+          <p>Business Central can be configured to simply warn a user that a customer is over their credit limit, rather than genuinely blocking the transaction. A warning that a busy sales rep can click past without a second thought provides essentially no real control — it satisfies the appearance of a credit check without the substance of one.</p>
+
+          <h3>Outstanding Balance Not Reflecting Reality</h3>
+
+          <p>Credit checks are only as accurate as the underlying customer ledger. If invoicing is delayed, or if orders aren't reflected in the outstanding balance calculation until very late in the process, credit checks run against stale numbers — technically functioning, but not actually protecting against the real, current exposure.</p>
+
+          <hr>
+
+          <h2>What Proper Configuration Looks Like</h2>
+
+          <p>A genuinely effective setup means every customer has a deliberately assigned credit limit reflecting an actual credit decision, the system is configured to block rather than merely warn on orders that would exceed it, and someone has a clear, fast process for reviewing and releasing a legitimately blocked order rather than treating every block as a customer service failure to route around.</p>
+
+          <hr>
+
+          <h2>Where to Start</h2>
+
+          <p>Pull a list of your customers currently past due, and check directly whether any of them have placed a new order since going past due. If the answer is yes for even one customer, that's a live gap in your credit control worth closing before the next order goes out the same way.</p>
+
+        </div>
+
+        <div style="background:var(--black);border-radius:12px;padding:32px;text-align:center;margin:48px 0;">
+          <div class="section-label" style="color:rgba(255,255,255,0.4);margin-bottom:8px;">Not Sure Your Credit Controls Are Actually Blocking Anything?</div>
+          <h3 style="color:#fff;font-size:22px;font-weight:900;font-family:'Nunito Sans',sans-serif;margin-bottom:12px;">Get your credit management setup reviewed.</h3>
+          <p style="color:rgba(255,255,255,0.6);font-size:15px;margin-bottom:24px;line-height:1.6;">Book a free 30-minute call with our team. We'll check whether your credit limits are actually enforced, or just sitting there as unused data.</p>
+          <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="btn btn-primary">Book a Free 30-Min Call</a>
+        </div>
+
+        <div style="margin-top:40px;padding-top:28px;border-top:1px solid var(--gray-border);text-align:center;">
+          <a href="/pages/blog.html" style="font-family:'Nunito Sans',sans-serif;font-weight:800;font-size:14px;color:var(--red);">← Back to all articles</a>
+        </div>
+
+      </div>
+    </section>
+  </article>
+
+</main>
+<div id="footer-placeholder"></div>
+<script src="/components.js"></script>
+<script src="/assets/engagement.js" defer></script>
+<script>renderNavbar("blog"); renderFooter();</script>
+</body>
+</html>
