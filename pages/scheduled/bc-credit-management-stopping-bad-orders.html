@@ -1,0 +1,127 @@
+<!-- publish-date: 2026-10-01 -->
+<!-- blog-title: Credit Management in Business Central: Stopping Bad Orders Before They Ship -->
+<!-- blog-desc: A credit limit field with a number in it and nothing enforcing it is a false sense of control. Here's how to actually configure enforcement. -->
+<!-- blog-cover: /assets/blog/bc-credit-management-stopping-bad-orders-cover.png -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Credit Management in Business Central: Stopping Bad Orders Before They Ship | BC Team</title>
+  <meta name="description" content="A credit limit field with a number in it and nothing enforcing it is a false sense of control. Here's how to actually configure enforcement.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.bcteam1.com/pages/blog/bc-credit-management-stopping-bad-orders.html">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.bcteam1.com/pages/blog/bc-credit-management-stopping-bad-orders.html">
+  <meta property="og:title" content="Credit Management in Business Central: Stopping Bad Orders Before They Ship | BC Team">
+  <meta property="og:description" content="A credit limit field with a number in it and nothing enforcing it is a false sense of control. Here's how to actually configure enforcement.">
+  <meta property="og:image" content="https://www.bcteam1.com/assets/blog/bc-credit-management-stopping-bad-orders-cover.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap"></noscript>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .post-body h2 { font-family:'Nunito Sans',sans-serif; font-weight:900; font-size:22px; color:var(--gray-dark); margin:40px 0 14px; }
+    .post-body h3 { font-family:'Nunito Sans',sans-serif; font-weight:800; font-size:17px; color:var(--gray-dark); margin:28px 0 10px; }
+    .post-body p  { font-size:16px; color:#333; line-height:1.85; margin-bottom:20px; }
+    .post-body ul { margin:0 0 20px 22px; }
+    .post-body li { font-size:16px; color:#333; line-height:1.8; margin-bottom:8px; }
+    .post-body hr { border:none; border-top:1px solid var(--gray-border); margin:40px 0; }
+    .post-body strong { color:var(--gray-dark); }
+  </style>
+</head>
+<body>
+
+<div class="bc-alert-banner">
+  <div class="bc-alert-banner-inner">
+    <span class="bc-alert-text">🔥 <strong>Free BC Health Check</strong> — Find out if your Business Central is silently costing you money</span>
+    <div class="alert-btns">
+      <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="alert-btn alert-btn-primary">Book Free 30-Min Call</a>
+      <a href="/pages/bc-rescue-audit.html" class="alert-btn alert-btn-outline">See Rescue Audit →</a>
+    </div>
+  </div>
+</div>
+<div id="navbar-placeholder"></div>
+<main>
+
+  <article>
+    <section style="background:var(--black);padding:56px 24px 48px;">
+      <div style="max-width:760px;margin:0 auto;">
+        <div class="breadcrumb" style="margin-bottom:20px;">
+          <a href="/index.html" style="color:rgba(255,255,255,0.4);">Home</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <a href="/pages/blog.html" style="color:rgba(255,255,255,0.4);">Blog</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <span style="color:rgba(255,255,255,0.6);">Credit Management in Business Central: Stoppi...</span>
+        </div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:14px;font-family:'Nunito Sans',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:1px;">October 1, 2026</div>
+        <h1 style="color:#fff;font-size:clamp(24px,3.5vw,44px);line-height:1.2;font-family:'Nunito Sans',sans-serif;font-weight:900;margin-bottom:20px;">Credit Management in Business Central: Stopping Bad Orders Before They Ship</h1>
+        <p style="color:rgba(255,255,255,0.65);font-size:17px;line-height:1.7;max-width:660px;">A credit limit field with a number in it and nothing enforcing it is a false sense of control. Here's how to actually configure enforcement.</p>
+      </div>
+    </section>
+
+    <div style="max-width:860px;margin:0 auto 40px;padding:0 24px;">
+      <img src="/assets/blog/bc-credit-management-stopping-bad-orders-cover.png"
+           alt="Credit Management in Business Central: Stopping Bad Orders Before They Ship"
+           style="width:100%;border-radius:12px;max-height:420px;object-fit:cover;display:block;"
+           loading="lazy">
+    </div>
+
+    <section style="padding:48px 24px 64px;background:#fff;">
+      <div style="max-width:760px;margin:0 auto;">
+        <div class="post-body">
+<p>A sales rep enters an order for a customer who's already $40,000 past their credit limit, three invoices overdue. Business Central lets the order through anyway, because nobody configured the system to stop it — the credit limit field on the customer card has been sitting there since implementation, populated with a number, doing nothing.</p>
+
+<p>This is a specific, common gap: companies enter a credit limit because the field exists, without ever configuring the actual enforcement behavior that would make that number mean something at the point an order is placed.</p>
+
+<hr>
+
+<h2>The Credit Limit Field Alone Does Nothing</h2>
+
+<p>Entering a value in the <strong>Credit Limit (LCY)</strong> field on a Customer Card is necessary but not sufficient. Business Central checks credit limit against open balance plus outstanding order value only when <strong>credit warnings</strong> are actually enabled in Sales & Receivables Setup — and even then, the default behavior is typically a warning a user can click through, not a hard block. Companies that assume entering a limit automatically stops bad orders are trusting a number that isn't actually being enforced anywhere in the transaction flow.</p>
+
+<hr>
+
+<h2>Warning vs. Blocking: A Deliberate Choice</h2>
+
+<p>Sales & Receivables Setup lets you configure whether exceeding a credit limit produces a soft warning or genuinely blocks order entry. A soft warning is appropriate for a business that wants sales staff to have visibility and judgment on a case-by-case basis — a longtime customer briefly over limit due to a large, legitimate order might be a fine risk to take. A hard block is appropriate where credit risk needs to be a strict, non-negotiable control rather than left to individual judgment.</p>
+
+<p>Most companies never make this choice deliberately — they inherit whatever the default was set to during implementation, which may not reflect how the business actually wants to manage risk today.</p>
+
+<hr>
+
+<h2>Aging Data Feeds the Real Picture, Not Just the Limit</h2>
+
+<p>A credit limit check that only looks at total outstanding balance misses a genuinely important distinction: a customer with $30,000 outstanding, all current, is a very different risk than a customer with $30,000 outstanding, most of it 90+ days overdue. Pairing credit limit enforcement with a routine review of the aging breakdown — not just the total — is what actually protects cash flow, since a customer can sit under their nominal limit while still being a real collection risk.</p>
+
+<hr>
+
+<h2>Credit Holds Need an Actual Owner</h2>
+
+<p>When an order does get flagged or blocked, someone specific needs to own the decision to release it — verify payment status, check with the customer, or explicitly approve shipping despite the flag. Without a named owner and a documented process, blocked orders either sit in limbo frustrating sales, or get overridden by whoever hits the block first, defeating the purpose of the control.</p>
+
+<hr>
+
+<h2>Where to Start</h2>
+
+<p>Check three things directly: whether credit warnings are actually enabled in Sales & Receivables Setup, whether the warning-vs-block behavior matches how your business genuinely wants to manage risk, and whether someone specific owns the decision when an order gets flagged. A credit limit field with a number in it and nothing enforcing it is a false sense of control.</p>
+
+        </div>
+
+        <div style="margin-top:40px;padding-top:28px;border-top:1px solid var(--gray-border);text-align:center;">
+          <a href="/pages/blog.html" style="font-family:'Nunito Sans',sans-serif;font-weight:800;font-size:14px;color:var(--red);">← Back to all articles</a>
+        </div>
+      </div>
+    </section>
+  </article>
+
+</main>
+<div id="footer-placeholder"></div>
+<script src="/components.js"></script>
+<script src="/assets/engagement.js" defer></script>
+<script>renderNavbar("blog"); renderFooter();</script>
+</body>
+</html>
