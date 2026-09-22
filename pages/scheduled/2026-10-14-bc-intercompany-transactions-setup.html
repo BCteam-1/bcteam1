@@ -1,0 +1,139 @@
+<!-- publish-date: 2026-10-14 -->
+<!-- blog-title: Intercompany Transactions in Business Central: Setup Beyond Consolidation -->
+<!-- blog-desc: Consolidation reporting is only half the intercompany picture. Here's what has to be configured correctly for the day-to-day transactions between related entities to actually flow cleanly. -->
+<!-- blog-cover: /assets/blog/2026-10-14-bc-intercompany-transactions-setup-cover.png -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intercompany Transactions in Business Central: Setup Beyond Consolidation | BC Team</title>
+  <meta name="description" content="Consolidation reporting is only half the intercompany picture. Here's what has to be configured correctly for day-to-day transactions between related entities to flow cleanly.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.bcteam1.com/pages/blog/2026-10-14-bc-intercompany-transactions-setup.html">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.bcteam1.com/pages/blog/2026-10-14-bc-intercompany-transactions-setup.html">
+  <meta property="og:title" content="Intercompany Transactions in Business Central: Setup Beyond Consolidation | BC Team">
+  <meta property="og:description" content="Consolidation reporting is only half the intercompany picture. Here's what needs to be configured for day-to-day transactions.">
+  <meta property="og:image" content="https://www.bcteam1.com/assets/blog/2026-10-14-bc-intercompany-transactions-setup-cover.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap"></noscript>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .post-body h2 { font-family:'Nunito Sans',sans-serif; font-weight:900; font-size:22px; color:var(--gray-dark); margin:40px 0 14px; }
+    .post-body h3 { font-family:'Nunito Sans',sans-serif; font-weight:800; font-size:17px; color:var(--gray-dark); margin:28px 0 10px; }
+    .post-body p  { font-size:16px; color:#333; line-height:1.85; margin-bottom:20px; }
+    .post-body ul { margin:0 0 20px 22px; }
+    .post-body li { font-size:16px; color:#333; line-height:1.8; margin-bottom:8px; }
+    .post-body hr { border:none; border-top:1px solid var(--gray-border); margin:40px 0; }
+    .post-body strong { color:var(--gray-dark); }
+  </style>
+</head>
+<body>
+
+<div class="bc-alert-banner">
+  <div class="bc-alert-banner-inner">
+    <span class="bc-alert-text">🔥 <strong>Free BC Health Check</strong> — Find out if your Business Central is silently costing you money</span>
+    <div class="alert-btns">
+      <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="alert-btn alert-btn-primary">Book Free 30-Min Call</a>
+      <a href="/pages/bc-rescue-audit.html" class="alert-btn alert-btn-outline">See Rescue Audit →</a>
+    </div>
+  </div>
+</div>
+<div id="navbar-placeholder"></div>
+<main>
+
+  <article>
+    <section style="background:var(--black);padding:56px 24px 48px;">
+      <div style="max-width:760px;margin:0 auto;">
+        <div class="breadcrumb" style="margin-bottom:20px;">
+          <a href="/index.html" style="color:rgba(255,255,255,0.4);">Home</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <a href="/pages/blog.html" style="color:rgba(255,255,255,0.4);">Blog</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <span style="color:rgba(255,255,255,0.6);">Intercompany Transactions in Business Central...</span>
+        </div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:14px;font-family:'Nunito Sans',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:1px;">October 14, 2026</div>
+        <h1 style="color:#fff;font-size:clamp(24px,3.5vw,44px);line-height:1.2;font-family:'Nunito Sans',sans-serif;font-weight:900;margin-bottom:20px;">Intercompany Transactions in Business Central: Setup Beyond Consolidation</h1>
+        <p style="color:rgba(255,255,255,0.65);font-size:17px;line-height:1.7;max-width:660px;">Consolidation reporting is only half the intercompany picture. Here's what needs to work correctly day to day.</p>
+      </div>
+    </section>
+
+    <div style="max-width:860px;margin:0 auto 40px;padding:0 24px;">
+      <img src="/assets/blog/2026-10-14-bc-intercompany-transactions-setup-cover.png"
+           alt="Intercompany Transactions in Business Central: Setup Beyond Consolidation"
+           style="width:100%;border-radius:12px;max-height:420px;object-fit:cover;display:block;"
+           loading="lazy">
+    </div>
+
+    <section style="padding:48px 24px 64px;background:#fff;">
+      <div style="max-width:760px;margin:0 auto;">
+
+        <div class="post-body">
+
+          <p>One subsidiary invoices another for shared services, and the entry sits unmatched in both companies for three weeks before anyone notices — not because the transaction was wrong, but because nothing in the setup was actually designed to keep two separate companies' books synchronized on the same transaction in real time. Consolidation reporting, covered in more depth elsewhere on this site, solves the reporting-level problem. It doesn't solve this one.</p>
+
+          <hr>
+
+          <h2>Two Different Problems, Often Confused</h2>
+
+          <p>Consolidation combines multiple companies' financials into one reported view at period-end. <strong>Intercompany transaction processing</strong> is a different, day-to-day problem: making sure a transaction recorded in one company automatically creates the corresponding, correctly matched transaction in the related company, without someone manually re-keying it twice and hoping both sides agree.</p>
+
+          <p>A company can have excellent consolidation reporting and still have a genuinely broken intercompany transaction process underneath it — the two are related but solve different problems.</p>
+
+          <hr>
+
+          <h2>What Proper Setup Actually Requires</h2>
+
+          <h3>Intercompany Partner Setup</h3>
+
+          <p>Each related company needs to be set up as a recognized <strong>intercompany partner</strong>, with a defined chart of accounts mapping between them — since two companies rarely share an identical G/L structure, this mapping determines where a transaction posted in one company lands in the other.</p>
+
+          <h3>Automatic Transaction Creation, Not Manual Re-Entry</h3>
+
+          <p>Done properly, a transaction entered in Company A specifying Company B as the intercompany partner automatically generates the corresponding transaction in Company B, correctly mapped through the chart of accounts translation. Companies that skip this setup end up manually creating matching entries in both companies — a process that's slow and creates exactly the kind of unmatched, drifting entries described above.</p>
+
+          <h3>Dimension Consistency Across Companies</h3>
+
+          <p>If intercompany transactions need to be reported by department, project, or region, the Dimensions used need to be set up consistently across every company involved — the same problem covered in more depth in the consolidation-specific article on this site, but relevant here at the transaction level too, not just at reporting time.</p>
+
+          <hr>
+
+          <h2>Where This Typically Breaks</h2>
+
+          <p>The most common gap is treating intercompany as purely a consolidation-time concern and never configuring the transaction-level automation at all — meaning every intercompany transaction throughout the year gets manually duplicated, with all the reconciliation risk that implies, and consolidation at period-end becomes an exercise in untangling a year's worth of manually matched entries rather than simply combining data that was already correctly linked from the start.</p>
+
+          <hr>
+
+          <h2>Where to Start</h2>
+
+          <p>If your company has related entities and intercompany transactions currently get manually entered twice, once in each company, that's the specific gap worth closing first — before period-end consolidation, not as a consequence of struggling with it.</p>
+
+        </div>
+
+        <div style="background:var(--black);border-radius:12px;padding:32px;text-align:center;margin:48px 0;">
+          <div class="section-label" style="color:rgba(255,255,255,0.4);margin-bottom:8px;">Manually Re-Entering Intercompany Transactions?</div>
+          <h3 style="color:#fff;font-size:22px;font-weight:900;font-family:'Nunito Sans',sans-serif;margin-bottom:12px;">Get automatic, correctly mapped intercompany processing.</h3>
+          <p style="color:rgba(255,255,255,0.6);font-size:15px;margin-bottom:24px;line-height:1.6;">Book a free 30-minute call with our team. We'll review your intercompany partner setup and chart of accounts mapping.</p>
+          <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="btn btn-primary">Book a Free 30-Min Call</a>
+        </div>
+
+        <div style="margin-top:40px;padding-top:28px;border-top:1px solid var(--gray-border);text-align:center;">
+          <a href="/pages/blog.html" style="font-family:'Nunito Sans',sans-serif;font-weight:800;font-size:14px;color:var(--red);">← Back to all articles</a>
+        </div>
+
+      </div>
+    </section>
+  </article>
+
+</main>
+<div id="footer-placeholder"></div>
+<script src="/components.js"></script>
+<script src="/assets/engagement.js" defer></script>
+<script>renderNavbar("blog"); renderFooter();</script>
+</body>
+</html>
