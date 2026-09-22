@@ -1,0 +1,127 @@
+<!-- publish-date: 2026-10-14 -->
+<!-- blog-title: Multi-Currency in Business Central: Where Exchange Rate Setup Goes Wrong -->
+<!-- blog-desc: A currency exchange rate table updated inconsistently for months can quietly distort consolidated retained earnings. Here's what to check. -->
+<!-- blog-cover: /assets/blog/bc-multi-currency-exchange-rate-setup-cover.png -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-Currency in Business Central: Where Exchange Rate Setup Goes Wrong | BC Team</title>
+  <meta name="description" content="A currency exchange rate table updated inconsistently for months can quietly distort consolidated retained earnings. Here's what to check.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.bcteam1.com/pages/blog/bc-multi-currency-exchange-rate-setup.html">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.bcteam1.com/pages/blog/bc-multi-currency-exchange-rate-setup.html">
+  <meta property="og:title" content="Multi-Currency in Business Central: Where Exchange Rate Setup Goes Wrong | BC Team">
+  <meta property="og:description" content="A currency exchange rate table updated inconsistently for months can quietly distort consolidated retained earnings. Here's what to check.">
+  <meta property="og:image" content="https://www.bcteam1.com/assets/blog/bc-multi-currency-exchange-rate-setup-cover.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap"></noscript>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .post-body h2 { font-family:'Nunito Sans',sans-serif; font-weight:900; font-size:22px; color:var(--gray-dark); margin:40px 0 14px; }
+    .post-body h3 { font-family:'Nunito Sans',sans-serif; font-weight:800; font-size:17px; color:var(--gray-dark); margin:28px 0 10px; }
+    .post-body p  { font-size:16px; color:#333; line-height:1.85; margin-bottom:20px; }
+    .post-body ul { margin:0 0 20px 22px; }
+    .post-body li { font-size:16px; color:#333; line-height:1.8; margin-bottom:8px; }
+    .post-body hr { border:none; border-top:1px solid var(--gray-border); margin:40px 0; }
+    .post-body strong { color:var(--gray-dark); }
+  </style>
+</head>
+<body>
+
+<div class="bc-alert-banner">
+  <div class="bc-alert-banner-inner">
+    <span class="bc-alert-text">🔥 <strong>Free BC Health Check</strong> — Find out if your Business Central is silently costing you money</span>
+    <div class="alert-btns">
+      <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="alert-btn alert-btn-primary">Book Free 30-Min Call</a>
+      <a href="/pages/bc-rescue-audit.html" class="alert-btn alert-btn-outline">See Rescue Audit →</a>
+    </div>
+  </div>
+</div>
+<div id="navbar-placeholder"></div>
+<main>
+
+  <article>
+    <section style="background:var(--black);padding:56px 24px 48px;">
+      <div style="max-width:760px;margin:0 auto;">
+        <div class="breadcrumb" style="margin-bottom:20px;">
+          <a href="/index.html" style="color:rgba(255,255,255,0.4);">Home</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <a href="/pages/blog.html" style="color:rgba(255,255,255,0.4);">Blog</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <span style="color:rgba(255,255,255,0.6);">Multi-Currency in Business Central: Where Exc...</span>
+        </div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:14px;font-family:'Nunito Sans',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:1px;">October 14, 2026</div>
+        <h1 style="color:#fff;font-size:clamp(24px,3.5vw,44px);line-height:1.2;font-family:'Nunito Sans',sans-serif;font-weight:900;margin-bottom:20px;">Multi-Currency in Business Central: Where Exchange Rate Setup Goes Wrong</h1>
+        <p style="color:rgba(255,255,255,0.65);font-size:17px;line-height:1.7;max-width:660px;">A currency exchange rate table updated inconsistently for months can quietly distort consolidated retained earnings. Here's what to check.</p>
+      </div>
+    </section>
+
+    <div style="max-width:860px;margin:0 auto 40px;padding:0 24px;">
+      <img src="/assets/blog/bc-multi-currency-exchange-rate-setup-cover.png"
+           alt="Multi-Currency in Business Central: Where Exchange Rate Setup Goes Wrong"
+           style="width:100%;border-radius:12px;max-height:420px;object-fit:cover;display:block;"
+           loading="lazy">
+    </div>
+
+    <section style="padding:48px 24px 64px;background:#fff;">
+      <div style="max-width:760px;margin:0 auto;">
+        <div class="post-body">
+<p>A company with a US subsidiary closes their books for the month, and the consolidated retained earnings figure looks meaningfully off from what anyone expected — not wildly wrong, just persistently, quietly wrong in a way that's hard to trace. Weeks later, the cause turns out to be a currency exchange rate table that was updated inconsistently for months, with small errors compounding across every USD transaction in that period.</p>
+
+<p>Multi-currency setup in Business Central is genuinely capable, and it's also one of the easier areas to get subtly wrong in a way that doesn't surface immediately — the numbers still look plausible, they're just not quite correct.</p>
+
+<hr>
+
+<h2>Exchange Rates Need a Real Maintenance Process, Not Ad Hoc Updates</h2>
+
+<p>Currency exchange rates in Business Central are maintained in a dedicated table, and the system uses the rate in effect on a transaction's posting date to perform currency conversion. If exchange rates are updated inconsistently — sometimes daily, sometimes whenever someone remembers, sometimes backfilled after the fact — transactions get converted using rates that don't actually reflect market conditions at the time, and the resulting error compounds across every foreign currency transaction posted during that gap.</p>
+
+<p>A deliberate, documented update cadence — daily for actively traded currencies, whatever frequency genuinely matches your transaction volume for others — is a small process discipline that prevents a real, compounding accuracy problem.</p>
+
+<hr>
+
+<h2>Realized vs. Unrealized Gains and Losses: A Distinction Worth Understanding</h2>
+
+<p>An open foreign currency invoice generates an <strong>unrealized</strong> gain or loss as exchange rates fluctuate before it's paid — a paper adjustment reflecting what the balance would be worth today, not an actual cash event. Once the invoice is paid, that gain or loss becomes <strong>realized</strong> — an actual difference between the invoiced amount and what was actually collected in your functional currency. Companies that don't clearly separate these in their reporting can end up with a distorted view of actual currency risk versus paper fluctuation that will reverse before anything is collected.</p>
+
+<hr>
+
+<h2>Currency Codes Need to Match What Finance Actually Wants to Track</h2>
+
+<p>Each customer, vendor, and bank account can be assigned a specific currency code, and getting this consistent matters more than it sounds like it should — a vendor genuinely invoicing in EUR but set up with no currency code (defaulting to your functional currency) will have every transaction converted incorrectly at the point of entry, not just at reporting time. This is a data setup issue, not a system limitation, and it's worth auditing directly rather than assuming it was done correctly during initial setup.</p>
+
+<hr>
+
+<h2>Consolidation Adds Another Layer of Currency Decisions</h2>
+
+<p>For companies consolidating multiple entities operating in different currencies — covered in more depth in a related article on this site — the translation method chosen for consolidation (current rate method versus other approaches) has real, material consequences for consolidated equity and retained earnings over time. This needs to be a deliberate decision aligned with how your auditors expect currency translation to be handled, not a default left over from initial implementation.</p>
+
+<hr>
+
+<h2>Where to Start</h2>
+
+<p>Before assuming multi-currency numbers are accurate, it's worth checking three things directly: whether exchange rates are actually updated on a consistent, documented schedule, whether every customer and vendor genuinely transacting in a foreign currency has the correct currency code assigned, and whether realized and unrealized gains and losses are clearly separated in the reports your finance team actually reviews.</p>
+
+        </div>
+
+        <div style="margin-top:40px;padding-top:28px;border-top:1px solid var(--gray-border);text-align:center;">
+          <a href="/pages/blog.html" style="font-family:'Nunito Sans',sans-serif;font-weight:800;font-size:14px;color:var(--red);">← Back to all articles</a>
+        </div>
+      </div>
+    </section>
+  </article>
+
+</main>
+<div id="footer-placeholder"></div>
+<script src="/components.js"></script>
+<script src="/assets/engagement.js" defer></script>
+<script>renderNavbar("blog"); renderFooter();</script>
+</body>
+</html>
