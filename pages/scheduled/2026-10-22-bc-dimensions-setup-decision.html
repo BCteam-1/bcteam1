@@ -1,0 +1,143 @@
+<!-- publish-date: 2026-10-22 -->
+<!-- blog-title: Dimensions in Business Central: The Setup Decision That Outlives Everyone Who Made It -->
+<!-- blog-desc: Nobody currently at your company remembers why you have 11 dimensions. Here's why dimension decisions accumulate silently, and how to actually clean them up without breaking historical reporting. -->
+<!-- blog-cover: /assets/blog/2026-10-22-bc-dimensions-setup-decision-cover.png -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dimensions in Business Central: The Setup Decision That Outlives Everyone Who Made It | BC Team</title>
+  <meta name="description" content="Nobody currently at your company remembers why you have 11 dimensions. Here's why dimension decisions accumulate silently, and how to clean them up without breaking historical reporting.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.bcteam1.com/pages/blog/2026-10-22-bc-dimensions-setup-decision.html">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.bcteam1.com/pages/blog/2026-10-22-bc-dimensions-setup-decision.html">
+  <meta property="og:title" content="Dimensions in Business Central: The Setup Decision That Outlives Everyone | BC Team">
+  <meta property="og:description" content="Nobody currently at your company remembers why you have 11 dimensions. Here's how to clean them up safely.">
+  <meta property="og:image" content="https://www.bcteam1.com/assets/blog/2026-10-22-bc-dimensions-setup-decision-cover.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap"></noscript>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .post-body h2 { font-family:'Nunito Sans',sans-serif; font-weight:900; font-size:22px; color:var(--gray-dark); margin:40px 0 14px; }
+    .post-body h3 { font-family:'Nunito Sans',sans-serif; font-weight:800; font-size:17px; color:var(--gray-dark); margin:28px 0 10px; }
+    .post-body p  { font-size:16px; color:#333; line-height:1.85; margin-bottom:20px; }
+    .post-body ul { margin:0 0 20px 22px; }
+    .post-body li { font-size:16px; color:#333; line-height:1.8; margin-bottom:8px; }
+    .post-body hr { border:none; border-top:1px solid var(--gray-border); margin:40px 0; }
+    .post-body strong { color:var(--gray-dark); }
+  </style>
+</head>
+<body>
+
+<div class="bc-alert-banner">
+  <div class="bc-alert-banner-inner">
+    <span class="bc-alert-text">🔥 <strong>Free BC Health Check</strong> — Find out if your Business Central is silently costing you money</span>
+    <div class="alert-btns">
+      <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="alert-btn alert-btn-primary">Book Free 30-Min Call</a>
+      <a href="/pages/bc-rescue-audit.html" class="alert-btn alert-btn-outline">See Rescue Audit →</a>
+    </div>
+  </div>
+</div>
+<div id="navbar-placeholder"></div>
+<main>
+
+  <article>
+    <section style="background:var(--black);padding:56px 24px 48px;">
+      <div style="max-width:760px;margin:0 auto;">
+        <div class="breadcrumb" style="margin-bottom:20px;">
+          <a href="/index.html" style="color:rgba(255,255,255,0.4);">Home</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <a href="/pages/blog.html" style="color:rgba(255,255,255,0.4);">Blog</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <span style="color:rgba(255,255,255,0.6);">Dimensions in Business Central...</span>
+        </div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:14px;font-family:'Nunito Sans',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:1px;">October 22, 2026</div>
+        <h1 style="color:#fff;font-size:clamp(24px,3.5vw,44px);line-height:1.2;font-family:'Nunito Sans',sans-serif;font-weight:900;margin-bottom:20px;">Dimensions in Business Central: The Setup Decision That Outlives Everyone Who Made It</h1>
+        <p style="color:rgba(255,255,255,0.65);font-size:17px;line-height:1.7;max-width:660px;">Nobody currently at your company remembers why you have 11 dimensions. Here's how that happens, and how to fix it safely.</p>
+      </div>
+    </section>
+
+    <div style="max-width:860px;margin:0 auto 40px;padding:0 24px;">
+      <img src="/assets/blog/2026-10-22-bc-dimensions-setup-decision-cover.png"
+           alt="Dimensions in Business Central: The Setup Decision That Outlives Everyone Who Made It"
+           style="width:100%;border-radius:12px;max-height:420px;object-fit:cover;display:block;"
+           loading="lazy">
+    </div>
+
+    <section style="padding:48px 24px 64px;background:#fff;">
+      <div style="max-width:760px;margin:0 auto;">
+
+        <div class="post-body">
+
+          <p>Someone runs a report and notices a dimension called "Legacy Region" still showing up as an active filter option. Nobody currently on the finance team can explain what it was for, whether anyone still uses it, or whether it's safe to retire. This is an ordinary, common state for dimensions to end up in — not because anyone did anything wrong, but because dimension decisions get made once, quietly, by whoever needed that specific breakdown at the time, and rarely get revisited as people move on and business needs change.</p>
+
+          <hr>
+
+          <h2>Why Dimensions Accumulate This Way</h2>
+
+          <p>Creating a new dimension in Business Central is fast and doesn't require much justification in the moment — someone needs to report on a specific breakdown, a dimension gets created, and it solves that immediate problem. What rarely happens is a corresponding decision, later, about whether that dimension is still needed. Dimensions don't expire on their own; they just accumulate, one reasonable decision at a time, until the total picture is a structure nobody currently understands in full.</p>
+
+          <hr>
+
+          <h2>Why This Isn't Just Clutter</h2>
+
+          <p>Beyond the confusion of unexplained dimensions, excess dimension usage has a real, measurable performance cost — every additional dimension combination expands the Dimension Set Entry table, and reports filtering or summing across dimensions get measurably slower as that table grows. This is covered in more technical depth in a related performance article on this site, but it's worth knowing this isn't purely a tidiness issue; it has a direct, compounding cost on system speed.</p>
+
+          <hr>
+
+          <h2>How to Actually Clean This Up</h2>
+
+          <h3>Audit Actual Usage, Not Assumed Usage</h3>
+
+          <p>Before deciding a dimension is dormant, check whether it's actually used in any report currently being run, not just whether it exists on transactions. A dimension with historical data but zero current reporting use is a genuine candidate for retirement, even if data exists against it.</p>
+
+          <h3>Never Delete — Deactivate</h3>
+
+          <p>Dimensions with historical transaction data attached should never simply be deleted; doing so breaks the ability to accurately report on prior periods. The safer path is preventing the dimension from being used on new transactions going forward, while preserving it for historical reporting on data that already exists.</p>
+
+          <h3>Distinguish Genuinely Load-Bearing Dimensions From Redundant Ones</h3>
+
+          <p>A useful test: for each dimension, ask whether removing it would actually change a decision someone makes regularly. Dimensions that pass this test are worth keeping and maintaining properly. Dimensions that don't — the ones nobody would notice disappearing from a report — are the ones worth actively retiring.</p>
+
+          <hr>
+
+          <h2>What a Clean Dimension Structure Actually Enables</h2>
+
+          <p>Beyond the performance benefit, a dimension structure that only contains genuinely used, well-understood dimensions makes reporting faster to build, easier to explain to a new hire, and considerably less prone to the kind of "wait, what does this one even mean" confusion that slows down every ad hoc reporting request.</p>
+
+          <hr>
+
+          <h2>Where to Start</h2>
+
+          <p>Pull your full list of active dimensions and, for each one, ask directly whether anyone on your current team could confidently explain what it's for and who uses it. Any dimension that fails this test is worth investigating for retirement — not because it's necessarily wrong, but because nobody currently understands it well enough to know whether it still matters.</p>
+
+        </div>
+
+        <div style="background:var(--black);border-radius:12px;padding:32px;text-align:center;margin:48px 0;">
+          <div class="section-label" style="color:rgba(255,255,255,0.4);margin-bottom:8px;">Not Sure Why You Have So Many Dimensions?</div>
+          <h3 style="color:#fff;font-size:22px;font-weight:900;font-family:'Nunito Sans',sans-serif;margin-bottom:12px;">Get your dimension structure audited and cleaned up safely.</h3>
+          <p style="color:rgba(255,255,255,0.6);font-size:15px;margin-bottom:24px;line-height:1.6;">Book a free 30-minute call with our team. We'll review which dimensions are actually load-bearing and which are quietly slowing you down.</p>
+          <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="btn btn-primary">Book a Free 30-Min Call</a>
+        </div>
+
+        <div style="margin-top:40px;padding-top:28px;border-top:1px solid var(--gray-border);text-align:center;">
+          <a href="/pages/blog.html" style="font-family:'Nunito Sans',sans-serif;font-weight:800;font-size:14px;color:var(--red);">← Back to all articles</a>
+        </div>
+
+      </div>
+    </section>
+  </article>
+
+</main>
+<div id="footer-placeholder"></div>
+<script src="/components.js"></script>
+<script src="/assets/engagement.js" defer></script>
+<script>renderNavbar("blog"); renderFooter();</script>
+</body>
+</html>
