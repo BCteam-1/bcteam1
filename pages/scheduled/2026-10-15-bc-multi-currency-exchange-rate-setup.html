@@ -1,0 +1,137 @@
+<!-- publish-date: 2026-10-15 -->
+<!-- blog-title: Multi-Currency in Business Central: Where Exchange Rate Setup Goes Wrong -->
+<!-- blog-desc: A currency exchange rate that's a day stale doesn't look wrong on any single invoice. It looks wrong three months later, as an unexplained variance nobody can trace back to its source. -->
+<!-- blog-cover: /assets/blog/2026-10-15-bc-multi-currency-exchange-rate-setup-cover.png -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-Currency in Business Central: Where Exchange Rate Setup Goes Wrong | BC Team</title>
+  <meta name="description" content="A stale exchange rate doesn't look wrong on any single invoice. It looks wrong three months later, as an unexplained variance nobody can trace back to its source.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.bcteam1.com/pages/blog/2026-10-15-bc-multi-currency-exchange-rate-setup.html">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.bcteam1.com/pages/blog/2026-10-15-bc-multi-currency-exchange-rate-setup.html">
+  <meta property="og:title" content="Multi-Currency in Business Central: Where Exchange Rate Setup Goes Wrong | BC Team">
+  <meta property="og:description" content="A stale exchange rate doesn't look wrong on any single invoice. It looks wrong three months later as an unexplained variance.">
+  <meta property="og:image" content="https://www.bcteam1.com/assets/blog/2026-10-15-bc-multi-currency-exchange-rate-setup-cover.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap"></noscript>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .post-body h2 { font-family:'Nunito Sans',sans-serif; font-weight:900; font-size:22px; color:var(--gray-dark); margin:40px 0 14px; }
+    .post-body h3 { font-family:'Nunito Sans',sans-serif; font-weight:800; font-size:17px; color:var(--gray-dark); margin:28px 0 10px; }
+    .post-body p  { font-size:16px; color:#333; line-height:1.85; margin-bottom:20px; }
+    .post-body ul { margin:0 0 20px 22px; }
+    .post-body li { font-size:16px; color:#333; line-height:1.8; margin-bottom:8px; }
+    .post-body hr { border:none; border-top:1px solid var(--gray-border); margin:40px 0; }
+    .post-body strong { color:var(--gray-dark); }
+  </style>
+</head>
+<body>
+
+<div class="bc-alert-banner">
+  <div class="bc-alert-banner-inner">
+    <span class="bc-alert-text">🔥 <strong>Free BC Health Check</strong> — Find out if your Business Central is silently costing you money</span>
+    <div class="alert-btns">
+      <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="alert-btn alert-btn-primary">Book Free 30-Min Call</a>
+      <a href="/pages/bc-rescue-audit.html" class="alert-btn alert-btn-outline">See Rescue Audit →</a>
+    </div>
+  </div>
+</div>
+<div id="navbar-placeholder"></div>
+<main>
+
+  <article>
+    <section style="background:var(--black);padding:56px 24px 48px;">
+      <div style="max-width:760px;margin:0 auto;">
+        <div class="breadcrumb" style="margin-bottom:20px;">
+          <a href="/index.html" style="color:rgba(255,255,255,0.4);">Home</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <a href="/pages/blog.html" style="color:rgba(255,255,255,0.4);">Blog</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <span style="color:rgba(255,255,255,0.6);">Multi-Currency in Business Central...</span>
+        </div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:14px;font-family:'Nunito Sans',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:1px;">October 15, 2026</div>
+        <h1 style="color:#fff;font-size:clamp(24px,3.5vw,44px);line-height:1.2;font-family:'Nunito Sans',sans-serif;font-weight:900;margin-bottom:20px;">Multi-Currency in Business Central: Where Exchange Rate Setup Goes Wrong</h1>
+        <p style="color:rgba(255,255,255,0.65);font-size:17px;line-height:1.7;max-width:660px;">A stale exchange rate doesn't look wrong on any single invoice. It looks wrong three months later as an unexplained variance.</p>
+      </div>
+    </section>
+
+    <div style="max-width:860px;margin:0 auto 40px;padding:0 24px;">
+      <img src="/assets/blog/2026-10-15-bc-multi-currency-exchange-rate-setup-cover.png"
+           alt="Multi-Currency in Business Central: Where Exchange Rate Setup Goes Wrong"
+           style="width:100%;border-radius:12px;max-height:420px;object-fit:cover;display:block;"
+           loading="lazy">
+    </div>
+
+    <section style="padding:48px 24px 64px;background:#fff;">
+      <div style="max-width:760px;margin:0 auto;">
+
+        <div class="post-body">
+
+          <p>A Controller reviewing quarter-end numbers finds a currency realized-gain-loss variance that doesn't reconcile to anything obvious. Tracing it back takes hours, and the eventual answer is almost anticlimactic: an exchange rate that hadn't been updated in six weeks, quietly applied to every transaction in that currency during that window. No single transaction looked wrong. The accumulated drift across dozens of transactions did.</p>
+
+          <hr>
+
+          <h2>How Exchange Rates Actually Work in Business Central</h2>
+
+          <p>Business Central maintains exchange rates by currency and effective date, and every transaction in a foreign currency uses the rate in effect on that transaction's posting date. This works cleanly when rates are updated regularly and accurately. It produces exactly the kind of quiet, compounding drift described above when they aren't.</p>
+
+          <hr>
+
+          <h2>Where This Typically Breaks</h2>
+
+          <h3>Manual Rate Updates That Fall Behind</h3>
+
+          <p>Companies without an automated rate feed rely on someone manually entering updated exchange rates on a regular cadence — and this is exactly the kind of recurring administrative task that quietly slips when the person responsible gets busy with something more urgent. A rate that's a few days stale rarely matters much. A rate that's six weeks stale, applied across every transaction in that window, becomes a real, hard-to-trace variance.</p>
+
+          <h3>Unrealized vs. Realized Gain/Loss Confusion</h3>
+
+          <p>Open items in a foreign currency — an invoice not yet paid — carry unrealized gain or loss based on rate movement since the transaction was posted, distinct from realized gain or loss booked once the item actually settles. Companies that don't clearly understand or properly configure this distinction end up with currency variance postings that don't map cleanly to what actually happened, making genuine reconciliation difficult even when the underlying rates were accurate.</p>
+
+          <h3>Rounding and Currency-Specific Configuration</h3>
+
+          <p>Each currency in Business Central carries its own rounding precision and invoice rounding configuration, and inconsistent setup across currencies — reasonable for one currency, wrong for another with different typical transaction sizes — creates small, compounding discrepancies that are individually trivial but collectively confusing at reconciliation time.</p>
+
+          <hr>
+
+          <h2>What a Reliable Setup Actually Requires</h2>
+
+          <p>For any business with meaningful multi-currency volume, an automated or at minimum tightly disciplined manual process for updating exchange rates matters more than almost any other single configuration choice in this area. Beyond that, a clear, correctly configured distinction between unrealized and realized gain/loss, and currency-specific rounding settings reviewed deliberately rather than left at default, round out a setup that won't produce mystery variances at quarter-end.</p>
+
+          <hr>
+
+          <h2>Where to Start</h2>
+
+          <p>Check directly how current your exchange rates actually are right now, and how they're normally updated — automated feed, or someone remembering to do it manually. If it's the latter, that's worth tightening into a defined, owned process before the next quarter-end variance investigation, rather than after.</p>
+
+        </div>
+
+        <div style="background:var(--black);border-radius:12px;padding:32px;text-align:center;margin:48px 0;">
+          <div class="section-label" style="color:rgba(255,255,255,0.4);margin-bottom:8px;">Chasing Currency Variances You Can't Explain?</div>
+          <h3 style="color:#fff;font-size:22px;font-weight:900;font-family:'Nunito Sans',sans-serif;margin-bottom:12px;">Get your multi-currency setup reviewed.</h3>
+          <p style="color:rgba(255,255,255,0.6);font-size:15px;margin-bottom:24px;line-height:1.6;">Book a free 30-minute call with our team. We'll check your exchange rate process, rounding configuration, and gain/loss setup.</p>
+          <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="btn btn-primary">Book a Free 30-Min Call</a>
+        </div>
+
+        <div style="margin-top:40px;padding-top:28px;border-top:1px solid var(--gray-border);text-align:center;">
+          <a href="/pages/blog.html" style="font-family:'Nunito Sans',sans-serif;font-weight:800;font-size:14px;color:var(--red);">← Back to all articles</a>
+        </div>
+
+      </div>
+    </section>
+  </article>
+
+</main>
+<div id="footer-placeholder"></div>
+<script src="/components.js"></script>
+<script src="/assets/engagement.js" defer></script>
+<script>renderNavbar("blog"); renderFooter();</script>
+</body>
+</html>
