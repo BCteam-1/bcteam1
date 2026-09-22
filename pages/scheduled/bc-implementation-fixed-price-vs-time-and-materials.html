@@ -1,0 +1,137 @@
+<!-- publish-date: 2026-10-21 -->
+<!-- blog-title: Business Central Implementation: Fixed-Price vs. Time-and-Materials, What Actually Changes -->
+<!-- blog-desc: These aren't just different prices for the same project — they're different risk allocations. Here's what you're actually choosing between. -->
+<!-- blog-cover: /assets/blog/bc-implementation-fixed-price-vs-time-and-materials-cover.png -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Central Implementation: Fixed-Price vs. Time-and-Materials, What Actually Changes | BC Team</title>
+  <meta name="description" content="These aren't just different prices for the same project — they're different risk allocations. Here's what you're actually choosing between.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.bcteam1.com/pages/blog/bc-implementation-fixed-price-vs-time-and-materials.html">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.bcteam1.com/pages/blog/bc-implementation-fixed-price-vs-time-and-materials.html">
+  <meta property="og:title" content="Business Central Implementation: Fixed-Price vs. Time-and-Materials, What Actually Changes | BC Team">
+  <meta property="og:description" content="These aren't just different prices for the same project — they're different risk allocations. Here's what you're actually choosing between.">
+  <meta property="og:image" content="https://www.bcteam1.com/assets/blog/bc-implementation-fixed-price-vs-time-and-materials-cover.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap"></noscript>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .post-body h2 { font-family:'Nunito Sans',sans-serif; font-weight:900; font-size:22px; color:var(--gray-dark); margin:40px 0 14px; }
+    .post-body h3 { font-family:'Nunito Sans',sans-serif; font-weight:800; font-size:17px; color:var(--gray-dark); margin:28px 0 10px; }
+    .post-body p  { font-size:16px; color:#333; line-height:1.85; margin-bottom:20px; }
+    .post-body ul { margin:0 0 20px 22px; }
+    .post-body li { font-size:16px; color:#333; line-height:1.8; margin-bottom:8px; }
+    .post-body hr { border:none; border-top:1px solid var(--gray-border); margin:40px 0; }
+    .post-body strong { color:var(--gray-dark); }
+  </style>
+</head>
+<body>
+
+<div class="bc-alert-banner">
+  <div class="bc-alert-banner-inner">
+    <span class="bc-alert-text">🔥 <strong>Free BC Health Check</strong> — Find out if your Business Central is silently costing you money</span>
+    <div class="alert-btns">
+      <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="alert-btn alert-btn-primary">Book Free 30-Min Call</a>
+      <a href="/pages/bc-rescue-audit.html" class="alert-btn alert-btn-outline">See Rescue Audit →</a>
+    </div>
+  </div>
+</div>
+<div id="navbar-placeholder"></div>
+<main>
+
+  <article>
+    <section style="background:var(--black);padding:56px 24px 48px;">
+      <div style="max-width:760px;margin:0 auto;">
+        <div class="breadcrumb" style="margin-bottom:20px;">
+          <a href="/index.html" style="color:rgba(255,255,255,0.4);">Home</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <a href="/pages/blog.html" style="color:rgba(255,255,255,0.4);">Blog</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <span style="color:rgba(255,255,255,0.6);">Business Central Implementation: Fixed-Price ...</span>
+        </div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:14px;font-family:'Nunito Sans',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:1px;">October 21, 2026</div>
+        <h1 style="color:#fff;font-size:clamp(24px,3.5vw,44px);line-height:1.2;font-family:'Nunito Sans',sans-serif;font-weight:900;margin-bottom:20px;">Business Central Implementation: Fixed-Price vs. Time-and-Materials, What Actually Changes</h1>
+        <p style="color:rgba(255,255,255,0.65);font-size:17px;line-height:1.7;max-width:660px;">These aren't just different prices for the same project — they're different risk allocations. Here's what you're actually choosing between.</p>
+      </div>
+    </section>
+
+    <div style="max-width:860px;margin:0 auto 40px;padding:0 24px;">
+      <img src="/assets/blog/bc-implementation-fixed-price-vs-time-and-materials-cover.png"
+           alt="Business Central Implementation: Fixed-Price vs. Time-and-Materials, What Actually Changes"
+           style="width:100%;border-radius:12px;max-height:420px;object-fit:cover;display:block;"
+           loading="lazy">
+    </div>
+
+    <section style="padding:48px 24px 64px;background:#fff;">
+      <div style="max-width:760px;margin:0 auto;">
+        <div class="post-body">
+<p>Two implementation proposals land on a CFO's desk for what looks like the same project scope. One is fixed-price at $180,000. The other is time-and-materials with an estimate around $150,000. The instinct is to treat these as directly comparable numbers and pick the cheaper one — but fixed-price and time-and-materials aren't just different prices for the same thing; they're different risk allocations, and understanding which risks you're actually taking on matters more than the headline number.</p>
+
+<hr>
+
+<h2>What Fixed-Price Actually Fixes</h2>
+
+<p>A fixed-price contract locks in cost against a defined scope — you know the number going in, and the partner absorbs the risk of the project taking longer than estimated, provided the scope doesn't change. This protects your budget from overruns caused by the partner's own estimation errors or inefficiency. It does not protect you from cost increases caused by scope changes on your side — new requirements discovered mid-project become formal change orders, priced and negotiated separately, which is where fixed-price budgets most commonly grow beyond the original number.</p>
+
+<hr>
+
+<h2>What Time-and-Materials Actually Offers</h2>
+
+<p>Time-and-materials bills for actual hours worked, which means it can absorb newly discovered requirements more fluidly — no formal change order negotiation required, just more hours logged against the work. This flexibility is genuinely valuable when scope is still evolving or genuinely uncertain. The tradeoff is that your total cost isn't capped unless you set a budget ceiling explicitly, and cost discipline depends heavily on active project management rather than a fixed number doing that work for you automatically.</p>
+
+<hr>
+
+<h2>The Risk You're Actually Choosing Between</h2>
+
+<p>Fixed-price shifts estimation risk to the partner — if they underestimated the work, that's their problem, not yours, as long as scope hasn't changed. Time-and-materials shifts that same risk to you — if the work takes longer than anyone expected, you're the one paying for the additional hours. Neither allocation is inherently better; it depends on how confident you are in the original scope definition and how disciplined you're prepared to be about managing a T&M engagement actively rather than passively.</p>
+
+<hr>
+
+<h2>Where Change Orders Actually Come From</h2>
+
+<p>The most common source of fixed-price budget growth isn't partner incompetence — it's requirements that were genuinely unclear or unknown during the original scoping conversation, surfacing only once the team is deep in configuration and testing. A rigorous discovery phase, covered in more depth in a related article on this site, reduces this risk under either pricing structure, but it's especially valuable under fixed-price, where every discovered gap becomes a negotiated add-on rather than simply more logged hours.</p>
+
+<hr>
+
+<h2>Questions Worth Asking Under Either Structure</h2>
+
+<p>Under fixed-price: what specifically triggers a change order, and how are change orders priced — at the same rate as the original quote, or at a premium? Under time-and-materials: is there a not-to-exceed ceiling, and how frequently will you receive cost updates against that ceiling, so a budget overrun is visible early rather than discovered at the final invoice?</p>
+
+<hr>
+
+<h2>What Actually Changes Based on Which You Choose</h2>
+
+<p>Fixed-price rewards a thorough, rigorous discovery phase, since the entire pricing depends on scope being genuinely well understood upfront. Time-and-materials rewards active, engaged project management on your side, since nothing is automatically capping cost growth except your own oversight. Neither structure removes the need for careful planning — they just place the consequence of inadequate planning in different places.</p>
+
+<hr>
+
+<h2>Where to Start</h2>
+
+<p>Before comparing two proposals purely on headline price, ask each partner directly how change orders get triggered and priced under fixed-price, or what ceiling and reporting cadence applies under time-and-materials. The answer to that question often matters more than which number looked smaller on the first page.</p>
+
+        </div>
+        <div data-lead-magnet="bc-implementation"></div>
+
+        <div style="margin-top:40px;padding-top:28px;border-top:1px solid var(--gray-border);text-align:center;">
+          <a href="/pages/blog.html" style="font-family:'Nunito Sans',sans-serif;font-weight:800;font-size:14px;color:var(--red);">← Back to all articles</a>
+        </div>
+      </div>
+    </section>
+  </article>
+
+</main>
+<div id="footer-placeholder"></div>
+<script src="/components.js"></script>
+<script src="/assets/engagement.js" defer></script>
+<script src="/assets/leadmagnet.js" defer></script>
+<script>renderNavbar("blog"); renderFooter();</script>
+</body>
+</html>
