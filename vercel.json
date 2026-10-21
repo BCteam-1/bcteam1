@@ -55,6 +55,18 @@
       ]
     }
   ],
+  "rewrites": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "rap-spin.bcteam1.com"
+        }
+      ],
+      "destination": "/pages/rap-spin.html"
+    }
+  ],
   "redirects": [
     {
       "source": "/post/erp-for-construction-companies-what-business-central-can-and-cant-do",
