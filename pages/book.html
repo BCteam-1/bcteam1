@@ -411,6 +411,24 @@
       line-height: 1.6;
     }
 
+
+    /* ── Question-first form ── */
+    .question-section { background: var(--off-white); padding: 56px 24px; }
+    .question-inner { max-width: 640px; margin: 0 auto; }
+    .question-inner h2 { font-size: 1.5rem; font-weight: 800; color: var(--navy); letter-spacing: -.02em; margin-bottom: 6px; }
+    .question-inner > p { font-size: .95rem; color: var(--gray-600); margin-bottom: 24px; line-height: 1.6; }
+    .question-form { background: var(--white); border: 1px solid var(--gray-200); border-radius: 12px; padding: 24px; box-shadow: var(--shadow); }
+    .question-form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media (max-width: 560px) { .question-form .row { grid-template-columns: 1fr; } }
+    .question-form label { display: block; font-size: .82rem; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+    .question-form input, .question-form textarea { width: 100%; font: inherit; font-size: .95rem; padding: 10px 12px; border: 1px solid var(--gray-200); border-radius: 8px; margin-bottom: 16px; background: var(--white); }
+    .question-form textarea { min-height: 110px; resize: vertical; }
+    .question-form .hp { position: absolute; left: -9999px; height: 0; overflow: hidden; }
+    .question-form button { background: var(--navy); color: var(--white); font: inherit; font-weight: 700; border: 0; border-radius: 8px; padding: 12px 22px; cursor: pointer; }
+    .question-form button:disabled { opacity: .6; cursor: default; }
+    .question-note { font-size: .8rem; color: var(--gray-600); margin-top: 12px; }
+    .question-status { font-size: .9rem; margin-top: 12px; }
+
     /* ── Footer ── */
     footer {
       background: var(--gray-800);
@@ -468,35 +486,35 @@
       <p class="section-sub">Select the session that best matches your situation — all are free.</p>
 
       <div class="service-grid">
-        <div class="service-card active" onclick="selectService(this, 'health-check')">
+        <div class="service-card active" data-key="health-check" onclick="selectService(this, 'health-check')">
           <span class="icon">🆓</span>
           <div class="label">Most Popular</div>
           <div class="name">Free BC Health Check</div>
           <div class="duration">30 min · Free</div>
           <div class="check">✓</div>
         </div>
-        <div class="service-card" onclick="selectService(this, 'rescue')">
+        <div class="service-card" data-key="rescue" onclick="selectService(this, 'rescue')">
           <span class="icon">🚑</span>
           <div class="label">Broken Environment</div>
           <div class="name">BC Rescue Audit Call</div>
           <div class="duration">45 min · Free</div>
           <div class="check">✓</div>
         </div>
-        <div class="service-card" onclick="selectService(this, 'implementation')">
+        <div class="service-card" data-key="implementation" onclick="selectService(this, 'implementation')">
           <span class="icon">🏗️</span>
           <div class="label">New to BC</div>
           <div class="name">BC Implementation Scoping</div>
           <div class="duration">60 min · Free</div>
           <div class="check">✓</div>
         </div>
-        <div class="service-card" onclick="selectService(this, 'optimization')">
+        <div class="service-card" data-key="optimization" onclick="selectService(this, 'optimization')">
           <span class="icon">⚙️</span>
           <div class="label">Already Live</div>
           <div class="name">BC Optimization Review</div>
           <div class="duration">45 min · Free</div>
           <div class="check">✓</div>
         </div>
-        <div class="service-card" onclick="selectService(this, 'rap')">
+        <div class="service-card" data-key="rap" onclick="selectService(this, 'rap')">
           <span class="icon">💰</span>
           <div class="label">AR Automation</div>
           <div class="name">RAP Demo</div>
@@ -565,12 +583,12 @@
         <div class="expect-step">
           <div class="num">STEP 01</div>
           <div class="step-title">You book — Taylor confirms</div>
-          <p>You'll get an immediate confirmation with a Teams link. No assistant, no intake call — you're booking directly with Taylor.</p>
+          <p>You'll get an immediate confirmation with a Teams link. No assistant and no separate intake call — you're booking directly with Taylor.</p>
         </div>
         <div class="expect-step">
           <div class="num">STEP 02</div>
           <div class="step-title">Taylor reviews your situation</div>
-          <p>Taylor reads your intake answers before the call so you're not repeating yourself. He comes in already oriented to your BC environment.</p>
+          <p>Taylor reads any notes you add when you book, so you're not repeating yourself. He comes in already oriented to your BC environment.</p>
         </div>
         <div class="expect-step">
           <div class="num">STEP 03</div>
@@ -586,9 +604,39 @@
     </div>
   </section>
 
+  <!-- Question first -->
+  <section class="question-section" id="question">
+    <div class="question-inner">
+      <h2>Have a question first?</h2>
+      <p>Not ready to pick a time? Send us a quick note and we'll reply by email — no call needed.</p>
+      <form class="question-form" id="question-form" novalidate>
+        <div class="row">
+          <div>
+            <label for="q-name">Your name</label>
+            <input type="text" id="q-name" name="name" autocomplete="name" required>
+          </div>
+          <div>
+            <label for="q-email">Email</label>
+            <input type="email" id="q-email" name="email" autocomplete="email" required>
+          </div>
+        </div>
+        <label for="q-message">Your question</label>
+        <textarea id="q-message" name="message" required></textarea>
+        <div class="hp" aria-hidden="true">
+          <label for="q-website">Leave this field empty</label>
+          <input type="text" id="q-website" name="website" tabindex="-1" autocomplete="off">
+        </div>
+        <button type="submit">Send question</button>
+        <p class="question-note">Or email us at <a href="mailto:sales@bcteam1.com">sales@bcteam1.com</a>.</p>
+        <p class="question-status" id="question-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer>
-    <p>© 2025 BC Team · <a href="https://www.bcteam1.com">bcteam1.com</a> · Microsoft Dynamics 365 Business Central Experts</p>
+    <p>© 2026 BC Team · <a href="https://www.bcteam1.com">bcteam1.com</a> · Microsoft Dynamics 365 Business Central Experts</p>
+    <p style="margin-top:8px;">Questions? <a href="mailto:sales@bcteam1.com">sales@bcteam1.com</a></p>
   </footer>
 
   <script>
@@ -602,14 +650,64 @@
       'rap':           'RAP Demo — AR Automation — 30 Min'
     };
 
-    function selectService(card, key) {
-      document.querySelectorAll('.service-card').forEach(c => c.classList.remove('active'));
-      card.classList.add('active');
-      document.getElementById('booking-title').textContent = serviceLabels[key];
+    // Direct Microsoft Bookings links per session. A session with no URL here
+    // falls back to the full Bookings page (all services listed).
+    // To enable a direct link, paste the service URL from Bookings (…/book/<page>/s/<id>).
+    const DEFAULT_BOOKING_URL = 'https://outlook.office.com/book/TheBCTeam@bcteam1.com/';
+    const serviceUrls = {
+      'health-check': null,
+      'rescue':        null,
+      'implementation':null,
+      'optimization':  null,
+      'rap':           'https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2'
+    };
 
+    function applyService(key) {
+      if (!serviceLabels[key]) return;
+      document.querySelectorAll('.service-card').forEach(c => c.classList.toggle('active', c.dataset.key === key));
+      document.getElementById('booking-title').textContent = serviceLabels[key];
+      const iframe = document.getElementById('booking-iframe');
+      const target = serviceUrls[key] || DEFAULT_BOOKING_URL;
+      if (iframe.getAttribute('src') !== target) iframe.setAttribute('src', target);
+    }
+
+    function selectService(card, key) {
+      applyService(key);
       // Scroll to booking embed smoothly
       document.getElementById('booking-embed').scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+
+    // Preselect from ?session=rescue|rap|implementation|optimization|health-check
+    (function () {
+      const key = new URLSearchParams(location.search).get('session');
+      if (key) applyService(key);
+    })();
+
+    // "Have a question first?" form -> /api/contact (delivered to sales@bcteam1.com)
+    (function () {
+      const form = document.getElementById('question-form');
+      if (!form) return;
+      const status = document.getElementById('question-status');
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        const btn = form.querySelector('button[type=submit]');
+        const data = Object.fromEntries(new FormData(form).entries());
+        if (!data.name.trim() || !data.message.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email.trim())) {
+          status.textContent = 'Please add your name, a valid email and your question.';
+          return;
+        }
+        btn.disabled = true; status.textContent = 'Sending…';
+        try {
+          const r = await fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
+          if (!r.ok) throw new Error('failed');
+          form.reset();
+          status.textContent = "Thanks — we've got your question and will reply by email.";
+        } catch (_) {
+          btn.disabled = false;
+          status.innerHTML = 'Sorry, that did not go through. Please email <a href="mailto:sales@bcteam1.com">sales@bcteam1.com</a>.';
+        }
+      });
+    })();
   </script>
 
 </body>
