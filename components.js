@@ -3,7 +3,8 @@
    Shared nav, footer, exit intent, scroll behaviour
    ===================================================== */
 
-const BOOK_URL   = 'https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2';
+const BOOK_PAGE  = 'https://www.bcteam1.com/pages/book.html';              // general booking page (all sessions)
+const BOOK_URL   = BOOK_PAGE + '?session=rap#booking-embed';                // RAP demo, preselected
 const PHONE_DISPLAY = '+1 (226) 747-7679';
 const PHONE_TEL     = 'tel:+12267477679';
 const EMAIL         = 'bc@bcteam1.com';
@@ -71,7 +72,7 @@ function renderNavbar(activePage) {
         <ul class="nav-links">${linksHTML}</ul>
         <div class="navbar-right">
           <a href="${PHONE_TEL}" class="navbar-phone">${PHONE_DISPLAY}</a>
-          <a href="${BOOK_URL}" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Book a Demo</a>
+          <a href="${BOOK_PAGE}" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Book a Call</a>
         </div>
         <button class="mobile-btn" onclick="toggleMobile()" aria-label="Toggle menu" aria-expanded="false">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
@@ -84,7 +85,7 @@ function renderNavbar(activePage) {
       <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
         ${mobileLinks}
         <a href="${PHONE_TEL}" style="color:var(--blue);">${PHONE_DISPLAY}</a>
-        <a href="${BOOK_URL}" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:12px;text-align:center;border-bottom:none;">Book a Demo</a>
+        <a href="${BOOK_PAGE}" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:12px;text-align:center;border-bottom:none;">Book a Call</a>
       </div>
     </nav>`;
 

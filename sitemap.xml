@@ -10,25 +10,25 @@
   </url>
   <url>
     <loc>https://www.bcteam1.com/pages/rap.html</loc>
-    <lastmod>2026-07-17</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.bcteam1.com/pages/bc-rescue-audit.html</loc>
-    <lastmod>2026-07-17</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.bcteam1.com/pages/bc-implementation.html</loc>
-    <lastmod>2026-07-17</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.bcteam1.com/pages/bc-optimization.html</loc>
-    <lastmod>2026-07-17</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -46,7 +46,7 @@
   </url>
   <url>
     <loc>https://www.bcteam1.com/pages/blog.html</loc>
-    <lastmod>2026-07-17</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -63,70 +63,370 @@
     <priority>0.3</priority>
   </url>
 
-  <!-- Blog posts (11 active posts) -->
+  <!-- Blog posts (61 active posts) -->
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/where-to-find-certified-erp-partners-canada.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/smb-focused-vs-enterprise-business-central-partner-canada.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/real-time-vs-batch-integration-business-central-inventory.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
   <url>
     <loc>https://www.bcteam1.com/pages/blog/job-costing-in-business-central-how-construction-firms-track-profitability-by-project.html</loc>
-    <lastmod>2026-07-17</lastmod>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/integrate-financial-software-inventory-management-issues.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/how-to-choose-erp-system-small-business-canada.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/evaluate-business-central-partner-before-you-sign.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/erp-selection-mistakes-canadian-small-business.html</loc>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.bcteam1.com/pages/blog/erp-for-construction-companies-what-business-central-can-and-cant-do-out-of-the-box.html</loc>
-    <lastmod>2026-07-17</lastmod>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/erp-fit-by-industry-manufacturing-distribution-professional-services.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/certified-business-central-partner-canada-how-to-verify.html</loc>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.bcteam1.com/pages/blog/cash-flow-forecasting-inside-business-central-is-your-erp-doing-enough.html</loc>
-    <lastmod>2026-07-17</lastmod>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/best-erp-small-business-canada-fit-framework.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/bc-optimization-what-a-real-engagement-looks-like.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/bc-implementation-timeline-what-it-actually-looks-like.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/bc-credit-management-stopping-bad-orders.html</loc>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.bcteam1.com/pages/blog/bc-blog-subcontractors-compliance.html</loc>
-    <lastmod>2026-07-17</lastmod>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/2026-10-22-bc-dimensions-setup-decision.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/2026-10-21-erp-rescue-what-to-do-first.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/2026-10-20-bc-implementation-fixed-price-vs-tm.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/2026-10-15-bc-multi-currency-exchange-rate-setup.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/2026-10-14-bc-intercompany-transactions-setup.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/2026-10-13-bc-optimization-5-signs-you-need-one.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/2026-10-08-bc-credit-management-stopping-bad-orders.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/2026-10-07-rap-ar-automation-without-overhaul.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/2026-10-06-erp-rescue-signs-need-stabilization.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/2026-10-01-bc-implementation-real-timeline.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/2026-09-30-bc-year-end-close-checklist.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/2026-09-29-bc-manufacturing-essentials-vs-premium-license.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/2026-09-24-bc-user-adoption-metrics-it-should-track.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/2026-09-23-bc-budgeting-that-actually-gets-used.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/2026-09-22-bc-ecommerce-integration-shopify-what-breaks.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/2026-09-17-bc-vendor-management-duplicate-invoices.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/2026-09-16-bc-backup-disaster-recovery-what-saas-covers.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/2026-09-15-bc-item-tracking-lot-serial-numbers.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/2026-09-10-bc-purchase-order-management-beyond-creating-po.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/2026-09-09-bc-power-bi-native-vs-custom.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/2026-09-08-bc-gst-hst-canadian-tax-compliance.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/2026-09-03-bc-warehouse-management-basic-vs-advanced.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/2026-09-02-bc-security-roles-access-control-gaps.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/2026-09-01-bc-sales-order-processing-where-deals-slow-down.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/2026-08-27-bc-fixed-assets-depreciation-setup-mistakes.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/2026-08-26-bc-approval-workflows-beyond-basic-po-signoff.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/2026-08-25-erp-custom-development-trap-check-before-you-build.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/2026-08-20-bc-financial-reports-beyond-default-statements.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/2026-08-19-bc-performance-issues-real-causes-fixes.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/2026-08-18-multi-location-bc-retail-setup.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/2026-08-13-true-customer-profitability-bc-what-to-measure.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/2026-08-12-best-erp-solutions-canadian-smb.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/2026-08-11-multi-entity-consolidation-bc-setup-guide.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/2026-08-06-bc-bank-reconciliation-automated-setup-guide.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/2026-08-05-bc-cash-flow-forecast-built-in-tool-guide.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/2026-08-04-bc-chart-of-accounts-review-when-and-how.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bcteam1.com/pages/blog/2026-07-22-bc-implementation-cost-2026.html</loc>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.bcteam1.com/pages/blog/2026-07-09-rap-digital-ar-agent.html</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.bcteam1.com/pages/blog/2026-07-08-3-week-month-end-close.html</loc>
-    <lastmod>2026-07-08</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.bcteam1.com/pages/blog/2026-07-07-bc-broken-or-poorly-configured.html</loc>
-    <lastmod>2026-07-07</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.bcteam1.com/pages/blog/2026-07-02-user-adoption-after-golive.html</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.bcteam1.com/pages/blog/2026-07-01-bc-training-fails-role-based-onboarding.html</loc>
-    <lastmod>2026-07-01</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.bcteam1.com/pages/blog/2026-06-30-bc-for-manufacturing.html</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.bcteam1.com/pages/blog/2026-06-26-data-migration-to-business-central.html</loc>
-    <lastmod>2026-06-26</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

@@ -71,7 +71,7 @@ async function sendLeadMagnetEmail({ email, name, magnet, downloadUrl }) {
           <p>Here's your copy of <strong>${escapeHtml(magnet.title)}</strong>:</p>
           <p><a href="${downloadUrl}">${downloadUrl}</a></p>
           <p>If you have questions about anything in it, we're happy to talk it through —
-          <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2">book a free 30-minute call</a>.</p>
+          <a href="https://www.bcteam1.com/pages/book.html">book a free 30-minute call</a>.</p>
           <p>— The BC Team</p>
         `,
       }),

@@ -52,6 +52,14 @@
 
     @media(max-width:640px){.blog-grid{grid-template-columns:1fr}}
   </style>
+<style>
+.blog-filter{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:1100px;margin:0 auto 12px;padding:0 24px}
+.blog-filter-btn{font:inherit;font-weight:700;font-size:14px;padding:8px 18px;border-radius:999px;border:1px solid #cfd6e3;background:#fff;color:#1a3a6b;cursor:pointer}
+.blog-filter-btn:hover{border-color:#1a3a6b}
+.blog-filter-btn.is-active{background:#1a3a6b;border-color:#1a3a6b;color:#fff}
+.blog-filter-note{text-align:center;font-size:15px;margin:0 auto 24px;padding:0 24px}
+.blog-filter-note a{font-weight:700}
+</style>
 </head>
 <body>
 
@@ -59,7 +67,7 @@
   <div class="bc-alert-banner-inner">
     <span class="bc-alert-text">🔥 <strong>Free BC Health Check</strong> — Find out if your Business Central is silently costing you money</span>
     <div class="alert-btns">
-      <a href="https://outlook.office.com/book/RAPDemo@bcteam1.com/s/oJIITW3tvU6B_Uprrd6WAA2" target="_blank" rel="noopener" class="alert-btn alert-btn-primary">Book Free 30-Min Call</a>
+      <a href="https://www.bcteam1.com/pages/book.html" target="_blank" rel="noopener" class="alert-btn alert-btn-primary">Book Free 30-Min Call</a>
       <a href="/pages/bc-rescue-audit.html" class="alert-btn alert-btn-outline">See Rescue Audit →</a>
     </div>
   </div>
@@ -81,6 +89,16 @@
   <!-- BLOG GRID -->
   <section class="blog-grid-section">
 
+
+    <!-- CATEGORY FILTER (cards are classified by topic in the script below, so new posts are picked up automatically) -->
+    <div class="blog-filter" id="blog-filter" role="group" aria-label="Filter articles by topic">
+      <button type="button" class="blog-filter-btn is-active" data-cat="all">All</button>
+      <button type="button" class="blog-filter-btn" data-cat="implementation">Implementation</button>
+      <button type="button" class="blog-filter-btn" data-cat="rescue">Rescue</button>
+      <button type="button" class="blog-filter-btn" data-cat="optimization">Optimization</button>
+      <button type="button" class="blog-filter-btn" data-cat="rap">RAP</button>
+    </div>
+    <p class="blog-filter-note" id="blog-filter-note" hidden></p>
 
     <div class="blog-grid" id="blog-grid">
       <!-- Scheduled Post: Oct 22, 2026 -->
@@ -797,6 +815,45 @@
 <script src="/components.js"></script>
 <script>renderNavbar('blog'); renderFooter();</script>
   <script src="/assets/engagement.js" defer></script>
+<script>
+// Blog topic filter. Classifies each card from its link and title, so new posts need no extra markup.
+(function () {
+  var RULES = [
+    ['rap',            /\brap\b|collections|digital ar|ar automation/],
+    ['rescue',         /rescue|broken|stabiliz|failing|performance-issues|inherit/],
+    ['optimization',   /optimi|adoption|training|chart-of-accounts|security|dimensions|reports|month-end|close|budget|cash-flow|bank-rec|workflow|fixed-assets|purchase-order|sales-order|vendor|credit|power-bi|warehouse|item-tracking|backup|gst|currency|intercompany|consolidation|profitab/],
+    ['implementation', /implementation|migration|choose|selection|partner|best-erp|erp-fit|where-to-find|multi-location|retail|manufactur|construction|go-?live|job-costing|subcontract|integrat|ecommerce|e-commerce|custom-development/]
+  ];
+  var PAGES = {
+    implementation: ['/pages/bc-implementation.html', 'BC Implementation'],
+    rescue:         ['/pages/bc-rescue-audit.html',   'the BC Rescue Audit'],
+    optimization:   ['/pages/bc-optimization.html',   'BC Optimization'],
+    rap:            ['/pages/rap.html',               'RAP (AR automation)']
+  };
+  function classify(card) {
+    var link = card.querySelector('a.blog-card-link');
+    var title = card.querySelector('.blog-card-title');
+    var text = ((link ? link.getAttribute('href') : '') + ' ' + (title ? title.textContent : '')).toLowerCase();
+    for (var i = 0; i < RULES.length; i++) if (RULES[i][1].test(text)) return RULES[i][0];
+    return 'other';
+  }
+  document.addEventListener('DOMContentLoaded', function () {
+    var cards = document.querySelectorAll('#blog-grid .blog-card');
+    var btns = document.querySelectorAll('.blog-filter-btn');
+    var note = document.getElementById('blog-filter-note');
+    cards.forEach(function (c) { c.setAttribute('data-cat', classify(c)); });
+    function apply(cat) {
+      cards.forEach(function (c) { c.hidden = !(cat === 'all' || c.getAttribute('data-cat') === cat); });
+      btns.forEach(function (b) { b.classList.toggle('is-active', b.getAttribute('data-cat') === cat); });
+      if (PAGES[cat]) {
+        note.innerHTML = 'Want help with this? See <a href="' + PAGES[cat][0] + '">' + PAGES[cat][1] + '</a>.';
+        note.hidden = false;
+      } else { note.hidden = true; }
+    }
+    btns.forEach(function (b) { b.addEventListener('click', function () { apply(b.getAttribute('data-cat')); }); });
+  });
+})();
+</script>
 </body>
 </html>
 
