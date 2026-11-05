@@ -1,0 +1,126 @@
+<!-- publish-date: 2026-12-09 -->
+    <!-- blog-title: Edit in Excel in Business Central: Bulk-Fix Records Without a Migration Tool -->
+    <!-- blog-desc: Use Edit in Excel in Business Central to bulk-update records safely. What works, what does not, and the field order trap that resets values. -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Edit in Excel in Business Central: Bulk Fix Records | BC Team</title>
+      <meta name="description" content="Use Edit in Excel in Business Central to bulk-update records safely. What works, what does not, and the field order trap that resets values.">
+      <meta name="robots" content="index, follow">
+      <link rel="canonical" href="https://www.bcteam1.com/pages/blog/2026-12-09-business-central-edit-in-excel.html">
+      <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+      <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+      <meta property="og:type" content="article">
+      <meta property="og:url" content="https://www.bcteam1.com/pages/blog/2026-12-09-business-central-edit-in-excel.html">
+      <meta property="og:title" content="Edit in Excel in Business Central: Bulk Fix Records | BC Team">
+      <meta property="og:description" content="Use Edit in Excel in Business Central to bulk-update records safely. What works, what does not, and the field order trap that resets values.">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
+      <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap"></noscript>
+      <link rel="stylesheet" href="/style.css">
+      <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Edit in Excel in Business Central: Bulk-Fix Records Without a Migration Tool", "description": "Use Edit in Excel in Business Central to bulk-update records safely. What works, what does not, and the field order trap that resets values.", "datePublished": "2026-12-09", "dateModified": "2026-12-09", "author": {"@type": "Person", "name": "Taylor McEachnie", "jobTitle": "President & CEO", "worksFor": {"@type": "Organization", "name": "The BC Team"}}, "publisher": {"@type": "Organization", "name": "The BC Team", "url": "https://www.bcteam1.com"}, "mainEntityOfPage": "https://www.bcteam1.com/pages/blog/2026-12-09-business-central-edit-in-excel.html"}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can Edit in Excel add new records?", "acceptedAnswer": {"@type": "Answer", "text": "On many pages, yes. Support depends on the page. Test with a small set first."}}, {"@type": "Question", "name": "Does it bypass validation?", "acceptedAnswer": {"@type": "Answer", "text": "No. Business Central applies its validation rules when you publish."}}, {"@type": "Question", "name": "Can I undo a bulk edit?", "acceptedAnswer": {"@type": "Answer", "text": "Not automatically. Keep your original sheet so you can restore values by publishing it back."}}, {"@type": "Question", "name": "Do I need an Excel add-in installed?", "acceptedAnswer": {"@type": "Answer", "text": "The feature uses an Office add-in that connects Excel to Business Central. Your administrator can confirm the setup."}}]}</script>
+  <style>
+        .post-body h2 { font-family:'Nunito Sans',sans-serif; font-weight:900; font-size:22px; color:var(--gray-dark); margin:40px 0 14px; }
+        .post-body h3 { font-family:'Nunito Sans',sans-serif; font-weight:800; font-size:17px; color:var(--gray-dark); margin:28px 0 10px; }
+        .post-body p  { font-size:16px; color:#333; line-height:1.85; margin-bottom:20px; }
+        .post-body ul { margin:0 0 20px 22px; }
+        .post-body li { font-size:16px; color:#333; line-height:1.8; margin-bottom:8px; }
+        .post-body hr { border:none; border-top:1px solid var(--gray-border); margin:40px 0; }
+        .post-body strong { color:var(--gray-dark); }
+      </style>
+    </head>
+    <body>
+
+    <div class="bc-alert-banner">
+      <div class="bc-alert-banner-inner">
+        <span class="bc-alert-text">🔥 <strong>Free BC Health Check</strong> — Find out if your Business Central is silently costing you money</span>
+        <div class="alert-btns">
+          <a href="https://www.bcteam1.com/pages/book.html" target="_blank" rel="noopener" class="alert-btn alert-btn-primary">Book Free 30-Min Call</a>
+          <a href="/pages/bc-rescue-audit.html" class="alert-btn alert-btn-outline">See Rescue Audit →</a>
+        </div>
+      </div>
+    </div>
+    <div id="navbar-placeholder"></div>
+    <main>
+
+      <article>
+        <section style="background:var(--black);padding:56px 24px 48px;">
+          <div style="max-width:760px;margin:0 auto;">
+            <div class="breadcrumb" style="margin-bottom:20px;">
+              <a href="/index.html" style="color:rgba(255,255,255,0.4);">Home</a>
+              <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+              <a href="/pages/blog.html" style="color:rgba(255,255,255,0.4);">Blog</a>
+              <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+              <span style="color:rgba(255,255,255,0.6);">Edit in Excel in Business Central: Bulk-...</span>
+            </div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:14px;font-family:'Nunito Sans',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:1px;">December 9, 2026</div>
+            <h1 style="color:#fff;font-size:clamp(24px,3.5vw,44px);line-height:1.2;font-family:'Nunito Sans',sans-serif;font-weight:900;margin-bottom:20px;">Edit in Excel in Business Central: Bulk-Fix Records Without a Migration Tool</h1>
+          </div>
+        </section>
+
+        <section style="padding:48px 24px 64px;background:#fff;">
+          <div style="max-width:760px;margin:0 auto;">
+            <div class="post-body">
+    <div style="background:#fff;border:2px solid var(--red);border-radius:10px;padding:20px 24px;margin:0 0 28px;"><div style="font-family:'Nunito Sans',sans-serif;font-weight:900;font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--red);margin-bottom:8px;">Quick answer</div><p style="margin-bottom:0;font-size:17px;">Edit in Excel lets you open a Business Central list in Excel, change values and publish them back, which is a quick way to bulk-update records without a migration project. It suits small, careful changes to fields such as payment terms or contact details. Test in a sandbox, keep a copy of the original, and avoid fields where changing one value affects others.</p></div>
+    <p>Two hundred customers need a new payment terms code. Entering them one at a time would take an afternoon and an unreasonable amount of coffee. Edit in Excel does it in minutes, and also changes the wrong field in minutes if you let it. The tool is good. The habits around it decide whether the result is good.</p>
+
+    <h2>What is Edit in Excel?</h2>
+<p>Edit in Excel is an action on many Business Central list pages. It opens the list in Excel with an add-in connected to your environment. You change cells, and publish the changes back to Business Central.</p>
+<p>The add-in applies each change as if you had typed it in Business Central. Validation rules still run.</p>
+
+<h2>How do you use it safely?</h2>
+<p>Follow this routine:</p>
+<ol style="margin:0 0 20px 22px;"><li>Open the list page, apply filters so only the records you want to change appear.</li><li>Choose Edit in Excel from the page actions. Save a copy of the untouched sheet as your backup.</li><li>Change only the columns you mean to change.</li><li>Publish the changes. Read any error messages.</li><li>Open a sample of records in Business Central and confirm the result.</li></ol>
+<p>Do the first run in a sandbox if the change is large.</p>
+
+<h2>What is the field order trap?</h2>
+<p>Business Central validates fields in a set order, and changing one field can trigger changes in others. A bulk update can therefore reset a value you set earlier in the same sheet, or fail on a row because a dependent field was not ready.</p>
+<p>Publish simple changes in small batches and check the result. If a change involves linked fields, such as codes that depend on one another, test with a few rows first.</p>
+
+<h2>What should you not do with it?</h2>
+<p>Avoid bulk-editing posted data, fields that drive accounting (such as posting groups) without your accountant's sign-off, and anything you cannot easily reverse. Do not use it as a substitute for a proper migration of large volumes.</p>
+<p>Also be careful with shared sheets. Several people editing the same list can overwrite each other.</p>
+
+<h2>When do you need something stronger?</h2>
+<p>When you load thousands of records, change relationships between tables or bring in data from another system, use configuration packages or a migration tool instead. They are built for validation and repeatable loads.</p>
+
+<div style="background:#f6f6f6;border-left:4px solid var(--red);border-radius:8px;padding:20px 24px;margin:32px 0;"><div style="font-family:'Nunito Sans',sans-serif;font-weight:900;font-size:14px;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Taylor&rsquo;s Take</div><p style="margin-bottom:0;">Bulk editing is a power tool. It is great when you know exactly what you are cutting. Keep a backup copy, change one thing at a time, and check a sample. The one time you skip the sample will be the time it matters. (Ask us how we know.)</p></div>
+<h2>Frequently Asked Questions</h2>
+<h3>Can Edit in Excel add new records?</h3>
+<p>On many pages, yes. Support depends on the page. Test with a small set first.</p>
+<h3>Does it bypass validation?</h3>
+<p>No. Business Central applies its validation rules when you publish.</p>
+<h3>Can I undo a bulk edit?</h3>
+<p>Not automatically. Keep your original sheet so you can restore values by publishing it back.</p>
+<h3>Do I need an Excel add-in installed?</h3>
+<p>The feature uses an Office add-in that connects Excel to Business Central. Your administrator can confirm the setup.</p>
+<hr>
+<p><strong>Keep reading:</strong></p>
+<ul><li><a href="https://www.bcteam1.com/pages/blog/2026-06-26-data-migration-to-business-central.html">Data migration to Business Central</a></li><li><a href="https://www.bcteam1.com/pages/blog/2026-08-20-bc-financial-reports-beyond-default-statements.html">Business Central financial reports</a></li><li><a href="https://www.bcteam1.com/pages/bc-optimization.html">Business Central optimization</a></li><li><a href="https://learn.microsoft.com/en-us/dynamics365/business-central/" target="_blank" rel="noopener">Microsoft Learn: Business Central documentation</a></li></ul>
+
+            </div>
+
+            <div style="margin-top:32px;padding:20px 24px;border:1px solid var(--gray-border);border-radius:10px;"><strong>Taylor McEachnie</strong>, President &amp; CEO, The BC Team.<br><span style="color:#555;font-size:15px;">Taylor has spent 19+ years inside Microsoft Dynamics 365 Business Central: implementing it, rescuing it and building products that run on top of it.</span></div>
+
+            <div style="background:var(--black);border-radius:12px;padding:32px;text-align:center;margin:48px 0;"><div class="section-label" style="color:rgba(255,255,255,0.4);margin-bottom:8px;">Next Step</div><p style="color:rgba(255,255,255,0.7);font-size:16px;margin-bottom:24px;line-height:1.6;">Bulk fixes are often a symptom of messy master data. Request the free Business Central Health Check and we will look at where your data needs attention.</p><a href="https://www.bcteam1.com/pages/book.html" target="_blank" rel="noopener" class="btn btn-primary" style="margin:4px;">Book the Free BC Health Check</a></div>
+
+            <div style="margin-top:40px;padding-top:28px;border-top:1px solid var(--gray-border);text-align:center;">
+              <a href="/pages/blog.html" style="font-family:'Nunito Sans',sans-serif;font-weight:800;font-size:14px;color:var(--red);">← Back to all articles</a>
+            </div>
+
+          </div>
+        </section>
+      </article>
+
+    </main>
+    <div id="footer-placeholder"></div>
+    <script src="/components.js"></script>
+    <script src="/assets/engagement.js" defer></script>
+    <script>renderNavbar("blog"); renderFooter();</script>
+    </body>
+    </html>
+    

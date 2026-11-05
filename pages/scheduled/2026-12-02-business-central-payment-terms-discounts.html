@@ -1,0 +1,127 @@
+<!-- publish-date: 2026-12-02 -->
+    <!-- blog-title: Payment Terms and Early-Payment Discounts in Business Central: Setup That Behaves -->
+    <!-- blog-desc: Set up 2/10 net 30 payment terms in Business Central so the due date and discount calculate correctly, with a worked invoice and receipt example. -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Business Central Payment Terms and Early-Payment Discounts | BC Team</title>
+      <meta name="description" content="Set up 2/10 net 30 payment terms in Business Central so the due date and discount calculate correctly, with a worked invoice and receipt example.">
+      <meta name="robots" content="index, follow">
+      <link rel="canonical" href="https://www.bcteam1.com/pages/blog/2026-12-02-business-central-payment-terms-discounts.html">
+      <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+      <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+      <meta property="og:type" content="article">
+      <meta property="og:url" content="https://www.bcteam1.com/pages/blog/2026-12-02-business-central-payment-terms-discounts.html">
+      <meta property="og:title" content="Business Central Payment Terms and Early-Payment Discounts | BC Team">
+      <meta property="og:description" content="Set up 2/10 net 30 payment terms in Business Central so the due date and discount calculate correctly, with a worked invoice and receipt example.">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
+      <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap"></noscript>
+      <link rel="stylesheet" href="/style.css">
+      <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Payment Terms and Early-Payment Discounts in Business Central: Setup That Behaves", "description": "Set up 2/10 net 30 payment terms in Business Central so the due date and discount calculate correctly, with a worked invoice and receipt example.", "datePublished": "2026-12-02", "dateModified": "2026-12-02", "author": {"@type": "Person", "name": "Taylor McEachnie", "jobTitle": "President & CEO", "worksFor": {"@type": "Organization", "name": "The BC Team"}}, "publisher": {"@type": "Organization", "name": "The BC Team", "url": "https://www.bcteam1.com"}, "mainEntityOfPage": "https://www.bcteam1.com/pages/blog/2026-12-02-business-central-payment-terms-discounts.html"}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the difference between due date and discount date?", "acceptedAnswer": {"@type": "Answer", "text": "The due date is when the full amount is owed. The discount date is the last day to pay and take the discount."}}, {"@type": "Question", "name": "Can I use different payment terms per customer?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Assign the code on each customer card, and it flows to their documents."}}, {"@type": "Question", "name": "Can I change terms on one invoice?", "acceptedAnswer": {"@type": "Answer", "text": "Usually you can change the payment terms code on an open document before posting. After posting, ask your accountant how to correct."}}, {"@type": "Question", "name": "Do discounts affect tax?", "acceptedAnswer": {"@type": "Answer", "text": "They can, depending on your tax setup. Confirm the treatment with your accountant before you roll it out."}}]}</script>
+  <style>
+        .post-body h2 { font-family:'Nunito Sans',sans-serif; font-weight:900; font-size:22px; color:var(--gray-dark); margin:40px 0 14px; }
+        .post-body h3 { font-family:'Nunito Sans',sans-serif; font-weight:800; font-size:17px; color:var(--gray-dark); margin:28px 0 10px; }
+        .post-body p  { font-size:16px; color:#333; line-height:1.85; margin-bottom:20px; }
+        .post-body ul { margin:0 0 20px 22px; }
+        .post-body li { font-size:16px; color:#333; line-height:1.8; margin-bottom:8px; }
+        .post-body hr { border:none; border-top:1px solid var(--gray-border); margin:40px 0; }
+        .post-body strong { color:var(--gray-dark); }
+      </style>
+    </head>
+    <body>
+
+    <div class="bc-alert-banner">
+      <div class="bc-alert-banner-inner">
+        <span class="bc-alert-text">🔥 <strong>Free BC Health Check</strong> — Find out if your Business Central is silently costing you money</span>
+        <div class="alert-btns">
+          <a href="https://www.bcteam1.com/pages/book.html" target="_blank" rel="noopener" class="alert-btn alert-btn-primary">Book Free 30-Min Call</a>
+          <a href="/pages/bc-rescue-audit.html" class="alert-btn alert-btn-outline">See Rescue Audit →</a>
+        </div>
+      </div>
+    </div>
+    <div id="navbar-placeholder"></div>
+    <main>
+
+      <article>
+        <section style="background:var(--black);padding:56px 24px 48px;">
+          <div style="max-width:760px;margin:0 auto;">
+            <div class="breadcrumb" style="margin-bottom:20px;">
+              <a href="/index.html" style="color:rgba(255,255,255,0.4);">Home</a>
+              <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+              <a href="/pages/blog.html" style="color:rgba(255,255,255,0.4);">Blog</a>
+              <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+              <span style="color:rgba(255,255,255,0.6);">Payment Terms and Early-Payment Discount...</span>
+            </div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:14px;font-family:'Nunito Sans',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:1px;">December 2, 2026</div>
+            <h1 style="color:#fff;font-size:clamp(24px,3.5vw,44px);line-height:1.2;font-family:'Nunito Sans',sans-serif;font-weight:900;margin-bottom:20px;">Payment Terms and Early-Payment Discounts in Business Central: Setup That Behaves</h1>
+          </div>
+        </section>
+
+        <section style="padding:48px 24px 64px;background:#fff;">
+          <div style="max-width:760px;margin:0 auto;">
+            <div class="post-body">
+    <div style="background:#fff;border:2px solid var(--red);border-radius:10px;padding:20px 24px;margin:0 0 28px;"><div style="font-family:'Nunito Sans',sans-serif;font-weight:900;font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--red);margin-bottom:8px;">Quick answer</div><p style="margin-bottom:0;font-size:17px;">To set 2/10 net 30 in Business Central, create a payment terms code with a due date calculation of 30 days, a discount date calculation of 10 days and a discount percentage of 2. Assign it to the customer. Business Central then calculates the due date and discount date on each invoice and applies the discount if the payment arrives in time.</p></div>
+    <p>"2/10 net 30" means the customer may take 2 percent off if they pay within 10 days, and otherwise owes the full amount in 30. Easy to say. Less easy to configure so the invoice, the cash receipt and the ledger all agree. Follow one invoice through the whole path to see where setup matters.</p>
+
+    <h2>How do you create a 2/10 net 30 payment terms code?</h2>
+<p>Search for <strong>Payment Terms</strong> and add a new line with these values:</p>
+<ol style="margin:0 0 20px 22px;"><li><strong>Code:</strong> a short label, for example 2-10-N30.</li><li><strong>Due Date Calculation:</strong> 30D, which means 30 days after the document date.</li><li><strong>Discount Date Calculation:</strong> 10D.</li><li><strong>Discount %:</strong> 2.</li><li><strong>Description:</strong> a plain-English description, which can print on documents.</li></ol>
+<p>Assign the code to the customer on the customer card. New sales documents for that customer will pick it up.</p>
+
+<h2>What happens on the invoice?</h2>
+<p>The invoice shows a due date 30 days out and a payment discount date 10 days out. The discount amount is calculated from the invoice total, subject to your tax and discount settings.</p>
+<p>Check the document with Preview Posting before you post it. The customer ledger entry will store the due date, the discount date and the possible discount amount.</p>
+
+<h2>What happens when the customer pays?</h2>
+<p>If the payment is applied on or before the discount date, Business Central can take the discount automatically. The balance closes and the discount posts to the account you set up.</p>
+<p>If the payment arrives late, the full amount is owed and no discount applies. Some companies allow a tolerance for payments that arrive a few days late. Decide your policy and set it in the system deliberately.</p>
+
+<h2>Where do discounts post?</h2>
+<p>The accounts for payment discounts are set in the posting setup for each business and product posting group combination. Check them with your accountant. Setup also controls how discounts affect tax calculations, which depends on your tax rules.</p>
+<p>Test with one real invoice and one real payment before you roll the code out to all customers.</p>
+
+<h2>What are the common mistakes?</h2>
+<p>Four things go wrong most often: a discount date longer than the due date, the code not assigned to the customer, the discount account not set, and users applying payments manually without checking the discount date.</p>
+<p>A short test script run after any change to payment terms catches all four.</p>
+
+<div style="background:#f6f6f6;border-left:4px solid var(--red);border-radius:8px;padding:20px 24px;margin:32px 0;"><div style="font-family:'Nunito Sans',sans-serif;font-weight:900;font-size:14px;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Taylor&rsquo;s Take</div><p style="margin-bottom:0;">Payment terms are a policy before they are a setting. Decide whether you want to give discounts and whether you will honor late ones. Then configure it. The system will faithfully enforce whatever you tell it.</p></div>
+<h2>Frequently Asked Questions</h2>
+<h3>What is the difference between due date and discount date?</h3>
+<p>The due date is when the full amount is owed. The discount date is the last day to pay and take the discount.</p>
+<h3>Can I use different payment terms per customer?</h3>
+<p>Yes. Assign the code on each customer card, and it flows to their documents.</p>
+<h3>Can I change terms on one invoice?</h3>
+<p>Usually you can change the payment terms code on an open document before posting. After posting, ask your accountant how to correct.</p>
+<h3>Do discounts affect tax?</h3>
+<p>They can, depending on your tax setup. Confirm the treatment with your accountant before you roll it out.</p>
+<hr>
+<p><strong>Keep reading:</strong></p>
+<ul><li><a href="https://www.bcteam1.com/pages/blog/2026-10-08-bc-credit-management-stopping-bad-orders.html">Credit management: stopping bad orders before they ship</a></li><li><a href="https://www.bcteam1.com/pages/blog/2026-09-01-bc-sales-order-processing-where-deals-slow-down.html">Sales order processing</a></li><li><a href="https://www.bcteam1.com/pages/rap.html">RAP</a></li><li><a href="https://learn.microsoft.com/en-us/dynamics365/business-central/" target="_blank" rel="noopener">Microsoft Learn: Business Central documentation</a></li></ul>
+
+            </div>
+
+            <div style="margin-top:32px;padding:20px 24px;border:1px solid var(--gray-border);border-radius:10px;"><strong>Taylor McEachnie</strong>, President &amp; CEO, The BC Team.<br><span style="color:#555;font-size:15px;">Taylor has spent 19+ years inside Microsoft Dynamics 365 Business Central: implementing it, rescuing it and building products that run on top of it.</span></div>
+
+            <div style="background:var(--black);border-radius:12px;padding:32px;text-align:center;margin:48px 0;"><div class="section-label" style="color:rgba(255,255,255,0.4);margin-bottom:8px;">Next Step</div><p style="color:rgba(255,255,255,0.7);font-size:16px;margin-bottom:24px;line-height:1.6;">If discounts post oddly or due dates look wrong, a review of your payment terms and posting setup will find the cause. Request the free Business Central Health Check.</p><a href="https://www.bcteam1.com/pages/book.html" target="_blank" rel="noopener" class="btn btn-primary" style="margin:4px;">Book the Free BC Health Check</a></div>
+
+            <div style="margin-top:40px;padding-top:28px;border-top:1px solid var(--gray-border);text-align:center;">
+              <a href="/pages/blog.html" style="font-family:'Nunito Sans',sans-serif;font-weight:800;font-size:14px;color:var(--red);">← Back to all articles</a>
+            </div>
+
+          </div>
+        </section>
+      </article>
+
+    </main>
+    <div id="footer-placeholder"></div>
+    <script src="/components.js"></script>
+    <script src="/assets/engagement.js" defer></script>
+    <script>renderNavbar("blog"); renderFooter();</script>
+    </body>
+    </html>
+    

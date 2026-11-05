@@ -1,0 +1,126 @@
+<!-- publish-date: 2026-11-18 -->
+    <!-- blog-title: “General Posting Setup Does Not Exist”: What It Means and How to Fix It -->
+    <!-- blog-desc: Fix the Business Central error "General Posting Setup does not exist". Find which posting group combination is missing and add it in four steps. -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>&quot;General Posting Setup Does Not Exist&quot;: How to Fix It | BC Team</title>
+      <meta name="description" content="Fix the Business Central error &quot;General Posting Setup does not exist&quot;. Find which posting group combination is missing and add it in four steps.">
+      <meta name="robots" content="index, follow">
+      <link rel="canonical" href="https://www.bcteam1.com/pages/blog/2026-11-18-general-posting-setup-does-not-exist.html">
+      <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+      <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+      <meta property="og:type" content="article">
+      <meta property="og:url" content="https://www.bcteam1.com/pages/blog/2026-11-18-general-posting-setup-does-not-exist.html">
+      <meta property="og:title" content="&quot;General Posting Setup Does Not Exist&quot;: How to Fix It | BC Team">
+      <meta property="og:description" content="Fix the Business Central error &quot;General Posting Setup does not exist&quot;. Find which posting group combination is missing and add it in four steps.">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
+      <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap"></noscript>
+      <link rel="stylesheet" href="/style.css">
+      <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "“General Posting Setup Does Not Exist”: What It Means and How to Fix It", "description": "Fix the Business Central error \"General Posting Setup does not exist\". Find which posting group combination is missing and add it in four steps.", "datePublished": "2026-11-18", "dateModified": "2026-11-18", "author": {"@type": "Person", "name": "Taylor McEachnie", "jobTitle": "President & CEO", "worksFor": {"@type": "Organization", "name": "The BC Team"}}, "publisher": {"@type": "Organization", "name": "The BC Team", "url": "https://www.bcteam1.com"}, "mainEntityOfPage": "https://www.bcteam1.com/pages/blog/2026-11-18-general-posting-setup-does-not-exist.html"}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Who should change General Posting Setup?", "acceptedAnswer": {"@type": "Answer", "text": "A finance lead or administrator who understands the accounts. Changes affect how every matching transaction posts, so restrict access."}}, {"@type": "Question", "name": "Can I just copy another row?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, as a starting point. Check every account on the copied row, since the wrong account will post silently."}}, {"@type": "Question", "name": "Will the error come back for old documents?", "acceptedAnswer": {"@type": "Answer", "text": "Only if they use a pair that still has no row. Once the row exists, the same pair posts correctly."}}, {"@type": "Question", "name": "Does the error mean my data is damaged?", "acceptedAnswer": {"@type": "Answer", "text": "No. Business Central stopped the posting before writing anything. Add the setup and post again."}}]}</script>
+  <style>
+        .post-body h2 { font-family:'Nunito Sans',sans-serif; font-weight:900; font-size:22px; color:var(--gray-dark); margin:40px 0 14px; }
+        .post-body h3 { font-family:'Nunito Sans',sans-serif; font-weight:800; font-size:17px; color:var(--gray-dark); margin:28px 0 10px; }
+        .post-body p  { font-size:16px; color:#333; line-height:1.85; margin-bottom:20px; }
+        .post-body ul { margin:0 0 20px 22px; }
+        .post-body li { font-size:16px; color:#333; line-height:1.8; margin-bottom:8px; }
+        .post-body hr { border:none; border-top:1px solid var(--gray-border); margin:40px 0; }
+        .post-body strong { color:var(--gray-dark); }
+      </style>
+    </head>
+    <body>
+
+    <div class="bc-alert-banner">
+      <div class="bc-alert-banner-inner">
+        <span class="bc-alert-text">🔥 <strong>Free BC Health Check</strong> — Find out if your Business Central is silently costing you money</span>
+        <div class="alert-btns">
+          <a href="https://www.bcteam1.com/pages/book.html" target="_blank" rel="noopener" class="alert-btn alert-btn-primary">Book Free 30-Min Call</a>
+          <a href="/pages/bc-rescue-audit.html" class="alert-btn alert-btn-outline">See Rescue Audit →</a>
+        </div>
+      </div>
+    </div>
+    <div id="navbar-placeholder"></div>
+    <main>
+
+      <article>
+        <section style="background:var(--black);padding:56px 24px 48px;">
+          <div style="max-width:760px;margin:0 auto;">
+            <div class="breadcrumb" style="margin-bottom:20px;">
+              <a href="/index.html" style="color:rgba(255,255,255,0.4);">Home</a>
+              <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+              <a href="/pages/blog.html" style="color:rgba(255,255,255,0.4);">Blog</a>
+              <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+              <span style="color:rgba(255,255,255,0.6);">“General Posting Setup Does Not Exist”: ...</span>
+            </div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:14px;font-family:'Nunito Sans',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:1px;">November 18, 2026</div>
+            <h1 style="color:#fff;font-size:clamp(24px,3.5vw,44px);line-height:1.2;font-family:'Nunito Sans',sans-serif;font-weight:900;margin-bottom:20px;">“General Posting Setup Does Not Exist”: What It Means and How to Fix It</h1>
+          </div>
+        </section>
+
+        <section style="padding:48px 24px 64px;background:#fff;">
+          <div style="max-width:760px;margin:0 auto;">
+            <div class="post-body">
+    <div style="background:#fff;border:2px solid var(--red);border-radius:10px;padding:20px 24px;margin:0 0 28px;"><div style="font-family:'Nunito Sans',sans-serif;font-weight:900;font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--red);margin-bottom:8px;">Quick answer</div><p style="margin-bottom:0;font-size:17px;">"General Posting Setup does not exist" means Business Central cannot find an account mapping for a pair of posting groups: a Gen. Business Posting Group from the customer or vendor and a Gen. Product Posting Group from the item or account. Read the pair named in the error, open the General Posting Setup page, add that combination and fill in the G/L accounts it needs.</p></div>
+    <p>You try to post an invoice and Business Central stops with "General Posting Setup does not exist," followed by two codes. It reads like a ticket from the system's lawyers. It is actually a simple message: no one has told Business Central which account to use for this combination of customer and product. Add the missing row and the invoice posts.</p>
+
+    <h2>What does the error mean?</h2>
+<p>Business Central picks the G/L account for a sale or purchase by matching two posting groups. The business posting group comes from the customer or vendor. The product posting group comes from the item, resource or G/L account on the line.</p>
+<p>The pair is looked up on the General Posting Setup page. If that pair has no row, you get the error. The message shows the two codes it could not find.</p>
+
+<h2>How do you fix it?</h2>
+<p>Add the missing combination and fill in the accounts. Follow these steps:</p>
+<ol style="margin:0 0 20px 22px;"><li>Read the error and write down the two codes after "Gen. Bus. Posting Group" and "Gen. Prod. Posting Group".</li><li>Search for <strong>General Posting Setup</strong> and open the page.</li><li>Add a new line with that pair of codes. If a similar pair already exists, copy its account settings as a starting point.</li><li>Fill in the accounts the transaction needs, such as the sales account for a sale or the purchase account for a purchase. Ask your accountant which accounts are right.</li><li>Go back to the document and post again.</li></ol>
+
+<h2>Why did it happen?</h2>
+<p>It usually happens after someone adds a new customer, vendor or item with a posting group that has not been used before. It also appears when a new product group is created and nobody adds it to the setup.</p>
+<p>Treat it as a prompt to check the master data. Ask whether the new group was needed, or whether an existing group would do.</p>
+
+<h2>What about similar errors?</h2>
+<p>Other posting errors follow the same pattern with a different table. "VAT Posting Setup does not exist" refers to the tax groups. "Inventory Posting Setup does not exist" refers to the location and inventory group. Each one names the missing pair, and each fix is to add the row and its accounts.</p>
+<p>A missing account on an existing row gives a different message, usually naming the field that must have a value. Fill in that field.</p>
+
+<h2>How do you stop it recurring?</h2>
+<p>Keep a short rule for creating new posting groups: who can add them, who updates the setup tables, and who checks the result. Run a posting preview on the first document that uses a new group.</p>
+<p>A tidy chart of accounts helps too. Fewer groups means fewer rows to maintain.</p>
+
+<div style="background:#f6f6f6;border-left:4px solid var(--red);border-radius:8px;padding:20px 24px;margin:32px 0;"><div style="font-family:'Nunito Sans',sans-serif;font-weight:900;font-size:14px;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Taylor&rsquo;s Take</div><p style="margin-bottom:0;">Posting groups are the wiring behind your numbers. Treat them as part of the foundation: designed once, changed carefully. If every new customer needs a fix, the design needs a review, not a patch.</p></div>
+<h2>Frequently Asked Questions</h2>
+<h3>Who should change General Posting Setup?</h3>
+<p>A finance lead or administrator who understands the accounts. Changes affect how every matching transaction posts, so restrict access.</p>
+<h3>Can I just copy another row?</h3>
+<p>Yes, as a starting point. Check every account on the copied row, since the wrong account will post silently.</p>
+<h3>Will the error come back for old documents?</h3>
+<p>Only if they use a pair that still has no row. Once the row exists, the same pair posts correctly.</p>
+<h3>Does the error mean my data is damaged?</h3>
+<p>No. Business Central stopped the posting before writing anything. Add the setup and post again.</p>
+<hr>
+<p><strong>Keep reading:</strong></p>
+<ul><li><a href="https://www.bcteam1.com/pages/blog/2026-08-04-bc-chart-of-accounts-review-when-and-how.html">Chart of accounts review: when and how</a></li><li><a href="https://www.bcteam1.com/pages/blog/2026-10-22-bc-dimensions-setup-decision.html">Dimensions setup decision</a></li><li><a href="https://www.bcteam1.com/pages/bc-optimization.html">Business Central optimization</a></li><li><a href="https://learn.microsoft.com/en-us/dynamics365/business-central/" target="_blank" rel="noopener">Microsoft Learn: Business Central documentation</a></li></ul>
+
+            </div>
+
+            <div style="margin-top:32px;padding:20px 24px;border:1px solid var(--gray-border);border-radius:10px;"><strong>Taylor McEachnie</strong>, President &amp; CEO, The BC Team.<br><span style="color:#555;font-size:15px;">Taylor has spent 19+ years inside Microsoft Dynamics 365 Business Central: implementing it, rescuing it and building products that run on top of it.</span></div>
+
+            <div style="background:var(--black);border-radius:12px;padding:32px;text-align:center;margin:48px 0;"><div class="section-label" style="color:rgba(255,255,255,0.4);margin-bottom:8px;">Next Step</div><p style="color:rgba(255,255,255,0.7);font-size:16px;margin-bottom:24px;line-height:1.6;">If posting errors keep coming back, the setup behind them needs a review. Request the free Business Central Health Check and we will trace your posting groups with you.</p><a href="https://www.bcteam1.com/pages/book.html" target="_blank" rel="noopener" class="btn btn-primary" style="margin:4px;">Book the Free BC Health Check</a></div>
+
+            <div style="margin-top:40px;padding-top:28px;border-top:1px solid var(--gray-border);text-align:center;">
+              <a href="/pages/blog.html" style="font-family:'Nunito Sans',sans-serif;font-weight:800;font-size:14px;color:var(--red);">← Back to all articles</a>
+            </div>
+
+          </div>
+        </section>
+      </article>
+
+    </main>
+    <div id="footer-placeholder"></div>
+    <script src="/components.js"></script>
+    <script src="/assets/engagement.js" defer></script>
+    <script>renderNavbar("blog"); renderFooter();</script>
+    </body>
+    </html>
+    

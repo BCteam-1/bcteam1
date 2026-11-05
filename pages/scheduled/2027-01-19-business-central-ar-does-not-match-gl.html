@@ -1,0 +1,122 @@
+<!-- publish-date: 2027-01-19 -->
+    <!-- blog-title: Why Your Accounts Receivable Balance Does Not Match the G/L in Business Central -->
+    <!-- blog-desc: Customer ledger and the G/L show different AR totals? Three common causes in Business Central, with a check for each. -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Why AR Does Not Match the G/L in Business Central | BC Team</title>
+      <meta name="description" content="Customer ledger and the G/L show different AR totals? Three common causes in Business Central, with a check for each.">
+      <meta name="robots" content="index, follow">
+      <link rel="canonical" href="https://www.bcteam1.com/pages/blog/2027-01-19-business-central-ar-does-not-match-gl.html">
+      <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+      <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+      <meta property="og:type" content="article">
+      <meta property="og:url" content="https://www.bcteam1.com/pages/blog/2027-01-19-business-central-ar-does-not-match-gl.html">
+      <meta property="og:title" content="Why AR Does Not Match the G/L in Business Central | BC Team">
+      <meta property="og:description" content="Customer ledger and the G/L show different AR totals? Three common causes in Business Central, with a check for each.">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
+      <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap"></noscript>
+      <link rel="stylesheet" href="/style.css">
+      <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Why Your Accounts Receivable Balance Does Not Match the G/L in Business Central", "description": "Customer ledger and the G/L show different AR totals? Three common causes in Business Central, with a check for each.", "datePublished": "2027-01-19", "dateModified": "2027-01-19", "author": {"@type": "Person", "name": "Taylor McEachnie", "jobTitle": "President & CEO", "worksFor": {"@type": "Organization", "name": "The BC Team"}}, "publisher": {"@type": "Organization", "name": "The BC Team", "url": "https://www.bcteam1.com"}, "mainEntityOfPage": "https://www.bcteam1.com/pages/blog/2027-01-19-business-central-ar-does-not-match-gl.html"}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is it normal for AR not to match the G/L?", "acceptedAnswer": {"@type": "Answer", "text": "No. With normal postings, they should agree at the same date. A gap needs an explanation."}}, {"@type": "Question", "name": "Can I just post a journal to make them agree?", "acceptedAnswer": {"@type": "Answer", "text": "That hides the problem. Find the cause first, then correct it properly."}}, {"@type": "Question", "name": "How often should I reconcile?", "acceptedAnswer": {"@type": "Answer", "text": "Every month, as part of close."}}, {"@type": "Question", "name": "Does this apply to payables too?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The same checks work for vendor ledger and payables."}}]}</script>
+  <style>
+        .post-body h2 { font-family:'Nunito Sans',sans-serif; font-weight:900; font-size:22px; color:var(--gray-dark); margin:40px 0 14px; }
+        .post-body h3 { font-family:'Nunito Sans',sans-serif; font-weight:800; font-size:17px; color:var(--gray-dark); margin:28px 0 10px; }
+        .post-body p  { font-size:16px; color:#333; line-height:1.85; margin-bottom:20px; }
+        .post-body ul { margin:0 0 20px 22px; }
+        .post-body li { font-size:16px; color:#333; line-height:1.8; margin-bottom:8px; }
+        .post-body hr { border:none; border-top:1px solid var(--gray-border); margin:40px 0; }
+        .post-body strong { color:var(--gray-dark); }
+      </style>
+    </head>
+    <body>
+
+    <div class="bc-alert-banner">
+      <div class="bc-alert-banner-inner">
+        <span class="bc-alert-text">🔥 <strong>Free BC Health Check</strong> — Find out if your Business Central is silently costing you money</span>
+        <div class="alert-btns">
+          <a href="https://www.bcteam1.com/pages/book.html" target="_blank" rel="noopener" class="alert-btn alert-btn-primary">Book Free 30-Min Call</a>
+          <a href="/pages/bc-rescue-audit.html" class="alert-btn alert-btn-outline">See Rescue Audit →</a>
+        </div>
+      </div>
+    </div>
+    <div id="navbar-placeholder"></div>
+    <main>
+
+      <article>
+        <section style="background:var(--black);padding:56px 24px 48px;">
+          <div style="max-width:760px;margin:0 auto;">
+            <div class="breadcrumb" style="margin-bottom:20px;">
+              <a href="/index.html" style="color:rgba(255,255,255,0.4);">Home</a>
+              <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+              <a href="/pages/blog.html" style="color:rgba(255,255,255,0.4);">Blog</a>
+              <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+              <span style="color:rgba(255,255,255,0.6);">Why Your Accounts Receivable Balance Doe...</span>
+            </div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:14px;font-family:'Nunito Sans',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:1px;">January 19, 2027</div>
+            <h1 style="color:#fff;font-size:clamp(24px,3.5vw,44px);line-height:1.2;font-family:'Nunito Sans',sans-serif;font-weight:900;margin-bottom:20px;">Why Your Accounts Receivable Balance Does Not Match the G/L in Business Central</h1>
+          </div>
+        </section>
+
+        <section style="padding:48px 24px 64px;background:#fff;">
+          <div style="max-width:760px;margin:0 auto;">
+            <div class="post-body">
+    <div style="background:#fff;border:2px solid var(--red);border-radius:10px;padding:20px 24px;margin:0 0 28px;"><div style="font-family:'Nunito Sans',sans-serif;font-weight:900;font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--red);margin-bottom:8px;">Quick answer</div><p style="margin-bottom:0;font-size:17px;">Your accounts receivable total differs from the G/L when something posted to the receivables account without going through the customer ledger, when the two reports use different dates, or when currency adjustments post to one but not the other. Compare both totals at the same date, then check direct postings, report date basis and exchange rate adjustments, in that order.</p></div>
+    <p>The customer ledger says $412,000. The balance sheet says something else. Someone says "it's probably a timing thing," which is what people say when they have not looked yet. In Business Central the two views are built from related but different records, so a gap always has a cause. Three causes explain most gaps.</p>
+
+    <h2>Why would two reports show different AR totals?</h2>
+<p>Because they read different data. The aged receivables report reads customer ledger entries. The balance sheet reads G/L entries. If a posting touches one and not the other, or if the reports use different dates, the totals drift apart.</p>
+<p>Start by making the comparison fair: same company, same date, same currency view.</p>
+
+<h2>What are the three common causes?</h2>
+<p>Check them in this order:</p>
+<ol style="margin:0 0 20px 22px;"><li><strong>Direct postings to the receivables account.</strong> If a journal line posts straight to the G/L receivables account, the G/L moves and the customer ledger does not. Check whether the account allows direct posting, and look at the G/L entries for that account that have no customer link.</li><li><strong>Different dates.</strong> One report may use posting date and another due date or document date. Make sure both are as of the same date, and that nothing was posted after that date and changed one but not the other.</li><li><strong>Currency adjustments.</strong> Exchange rate adjustments can post to the customer ledger and the G/L at different moments, or with different results if one run was missed. Check when the last adjustment ran and whether it covered all currencies.</li></ol>
+
+<h2>How do you trace a difference?</h2>
+<p>Work backward from the gap. Filter G/L entries on the receivables account for the date range. Compare them with customer ledger totals for the same range. Look for entries that appear in one list but not the other, or for amounts that differ.</p>
+<p>Business Central also has reports that reconcile customer and vendor accounts to the G/L in many versions. Ask your administrator which one your version has.</p>
+
+<h2>How do you fix it safely?</h2>
+<p>Do not adjust balances to make them match. Find the entry that caused the gap and correct it with a proper journal, approved by your controller. Record the cause so it does not return.</p>
+<p>Then close the door. Restrict direct posting on the receivables account, and add the reconciliation to your month-end checklist.</p>
+
+<div style="background:#f6f6f6;border-left:4px solid var(--red);border-radius:8px;padding:20px 24px;margin:32px 0;"><div style="font-family:'Nunito Sans',sans-serif;font-weight:900;font-size:14px;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Taylor&rsquo;s Take</div><p style="margin-bottom:0;">A sub-ledger that matches the control account every month is a sign of a healthy system. A gap you have "always had" is usually a design problem. Fix it once, at the cause. (The ones that start with "it's only a few dollars" are the ones with the best stories.)</p></div>
+<h2>Frequently Asked Questions</h2>
+<h3>Is it normal for AR not to match the G/L?</h3>
+<p>No. With normal postings, they should agree at the same date. A gap needs an explanation.</p>
+<h3>Can I just post a journal to make them agree?</h3>
+<p>That hides the problem. Find the cause first, then correct it properly.</p>
+<h3>How often should I reconcile?</h3>
+<p>Every month, as part of close.</p>
+<h3>Does this apply to payables too?</h3>
+<p>Yes. The same checks work for vendor ledger and payables.</p>
+<hr>
+<p><strong>Keep reading:</strong></p>
+<ul><li><a href="https://www.bcteam1.com/pages/blog/2026-08-06-bc-bank-reconciliation-automated-setup-guide.html">Bank reconciliation guide</a></li><li><a href="https://www.bcteam1.com/pages/blog/2026-10-15-bc-multi-currency-exchange-rate-setup.html">Multi-currency exchange rate setup</a></li><li><a href="https://www.bcteam1.com/pages/bc-rescue-audit.html">Rescue Audit</a></li><li><a href="https://learn.microsoft.com/en-us/dynamics365/business-central/" target="_blank" rel="noopener">Microsoft Learn: Business Central documentation</a></li></ul>
+
+            </div>
+
+            <div style="margin-top:32px;padding:20px 24px;border:1px solid var(--gray-border);border-radius:10px;"><strong>Taylor McEachnie</strong>, President &amp; CEO, The BC Team.<br><span style="color:#555;font-size:15px;">Taylor has spent 19+ years inside Microsoft Dynamics 365 Business Central: implementing it, rescuing it and building products that run on top of it.</span></div>
+
+            <div style="background:var(--black);border-radius:12px;padding:32px;text-align:center;margin:48px 0;"><div class="section-label" style="color:rgba(255,255,255,0.4);margin-bottom:8px;">Next Step</div><p style="color:rgba(255,255,255,0.7);font-size:16px;margin-bottom:24px;line-height:1.6;">If your sub-ledger and your balance sheet will not agree, a Rescue Audit will find the cause and give you a fix plan. Bring your two reports to the call.</p><a href="https://www.bcteam1.com/pages/bc-rescue-audit.html" class="btn btn-primary" style="margin:4px;">See the Rescue Audit</a><a href="https://www.bcteam1.com/pages/book.html" target="_blank" rel="noopener" class="btn btn-primary" style="margin:4px;">Book a Free 30-Min Call</a></div>
+
+            <div style="margin-top:40px;padding-top:28px;border-top:1px solid var(--gray-border);text-align:center;">
+              <a href="/pages/blog.html" style="font-family:'Nunito Sans',sans-serif;font-weight:800;font-size:14px;color:var(--red);">← Back to all articles</a>
+            </div>
+
+          </div>
+        </section>
+      </article>
+
+    </main>
+    <div id="footer-placeholder"></div>
+    <script src="/components.js"></script>
+    <script src="/assets/engagement.js" defer></script>
+    <script>renderNavbar("blog"); renderFooter();</script>
+    </body>
+    </html>
+    

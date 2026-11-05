@@ -1,0 +1,125 @@
+<!-- publish-date: 2027-01-27 -->
+    <!-- blog-title: How to Merge Duplicate Customers and Vendors in Business Central -->
+    <!-- blog-desc: How to merge duplicate customer and vendor cards in Business Central using Merge With. What moves, conflicts to resolve and how to prevent duplicates. -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Merge Duplicate Customers and Vendors in Business Central | BC Team</title>
+      <meta name="description" content="How to merge duplicate customer and vendor cards in Business Central using Merge With. What moves, conflicts to resolve and how to prevent duplicates.">
+      <meta name="robots" content="index, follow">
+      <link rel="canonical" href="https://www.bcteam1.com/pages/blog/2027-01-27-merge-duplicate-customers-business-central.html">
+      <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+      <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+      <meta property="og:type" content="article">
+      <meta property="og:url" content="https://www.bcteam1.com/pages/blog/2027-01-27-merge-duplicate-customers-business-central.html">
+      <meta property="og:title" content="Merge Duplicate Customers and Vendors in Business Central | BC Team">
+      <meta property="og:description" content="How to merge duplicate customer and vendor cards in Business Central using Merge With. What moves, conflicts to resolve and how to prevent duplicates.">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
+      <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap"></noscript>
+      <link rel="stylesheet" href="/style.css">
+      <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to Merge Duplicate Customers and Vendors in Business Central", "description": "How to merge duplicate customer and vendor cards in Business Central using Merge With. What moves, conflicts to resolve and how to prevent duplicates.", "datePublished": "2027-01-27", "dateModified": "2027-01-27", "author": {"@type": "Person", "name": "Taylor McEachnie", "jobTitle": "President & CEO", "worksFor": {"@type": "Organization", "name": "The BC Team"}}, "publisher": {"@type": "Organization", "name": "The BC Team", "url": "https://www.bcteam1.com"}, "mainEntityOfPage": "https://www.bcteam1.com/pages/blog/2027-01-27-merge-duplicate-customers-business-central.html"}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can I undo a merge?", "acceptedAnswer": {"@type": "Answer", "text": "No. Microsoft states that merging cannot be undone."}}, {"@type": "Question", "name": "Does merging combine invoices?", "acceptedAnswer": {"@type": "Answer", "text": "Related records are updated to refer to the record you keep. Test in a sandbox to see how your history appears."}}, {"@type": "Question", "name": "Who can merge?", "acceptedAnswer": {"@type": "Answer", "text": "Users with the MERGE DUPLICATES permission set."}}, {"@type": "Question", "name": "Does this work for contacts?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, the same action exists for contacts, and there is a separate duplicate search for them."}}]}</script>
+  <style>
+        .post-body h2 { font-family:'Nunito Sans',sans-serif; font-weight:900; font-size:22px; color:var(--gray-dark); margin:40px 0 14px; }
+        .post-body h3 { font-family:'Nunito Sans',sans-serif; font-weight:800; font-size:17px; color:var(--gray-dark); margin:28px 0 10px; }
+        .post-body p  { font-size:16px; color:#333; line-height:1.85; margin-bottom:20px; }
+        .post-body ul { margin:0 0 20px 22px; }
+        .post-body li { font-size:16px; color:#333; line-height:1.8; margin-bottom:8px; }
+        .post-body hr { border:none; border-top:1px solid var(--gray-border); margin:40px 0; }
+        .post-body strong { color:var(--gray-dark); }
+      </style>
+    </head>
+    <body>
+
+    <div class="bc-alert-banner">
+      <div class="bc-alert-banner-inner">
+        <span class="bc-alert-text">🔥 <strong>Free BC Health Check</strong> — Find out if your Business Central is silently costing you money</span>
+        <div class="alert-btns">
+          <a href="https://www.bcteam1.com/pages/book.html" target="_blank" rel="noopener" class="alert-btn alert-btn-primary">Book Free 30-Min Call</a>
+          <a href="/pages/bc-rescue-audit.html" class="alert-btn alert-btn-outline">See Rescue Audit →</a>
+        </div>
+      </div>
+    </div>
+    <div id="navbar-placeholder"></div>
+    <main>
+
+      <article>
+        <section style="background:var(--black);padding:56px 24px 48px;">
+          <div style="max-width:760px;margin:0 auto;">
+            <div class="breadcrumb" style="margin-bottom:20px;">
+              <a href="/index.html" style="color:rgba(255,255,255,0.4);">Home</a>
+              <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+              <a href="/pages/blog.html" style="color:rgba(255,255,255,0.4);">Blog</a>
+              <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+              <span style="color:rgba(255,255,255,0.6);">How to Merge Duplicate Customers and Ven...</span>
+            </div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:14px;font-family:'Nunito Sans',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:1px;">January 27, 2027</div>
+            <h1 style="color:#fff;font-size:clamp(24px,3.5vw,44px);line-height:1.2;font-family:'Nunito Sans',sans-serif;font-weight:900;margin-bottom:20px;">How to Merge Duplicate Customers and Vendors in Business Central</h1>
+          </div>
+        </section>
+
+        <section style="padding:48px 24px 64px;background:#fff;">
+          <div style="max-width:760px;margin:0 auto;">
+            <div class="post-body">
+    <div style="background:#fff;border:2px solid var(--red);border-radius:10px;padding:20px 24px;margin:0 0 28px;"><div style="font-family:'Nunito Sans',sans-serif;font-weight:900;font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--red);margin-bottom:8px;">Quick answer</div><p style="margin-bottom:0;font-size:17px;">Open the customer or vendor card you want to keep, choose Merge With, and select the duplicate. Review the fields that differ, choose which values to keep, resolve any conflicts and merge. Merging cannot be undone, and only users with the MERGE DUPLICATES permission set can do it. Back up or test in a sandbox first.</p></div>
+    <p>Acme Ltd, ACME Limited and Acme (old). Three cards, one customer, and a collector who never knows which one to open. Duplicates split history, confuse reports and cause duplicate payments. Business Central has a built-in merge. It is powerful and it is permanent, so the preparation matters more than the clicks.</p>
+
+    <h2>Can you merge customer and vendor records?</h2>
+<p>Yes. Business Central has a Merge With action on customer, vendor and contact cards. It combines a duplicate into the record you keep and updates references to the duplicate's number.</p>
+<p>Microsoft's documentation says merging cannot be undone, and requires the MERGE DUPLICATES permission set.</p>
+
+<h2>What are the steps?</h2>
+<p>Follow Microsoft's steps:</p>
+<ol style="margin:0 0 20px 22px;"><li>Open the record you want to <strong>keep</strong>, for example the customer card.</li><li>Choose <strong>Merge With</strong> and select the duplicate.</li><li>On the Merge Duplicate page, review the <strong>Fields</strong> section. It shows only fields whose values differ. A few differences, such as typos, suggest a true duplicate. Many differences suggest it may not be one.</li><li>Check the <strong>Related Tables</strong> section, which shows record counts for each side. It is for information only.</li><li>For each field where you want the duplicate's value, choose <strong>Override</strong>.</li><li>Choose <strong>Merge</strong> and confirm.</li></ol>
+
+<h2>What are conflicts and how do you handle them?</h2>
+<p>A conflict exists when related records share the same key but belong to different numbers. If conflicts appear, resolve them before the merge completes. For each conflict you can remove the duplicate's record or rename it so both can be kept.</p>
+<p>Read each conflict carefully. Removing a record deletes it.</p>
+
+<h2>What should you check before merging?</h2>
+<p>Check three things. First, are they truly the same company? Second, what is open on each, such as invoices, orders or payments? Third, do any integrations or external systems refer to the old number?</p>
+<p>Microsoft's article does not explicitly address ledger entries. Confirm how your history looks after a test merge in a sandbox, and ask your partner if unsure.</p>
+
+<h2>How do you prevent new duplicates?</h2>
+<p>Search before you create. Agree naming rules, such as legal name first, no abbreviations. Limit who can create customers and vendors. Review new records weekly.</p>
+
+<div style="background:#f6f6f6;border-left:4px solid var(--red);border-radius:8px;padding:20px 24px;margin:32px 0;"><div style="font-family:'Nunito Sans',sans-serif;font-weight:900;font-size:14px;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Taylor&rsquo;s Take</div><p style="margin-bottom:0;">Master data is the cheapest thing to keep clean and the most expensive to fix late. Make "search before you create" a rule, and review new cards each week. Your future self, and your auditors, will thank you.</p></div>
+<h2>Frequently Asked Questions</h2>
+<h3>Can I undo a merge?</h3>
+<p>No. Microsoft states that merging cannot be undone.</p>
+<h3>Does merging combine invoices?</h3>
+<p>Related records are updated to refer to the record you keep. Test in a sandbox to see how your history appears.</p>
+<h3>Who can merge?</h3>
+<p>Users with the MERGE DUPLICATES permission set.</p>
+<h3>Does this work for contacts?</h3>
+<p>Yes, the same action exists for contacts, and there is a separate duplicate search for them.</p>
+<hr>
+<p><strong>Keep reading:</strong></p>
+<ul><li><a href="https://www.bcteam1.com/pages/blog/2026-09-17-bc-vendor-management-duplicate-invoices.html">Vendor management and duplicate invoices</a></li><li><a href="https://www.bcteam1.com/pages/blog/2026-06-26-data-migration-to-business-central.html">Data migration to Business Central</a></li><li><a href="https://www.bcteam1.com/pages/bc-optimization.html">Business Central optimization</a></li><li><a href="https://learn.microsoft.com/en-gb/dynamics365/business-central/sales-how-merge-duplicate-records" target="_blank" rel="noopener">Microsoft Learn: Merge duplicate records</a></li></ul>
+
+            </div>
+
+            <div style="margin-top:32px;padding:20px 24px;border:1px solid var(--gray-border);border-radius:10px;"><strong>Taylor McEachnie</strong>, President &amp; CEO, The BC Team.<br><span style="color:#555;font-size:15px;">Taylor has spent 19+ years inside Microsoft Dynamics 365 Business Central: implementing it, rescuing it and building products that run on top of it.</span></div>
+
+            <div style="background:var(--black);border-radius:12px;padding:32px;text-align:center;margin:48px 0;"><div class="section-label" style="color:rgba(255,255,255,0.4);margin-bottom:8px;">Next Step</div><p style="color:rgba(255,255,255,0.7);font-size:16px;margin-bottom:24px;line-height:1.6;">Cleaning up master data before a bigger project? Book a free 30-minute call with Taylor and we will talk through the safest approach.</p><a href="https://www.bcteam1.com/pages/book.html" target="_blank" rel="noopener" class="btn btn-primary" style="margin:4px;">Book a Free 30-Min Call</a></div>
+
+            <div style="margin-top:40px;padding-top:28px;border-top:1px solid var(--gray-border);text-align:center;">
+              <a href="/pages/blog.html" style="font-family:'Nunito Sans',sans-serif;font-weight:800;font-size:14px;color:var(--red);">← Back to all articles</a>
+            </div>
+
+          </div>
+        </section>
+      </article>
+
+    </main>
+    <div id="footer-placeholder"></div>
+    <script src="/components.js"></script>
+    <script src="/assets/engagement.js" defer></script>
+    <script>renderNavbar("blog"); renderFooter();</script>
+    </body>
+    </html>
+    

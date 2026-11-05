@@ -1,0 +1,130 @@
+<!-- publish-date: 2026-12-08 -->
+    <!-- blog-title: Why Business Central Implementations Fail: Five Decisions Made in the First 30 Days -->
+    <!-- blog-desc: Most Business Central projects fail from decisions made in the first 30 days. Five design choices that decide the outcome, and how to get them right. -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Why Business Central Implementations Fail: 5 Decisions | BC Team</title>
+      <meta name="description" content="Most Business Central projects fail from decisions made in the first 30 days. Five design choices that decide the outcome, and how to get them right.">
+      <meta name="robots" content="index, follow">
+      <link rel="canonical" href="https://www.bcteam1.com/pages/blog/2026-12-08-why-business-central-implementations-fail.html">
+      <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+      <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+      <meta property="og:type" content="article">
+      <meta property="og:url" content="https://www.bcteam1.com/pages/blog/2026-12-08-why-business-central-implementations-fail.html">
+      <meta property="og:title" content="Why Business Central Implementations Fail: 5 Decisions | BC Team">
+      <meta property="og:description" content="Most Business Central projects fail from decisions made in the first 30 days. Five design choices that decide the outcome, and how to get them right.">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
+      <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap"></noscript>
+      <link rel="stylesheet" href="/style.css">
+      <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Why Business Central Implementations Fail: Five Decisions Made in the First 30 Days", "description": "Most Business Central projects fail from decisions made in the first 30 days. Five design choices that decide the outcome, and how to get them right.", "datePublished": "2026-12-08", "dateModified": "2026-12-08", "author": {"@type": "Person", "name": "Taylor McEachnie", "jobTitle": "President & CEO", "worksFor": {"@type": "Organization", "name": "The BC Team"}}, "publisher": {"@type": "Organization", "name": "The BC Team", "url": "https://www.bcteam1.com"}, "mainEntityOfPage": "https://www.bcteam1.com/pages/blog/2026-12-08-why-business-central-implementations-fail.html"}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can I change these decisions after go-live?", "acceptedAnswer": {"@type": "Answer", "text": "Some, with effort and risk. Changing a chart of accounts or dimensions after postings exist requires careful planning with your accountant."}}, {"@type": "Question", "name": "Who should make these decisions?", "acceptedAnswer": {"@type": "Answer", "text": "The business owner and finance lead, advised by the partner. They are business decisions, not technical ones."}}, {"@type": "Question", "name": "Is poor training a cause of failure?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, often alongside the design problems. Both need attention."}}, {"@type": "Question", "name": "What is the earliest warning sign?", "acceptedAnswer": {"@type": "Answer", "text": "Design decisions made without finance in the room."}}]}</script>
+  <style>
+        .post-body h2 { font-family:'Nunito Sans',sans-serif; font-weight:900; font-size:22px; color:var(--gray-dark); margin:40px 0 14px; }
+        .post-body h3 { font-family:'Nunito Sans',sans-serif; font-weight:800; font-size:17px; color:var(--gray-dark); margin:28px 0 10px; }
+        .post-body p  { font-size:16px; color:#333; line-height:1.85; margin-bottom:20px; }
+        .post-body ul { margin:0 0 20px 22px; }
+        .post-body li { font-size:16px; color:#333; line-height:1.8; margin-bottom:8px; }
+        .post-body hr { border:none; border-top:1px solid var(--gray-border); margin:40px 0; }
+        .post-body strong { color:var(--gray-dark); }
+      </style>
+    </head>
+    <body>
+
+    <div class="bc-alert-banner">
+      <div class="bc-alert-banner-inner">
+        <span class="bc-alert-text">🔥 <strong>Free BC Health Check</strong> — Find out if your Business Central is silently costing you money</span>
+        <div class="alert-btns">
+          <a href="https://www.bcteam1.com/pages/book.html" target="_blank" rel="noopener" class="alert-btn alert-btn-primary">Book Free 30-Min Call</a>
+          <a href="/pages/bc-rescue-audit.html" class="alert-btn alert-btn-outline">See Rescue Audit →</a>
+        </div>
+      </div>
+    </div>
+    <div id="navbar-placeholder"></div>
+    <main>
+
+      <article>
+        <section style="background:var(--black);padding:56px 24px 48px;">
+          <div style="max-width:760px;margin:0 auto;">
+            <div class="breadcrumb" style="margin-bottom:20px;">
+              <a href="/index.html" style="color:rgba(255,255,255,0.4);">Home</a>
+              <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+              <a href="/pages/blog.html" style="color:rgba(255,255,255,0.4);">Blog</a>
+              <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+              <span style="color:rgba(255,255,255,0.6);">Why Business Central Implementations Fai...</span>
+            </div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:14px;font-family:'Nunito Sans',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:1px;">December 8, 2026</div>
+            <h1 style="color:#fff;font-size:clamp(24px,3.5vw,44px);line-height:1.2;font-family:'Nunito Sans',sans-serif;font-weight:900;margin-bottom:20px;">Why Business Central Implementations Fail: Five Decisions Made in the First 30 Days</h1>
+          </div>
+        </section>
+
+        <section style="padding:48px 24px 64px;background:#fff;">
+          <div style="max-width:760px;margin:0 auto;">
+            <div class="post-body">
+    <div style="background:#fff;border:2px solid var(--red);border-radius:10px;padding:20px 24px;margin:0 0 28px;"><div style="font-family:'Nunito Sans',sans-serif;font-weight:900;font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--red);margin-bottom:8px;">Quick answer</div><p style="margin-bottom:0;font-size:17px;">Business Central implementations most often fail because of five design decisions made in the first 30 days: the chart of accounts, the dimensions, the posting groups, the item setup and who owns the data. Software bugs are rarely the cause. These foundation choices decide what every later report can say, and they are the hardest to change after go-live.</p></div>
+    <p>Teams blame failed ERP projects on the software, the partner or the schedule. Look closer and most trace back to a design meeting in week two where nobody pushed back. The foundation determines everything: the chart of accounts, dimensions and posting setup decide what every later report can show. Here are the five decisions to get right, and what to ask in each.</p>
+
+    <h2>Which five decisions matter most?</h2>
+<p>They are the chart of accounts, dimensions, posting groups, item setup and data ownership. Each one is hard to change once transactions exist.</p>
+
+<h2>Decision 1: What does the chart of accounts need to report?</h2>
+<p>Design the chart of accounts from the reports you need, not from the old chart. Ask what management, lenders and tax filings require, and build backward.</p>
+<p>A copied chart of accounts brings its old problems along.</p>
+
+<h2>Decision 2: Which dimensions will you track?</h2>
+<p>Dimensions are the tags that let you report by department, project, location or other cuts. Decide which ones you need, which are required on every posting and who maintains the values.</p>
+<p>Too few and you cannot answer questions. Too many and users enter them wrong. See our dimensions post for the decision process.</p>
+
+<h2>Decision 3: How will posting groups map to accounts?</h2>
+<p>Posting groups decide which account each transaction hits. Design them with your accountant and test each combination. Messy groups produce posting errors and wrong reports for years.</p>
+
+<h2>Decision 4: How will items be set up?</h2>
+<p>For companies with inventory, item types, units of measure, costing method and categories matter. Changing costing after transactions exist is painful. Agree the rules before you load items.</p>
+
+<h2>Decision 5: Who owns the data?</h2>
+<p>Every master data set needs an owner: customers, vendors, items and the chart of accounts. Without owners, duplicates and bad records grow after go-live.</p>
+<p>Name the owners in the project plan, with authority to approve changes.</p>
+
+<h2>How do you catch a bad decision early?</h2>
+<p>Run a test with real scenarios before go-live. Post a sale, a purchase, a payment and a month-end close, and read the reports. If a report cannot answer a question it must answer, the foundation needs work.</p>
+
+<div style="background:#f6f6f6;border-left:4px solid var(--red);border-radius:8px;padding:20px 24px;margin:32px 0;"><div style="font-family:'Nunito Sans',sans-serif;font-weight:900;font-size:14px;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Taylor&rsquo;s Take</div><p style="margin-bottom:0;">The foundation determines everything. Spend a week more on design and save months of repair. Any partner who rushes through these five decisions to reach the demo is borrowing against your future.</p></div>
+<h2>Frequently Asked Questions</h2>
+<h3>Can I change these decisions after go-live?</h3>
+<p>Some, with effort and risk. Changing a chart of accounts or dimensions after postings exist requires careful planning with your accountant.</p>
+<h3>Who should make these decisions?</h3>
+<p>The business owner and finance lead, advised by the partner. They are business decisions, not technical ones.</p>
+<h3>Is poor training a cause of failure?</h3>
+<p>Yes, often alongside the design problems. Both need attention.</p>
+<h3>What is the earliest warning sign?</h3>
+<p>Design decisions made without finance in the room.</p>
+<hr>
+<p><strong>Keep reading:</strong></p>
+<ul><li><a href="https://www.bcteam1.com/pages/blog/2026-10-21-erp-rescue-what-to-do-first.html">What to do first when you inherit a failing Business Central project</a></li><li><a href="https://www.bcteam1.com/pages/blog/2026-10-22-bc-dimensions-setup-decision.html">Dimensions setup decision</a></li><li><a href="https://www.bcteam1.com/pages/blog/2026-08-04-bc-chart-of-accounts-review-when-and-how.html">Chart of accounts review</a></li><li><a href="https://learn.microsoft.com/en-us/dynamics365/business-central/" target="_blank" rel="noopener">Microsoft Learn: Business Central documentation</a></li></ul>
+
+            </div>
+
+            <div style="margin-top:32px;padding:20px 24px;border:1px solid var(--gray-border);border-radius:10px;"><strong>Taylor McEachnie</strong>, President &amp; CEO, The BC Team.<br><span style="color:#555;font-size:15px;">Taylor has spent 19+ years inside Microsoft Dynamics 365 Business Central: implementing it, rescuing it and building products that run on top of it.</span></div>
+
+            <div style="background:var(--black);border-radius:12px;padding:32px;text-align:center;margin:48px 0;"><div class="section-label" style="color:rgba(255,255,255,0.4);margin-bottom:8px;">Next Step</div><p style="color:rgba(255,255,255,0.7);font-size:16px;margin-bottom:24px;line-height:1.6;">Already living with these decisions? A Rescue Audit shows which of the five are hurting you and what to fix first.</p><a href="https://www.bcteam1.com/pages/bc-rescue-audit.html" class="btn btn-primary" style="margin:4px;">See the Rescue Audit</a><a href="https://www.bcteam1.com/pages/book.html" target="_blank" rel="noopener" class="btn btn-primary" style="margin:4px;">Book a Free 30-Min Call</a></div>
+
+            <div style="margin-top:40px;padding-top:28px;border-top:1px solid var(--gray-border);text-align:center;">
+              <a href="/pages/blog.html" style="font-family:'Nunito Sans',sans-serif;font-weight:800;font-size:14px;color:var(--red);">← Back to all articles</a>
+            </div>
+
+          </div>
+        </section>
+      </article>
+
+    </main>
+    <div id="footer-placeholder"></div>
+    <script src="/components.js"></script>
+    <script src="/assets/engagement.js" defer></script>
+    <script>renderNavbar("blog"); renderFooter();</script>
+    </body>
+    </html>
+    
