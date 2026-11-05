@@ -1,0 +1,130 @@
+<!-- publish-date: 2026-11-11 -->
+<!-- blog-title: Business Central Reminders and Finance Charge Memos: How to Set Them Up -->
+<!-- blog-desc: Set up Business Central reminders and finance charge memos step by step, so overdue invoices get chased on schedule. Includes where the tools stop. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Central Reminders: Setup Guide for Overdue AR | BC Team</title>
+  <meta name="description" content="Set up Business Central reminders and finance charge memos step by step, so overdue invoices get chased on schedule. Includes where the tools stop.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.bcteam1.com/pages/blog/2026-11-11-business-central-reminders-setup.html">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.bcteam1.com/pages/blog/2026-11-11-business-central-reminders-setup.html">
+  <meta property="og:title" content="Business Central Reminders: Setup Guide for Overdue AR | BC Team">
+  <meta property="og:description" content="Set up Business Central reminders and finance charge memos step by step, so overdue invoices get chased on schedule. Includes where the tools stop.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap"></noscript>
+  <link rel="stylesheet" href="/style.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Business Central Reminders and Finance Charge Memos: How to Set Them Up", "description": "Set up Business Central reminders and finance charge memos step by step, so overdue invoices get chased on schedule. Includes where the tools stop.", "datePublished": "2026-11-11", "dateModified": "2026-11-11", "author": {"@type": "Person", "name": "Taylor McEachnie", "jobTitle": "President & CEO", "worksFor": {"@type": "Organization", "name": "The BC Team"}}, "publisher": {"@type": "Organization", "name": "The BC Team", "url": "https://www.bcteam1.com"}, "mainEntityOfPage": "https://www.bcteam1.com/pages/blog/2026-11-11-business-central-reminders-setup.html"}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can Business Central send overdue reminders automatically?", "acceptedAnswer": {"@type": "Answer", "text": "Partly. Microsoft documents tools to automate creating, issuing and sending reminders, but the base process is manual. Set up Reminder Terms first, then check the automation options for your version."}}, {"@type": "Question", "name": "What is the difference between a reminder and a finance charge memo?", "acceptedAnswer": {"@type": "Answer", "text": "A reminder lists overdue invoices and asks for payment, with an optional fee or interest. A finance charge memo bills interest or fees without listing what is overdue."}}, {"@type": "Question", "name": "Can I stop reminders for an invoice that is in dispute?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Remove it from the draft before you issue. An entry with On Hold filled in does not trigger a reminder, but it can still appear on one created for other overdue entries, so check the draft."}}, {"@type": "Question", "name": "Where do reminder fees and interest post?", "acceptedAnswer": {"@type": "Answer", "text": "To the G/L accounts set on the Customer Posting Groups page when you issue the reminder, if the Reminder Terms are set to post fees and interest."}}]}</script>
+  <style>
+    .post-body h2 { font-family:'Nunito Sans',sans-serif; font-weight:900; font-size:22px; color:var(--gray-dark); margin:40px 0 14px; }
+    .post-body h3 { font-family:'Nunito Sans',sans-serif; font-weight:800; font-size:17px; color:var(--gray-dark); margin:28px 0 10px; }
+    .post-body p  { font-size:16px; color:#333; line-height:1.85; margin-bottom:20px; }
+    .post-body ul { margin:0 0 20px 22px; }
+    .post-body li { font-size:16px; color:#333; line-height:1.8; margin-bottom:8px; }
+    .post-body hr { border:none; border-top:1px solid var(--gray-border); margin:40px 0; }
+    .post-body strong { color:var(--gray-dark); }
+  </style>
+</head>
+<body>
+
+<div class="bc-alert-banner">
+  <div class="bc-alert-banner-inner">
+    <span class="bc-alert-text">🔥 <strong>Free BC Health Check</strong> — Find out if your Business Central is silently costing you money</span>
+    <div class="alert-btns">
+      <a href="https://www.bcteam1.com/pages/book.html" target="_blank" rel="noopener" class="alert-btn alert-btn-primary">Book Free 30-Min Call</a>
+      <a href="/pages/bc-rescue-audit.html" class="alert-btn alert-btn-outline">See Rescue Audit →</a>
+    </div>
+  </div>
+</div>
+<div id="navbar-placeholder"></div>
+<main>
+
+  <article>
+    <section style="background:var(--black);padding:56px 24px 48px;">
+      <div style="max-width:760px;margin:0 auto;">
+        <div class="breadcrumb" style="margin-bottom:20px;">
+          <a href="/index.html" style="color:rgba(255,255,255,0.4);">Home</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <a href="/pages/blog.html" style="color:rgba(255,255,255,0.4);">Blog</a>
+          <span class="breadcrumb-sep" style="color:rgba(255,255,255,0.25);">›</span>
+          <span style="color:rgba(255,255,255,0.6);">Business Central Reminders and Finance C...</span>
+        </div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:14px;font-family:'Nunito Sans',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:1px;">November 11, 2026</div>
+        <h1 style="color:#fff;font-size:clamp(24px,3.5vw,44px);line-height:1.2;font-family:'Nunito Sans',sans-serif;font-weight:900;margin-bottom:20px;">Business Central Reminders and Finance Charge Memos: How to Set Them Up</h1>
+      </div>
+    </section>
+
+    <section style="padding:48px 24px 64px;background:#fff;">
+      <div style="max-width:760px;margin:0 auto;">
+        <div class="post-body">
+<div style="background:#fff;border:2px solid var(--red);border-radius:10px;padding:20px 24px;margin:0 0 28px;"><div style="font-family:'Nunito Sans',sans-serif;font-weight:900;font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--red);margin-bottom:8px;">Quick answer</div><p style="margin-bottom:0;font-size:17px;">To make Business Central chase overdue invoices, create Reminder Terms with levels, assign them to customers, then run Create Reminders and Issue Reminders each week. Finance charge memos are separate: they bill interest or fees without reminding the customer of the overdue amount. Microsoft describes tools to automate this, but the default process is mostly manual.</p></div>
+<p>Your AR clerk keeps a list in Excel: who was emailed, who was called, who promised to pay on Friday. Business Central reminders could replace part of that list. Most teams never set them up, because the first screen, Reminder Terms, looks like accounting homework. It is short homework. It also decides how Business Central chases every overdue invoice you have, so a blank or default setup quietly means nobody is chased on a rule.</p>
+
+<h2>What is the difference between reminders, finance charge memos and statements?</h2>
+<p>A reminder asks a customer to pay overdue invoices and can add a fee or interest. A finance charge memo bills interest or fees without listing what is overdue. A statement lists a customer’s transactions and is created from the customer card.</p>
+<div style="overflow-x:auto;margin:0 0 24px;"><table style="width:100%;border-collapse:collapse;font-size:15px;line-height:1.6;"><thead><tr><th style="text-align:left;padding:10px 12px;border-bottom:2px solid var(--gray-border);font-family:'Nunito Sans',sans-serif;">Tool</th><th style="text-align:left;padding:10px 12px;border-bottom:2px solid var(--gray-border);font-family:'Nunito Sans',sans-serif;">What it does</th><th style="text-align:left;padding:10px 12px;border-bottom:2px solid var(--gray-border);font-family:'Nunito Sans',sans-serif;">Use it when</th></tr></thead><tbody><tr><td style="padding:10px 12px;border-bottom:1px solid var(--gray-border);vertical-align:top;">Reminder</td><td style="padding:10px 12px;border-bottom:1px solid var(--gray-border);vertical-align:top;">Lists overdue invoices and asks for payment. Can add a fee or interest</td><td style="padding:10px 12px;border-bottom:1px solid var(--gray-border);vertical-align:top;">You want a rule-based follow-up on overdue invoices</td></tr><tr><td style="padding:10px 12px;border-bottom:1px solid var(--gray-border);vertical-align:top;">Finance charge memo</td><td style="padding:10px 12px;border-bottom:1px solid var(--gray-border);vertical-align:top;">Debits the customer for interest or fees without a reminder</td><td style="padding:10px 12px;border-bottom:1px solid var(--gray-border);vertical-align:top;">You charge interest and keep it separate from collections</td></tr><tr><td style="padding:10px 12px;border-bottom:1px solid var(--gray-border);vertical-align:top;">Statement</td><td style="padding:10px 12px;border-bottom:1px solid var(--gray-border);vertical-align:top;">Shows the customer’s transactions and balance</td><td style="padding:10px 12px;border-bottom:1px solid var(--gray-border);vertical-align:top;">You send a regular balance summary</td></tr></tbody></table></div>
+
+<h2>How do you set up Business Central reminders?</h2>
+<p>Start with Reminder Terms, then add levels, then assign the terms to customers. Three levels is enough for most small and mid-sized companies.</p>
+<ol style="margin:0 0 20px 22px;"><li>Search for <strong>Reminder Terms</strong> and create a code, for example STANDARD.</li><li>Open its <strong>Levels</strong>. For each level, set the grace period (days after the due date before the level applies), any additional fee, and whether to calculate interest.</li><li>Write the text that prints before and after the invoice list for each level.</li><li>Assign the terms code to your customers on the customer card.</li><li>On the Customer Posting Groups page, set the G/L accounts that receive fees and interest. The Reminder Terms page controls whether they post.</li></ol>
+<p>Example levels, which you should adjust to your own policy: level 1 at 7 days past due with a friendly note, level 2 at 21 days with a firmer note, level 3 at 35 days with a final notice and a fee.</p>
+
+<h2>How do you create and issue reminders in Business Central?</h2>
+<p>Run Create Reminders to draft them, review the drafts, then issue them. Issuing posts any fee or interest and records the reminder in the customer’s history.</p>
+<ol style="margin:0 0 20px 22px;"><li>Search for <strong>Reminders</strong> and choose <strong>Create Reminders</strong>.</li><li>Filter by customer and set the posting and document dates.</li><li>Review each draft. Remove invoices that are in dispute. An entry with On Hold filled in does not trigger a reminder by itself, but it can still appear on a reminder created for other overdue entries, so check each draft.</li><li>Choose <strong>Issue</strong>. Business Central posts the fee or interest and creates an issued reminder.</li><li>Send by email or print. Check <strong>Issued Reminders</strong> to see what went out and at which level.</li></ol>
+
+<h2>How do finance charge memos work?</h2>
+<p>Finance charge memos bill interest or fees on overdue balances without reminding the customer of the overdue amounts. Microsoft documents them as the option for debiting customers separately from a reminder.</p>
+<p>You set up Finance Charge Terms (interest rate, interest period, grace period), assign them to customers, then create and issue memos the same way you do reminders. Before you switch interest on, confirm the rate and the wording on your invoices and customer agreements with your accountant or lawyer.</p>
+
+<h2>Can Business Central send reminders automatically?</h2>
+<p>Partly. Microsoft’s documentation says Business Central has tools to automate creating, issuing and sending reminders, while describing the base process as mostly manual.</p>
+<p>Set up the terms first. Then read Microsoft’s “Automate reminders in collections” article to see which options your version offers. Automation repeats whatever your terms say, so wrong levels get sent faster, not fixed.</p>
+
+<h2>Where do native reminders stop?</h2>
+<p>Teams usually outgrow the native tools on three things: ranking which accounts to chase first, tracking promises to pay and disputes alongside follow-up, and sending original invoices with statements.</p>
+<p>Business Central’s built-in cash flow forecast is a separate feature that needs its own setup. Our <a href="https://www.bcteam1.com/pages/blog/2026-08-05-bc-cash-flow-forecast-built-in-tool-guide.html">guide to the Cash Flow Forecast page</a> covers it. If your team has hit the three limits above, RAP (Revenue Assurance Platform), BC Team’s AR automation extension, is built for that gap.</p>
+
+<div style="background:#f6f6f6;border-left:4px solid var(--red);border-radius:8px;padding:20px 24px;margin:32px 0;"><div style="font-family:'Nunito Sans',sans-serif;font-weight:900;font-size:14px;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Taylor&rsquo;s Take</div><p style="margin-bottom:0;">Use the native reminders first. If you cannot say what your reminder levels are and when each one fires, you are not ready for automation. You are ready for a collections policy. Software repeats a process. It does not invent one.</p></div>
+<h2>Frequently Asked Questions</h2>
+<h3>Can Business Central send overdue reminders automatically?</h3>
+<p>Partly. Microsoft documents tools to automate creating, issuing and sending reminders, but the base process is manual. Set up Reminder Terms first, then check the automation options for your version.</p>
+<h3>What is the difference between a reminder and a finance charge memo?</h3>
+<p>A reminder lists overdue invoices and asks for payment, with an optional fee or interest. A finance charge memo bills interest or fees without listing what is overdue.</p>
+<h3>Can I stop reminders for an invoice that is in dispute?</h3>
+<p>Yes. Remove it from the draft before you issue. An entry with On Hold filled in does not trigger a reminder, but it can still appear on one created for other overdue entries, so check the draft.</p>
+<h3>Where do reminder fees and interest post?</h3>
+<p>To the G/L accounts set on the Customer Posting Groups page when you issue the reminder, if the Reminder Terms are set to post fees and interest.</p>
+<hr>
+<p><strong>Keep reading:</strong></p>
+<ul><li><a href="https://www.bcteam1.com/pages/blog/2026-10-08-bc-credit-management-stopping-bad-orders.html">Credit management: stopping bad orders before they ship</a></li><li><a href="https://www.bcteam1.com/pages/blog/2026-08-05-bc-cash-flow-forecast-built-in-tool-guide.html">Cash Flow Forecast guide</a></li><li><a href="https://www.bcteam1.com/pages/rap.html">RAP</a></li><li><a href="https://learn.microsoft.com/en-US/dynamics365/business-central/receivables-collect-outstanding-balances" target="_blank" rel="noopener">Microsoft Learn: Collect outstanding balances</a></li></ul>
+
+        </div>
+
+        <div style="margin-top:32px;padding:20px 24px;border:1px solid var(--gray-border);border-radius:10px;"><strong>Taylor McEachnie</strong>, President &amp; CEO, The BC Team.<br><span style="color:#555;font-size:15px;">Taylor has spent 19+ years inside Microsoft Dynamics 365 Business Central: implementing it, rescuing it and building products that run on top of it.</span></div>
+
+        <div style="background:var(--black);border-radius:12px;padding:32px;text-align:center;margin:48px 0;"><div class="section-label" style="color:rgba(255,255,255,0.4);margin-bottom:8px;">Next Step</div><p style="color:rgba(255,255,255,0.7);font-size:16px;margin-bottom:24px;line-height:1.6;">If your reminder levels are blank or nobody can say who owns them, that is a setup finding we see often. Request the free Business Central Health Check and we will look at your receivables setup with you.</p><a href="https://www.bcteam1.com/pages/book.html" target="_blank" rel="noopener" class="btn btn-primary" style="margin:4px;">Book the free Business Central Health Check</a></div>
+
+        <div style="margin-top:40px;padding-top:28px;border-top:1px solid var(--gray-border);text-align:center;">
+          <a href="/pages/blog.html" style="font-family:'Nunito Sans',sans-serif;font-weight:800;font-size:14px;color:var(--red);">← Back to all articles</a>
+        </div>
+
+      </div>
+    </section>
+  </article>
+
+</main>
+<div id="footer-placeholder"></div>
+<script src="/components.js"></script>
+<script src="/assets/engagement.js" defer></script>
+<script>renderNavbar("blog"); renderFooter();</script>
+</body>
+</html>
