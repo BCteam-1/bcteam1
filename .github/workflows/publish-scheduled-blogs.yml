@@ -2,11 +2,12 @@ name: Publish Scheduled Blogs
 
 on:
   schedule:
-    # Runs every 3 hours, every day. The publish script itself only
-    # acts on posts whose publish-date has arrived (and skips/cleans
-    # up anything already live), so frequent checks are safe and
-    # simply protect against GitHub occasionally skipping a run.
-    - cron: '0 */3 * * *'
+    # Posts go live at 9:00 AM Eastern Time (EST/EDT). 9 AM Eastern is
+    # 13:00 UTC in summer (EDT) and 14:00 UTC in winter (EST). Runs
+    # cover 13:00-17:00 UTC hourly so a delayed GitHub run still
+    # publishes the same morning; the script itself refuses to publish
+    # before 9:00 AM Eastern, so early runs are harmless no-ops.
+    - cron: '0 13-17 * * *'
   workflow_dispatch:
 
 permissions:

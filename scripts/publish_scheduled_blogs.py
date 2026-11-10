@@ -3,7 +3,8 @@ publish_scheduled_blogs.py
 ==========================
 Reads every .html file in  pages/scheduled/
 that has a  <!-- publish-date: YYYY-MM-DD -->  meta comment.
-If the date <= today (UTC), it:
+If the date has arrived in Eastern Time (America/Toronto) and it is
+at or after 9:00 AM Eastern, it:
   1. Moves the file to pages/blog/
   2. Moves any matching cover image  assets/scheduled/ -> assets/blog/
   3. Injects a new card at the TOP of the blog listing in pages/blog.html
@@ -24,10 +25,15 @@ Required meta comment inside each scheduled HTML file (anywhere in <head>):
 """
 
 import os, re, shutil
-from datetime import date
+from datetime import date, datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
-TODAY = date.today()
+# All publish times follow Eastern Time (EST in winter, EDT in summer).
+# A post goes live at 9:00 AM Eastern on its publish-date.
+PUBLISH_HOUR_ET = 9
+_NOW_ET = datetime.now(ZoneInfo("America/Toronto"))
+TODAY = _NOW_ET.date()
 SCHEDULED_DIR = Path("pages/scheduled")
 BLOG_DIR      = Path("pages/blog")
 SCHED_IMG_DIR = Path("assets/scheduled")
@@ -104,6 +110,9 @@ def main():
         pub_date = date.fromisoformat(pub_date_str)
         if pub_date > TODAY:
             print(f"  SKIP {f.name} -- scheduled for {pub_date} (future)")
+            continue
+        if pub_date == TODAY and _NOW_ET.hour < PUBLISH_HOUR_ET:
+            print(f"  SKIP {f.name} -- goes live at {PUBLISH_HOUR_ET}:00 AM Eastern on {pub_date}")
             continue
 
         slug  = f.stem
