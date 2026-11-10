@@ -1,7 +1,8 @@
 <!-- publish-date: 2027-01-19 -->
     <!-- blog-title: Why Your Accounts Receivable Balance Does Not Match the G/L in Business Central -->
     <!-- blog-desc: Customer ledger and the G/L show different AR totals? Three common causes in Business Central, with a check for each. -->
-    <!DOCTYPE html>
+    <!-- blog-cover: /assets/blog/2027-01-19-business-central-ar-does-not-match-gl-cover.png -->
+<!DOCTYPE html>
     <html lang="en">
     <head>
       <meta charset="UTF-8">
@@ -16,6 +17,7 @@
       <meta property="og:url" content="https://www.bcteam1.com/pages/blog/2027-01-19-business-central-ar-does-not-match-gl.html">
       <meta property="og:title" content="Why AR Does Not Match the G/L in Business Central | BC Team">
       <meta property="og:description" content="Customer ledger and the G/L show different AR totals? Three common causes in Business Central, with a check for each.">
+  <meta property="og:image" content="https://www.bcteam1.com/assets/blog/2027-01-19-business-central-ar-does-not-match-gl-cover.png">
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
@@ -62,7 +64,14 @@
           </div>
         </section>
 
-        <section style="padding:48px 24px 64px;background:#fff;">
+        <div style="max-width:860px;margin:0 auto 40px;padding:0 24px;">
+      <img src="/assets/blog/2027-01-19-business-central-ar-does-not-match-gl-cover.png"
+           alt="Why Your Accounts Receivable Balance Does Not Match the G/L in Business Central"
+           style="width:100%;border-radius:12px;max-height:420px;object-fit:cover;display:block;"
+           loading="lazy">
+    </div>
+
+    <section style="padding:48px 24px 64px;background:#fff;">
           <div style="max-width:760px;margin:0 auto;">
             <div class="post-body">
     <div style="background:#fff;border:2px solid var(--red);border-radius:10px;padding:20px 24px;margin:0 0 28px;"><div style="font-family:'Nunito Sans',sans-serif;font-weight:900;font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--red);margin-bottom:8px;">Quick answer</div><p style="margin-bottom:0;font-size:17px;">Your accounts receivable total differs from the G/L when something posted to the receivables account without going through the customer ledger, when the two reports use different dates, or when currency adjustments post to one but not the other. Compare both totals at the same date, then check direct postings, report date basis and exchange rate adjustments, in that order.</p></div>

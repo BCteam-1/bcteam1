@@ -1,7 +1,8 @@
 <!-- publish-date: 2027-01-20 -->
     <!-- blog-title: Failed Job Queue Entries in Business Central: How to Find and Fix Them -->
     <!-- blog-desc: Find and fix failed job queue entries in Business Central. A 10-minute weekly check and the common causes of silent scheduled-task failures. -->
-    <!DOCTYPE html>
+    <!-- blog-cover: /assets/blog/2027-01-20-business-central-job-queue-errors-cover.png -->
+<!DOCTYPE html>
     <html lang="en">
     <head>
       <meta charset="UTF-8">
@@ -16,6 +17,7 @@
       <meta property="og:url" content="https://www.bcteam1.com/pages/blog/2027-01-20-business-central-job-queue-errors.html">
       <meta property="og:title" content="Failed Job Queue Entries in Business Central: Fix Them | BC Team">
       <meta property="og:description" content="Find and fix failed job queue entries in Business Central. A 10-minute weekly check and the common causes of silent scheduled-task failures.">
+  <meta property="og:image" content="https://www.bcteam1.com/assets/blog/2027-01-20-business-central-job-queue-errors-cover.png">
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap" media="print" onload="this.media='all'">
@@ -62,7 +64,14 @@
           </div>
         </section>
 
-        <section style="padding:48px 24px 64px;background:#fff;">
+        <div style="max-width:860px;margin:0 auto 40px;padding:0 24px;">
+      <img src="/assets/blog/2027-01-20-business-central-job-queue-errors-cover.png"
+           alt="Failed Job Queue Entries in Business Central: How to Find and Fix Them"
+           style="width:100%;border-radius:12px;max-height:420px;object-fit:cover;display:block;"
+           loading="lazy">
+    </div>
+
+    <section style="padding:48px 24px 64px;background:#fff;">
           <div style="max-width:760px;margin:0 auto;">
             <div class="post-body">
     <div style="background:#fff;border:2px solid var(--red);border-radius:10px;padding:20px 24px;margin:0 0 28px;"><div style="font-family:'Nunito Sans',sans-serif;font-weight:900;font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--red);margin-bottom:8px;">Quick answer</div><p style="margin-bottom:0;font-size:17px;">The job queue runs scheduled tasks in Business Central, such as posting in the background, sending emails and syncing data. When an entry fails, it stops running quietly. Open Job Queue Entries once a week, filter for entries in error status, read the error message, fix the cause and restart the entry. Ten minutes a week catches most failures.</p></div>
