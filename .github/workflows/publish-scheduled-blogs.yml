@@ -4,10 +4,12 @@ on:
   schedule:
     # Posts go live at 9:00 AM Eastern Time (EST/EDT). 9 AM Eastern is
     # 13:00 UTC in summer (EDT) and 14:00 UTC in winter (EST). Runs
-    # cover 13:00-17:00 UTC hourly so a delayed GitHub run still
+    # cover 13:00-17:00 UTC every 15 minutes so a delayed GitHub run still
     # publishes the same morning; the script itself refuses to publish
     # before 9:00 AM Eastern, so early runs are harmless no-ops.
-    - cron: '0 13-17 * * *'
+    # Extra off-peak minutes (not :00) because GitHub often delays or
+    # drops scheduled runs at the top of the hour.
+    - cron: '7,22,37,52 13-17 * * *'
   workflow_dispatch:
 
 permissions:
