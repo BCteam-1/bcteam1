@@ -6,13 +6,13 @@
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
   <title>RAP — AR Automation for Business Central | BC Team</title>
-  <meta name="description" content="Hire your first AR agent that lives inside Business Central. Cut DSO by 15%, automate collections, and get real-time cash flow forecasting. Starting at $539/month.">
+  <meta name="description" content="Hire your first AR agent that lives inside Business Central. Cut DSO by 15%, automate collections, and get real-time cash flow forecasting. Starting at $539/month, billed annually.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.bcteam1.com/pages/rap.html">
   <meta property="og:type"        content="website">
   <meta property="og:url"         content="https://www.bcteam1.com/pages/rap.html">
   <meta property="og:title"       content="RAP — AR Automation for Business Central | BC Team">
-  <meta property="og:description" content="Cut DSO by 15% with automated AR collections inside Business Central. Starting at $539/month.">
+  <meta property="og:description" content="Cut DSO by 15% with automated AR collections inside Business Central. Starting at $539/month, billed annually.">
   <meta property="og:image"       content="https://www.bcteam1.com/assets/og-rap.jpg">
   <meta name="twitter:card"       content="summary_large_image">
 
@@ -48,7 +48,7 @@
       {
         "@type": "Question",
         "name": "How much does RAP cost?",
-        "acceptedAnswer": { "@type": "Answer", "text": "RAP starts at $539/month for the standard tier. That's less than one hour of your finance team's time spent chasing invoices manually each month." }
+        "acceptedAnswer": { "@type": "Answer", "text": "RAP starts at $539/month (billed annually) for the standard tier, or $647/month billed monthly. That's less than one hour of your finance team's time spent chasing invoices manually each month." }
       }
     ]
   }
@@ -100,7 +100,7 @@
       <div style="width:1px;background:rgba(255,255,255,0.1);"></div>
       <div style="text-align:center;">
         <div style="font-family:'Nunito Sans',sans-serif;font-weight:900;font-size:28px;color:var(--yellow);">$539</div>
-        <div style="font-size:12px;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px;">Starting /Month</div>
+        <div style="font-size:12px;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px;">Starting /Month · Billed Annually</div>
       </div>
     </div>
   </section>
@@ -232,18 +232,18 @@
       <p class="section-sub">Less than one hour of your finance team's time chasing invoices manually — every single month.</p>
       <!-- Billing toggle -->
       <div style="display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:36px;">
-        <span id="toggle-label-monthly" style="font-size:15px;font-weight:700;font-family:'Nunito Sans',sans-serif;color:var(--gray-dark);">Monthly</span>
+        <span id="toggle-label-monthly" style="font-size:15px;font-weight:700;font-family:'Nunito Sans',sans-serif;color:#aaa;">Monthly</span>
         <div id="billing-toggle" onclick="toggleBilling()" style="width:52px;height:28px;background:var(--red);border-radius:14px;cursor:pointer;position:relative;transition:background 0.2s;flex-shrink:0;">
-          <div id="toggle-knob" style="position:absolute;top:3px;left:3px;width:22px;height:22px;background:#fff;border-radius:50%;transition:transform 0.2s;"></div>
+          <div id="toggle-knob" style="position:absolute;top:3px;left:3px;width:22px;height:22px;background:#fff;border-radius:50%;transition:transform 0.2s;transform:translateX(24px);"></div>
         </div>
-        <span id="toggle-label-annual" style="font-size:15px;font-weight:700;font-family:'Nunito Sans',sans-serif;color:#aaa;">Annual <span style="background:#e8f5e9;color:#2e7d32;font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px;margin-left:4px;">Save 20%</span></span>
+        <span id="toggle-label-annual" style="font-size:15px;font-weight:700;font-family:'Nunito Sans',sans-serif;color:var(--gray-dark);">Annual <span style="background:#e8f5e9;color:#2e7d32;font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px;margin-left:4px;">Save 17%</span></span>
       </div>
 
       <div class="pricing-grid">
         <div class="pricing-card">
           <div class="pricing-label">Standard</div>
           <div class="pricing-price"><span>$</span><span id="price-standard">539</span><sub>/mo</sub></div>
-          <p id="price-standard-note" class="pricing-desc" style="font-size:13px;color:#aaa;margin-top:-8px;margin-bottom:8px;min-height:18px;"></p>
+          <p id="price-standard-note" class="pricing-desc" style="font-size:13px;color:#aaa;margin-top:-8px;margin-bottom:8px;min-height:18px;">Billed annually — $6,468/yr</p>
           <p class="pricing-desc">Everything you need to automate AR for a mid-sized BC environment.</p>
           <ul class="pricing-features">
             <li>Automated statement generation &amp; delivery</li>
@@ -264,7 +264,7 @@
           <div class="pricing-badge">Most Popular</div>
           <div class="pricing-label">Growth</div>
           <div class="pricing-price"><span>$</span><span id="price-growth">874</span><sub>/mo</sub></div>
-          <p id="price-growth-note" class="pricing-desc" style="font-size:13px;color:#aaa;margin-top:-8px;margin-bottom:8px;min-height:18px;"></p>
+          <p id="price-growth-note" class="pricing-desc" style="font-size:13px;color:#aaa;margin-top:-8px;margin-bottom:8px;min-height:18px;">Billed annually — $10,488/yr</p>
           <p class="pricing-desc">Standard + cash flow forecasting + advanced reporting for CFOs and controllers.</p>
           <ul class="pricing-features">
             <li>Everything in Standard</li>
@@ -285,7 +285,7 @@
       <p style="color:#aaa;font-size:13px;margin-top:24px;">All prices USD. Canadian customers billed in CAD at current exchange.</p>
 
       <script>
-        var isAnnual = false;
+        var isAnnual = true;
         function toggleBilling() {
           isAnnual = !isAnnual;
           var knob = document.getElementById('toggle-knob');
@@ -294,10 +294,10 @@
           knob.style.transform = isAnnual ? 'translateX(24px)' : 'translateX(0)';
           labelMonthly.style.color = isAnnual ? '#aaa' : 'var(--gray-dark)';
           labelAnnual.style.color = isAnnual ? 'var(--gray-dark)' : '#aaa';
-          document.getElementById('price-standard').textContent = isAnnual ? '431' : '539';
-          document.getElementById('price-growth').textContent = isAnnual ? '699' : '874';
-          document.getElementById('price-standard-note').textContent = isAnnual ? 'Billed annually — $5,174/yr' : '';
-          document.getElementById('price-growth-note').textContent = isAnnual ? 'Billed annually — $8,390/yr' : '';
+          document.getElementById('price-standard').textContent = isAnnual ? '539' : '647';
+          document.getElementById('price-growth').textContent = isAnnual ? '874' : '1,049';
+          document.getElementById('price-standard-note').textContent = isAnnual ? 'Billed annually — $6,468/yr' : 'Billed monthly';
+          document.getElementById('price-growth-note').textContent = isAnnual ? 'Billed annually — $10,488/yr' : 'Billed monthly';
         }
       </script>
     </div>

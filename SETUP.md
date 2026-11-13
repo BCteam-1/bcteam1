@@ -94,7 +94,7 @@ Then in Vercel:
 ## Revenue-Driving Features Built In
 - ✅ AR Health Scorecard (20 questions → lead + ROI estimate)
 - ✅ Exit intent lead capture (AR Checklist PDF)
-- ✅ Pricing on RAP page ($539/mo Standard, $874/mo Growth; annual billing 20% off)
+- ✅ Pricing on RAP page ($539/mo Standard, $874/mo Growth when billed annually; monthly billing is 20% higher at $647 and $1,049)
 - ✅ "How It Works" 3-step (1 day to live)
 - ✅ Cash flow forecasting feature highlighted
 - ✅ CASL-compliant consent checkboxes on all forms
